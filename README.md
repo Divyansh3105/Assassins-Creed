@@ -17,7 +17,7 @@ Each era includes individual game pages featuring banners, storylines, character
 
 ## 🌐 Live Demo
 
-[🔗 Visit the live site](https://divyansh3105.github.io/Assassins-Creed/)
+[🔗 Visit the live site](https://assassins-creed-tribute.netlify.app/)
 
 ## 🎮 Features
 
