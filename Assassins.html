@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="Media/AC_OG.png" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Legends of the Creed</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-light overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-black text-white py-4 px-6">
+        <nav class="flex items-center justify-between">
+            <a href="index.html">
+                <img src="Media/logo.png" alt="logo" class="h-16">
+            </a>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="index.html" class="text-danger">Home</a></li>
+                <li><a href="Assassins.html" class="text-danger font-extrabold">Legendary Assassins</a></li>
+                <li class="dropdown relative">
+                    <button class="text-danger border-0 dropdownto focus:outline-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Games
+                    </button>
+                    <ul class="dropdown-menu absolute bg-transparent text-transparent w-56">
+                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="The Desmond Saga/Home.html">The Desmond Saga</a></li>
+                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="Colonial Era/Home.html">Colonial Era</a></li>
+                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="European Revolution Era/Home.html">European Revolution Era</a></li>
+                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
+                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="Modern Classic Return/Home.html">Modern Classic Return</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative bg-cover bg-center h-96 bg-[url(Media/AC_Legends.jpg)]">
+        <section class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">Legends of the Creed</h1>
+        </section>
+    </section>
+
+    <!-- Assassin Legends -->
+    <section class="container mx-auto py-12">
+        <h2 class="text-4xl font-bold text-center bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent mb-10">Master Assassins</h2>
+        <section class="row g-4">
+            <!-- Ezio -->
+            <section class="col-md-4">
+                <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center">
+                    <img src="Media/Ezio.png" alt="Ezio Auditore" class="w-full h-65 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-white mt-4">Ezio Auditore da Firenze</h3>
+                    <p class="text-gray-400">A charismatic leader and fan-favorite, Ezio led the Brotherhood during the Italian Renaissance.</p>
+                </section>
+            </section>
+
+            <!-- Altair -->
+            <section class="col-md-4">
+                <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center">
+                    <img src="Media/Altair.png" alt="Altair" class="w-full h-65 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-white mt-4">Altaïr Ibn-La'Ahad</h3>
+                    <p class="text-gray-400">The legendary Assassin who redefined the Creed's tenets and shaped its future.</p>
+                </section>
+            </section>
+
+            <!-- Bayek -->
+            <section class="col-md-4">
+                <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center">
+                    <img src="Media/Bayek.png" alt="Bayek" class="w-full h-65 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-white mt-4">Bayek of Siwa</h3>
+                    <p class="text-gray-400">A Medjay and the founder of the Assassin Brotherhood during ancient Egypt’s fall.</p>
+                </section>
+            </section>
+
+            <!-- Kassandra -->
+            <section class="col-md-4 py-3">
+                <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center">
+                    <img src="Media/Kassandra.png" alt="Kassandra" class="w-full h-65 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-white mt-4">Kassandra</h3>
+                    <p class="text-gray-400">A legendary misthios wielding the Staff of Hermes, fighting across Ancient Greece.</p>
+                </section>
+            </section>
+
+            <!-- Eivor -->
+            <section class="col-md-4 py-3">
+                <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center">
+                    <img src="Media/Eivor.png" alt="Eivor" class="w-full h-65 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-white mt-4">Eivor Varinsdottir</h3>
+                    <p class="text-gray-400">A fierce Viking warrior who battled Templars during England’s conquest era.</p>
+                </section>
+            </section>
+
+            <!-- Arno -->
+            <section class="col-md-4 py-3">
+                <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center">
+                    <img src="Media/Arno.png" alt="Arno" class="w-full h-65 object-cover rounded">
+                    <h3 class="text-xl font-semibold text-white mt-4">Arno Dorian</h3>
+                    <p class="text-gray-400">A master Assassin seeking redemption during the French Revolution.</p>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p class="text-gray-400">&copy; 2025 Assassin's Creed Tribute Page</p>
+        <a href="https://www.ubisoft.com/en-us/game/assassins-creed" target="_blank" class="text-gray-400 hover:text-gray-300">Ubisoft Official Site</a>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
