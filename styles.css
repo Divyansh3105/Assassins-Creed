@@ -1,6 +1,13 @@
+@font-face {
+    font-family: Assasign;
+    src: url(Media/Assassin$.ttf);
+}
+
 body{
     background-color: black;
     color: white;
+    font-family: Assasign;
+    margin: 0;
     overflow-x: hidden;
 }
 
@@ -32,3 +39,5 @@ header nav{
     padding: 0;
     gap: 1.5rem;
 }
+
+
