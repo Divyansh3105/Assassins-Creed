@@ -73,7 +73,10 @@ header nav {
     color: #f8f9fa;
 }
 .content .home-link {
-    font-weight: 800;
+    font-weight: 800; /* Bolds the Home link on the home page */
+}
+.content .assassins-link {
+    font-weight: 800; /* Bolds the Assassins link on the assassins page */
 }
 
 /* Dropdown */
@@ -118,7 +121,7 @@ header nav {
     color: #fff !important;
 }
 
-/* Hero Section */
+/* Hero Section (Home Page) */
 #hero {
     height: 24rem;
     background-image: url('Media/AC_Hero.jpg');
@@ -152,7 +155,7 @@ header nav {
     color: #fff;
 }
 
-/* About Section */
+/* About Section (Home Page) */
 #about {
     max-width: 960px;
     margin: 0 auto;
@@ -168,7 +171,7 @@ header nav {
     color: #fff;
 }
 
-/* Game Styles Section */
+/* Game Styles Section (Home Page) */
 #game-styles {
     padding: 0 1.5rem 5rem 1.5rem;
 }
@@ -232,7 +235,7 @@ header nav {
     color: #fff;
 }
 
-/* Stats Section */
+/* Stats Section (Home Page) */
 #legacy {
     max-width: 1140px;
     margin: 0 auto;
@@ -271,7 +274,7 @@ header nav {
     text-align: center;
 }
 
-/* Footer */
+/* Footer (Shared) */
 footer {
     text-align: center;
     margin-top: 2rem;
@@ -287,4 +290,65 @@ footer a {
 }
 footer a:hover {
     color: #e5e7eb;
+}
+
+/* ======================================== */
+/* == NEW STYLES FOR ASSASSINS.HTML PAGE == */
+/* ======================================== */
+
+/* Hero Section (Assassins Page) */
+#hero-assassins {
+    height: 24rem;
+    background-image: url('Media/AC_Legends.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-assassins h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #dc2626, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+/* Master Assassins Section */
+#master-assassins {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem;
+}
+#master-assassins h2 {
+    margin-bottom: 3rem;
+}
+.assassin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.assassin-card {
+    background-color: rgba(31, 41, 55, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden; /* Ensures the image border radius is applied */
+}
+.assassin-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.assassin-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+.assassin-card p {
+    padding: 0 1rem 1.5rem 1rem;
 }
