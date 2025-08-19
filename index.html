@@ -7,11 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assassin's Creed Tribute</title>
 
-    <!-- Meta Tag -->
     <meta name="description"
         content="Embark on a journey through time with this Assassin's Creed tribute page, honoring the franchise’s epic sagas, hidden blades, and historical adventures.">
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Assassin's Creed Tribute">
     <meta property="og:description"
         content="Dive into centuries of secret wars between Assassins and Templars. Explore the legacy of heroes like Ezio, Altair, Bayek, and Eivor.">
@@ -19,186 +17,144 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Assassin's Creed Tribute">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <a href="index.html">
                 <img id="logo" src="Media/logo.png" alt="logo">
             </a>
             <ul class="content">
-                <li><a href="index.html" class="text-danger font-extrabold">Home</a></li>
-                <li><a href="Assassins.html" class="text-danger">Legendary Assassins</a></li>
-                <li class="dropdown relative">
-                    <button class="text-danger border-0 dropdownto focus:outline-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="Assassins.html">Legendary Assassins</a></li>
+                <li class="dropdown">
+                    <button class="dropdownto" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Games
                     </button>
-                    <ul class="dropdown-menu absolute bg-transparent text-transparent w-56">
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="The Desmond Saga/Home.html">The Desmond Saga</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="Colonial Era/Home.html">Colonial Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="European Revolution Era/Home.html">European Revolution Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="Modern Classic Return/Home.html">Modern Classic Return</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a href="The Desmond Saga/Home.html">The Desmond Saga</a></li>
+                        <li><a href="Colonial Era/Home.html">Colonial Era</a></li>
+                        <li><a href="European Revolution Era/Home.html">European Revolution Era</a></li>
+                        <li><a href="Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
+                        <li><a href="Modern Classic Return/Home.html">Modern Classic Return</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative bg-cover bg-center h-96 bg-[url(Media/AC_Hero.jpg)]">
-        <section class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
-            <section class="text-center text-white px-4">
-                <h1 class="text-4xl font-bold bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">
-                    ASSASSIN'S CREED: THE HIDDEN BLADE OF HISTORY</h1>
-                <p class="text-lg mt-2">History is our playground.</p>
-            </section>
-        </section>
+    <section id="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>ASSASSIN'S CREED: THE HIDDEN BLADE OF HISTORY</h1>
+                <p>History is our playground.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="About" class="container py-7">
-        <h2 class="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent"> What is Assassin's Creed?</h2>
-        <section class="flex container-lg">
+    <section id="about">
+        <h2>What is Assassin's Creed?</h2>
+        <div class="about-content">
             <p><b>Assassin's Creed</b> is a revolutionary action-adventure game franchise developed by Ubisoft. Launched in 2007, it features historical fiction intertwined with stealth, parkour, and open-world exploration. Players use the Animus to relive the memories of legendary Assassins across different timelines—from Ancient Egypt and Renaissance Italy to Viking-age England. With rich narratives and immersive worlds, Assassin's Creed has captivated millions with the eternal war between the Assassins and Templars.</p>
-        </section>
+        </div>
     </section>
 
-    <!-- Game Styles Tabs -->
-    <section class="mb-20 justify">
-        <h2
-            class="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">
-            Game Styles</h2>
-        <ul class="nav nav-pills justify-content-center mb-4" id="gameTabs">
+    <section id="game-styles">
+        <h2>Game Styles</h2>
+        <ul class="nav nav-pills" id="gameTabs">
             <li class="nav-item">
-                <a class="nav-link active btn btn-danger rounded-pill px-4 py-2 mx-2 text-light" data-bs-toggle="pill"
-                    href="#stealth">Stealth</a>
+                <a class="nav-link active" data-bs-toggle="pill" href="#stealth">Stealth</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-danger rounded-pill px-4 py-2 mx-2 text-light" data-bs-toggle="pill"
-                    href="#combat">Combat</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#combat">Combat</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-danger rounded-pill px-4 py-2 mx-2 text-light" data-bs-toggle="pill"
-                    href="#exploration">Exploration</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#exploration">Exploration</a>
             </li>
         </ul>
 
-        <section class="tab-content text-center container">
-            <section class="tab-pane fade show active" id="stealth">
-                <section class="row g-4">
-                    <section class="col-md-4">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">🗡️</section>
-                            <h3 class="h5 fw-bold">Stealth Kills</h3>
-                            <p class="text-gray-400">Eliminate targets silently using hidden blades and shadows.</p>
-                        </section>
-                    </section>
-                    <section class="col-md-4">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">🏙️</section>
-                            <h3 class="h5 fw-bold">Blending In</h3>
-                            <p class="text-gray-400">Use crowds, disguises, and environment to stay undetected.</p>
-                        </section>
-                    </section>
-                    <section class="col-md-4">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">🧠</section>
-                            <h3 class="h5 fw-bold">Strategic Takedowns</h3>
-                            <p class="text-gray-400">Plan your attacks and use patience to strike precisely.</p>
-                        </section>
-                    </section>
-                </section>
-            </section>
+        <div class="tab-content">
+            <div class="tab-pane show active" id="stealth">
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🗡️</div>
+                        <h3>Stealth Kills</h3>
+                        <p>Eliminate targets silently using hidden blades and shadows.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🏙️</div>
+                        <h3>Blending In</h3>
+                        <p>Use crowds, disguises, and environment to stay undetected.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🧠</div>
+                        <h3>Strategic Takedowns</h3>
+                        <p>Plan your attacks and use patience to strike precisely.</p>
+                    </div>
+                </div>
+            </div>
 
-            <section class="tab-pane fade" id="combat">
-                <section class="row g-4">
-                    <section class="col-md-6">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">⚔️</section>
-                            <h3 class="h5 fw-bold">Evolving Combat</h3>
-                            <p class="text-gray-400">From simple counters to full-scale RPG combat systems.</p>
-                        </section>
-                    </section>
-                    <section class="col-md-6">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">🛡️</section>
-                            <h3 class="h5 fw-bold">Weapon Variety</h3>
-                            <p class="text-gray-400">Wield swords, bows, hidden blades, and dual axes.</p>
-                        </section>
-                    </section>
-                </section>
-            </section>
+            <div class="tab-pane" id="combat">
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">⚔️</div>
+                        <h3>Evolving Combat</h3>
+                        <p>From simple counters to full-scale RPG combat systems.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Weapon Variety</h3>
+                        <p>Wield swords, bows, hidden blades, and dual axes.</p>
+                    </div>
+                </div>
+            </div>
 
-            <section class="tab-pane fade" id="exploration">
-                <section class="row g-4">
-                    <section class="col-md-6">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">🏛️</section>
-                            <h3 class="h5 fw-bold">Historical Cities</h3>
-                            <p class="text-gray-400">Explore cities like Florence, London, and Constantinople.</p>
-                        </section>
-                    </section>
-                    <section class="col-md-6">
-                        <section class="p-4 bg-gray-800/50 border border-red-500/20 rounded-xl shadow-lg">
-                            <section class="text-red-500 text-4xl mb-3">🧭</section>
-                            <h3 class="h5 fw-bold">Parkour & Climbing</h3>
-                            <p class="text-gray-400">Climb iconic landmarks and leap across rooftops.</p>
-                        </section>
-                    </section>
-                </section>
-            </section>
-        </section>
+            <div class="tab-pane" id="exploration">
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🏛️</div>
+                        <h3>Historical Cities</h3>
+                        <p>Explore cities like Florence, London, and Constantinople.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🧭</div>
+                        <h3>Parkour & Climbing</h3>
+                        <p>Climb iconic landmarks and leap across rooftops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="mb-8 container mx-auto px-4 py-5">
-        <h2
-            class="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">
-            Legacy of the Creed</h2>
-        <section class="row gy-4">
-            <section class="col-6 col-md-3">
-                <section class="bg-gray-800/50 p-4 rounded-xl border border-red-500/20">
-                    <h3 class="text-5xl text-center font-black text-red-500 mb-3">13+</h3>
-                    <p class="text-gray-400 text-center">Main Titles</p>
-                </section>
-            </section>
-            <section class="col-6 col-md-3">
-                <section class="bg-gray-800/50 p-4 rounded-xl border border-red-500/20">
-                    <h3 class="text-5xl text-center font-black text-red-500 mb-3">200M+</h3>
-                    <p class="text-gray-400 text-center">Copies Sold</p>
-                </section>
-            </section>
-            <section class="col-6 col-md-3">
-                <section class="bg-gray-800/50 p-4 rounded-xl border border-red-500/20">
-                    <h3 class="text-5xl text-center font-black text-red-500 mb-3">15+</h3>
-                    <p class="text-gray-400 text-center">Years of Impact</p>
-                </section>
-            </section>
-            <section class="col-6 col-md-3">
-                <section class="bg-gray-800/50 p-4 rounded-xl border border-red-500/20">
-                    <h3 class="text-3xl text-center font-black text-red-500 mb-3">49 BCE – 2020 CE</h3>
-                    <p class="text-gray-400 text-center">Spanning History</p>
-                </section>
-            </section>
-        </section>
+    <section id="legacy">
+        <h2>Legacy of the Creed</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3 class="stat-number">13+</h3>
+                <p class="stat-label">Main Titles</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">200M+</h3>
+                <p class="stat-label">Copies Sold</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">15+</h3>
+                <p class="stat-label">Years of Impact</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number large-text">49 BCE – 2020 CE</h3>
+                <p class="stat-label">Spanning History</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center mt-8">
-        <p class="text-gray-400">&copy; 2025 Assassin's Creed Tribute Page</p>
-        <a href="https://www.ubisoft.com/en-us/game/assassins-creed" target="_blank"
-            class="text-gray-400 hover:text-gray-200">Official Site</a>
+    <footer>
+        <p>&copy; 2025 Assassin's Creed Tribute Page</p>
+        <a href="https://www.ubisoft.com/en-us/game/assassins-creed" target="_blank">Official Site</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
