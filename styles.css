@@ -7,6 +7,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    cursor:url(../Media/Unavailable.cur),pointer;
 }
 
 body {
@@ -333,11 +334,15 @@ footer a:hover {
     gap: 1.5rem;
 }
 .assassin-card {
+    display: block;
     background-color: rgba(31, 41, 55, 0.5);
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
     text-align: center;
-    overflow: hidden; /* Ensures the image border radius is applied */
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border: 2px solid #4a1414;
+    padding: 0;
 }
 .assassin-card img {
     width: 100%;
