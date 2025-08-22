@@ -95,9 +95,9 @@ header nav {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0; /* Aligns menu to the right to prevent going off-screen */
     z-index: 1000;
-    display: none;
+    display: none; /* Hidden by default */
     min-width: 14rem;
     padding: 0.5rem 0;
     margin: 0.125rem 0 0;
@@ -108,7 +108,9 @@ header nav {
     border-radius: 0.25rem;
     font-size: 1.1rem;
 }
-.dropdown-menu.show { display: block; }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 .dropdown-menu a {
     display: block;
     width: 100%;
