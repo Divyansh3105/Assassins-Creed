@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Assassin's Creed: Rogue (2014)</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    <!-- Link to the Styles.css file -->
+    <link rel="stylesheet" href="Styles.css">
+    <!-- Link to Bootstrap Icons and Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Coloud Flare Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
 </head>
-<body class="bg-black text-light overflow-x-hidden">
+<body>
 
-    <!-- Header -->
-    <header class="bg-black text-white py-4 px-6">
-        <nav class="flex items-center justify-between">
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
             <a href="../index.html">
-                <img src="../Media/logo.png" alt="logo" class="h-16">
+                <img id="logo" src="../Media/logo.png" alt="logo">
             </a>
-            <ul class="flex space-x-6 text-lg">
-                <li><a href="../index.html" class="text-danger">Home</a></li>
-                <li><a href="../Assassins.html" class="text-danger">Legendary Assassins</a></li>
-                <li class="dropdown relative">
-                    <button class="text-danger border-0 dropdownto focus:outline-none font-extrabold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Games
-                    </button>
-                    <ul class="dropdown-menu absolute bg-transparent text-transparent w-56">
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../The Desmond Saga/Home.html">The Desmond Saga</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent font-extrabold" href="../Colonial Era/Home.html">Colonial Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../European Revolution Era/Home.html">European Revolution Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Modern Classic Return/Home.html">Modern Classic Return</a></li>
+            <ul class="content">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Assassins.html">Legendary Assassins</a></li>
+                <li class="dropdown">
+                    <button class="dropdownto" type="button">Games</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="../The Desmond Saga/Home.html">The Desmond Saga</a></li>
+                        <li><a href="../Colonial Era/Home.html" class="active-dropdown-item">Colonial Era</a></li>
+                        <li><a href="../European Revolution Era/Home.html">European Revolution Era</a></li>
+                        <li><a href="../Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
+                        <li><a href="../Modern Classic Return/Home.html">Modern Classic Return</a></li>
                     </ul>
                 </li>
             </ul>
@@ -43,94 +37,92 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="relative bg-cover bg-center h-96 bg-[url(../Media/Rogue_Hero.jpg)]">
-        <section class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-            <h1 class="text-5xl font-extrabold bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">Assassin's Creed: Rogue (2014)</h1>
-        </section>
+    <section class="hero-game-detail" style="background-image: url('../Media/Rogue_Hero.jpg');">
+        <div class="hero-overlay">
+            <h1>Assassin's Creed: Rogue (2014)</h1>
+        </div>
     </section>
 
-    <!-- Campaign Info -->
-    <section class="container py-5">
-        <section class="row g-3 align-items-center">
-            <section class="col-md-6">
-                <section class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bjSy5kF6io0?si=Mso97QWY0OCR3OoJ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </section>
-            </section>
-            <section class="col-md-6">
-                <h3 class="text-red-500 text-xl font-semibold mb-3">A Betrayal from Within</h3>
+    <main class="game-container">
+
+        <!-- Campaign Info -->
+        <section class="two-column-layout">
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/bjSy5kF6io0?si=Mso97QWY0OCR3OoJ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h3 class="section-subtitle">A Betrayal from Within</h3>
                 <p>Play as <strong>Shay Patrick Cormac</strong>, a former Assassin turned Templar, in a story of betrayal, ideology, and loyalty. <em>Assassin's Creed: Rogue</em> delivers a fresh perspective, showing the conflict through the eyes of a Templar while exploring the icy North Atlantic and vibrant River Valley.</p>
-            </section>
+            </div>
         </section>
-    </section>
 
-    <!-- Features Section -->
-    <section class="my-5">
-        <h3 class="text-center text-red-500 mb-4">Core Features</h3>
-        <section class="row text-center text-gray-300">
-            <section class="col-md-4">
-                <i class="bi bi-crosshair text-3xl text-red-400 mb-3"></i>
-                <h5>Templar Perspective</h5>
-                <p>Experience the Assassin-Templar conflict from the other side.</p>
-            </section>
-            <section class="col-md-4">
-                <i class="fas fa-ship text-3xl text-red-400 mb-3"></i>
-                <h5>Naval Combat Returns</h5>
-                <p>Command your ship, the Morrigan, in Arctic naval battles.</p>
-            </section>
-            <section class="col-md-4">
-                <i class="bi bi-snow text-3xl text-red-400 mb-3"></i>
-                <h5>Icy Exploration</h5>
-                <p>Traverse the frozen North Atlantic and hidden River Valley settlements.</p>
-            </section>
+        <!-- Features Section -->
+        <section class="features-section">
+            <h3 class="section-title">Core Features</h3>
+            <div class="three-column-grid">
+                <div class="feature-item">
+                    <i class="bi bi-crosshair"></i>
+                    <h5>Templar Perspective</h5>
+                    <p>Experience the Assassin-Templar conflict from the other side.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-ship"></i>
+                    <h5>Naval Combat Returns</h5>
+                    <p>Command your ship, the Morrigan, in Arctic naval battles.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="bi bi-snow"></i>
+                    <h5>Icy Exploration</h5>
+                    <p>Traverse the frozen North Atlantic and hidden River Valley settlements.</p>
+                </div>
+            </div>
         </section>
-    </section>
 
-    <!-- Characters -->
-    <section class="text-center my-5">
-        <h3 class="text-red-500 mb-4">Notable Characters</h3>
-        <section class="row justify-content-center g-4">
-            <section class="col-md-3">
-                <img src="../Media/Shay.png" alt="Shay" class="rounded mb-2 w-100" />
-                <h5>Shay Cormac</h5>
-            </section>
-            <section class="col-md-3">
-                <img src="../Media/Haytham.png" alt="Haytham" class="rounded mb-2 w-100" />
-                <h5>Haytham Kenway</h5>
-            </section>
-            <section class="col-md-3">
-                <img src="../Media/Achilles.png" alt="Achilles" class="rounded mb-2 w-100" />
-                <h5>Achilles Davenport</h5>
-            </section>
+        <!-- Characters -->
+        <section>
+            <h3 class="section-title">Notable Characters</h3>
+            <div class="three-column-grid">
+                <div class="character-card">
+                    <img src="../Media/Shay.png" alt="Shay" />
+                    <h5>Shay Cormac</h5>
+                </div>
+                <div class="character-card">
+                    <img src="../Media/Haytham.png" alt="Haytham" />
+                    <h5>Haytham Kenway</h5>
+                </div>
+                <div class="character-card">
+                    <img src="../Media/Achilles.png" alt="Achilles" />
+                    <h5>Achilles Davenport</h5>
+                </div>
+            </div>
         </section>
-    </section>
 
-    <!-- Gallery -->
-    <section class="my-5">
-        <h3 class="text-center text-red-500 mb-4">Game Gallery</h3>
-        <section class="row g-3">
-            <section class="col-md-4"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_a1fa7dde874ab03dacfd0dd62633e316d34aa672.600x338.jpg" class="img-fluid rounded shadow" /></section>
-            <section class="col-md-4"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_142c19862c8bb307252dedf7f17cda4eb5f3f2b8.600x338.jpg" class="img-fluid rounded shadow" /></section>
-            <section class="col-md-4"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_221f6e993cdfc946eb1d61129b535d9d18b1c603.600x338.jpg" class="img-fluid rounded shadow" /></section>
+        <!-- Gallery -->
+        <section>
+            <h3 class="section-title">Game Gallery</h3>
+            <div class="three-column-grid">
+                <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_a1fa7dde874ab03dacfd0dd62633e316d34aa672.600x338.jpg" alt="AC Rogue Screenshot 1" /></div>
+                <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_142c19862c8bb307252dedf7f17cda4eb5f3f2b8.600x338.jpg" alt="AC Rogue Screenshot 2" /></div>
+                <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_221f6e993cdfc946eb1d61129b535d9d18b1c603.600x338.jpg" alt="AC Rogue Screenshot 3" /></div>
+            </div>
         </section>
-    </section>
 
-    <!-- Call to Action -->
-    <section class="text-center bg-gray-900 p-5 rounded-xl my-5">
-        <h3 class="text-2xl font-bold text-red-500 mb-3">Walk the Templar Path</h3>
-        <p class="mb-4 text-gray-300">Challenge your ideals, shape history, and embrace a darker legacy.</p>
-        <a href="https://www.ubisoft.com/en-gb/game/assassins-creed/rogue-remastered" target="_blank" class="btn btn-danger px-4 py-2 rounded-pill">
-            Play Now
-        </a>
-    </section>
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h3>Walk the Templar Path</h3>
+            <p>Challenge your ideals, shape history, and embrace a darker legacy.</p>
+            <a href="https://www.ubisoft.com/en-gb/game/assassins-creed/rogue-remastered" target="_blank" class="btn">
+                Play Now
+            </a>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="text-center py-4">
-        <p class="text-gray-400">&copy; 2025 Assassin's Creed Tribute Page</p>
-        <a href="https://www.ubisoft.com/game/assassins-creed" target="_blank" class="text-gray-400 hover:text-gray-300">Ubisoft Official Site</a>
+    <footer>
+        <p>&copy; 2025 Assassin's Creed Tribute Page</p>
+        <a href="https://www.ubisoft.com/game/assassins-creed" target="_blank">Ubisoft Official Site</a>
     </footer>
 
-    <!-- JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

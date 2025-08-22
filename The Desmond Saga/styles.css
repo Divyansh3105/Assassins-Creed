@@ -1,0 +1,427 @@
+/* Imports the custom font used throughout the site */
+@font-face {
+    font-family: Assasign;
+    src: url(../Media/Assassin$.ttf);
+}
+
+/* Universal box-sizing reset for consistent layout */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    cursor: url(../Media/Unavailable.cur), pointer;
+}
+
+/* ======================================== */
+/* == GLOBAL STYLES                      == */
+/* ======================================== */
+
+/* Default styles for the entire page */
+body {
+    background-color: black;
+    color: white;
+    font-family: Assasign, sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    font-size: 19px;
+}
+
+/* Basic typography settings */
+h1, h2, h3, h5 {
+    font-weight: 700;
+}
+
+/* Gradient text effect for main section titles */
+h2 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #dc2626, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+/* Default paragraph styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+/* Removes the default underline from links */
+a {
+    text-decoration: none;
+}
+
+
+/* ======================================== */
+/* == HEADER & NAVIGATION                == */
+/* ======================================== */
+
+/* Header container */
+header {
+    background-color: black;
+    padding: 1rem 1.5rem;
+}
+
+/* Navigation bar layout */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+#logo {
+    height: 4rem;
+}
+
+/* Navigation links container */
+.content {
+    display: flex;
+    list-style: none;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Styling for navigation links and the dropdown button */
+.content a, .dropdownto {
+    text-decoration: none;
+    color: #dc3545;
+    transition: color 0.2s ease-in-out;
+}
+.content a:hover, .dropdownto:hover {
+    color: #f8f9fa;
+}
+
+/* Dropdown Menu styling */
+.dropdown {
+    position: relative; /* Parent for absolute positioning of the menu */
+}
+.dropdownto {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+.dropdownto:focus { outline: none; }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0; /* Aligns menu to the right to prevent going off-screen */
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    min-width: 14rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    list-style: none;
+    background-color: #212529;
+    background-clip: padding-box;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+}
+
+/* Shows the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    color: #dc3545;
+}
+.dropdown-menu a:hover {
+    background-color: #dc3545;
+    color: #fff !important;
+}
+/* Style for the currently active page link in the dropdown */
+.active-dropdown-item {
+    font-weight: 800;
+    color: #fff !important;
+}
+
+/* ======================================== */
+/* == HERO SECTIONS                      == */
+/* ======================================== */
+
+/* Dark overlay for all hero banners */
+.hero-overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+/* Gradient text for hero titles */
+.hero-overlay h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #dc2626, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Hero banner for the main landing page (Home.html) */
+#hero-modern {
+    height: 24rem;
+    background-image: url('../Media/ModernBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Hero banner for the Kenway Saga home page */
+#hero-kenway {
+    height: 24rem;
+    background-image: url('../Media/KenwaySagaBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Hero banner for the European Revolution Era home page */
+#hero-european {
+    height: 24rem;
+    background-image: url('../Media/EuropeanBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Hero banner for the Desmond Saga home page */
+#hero-desmond {
+    height: 24rem;
+    background-image: url('../Media/DesmondSagaBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Generic hero banner for game detail pages (Mirage.html, etc.) */
+.hero-game-detail {
+    height: 24rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+/* ======================================== */
+/* == GAME CARD STYLES (HOME.HTML)       == */
+/* ======================================== */
+
+/* Container for the game cards section */
+#master-assassins {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem;
+}
+
+#master-assassins h2 {
+    margin-bottom: 3rem;
+}
+
+/* Responsive grid for the game cards */
+.assassin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual game card styling */
+a.assassin-card {
+    display: block;
+    background-color: rgba(31, 41, 55, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border: 2px solid #4a1414;
+    padding: 1rem;
+}
+a.assassin-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    border-color: #991b1b;
+}
+
+.assassin-card img {
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.assassin-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.assassin-card p {
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+/* ======================================== */
+/* == GAME DETAIL STYLES (MIRAGE.HTML)   == */
+/* ======================================== */
+
+/* Main content container for game detail pages */
+.game-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Title for sections within a game page */
+.section-title {
+    text-align: center;
+    color: #ef4444; /* red-500 */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+}
+/* Subtitle used next to the video embed */
+.section-subtitle {
+    color: #ef4444; /* red-500 */
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive two-column layout (for video/text and characters) */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+    .two-column-layout {
+        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+}
+
+/* Responsive container for YouTube video embeds */
+.video-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 0.5rem;
+}
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive three-column layout (for features and gallery) */
+.three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Container for the features section */
+.features-section {
+    margin: 3rem 0;
+}
+
+/* Individual feature item (icon, title, text) */
+.feature-item i {
+    font-size: 3rem;
+    color: #f87171; /* red-400 */
+    margin-bottom: 1rem;
+}
+.feature-item h5 {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+/* Individual character card */
+.character-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.character-card h5 {
+    font-size: 1.25rem;
+}
+
+/* Individual gallery image */
+.gallery-item img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+/* Call-to-action section at the bottom of game pages */
+.cta-section {
+    text-align: center;
+    background-color: #1f2937; /* gray-800 */
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    margin: 4rem auto;
+}
+.cta-section h3 {
+    font-size: 1.75rem;
+    color: #ef4444; /* red-500 */
+    margin-bottom: 1rem;
+}
+/* Button styling for the CTA */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 9999px; /* Creates a pill shape */
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 1.1rem;
+    border: none;
+}
+.btn:hover {
+    background-color: #c82333;
+}
+
+
+/* ======================================== */
+/* == FOOTER                             == */
+/* ======================================== */
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid #374151; /* gray-700 */
+}
+
+footer p {
+    color: #9ca3af;
+}
+
+footer a {
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e5e7eb;
+}

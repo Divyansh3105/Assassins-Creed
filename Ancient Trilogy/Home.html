@@ -5,88 +5,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ancient Trilogy</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-black text-light overflow-x-hidden">
+<body>
 
-    <!-- Header -->
-    <header class="bg-black text-white py-4 px-6">
-        <nav class="flex items-center justify-between">
+    <header>
+        <nav>
             <a href="../index.html">
-                <img src="../Media/logo.png" alt="logo" class="h-16">
+                <img src="../Media/logo.png" alt="logo" id="logo">
             </a>
-            <ul class="flex space-x-6 text-lg">
-                <li><a href="../index.html" class="text-danger">Home</a></li>
-                <li><a href="../Assassins.html" class="text-danger">Legendary Assassins</a></li>
-                <li class="dropdown relative">
-                    <button class="text-danger border-0 dropdownto focus:outline-none font-extrabold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="content">
+                <li><a href="../index.html" class="active-link">Home</a></li>
+                <li><a href="../Assassins.html">Legendary Assassins</a></li>
+                <li class="dropdown">
+                    <button class="dropdownto" type="button">
                         Games
                     </button>
-                    <ul class="dropdown-menu absolute bg-transparent text-transparent w-56">
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../The Desmond Saga/Home.html">The Desmond Saga</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Colonial Era/Home.html">Colonial Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../European Revolution Era/Home.html">European Revolution Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent font-extrabold" href="../Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Modern Classic Return/Home.html">Modern Classic Return</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../The Desmond Saga/Home.html">The Desmond Saga</a></li>
+                        <li><a class="dropdown-item" href="../Colonial Era/Home.html">Colonial Era</a></li>
+                        <li><a class="dropdown-item" href="../European Revolution Era/Home.html">European Revolution Era</a></li>
+                        <li><a class="active-dropdown-item" href="../Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
+                        <li><a class="dropdown-item" href="../Modern Classic Return/Home.html">Modern Classic Return</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="relative bg-cover bg-center h-96 bg-[url(../Media/AncientBanner.jpg)]">
-        <section class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
-            <h1 class="text-5xl font-extrabold bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">Ancient Trilogy</h1>
+    <section id="hero-modern" style="background-image: url('../Media/AncientBanner.jpg');">
+        <section class="hero-overlay">
+            <h1>Ancient Trilogy</h1>
         </section>
     </section>
 
-    <!-- Game Titles -->
-    <section class="container mx-auto py-12">
-        <h2 class="text-4xl font-bold text-center bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent mb-10">Exploring Ancient Civilizations</h2>
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Assassin's Creed Origins -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="Origins.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/header.jpg" alt="Assassin's Creed Origins" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed: Origins (2017)</h3>
-                    <p class="text-gray-400">Discover the roots of the Brotherhood with Bayek in a stunning recreation of Ancient Egypt during Cleopatra's rise to power.</p>
-                </a>
-            </section>
+    <section id="master-assassins">
+        <h2>Exploring Ancient Civilizations</h2>
+        <section class="assassin-grid">
+            <a href="Origins.html" class="assassin-card">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/header.jpg" alt="Assassin's Creed Origins">
+                <h3>Assassin's Creed: Origins (2017)</h3>
+                <p>Discover the roots of the Brotherhood with Bayek in a stunning recreation of Ancient Egypt during Cleopatra's rise to power.</p>
+            </a>
 
-            <!-- Assassin's Creed Odyssey -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="Odyssey.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/header.jpg" alt="Assassin's Creed Odyssey" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed: Odyssey (2018)</h3>
-                    <p class="text-gray-400">Choose your destiny as Kassandra or Alexios and shape the fate of Ancient Greece during the Peloponnesian War.</p>
-                </a>
-            </section>
+            <a href="Odyssey.html" class="assassin-card">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/header.jpg" alt="Assassin's Creed Odyssey">
+                <h3>Assassin's Creed: Odyssey (2018)</h3>
+                <p>Choose your destiny as Kassandra or Alexios and shape the fate of Ancient Greece during the Peloponnesian War.</p>
+            </a>
 
-            <!-- Assassin's Creed Valhalla -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="Valhalla.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg" alt="Assassin's Creed Valhalla" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed: Valhalla (2020)</h3>
-                    <p class="text-gray-400">Become Eivor, a fierce Viking raider, and forge your legacy across England in a sprawling open-world saga of conquest and myth.</p>
-                </a>
-            </section>
+            <a href="Valhalla.html" class="assassin-card">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg" alt="Assassin's Creed Valhalla">
+                <h3>Assassin's Creed: Valhalla (2020)</h3>
+                <p>Become Eivor, a fierce Viking raider, and forge your legacy across England in a sprawling open-world saga of conquest and myth.</p>
+            </a>
         </section>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <p class="text-gray-400">&copy; 2025 Assassin's Creed Tribute Page</p>
-        <a href="https://www.ubisoft.com/game/assassins-creed" target="_blank" class="text-gray-400 hover:text-gray-300">Ubisoft Official Site</a>
+    <footer>
+        <p>&copy; 2025 Assassin's Creed Tribute Page</p>
+        <a href="https://www.ubisoft.com/game/assassins-creed" target="_blank">Ubisoft Official Site</a>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

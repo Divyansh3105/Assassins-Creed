@@ -6,34 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>The Desmond Saga</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    <!-- Link to the Styles.css file -->
+    <link rel="stylesheet" href="Styles.css">
+    <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-light overflow-x-hidden">
+<body>
 
     <!-- Header -->
-    <header class="bg-black text-white py-4 px-6">
-        <nav class="flex items-center justify-between">
+    <header>
+        <nav>
             <a href="../index.html">
-                <img src="../Media/logo.png" alt="logo" class="h-16">
+                <img id="logo" src="../Media/logo.png" alt="logo">
             </a>
-            <ul class="flex space-x-6 text-lg">
-                <li><a href="../index.html" class="text-danger">Home</a></li>
-                <li><a href="../Assassins.html" class="text-danger">Legendary Assassins</a></li>
-                <li class="dropdown relative">
-                    <button class="text-danger border-0 dropdownto focus:outline-none font-extrabold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Games
-                    </button>
-                    <ul class="dropdown-menu absolute bg-transparent text-transparent w-56">
-                        <li><a class="block px-4 py-2 text-danger bg-transparent font-extrabold" href="../The Desmond Saga/Home.html">The Desmond Saga</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Colonial Era/Home.html">Colonial Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../European Revolution Era/Home.html">European Revolution Era</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
-                        <li><a class="block px-4 py-2 text-danger bg-transparent" href="../Modern Classic Return/Home.html">Modern Classic Return</a></li>
+            <ul class="content">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Assassins.html">Legendary Assassins</a></li>
+                <li class="dropdown">
+                    <button class="dropdownto" type="button">Games</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="../The Desmond Saga/Home.html" class="active-dropdown-item">The Desmond Saga</a></li>
+                        <li><a href="../Colonial Era/Home.html">Colonial Era</a></li>
+                        <li><a href="../European Revolution Era/Home.html">European Revolution Era</a></li>
+                        <li><a href="../Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
+                        <li><a href="../Modern Classic Return/Home.html">Modern Classic Return</a></li>
                     </ul>
                 </li>
             </ul>
@@ -41,70 +37,58 @@
     </header>
 
     <!-- Hero Banner -->
-    <section class="relative bg-cover bg-center h-96 bg-[url(../Media/DesmondSagaBanner.jpg)]">
-        <section class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
-            <h1 class="text-5xl font-extrabold bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent">The Desmond Saga</h1>
-        </section>
+    <section id="hero-desmond">
+        <div class="hero-overlay">
+            <h1>The Desmond Saga</h1>
+        </div>
     </section>
 
-    <!-- Game Titles -->
-    <section class="container mx-auto py-12">
-        <h2 class="text-4xl font-bold text-center bg-gradient-to-r from-red-600 to-white bg-clip-text text-transparent mb-10">The Desmond Miles Era</h2>
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <main class="game-container">
+        <!-- Game Titles -->
+        <h2>The Desmond Miles Era</h2>
+        <div class="assassin-grid">
             <!-- AC1 -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="AC1.html" class="no-underline hover:no-underline">
-                    <img src="../Media/AC1.jpg" alt="Assassin's Creed 1" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed (2007)</h3>
-                    <p class="text-gray-400">The journey begins with Altaïr during the Third Crusade and the awakening of Desmond Miles.</p>
-                </a>
-            </section>
+            <a href="AC1.html" class="assassin-card">
+                <img src="../Media/AC1.jpg" alt="Assassin's Creed 1">
+                <h3>Assassin's Creed (2007)</h3>
+                <p>The journey begins with Altaïr during the Third Crusade and the awakening of Desmond Miles.</p>
+            </a>
 
             <!-- AC2 -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="AC2.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/header.jpg" alt="Assassin's Creed II" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed II (2009)</h3>
-                    <p class="text-gray-400">Enter the Italian Renaissance and meet Ezio Auditore da Firenze on his quest for justice and vengeance.</p>
-                </a>
-            </section>
+            <a href="AC2.html" class="assassin-card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/header.jpg" alt="Assassin's Creed II">
+                <h3>Assassin's Creed II (2009)</h3>
+                <p>Enter the Italian Renaissance and meet Ezio Auditore da Firenze on his quest for justice and vengeance.</p>
+            </a>
 
             <!-- Brotherhood -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="Brotherhood.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/header.jpg" alt="Brotherhood" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed: Brotherhood (2010)</h3>
-                    <p class="text-gray-400">Ezio leads the Brotherhood in Rome, expanding the Assassin Order and continuing the war against the Templars.</p>
-                </a>
-            </section>
+            <a href="Brotherhood.html" class="assassin-card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/header.jpg" alt="Brotherhood">
+                <h3>Assassin's Creed: Brotherhood (2010)</h3>
+                <p>Ezio leads the Brotherhood in Rome, expanding the Assassin Order and continuing the war against the Templars.</p>
+            </a>
 
             <!-- Revelations -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="Revelations.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/header.jpg" alt="Revelations" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed: Revelations (2011)</h3>
-                    <p class="text-gray-400">Ezio follows in Altaïr’s footsteps to unlock secrets buried in Constantinople.</p>
-                </a>
-            </section>
+            <a href="Revelations.html" class="assassin-card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/header.jpg" alt="Revelations">
+                <h3>Assassin's Creed: Revelations (2011)</h3>
+                <p>Ezio follows in Altaïr’s footsteps to unlock secrets buried in Constantinople.</p>
+            </a>
 
             <!-- AC3 -->
-            <section class="bg-gray-800/50 p-4 rounded-lg shadow-lg text-center hover:-translate-y-1 hover:scale-105 transition">
-                <a href="AC3.html" class="no-underline hover:no-underline">
-                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/header.jpg" alt="Assassin's Creed III" class="w-full h-64 object-cover rounded mb-4">
-                    <h3 class="text-2xl font-bold text-red-400 mb-2">Assassin's Creed III (2012)</h3>
-                    <p class="text-gray-400">As the American Revolution rages, Desmond learns his ultimate role through the story of Connor Kenway.</p>
-                </a>
-            </section>
-        </section>
-    </section>
+            <a href="AC3.html" class="assassin-card">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/header.jpg" alt="Assassin's Creed III">
+                <h3>Assassin's Creed III (2012)</h3>
+                <p>As the American Revolution rages, Desmond learns his ultimate role through the story of Connor Kenway.</p>
+            </a>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="text-center py-4">
-        <p class="text-gray-400">&copy; 2025 Assassin's Creed Tribute Page</p>
-        <a href="https://www.ubisoft.com/game/assassins-creed" target="_blank" class="text-gray-400 hover:text-gray-300">Ubisoft Official Site</a>
+    <footer>
+        <p>&copy; 2025 Assassin's Creed Tribute Page</p>
+        <a href="https://www.ubisoft.com/game/assassins-creed" target="_blank">Ubisoft Official Site</a>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
