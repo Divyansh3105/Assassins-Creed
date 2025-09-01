@@ -1,75 +1,127 @@
-# 🗡️ Assassin's Creed Tribute Page
+# 🗡️ Assassin's Creed Tribute Website
 
-Welcome to the Assassin's Creed Tribute Page!
-This fan-made website honors the legendary Assassin’s Creed franchise by **Ubisoft** — showcasing centuries of hidden blade warfare, historical exploration, and the eternal battle between Assassins and Templars. From ancient Egypt to Feudal Japan, this tribute captures the spirit, stories, and signature parkour stealth that define the Brotherhood.
+![Banner](Media/Banner.png)
+
+![Assassin’s Creed](https://img.shields.io/badge/Assassin's_Creed-000000?style=for-the-badge&logo=ubisoft&logoColor=white)
+![Hidden Blade](https://img.shields.io/badge/Hidden_Blade-C1121F?style=for-the-badge&logoColor=white)
+![Animus](https://img.shields.io/badge/Animus-1D3557?style=for-the-badge&logoColor=white)
+![Brotherhood](https://img.shields.io/badge/Brotherhood-6A040F?style=for-the-badge&logoColor=white)
+![Templars vs Assassins](https://img.shields.io/badge/Assassins_vs_Templars-212529?style=for-the-badge&logoColor=white)
+
+---
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)
+
+## 📌 Project Overview
+
+The **Assassin’s Creed Tribute Website** is a fan-made project celebrating the **Assassin’s Creed franchise**.
+It is built with **HTML & CSS**, focusing on **responsive layouts, animations, and clean design** to showcase the evolution of the series.
 
 ## 📖 Description
 
-This tribute website showcases every major Assassin's Creed title by dividing them into key narrative eras:
+This website highlights the journey of **Assassins across centuries**, featuring:
 
-- The Desmond Saga (2007–2012)
-- Colonial Era
-- European Revolution Era
-- Ancient Trilogy
-- Modern Classic Return (Mirage & Shadows)
+- **The Desmond Saga** (AC1–AC3)
+- **The Kenway Saga** (Black Flag, Rogue, AC3)
+- **Ezio Trilogy** (AC2, Brotherhood, Revelations)
+- **Industrial Revolution Titles** (Unity, Syndicate)
+- **Ancient Trilogy** (Origins, Odyssey, Valhalla)
 
-Each era includes individual game pages featuring banners, storylines, character highlights, trailers, and era-appropriate visuals. A special "Legendary Assassins" section is dedicated to iconic protagonists from all games.
+Each section has dedicated **tribute pages** with banners, characters, trailers, lore, and the Brotherhood’s creed.
+A “**Legacy of the Assassins**” page pays homage to iconic Assassins across time.
 
-## 🌐 Live Demo
+🌐 **Live Demo:** [Assassin's Creed Tribute Website](https://assassins-creed-tribute.netlify.app)
 
-[🔗 Visit the live site](https://assassins-creed-tribute.netlify.app/)
+💻 **GitHub Repo:** [Divyansh3105/Assassins-Creed](https://github.com/Divyansh3105/Assassins-Creed)
 
-## 🎮 Features
+---
 
-- 🕹️ Game Tributes
-  Explore detailed tribute pages for each major Assassin's Creed game — from **AC (2007)** to **Assassin’s Creed Shadows (2024)**
+## 🚀 Features
+- 🗡️ Tribute pages for multiple **Assassin’s Creed games**
+- 📱 **Responsive design** – Works smoothly on desktop, tablet, and mobile
+- 🧭 **Unified Navigation** – Consistent navbar and footer across pages
+- 🎨 Pure **HTML + CSS styling** for modern and lightweight UI
+- 🖼️ Engaging sections with banners, lore, and character highlights
+- 🌍 Deployed seamlessly on **Netlify**
 
-- 🧍 Legendary Assassins
-  Discover iconic characters like **Altair**, **Ezio**, **Connor**, **Edward Kenway**, **Arno**, **Bayek**, **Kassandra**, **Eivor**, **Basim**, and the newest — **Yasuke** & **Naoe**
+---
 
-- 🏛️ Organized Game Categories
-  Titles are grouped into:
-  - The Desmond Saga
-  - Colonial Era
-  - European Revolution Era
-  - Ancient Trilogy
-  - Modern Classic Return
+## 🛠️ Tech Stack
+- **Frontend:** HTML5, CSS3
+- **Deployment:** Netlify
+- **Version Control:** Git & GitHub
 
-- 📸 Visual Content
-  Game banners, screenshots, trailers, and promotional art throughout the site
+---
 
-- 🧭 Smooth Navigation
-  Fixed navbar with dropdown menus for quick access to any timeline or game
+## 📂 Project Structure
+```
+Assassins-Creed/
+│── index.html              # Landing page
+│── desmond-saga/           # Desmond Saga (AC1–AC3)
+│── ezio-trilogy/           # AC2, Brotherhood, Revelations
+│── kenway-saga/            # Edward, Haytham, Connor stories
+│── industrial-era/         # Unity & Syndicate
+│── ancient-trilogy/        # Origins, Odyssey, Valhalla
+│── assets/                 # Images, icons, and media
+│── README.md               # Project documentation
+```
 
-- 📱 Fully Responsive Design
-  Works seamlessly across desktops, tablets, and mobile devices
-
-## 🛠️ Technologies Used
-
-- **HTML5** — for semantic markup and page structure
-- **Tailwind CSS** — for utility-first modern styling
-- **Bootstrap 4 & 5** — for grid layout, responsive design, and interactive components
-- **Bootstrap Icons** — used for clean, minimal iconography
-- **YouTube Embeds** — for official game trailers
+---
 
 ## 📸 Screenshots
 
-<div align="center">
-    <img width="70%" src="Media/ss1.png" alt="Screenshot 1">
-    <img width="70%" src="Media/ss2.png" alt="Screenshot 2">
-    <img width="70%" src="Media/ss3.png" alt="Screenshot 3">
-</div>
+### 🔹 Homepage
+![Homepage Screenshot](Media/ss1.png)
 
-## License
+### 🔹 Game Page Example
+![Game Page Screenshot](Media/ss3.png)
 
-This project is open-source and available under the MIT License.
+---
 
-## Author
+## 📖 How to Run Locally
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Divyansh3105/Assassins-Creed.git
+   ```
+
+2. Open the project folder:
+   ```bash
+   cd Assassins-Creed
+   ```
+
+3. Run the website:
+   - Simply open `index.html` in your browser.
+
+---
+
+## 🎯 Purpose of the Project
+This project was developed as a **portfolio showcase project** to:
+- Practice **multi-page responsive design** using only HTML & CSS.
+- Demonstrate ability to structure **content-rich tribute sites**.
+- Present a visually engaging fan tribute to the **Assassin’s Creed universe**.
+- Highlight creative storytelling combined with **modern web UI/UX practices**.
+
+---
+
+## 📌 Future Enhancements
+- 🌑 Add **Dark/Light Mode toggle**
+- 🎥 Integrate **trailers and gameplay clips**
+- 🔎 Implement a **search/filter system** for games by timeline
+
+---
+
+## 👨‍💻 Author
 **Divyansh Garg**
+- 🌐 [Portfolio](https://divyansh3105.github.io/Portfolio/)
+- 💼 [LinkedIn](www.linkedin.com/in/divyanshgarg3105)
+- 💻 [GitHub](https://github.com/Divyansh3105)
 
-## Contact
+---
 
-- 📧 Email: divyanshgarg3105@gmail.com
-- 🌐 GitHub: [GitHub Profile](https://github.com/Divyansh3105)
+✨ *This is a fan-made tribute website and not affiliated with Ubisoft or the official Assassin’s Creed franchise.*
 
+⭐ If you like this project, consider giving it a **star** on GitHub!
