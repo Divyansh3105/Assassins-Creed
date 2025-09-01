@@ -77,7 +77,7 @@ Assassins-Creed/
 ![Homepage Screenshot](Media/ss1.png)
 
 ### 🔹 Game Page Example
-![Game Page Screenshot](Media/ss3.png)
+![Game Page Screenshot](Media/ss2.png)
 
 ---
 
