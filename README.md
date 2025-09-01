@@ -59,14 +59,16 @@ A “**Legacy of the Assassins**” page pays homage to iconic Assassins across 
 ## 📂 Project Structure
 ```
 Assassins-Creed/
-│── index.html              # Landing page
-│── desmond-saga/           # Desmond Saga (AC1–AC3)
-│── ezio-trilogy/           # AC2, Brotherhood, Revelations
-│── kenway-saga/            # Edward, Haytham, Connor stories
-│── industrial-era/         # Unity & Syndicate
-│── ancient-trilogy/        # Origins, Odyssey, Valhalla
-│── assets/                 # Images, icons, and media
-│── README.md               # Project documentation
+│── index.html                      # Landing page
+│── styles.css                      # Landing page style
+│── Assassins.html                  # Top Assassigns page
+│── The Desmond Saga/               # Desmond Saga (AC1–AC3, Brotherhood, Revelations)
+│── Modern Classic Return/          # Mirage, Shadows
+│── European Revolution Era/        # Unity & Syndicate
+│── Ancient Trilogy/                # Origins, Odyssey, Valhalla
+│── Colonial Era/                   # BlackFlag, Rogue
+│── Media/                          # Images, icons, and media
+│── README.md                       # Project documentation
 ```
 
 ---
