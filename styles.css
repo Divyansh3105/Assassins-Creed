@@ -276,27 +276,44 @@ header nav {
     text-align: center;
 }
 
-/* Footer (Shared) */
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    font-size: 1.1rem;
-}
-footer p {
-    color: #9ca3af;
-}
-footer a {
-    color: #9ca3af;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #e5e7eb;
+/* --------- Footer --------- */
+.main-footer {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(3, 4, 10, 0.8);
+  text-align: center;
 }
 
-/* ======================================== */
-/* == NEW STYLES FOR ASSASSINS.HTML PAGE == */
-/* ======================================== */
+.main-footer p {
+  color: #9ca3af;
+  font-size: 1.25rem;
+  margin: 6px 0;
+}
+
+.main-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+  color: #dc3545;
+}
+
+.footer-icons {
+  margin-top: 6px;
+}
+
+.footer-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #dc3545;
+}
 
 /* Hero Section (Assassins Page) */
 #hero-assassins {
@@ -357,4 +374,48 @@ footer a:hover {
 }
 .assassin-card p {
     padding: 0 1rem 1.5rem 1rem;
+}
+
+/* === CUSTOM SCROLLBAR & SELECTION STYLES === */
+
+/* SCROLLBAR STYLING - WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #dc3545, #ef4444);
+  border-radius: 6px;
+  border: 2px solid #000000;
+  box-shadow: 0 0 6px #dc3545;
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ef4444, #dc3545);
+  box-shadow: 0 0 12px #ef4444;
+}
+
+/* SCROLLBAR STYLING - Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #dc3545 #000000;
+}
+
+/* SELECTION STYLING */
+::selection {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* Firefox Selection Styling */
+::-moz-selection {
+  background: #dc3545;
+  color: #ffffff;
 }
