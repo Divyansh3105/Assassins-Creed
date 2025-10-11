@@ -755,6 +755,163 @@ header nav {
 
 /* ---------------- SMALL PHONES (max-width: 576px) ---------------- */
 @media (max-width: 576px) {
+  /* ---------------- HEADER & NAV ---------------- */
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-top: 5.5rem;
+    z-index: 1100;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  #menu-toggle:checked ~ .content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .content li {
+    width: 100%;
+  }
+
+  .content a,
+  .dropdownto {
+    display: block;
+    width: 100%;
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    text-decoration: none;
+    border-radius: 50rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .content a:hover,
+  .dropdownto:hover {
+    background: rgba(220, 53, 69, 0.2);
+    color: #ccc;
+  }
+
+  /* ---------------- HAMBURGER ---------------- */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.5rem;
+    z-index: 1101;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* ---------------- OVERLAY ---------------- */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  #menu-toggle:checked ~ .overlay {
+    display: block;
+    opacity: 1;
+  }
+
+  /* ---------------- GAME DROPDOWN ---------------- */
+  .dropdown {
+    width: 100%;
+    position: relative;
+  }
+
+  .dropdownto {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .dropdownto::after {
+    content: "▼";
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    transition: transform 0.4s ease, content 0.3s ease;
+  }
+
+  #games-toggle:checked + .dropdownto::after {
+    content: "▲";
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5rem;
+    margin-top: 0.2rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  #games-toggle:checked ~ .dropdown-menu {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.05rem;
+    color: #ccc;
+    background: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover {
+    color: #fff;
+  }
+
   body {
     font-size: 16px;
   }
@@ -762,13 +919,6 @@ header nav {
   header nav {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-    padding-top: 5.5rem;
   }
 
   #hero,
