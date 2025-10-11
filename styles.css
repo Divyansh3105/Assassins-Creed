@@ -1,279 +1,324 @@
 @font-face {
-    font-family: Assasign;
-    src: url(Media/Assassin$.ttf);
+  font-family: Assasign;
+  src: url(Media/Assassin$.ttf);
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    cursor:url(../Media/Unavailable.cur),pointer;
+  box-sizing: border-box;
+  cursor: url(../Media/Unavailable.cur), pointer;
+}
+
+#menu-toggle,
+#games-toggle {
+  display: none;
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: Assasign, sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-    font-size: 19px;
+  background-color: black;
+  color: white;
+  font-family: Assasign, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 19px;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
+h1,
+h2,
+h3 {
+  font-weight: 700;
 }
 
 h2 {
-    font-size: 3rem;
-    background: linear-gradient(to right, #dc2626, #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-align: center;
+  font-size: 3rem;
+  background: linear-gradient(to right, #dc2626, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
 }
 
 p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #9ca3af;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #9ca3af;
 }
 
 /* Header */
 header {
-    background-color: black;
-    padding: 1rem 1.5rem;
+  background-color: black;
+  padding: 1rem 1.5rem;
 }
 
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1600px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 #logo {
-    height: 4rem;
+  height: 4rem;
 }
 
 .content {
-    display: flex;
-    list-style: none;
-    font-size: 1.3rem;
-    margin: 0;
-    padding: 0;
-    gap: 1.5rem;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+  margin-left: auto;
 }
 
 .content a {
-    text-decoration: none;
-    color: #dc3545;
+  text-decoration: none;
+  color: #dc3545;
 }
 .content a:hover {
-    color: #f8f9fa;
+  color: #f8f9fa;
 }
 .content .home-link {
-    font-weight: 800; /* Bolds the Home link on the home page */
+  font-weight: 800; /* Bolds the Home link on the home page */
 }
 .content .assassins-link {
-    font-weight: 800; /* Bolds the Assassins link on the assassins page */
+  font-weight: 800; /* Bolds the Assassins link on the assassins page */
 }
 
 /* Dropdown */
-.dropdown { position: relative; }
-.dropdownto {
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    font-size: inherit;
-    color: #dc3545;
+/* Dropdown */
+.dropdown {
+  position: relative;
 }
-.dropdownto:focus { outline: none; }
 
+/* Dropdown toggle button */
+.dropdownto {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: #dc3545;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdownto:focus {
+  outline: none;
+}
+
+/* Dropdown menu (under the button) */
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0; /* Aligns menu to the right to prevent going off-screen */
-    z-index: 1000;
-    display: none; /* Hidden by default */
-    min-width: 14rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
-    list-style: none;
-    background-color: #212529;
-    background-clip: padding-box;
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    border-radius: 0.25rem;
-    font-size: 1.1rem;
+  position: absolute;
+  top: 100%; /* directly below the Games button */
+  left: 0; /* aligned under Games */
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  min-width: 14rem;
+  padding: 0.5rem 0;
+  margin: 0.25rem 0 0;
+  list-style: none;
+  background-color: #212529;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
 }
-.dropdown:hover .dropdown-menu {
-    display: block;
+
+/* Checkbox toggle controls visibility */
+#games-toggle:checked ~ .dropdown-menu {
+  display: flex;
 }
+
+/* Dropdown links */
 .dropdown-menu a {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    color: #dc3545;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: #dc3545;
+  background: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Hover effect */
 .dropdown-menu a:hover {
-    background-color: #dc3545;
-    color: #fff !important;
+  background-color: #dc3545;
+  color: #fff !important;
+}
+
+/* Hide dropdown when menu is closed */
+#menu-toggle:not(:checked) ~ .content .dropdown-menu {
+  display: none;
+}
+
+/* Optional: Close dropdown automatically on reopen (CSS-only trick) */
+#games-toggle:checked + .dropdownto:active + .dropdown-menu {
+  display: none;
 }
 
 /* Hero Section (Home Page) */
 #hero {
-    height: 24rem;
-    background-image: url('Media/AC_Hero.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  height: 24rem;
+  background-image: url("Media/AC_Hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .hero-overlay {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero-content {
-    text-align: center;
-    color: white;
-    padding: 0 1.5rem;
+  text-align: center;
+  color: white;
+  padding: 0 1.5rem;
 }
 #hero h1 {
-    font-size: 3rem;
-    background: linear-gradient(to right, #dc2626, #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  font-size: 3rem;
+  background: linear-gradient(to right, #dc2626, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 #hero p {
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-    color: #fff;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  color: #fff;
 }
 
 /* About Section (Home Page) */
 #about {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 4.5rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
 }
 #about h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 #about p {
-    text-align: left;
+  text-align: left;
 }
 #about b {
-    color: #fff;
+  color: #fff;
 }
 
 /* Game Styles Section (Home Page) */
 #game-styles {
-    padding: 0 1.5rem 5rem 1.5rem;
+  padding: 0 1.5rem 5rem 1.5rem;
 }
 #game-styles h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .nav-pills {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 3rem; /* Controls gap between pills and cards */
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 3rem; /* Controls gap between pills and cards */
+  gap: 1rem;
 }
 .nav-link {
-    display: block;
-    text-decoration: none;
-    color: #f8f9fa;
-    background-color: #dc3545;
-    border: 1px solid transparent;
-    border-radius: 50rem;
-    padding: 0.5rem 1.5rem;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: #f8f9fa;
+  background-color: #dc3545;
+  border: 1px solid transparent;
+  border-radius: 50rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 .nav-link.active {
-    box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.6);
+  box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.6);
 }
 .tab-content {
-    max-width: 1140px;
-    margin: 0 auto;
+  max-width: 1140px;
+  margin: 0 auto;
 }
-.tab-pane { display: none; }
-.tab-pane.show.active { display: block; }
+.tab-pane {
+  display: none;
+}
+.tab-pane.show.active {
+  display: block;
+}
 
 .card-grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 @media (min-width: 768px) {
-    .card-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 .card {
-    background-color: rgba(31, 41, 55, 0.5);
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  background-color: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 .card-icon {
-    font-size: 3rem;
-    color: #ef4444;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #ef4444;
+  margin-bottom: 1rem;
 }
 .card h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 /* Stats Section (Home Page) */
 #legacy {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem 5rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem 1.5rem;
 }
 #legacy h2 {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 .stats-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
 }
 @media (min-width: 768px) {
-    .stats-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 .stat-item {
-    background-color: rgba(31, 41, 55, 0.5);
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    text-align: center;
+  background-color: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 .stat-number {
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: #ef4444;
-    margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ef4444;
+  margin-bottom: 1rem;
 }
 .stat-number.large-text {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 .stat-label {
-    text-align: center;
+  text-align: center;
 }
 
 /* --------- Footer --------- */
@@ -317,63 +362,63 @@ header nav {
 
 /* Hero Section (Assassins Page) */
 #hero-assassins {
-    height: 24rem;
-    background-image: url('Media/AC_Legends.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 24rem;
+  background-image: url("Media/AC_Legends.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #hero-assassins h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    background: linear-gradient(to right, #dc2626, #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: 2; /* Ensure text is above the overlay */
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #dc2626, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 2; /* Ensure text is above the overlay */
 }
 
 /* Master Assassins Section */
 #master-assassins {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 4.5rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
 }
 #master-assassins h2 {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 .assassin-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 .assassin-card {
-    display: block;
-    background-color: rgba(31, 41, 55, 0.5);
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    border: 2px solid #4a1414;
-    padding: 0;
+  display: block;
+  background-color: rgba(31, 41, 55, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border: 2px solid #4a1414;
+  padding: 0;
 }
 .assassin-card img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 .assassin-card h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 1rem;
 }
 .assassin-card p {
-    padding: 0 1rem 1.5rem 1rem;
+  padding: 0 1rem 1.5rem 1rem;
 }
 
 /* === CUSTOM SCROLLBAR & SELECTION STYLES === */
@@ -418,4 +463,358 @@ header nav {
 ::-moz-selection {
   background: #dc3545;
   color: #ffffff;
+}
+
+/* ================= RESPONSIVENESS ================= */
+
+/* Tablets and smaller desktops (max-width: 992px) */
+@media (max-width: 992px) {
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.1rem;
+    gap: 1rem;
+  }
+
+  #hero,
+  #hero-assassins {
+    height: 18rem;
+  }
+
+  #hero h1,
+  #hero-assassins h1 {
+    font-size: 2.2rem;
+  }
+
+  #about,
+  #master-assassins,
+  #legacy {
+    padding: 3rem 1rem;
+  }
+
+  .assassin-card img {
+    height: 280px;
+  }
+}
+
+/* Tablets and large phones (max-width: 768px) */
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger container */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem; /* stays on right side */
+  top: 1.2rem;
+  z-index: 1001; /* above menu */
+}
+
+/* Hamburger bars */
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #dc3545;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* When checked → animate to X */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---------------- TABLETS & LARGE PHONES (max-width: 768px) ---------------- */
+@media (max-width: 768px) {
+  /* ---------------- HEADER & NAV ---------------- */
+  header nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-top: 6rem;
+    z-index: 1100;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  #menu-toggle:checked ~ .content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .content li {
+    width: 100%;
+  }
+
+  .content a,
+  .dropdownto {
+    display: block;
+    width: 100%;
+    padding: 1.1rem 2rem;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    text-decoration: none;
+    border-radius: 50rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .content a:hover,
+  .dropdownto:hover {
+    background: rgba(220, 53, 69, 0.2);
+    color: #ccc;
+  }
+
+  /* ---------------- HAMBURGER ---------------- */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.5rem;
+    z-index: 1101;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* ---------------- OVERLAY ---------------- */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  #menu-toggle:checked ~ .overlay {
+    display: block;
+    opacity: 1;
+  }
+
+  /* ---------------- GAME DROPDOWN ---------------- */
+  .dropdown {
+    width: 100%;
+    position: relative;
+  }
+
+  .dropdownto {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .dropdownto::after {
+    content: "▼";
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    transition: transform 0.4s ease, content 0.3s ease;
+  }
+
+  #games-toggle:checked + .dropdownto::after {
+    content: "▲";
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.5rem;
+    margin-top: 0.2rem;
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  #games-toggle:checked ~ .dropdown-menu {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.05rem;
+    color: #ccc;
+    background: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover {
+    color: #fff;
+  }
+
+  /* ---------------- HERO + TEXT RESIZING ---------------- */
+  #hero,
+  #hero-assassins {
+    height: 18rem;
+  }
+
+  #hero h1,
+  #hero-assassins h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  .nav-pills {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .assassin-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .assassin-card img {
+    height: 250px;
+  }
+}
+
+/* ---------------- SMALL PHONES (max-width: 576px) ---------------- */
+@media (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding-top: 5.5rem;
+  }
+
+  #hero,
+  #hero-assassins {
+    height: 15rem;
+    padding: 0 1rem;
+  }
+
+  #hero h1,
+  #hero-assassins h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  #hero p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #about,
+  #master-assassins,
+  #legacy,
+  #game-styles {
+    padding: 2rem 1rem;
+  }
+
+  .card-grid,
+  .stats-grid,
+  .assassin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .assassin-card img {
+    height: 220px;
+  }
+
+  .main-footer p {
+    font-size: 1rem;
+  }
+
+  .footer-icons a {
+    font-size: 1.2rem;
+    margin: 0 5px;
+  }
 }
