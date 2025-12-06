@@ -7,8 +7,22 @@
     <link rel="stylesheet" href="Styles.css">
     <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <header>
         <nav>
@@ -40,6 +54,30 @@
 
     <main class="game-container">
 
+        <!-- Game Info Cards -->
+        <section class="game-info-cards">
+            <div class="info-card">
+                <i class="bi bi-calendar-event"></i>
+                <h4>Release Date</h4>
+                <p>October 5, 2023</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-controller"></i>
+                <h4>Platforms</h4>
+                <p>PC, PS5, Xbox Series X/S</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Setting</h4>
+                <p>Baghdad, Iraq</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-clock-history"></i>
+                <h4>Era</h4>
+                <p>861-870 AD</p>
+            </div>
+        </section>
+
         <section class="two-column-layout">
             <div class="video-responsive">
                 <iframe src="https://www.youtube.com/embed/x55lAlFtXmw?si=Cr_jlj78jvsSBBT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -47,6 +85,15 @@
             <div>
                 <h3 class="section-subtitle">Return to the Roots</h3>
                 <p>In <strong>Assassin's Creed: Mirage</strong>, experience the origins of the Assassins in 9th-century Baghdad. Play as <strong>Basim</strong>, a skilled thief turned assassin, navigating a vibrant city filled with intrigue, stealth, and ancient secrets.</p>
+                <div class="story-highlights">
+                    <h4>Story Highlights</h4>
+                    <ul>
+                        <li>Discover Basim's transformation from street thief to Hidden One</li>
+                        <li>Explore the Golden Age of Baghdad with stunning detail</li>
+                        <li>Uncover the secrets of the ancient Order</li>
+                        <li>Experience classic stealth-focused gameplay</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -89,12 +136,51 @@
             </div>
         </section>
 
+        <!-- Gameplay Mechanics -->
+        <section class="gameplay-section">
+            <h3 class="section-title">Gameplay Mechanics</h3>
+            <div class="two-column-layout">
+                <div class="mechanic-card">
+                    <i class="bi bi-eye-slash-fill"></i>
+                    <h4>Classic Stealth</h4>
+                    <p>Return to the roots with refined stealth mechanics. Use social stealth, blend into crowds, and execute silent assassinations like the original games.</p>
+                </div>
+                <div class="mechanic-card">
+                    <i class="bi bi-compass-fill"></i>
+                    <h4>Dense Urban Exploration</h4>
+                    <p>Navigate the bustling streets and rooftops of Baghdad. Discover hidden secrets, complete contracts, and immerse yourself in the Islamic Golden Age.</p>
+                </div>
+            </div>
+        </section>
+
         <section>
             <h3 class="section-title">Game Gallery</h3>
             <div class="three-column-grid">
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_d2458dc72f538b42218cc16c0ce054810511bd81.600x338.jpg" alt="AC Mirage Screenshot 1" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_93780fe600368be8e4c3bb62469fb49390561300.600x338.jpg" alt="AC Mirage Screenshot 2" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_35ae8d4ea5b72a118082494994fc7eff9cd50a36.600x338.jpg" alt="AC Mirage Screenshot 3" /></div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="legacy-section">
+            <h3 class="section-title">Legacy & Impact</h3>
+            <div class="legacy-content">
+                <p>Assassin's Creed Mirage marks a return to the series' roots, focusing on stealth, parkour, and a tightly crafted narrative. Set in the vibrant city of Baghdad during the Islamic Golden Age, it pays homage to the original game while introducing modern refinements. Basim's story bridges past and future, connecting to the larger AC universe.</p>
+                <div class="awards-grid">
+                    <div class="award-badge">
+                        <i class="bi bi-trophy-fill"></i>
+                        <span>Back to Basics Approach</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Critically Acclaimed Setting</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-heart-fill"></i>
+                        <span>Fan-Favorite Return</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -125,6 +211,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <script src="../script.js"></script>
+    <script src="game-enhancements.js"></script>
 
 </body>
 </html>

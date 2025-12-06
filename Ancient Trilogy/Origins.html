@@ -9,8 +9,22 @@
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header and Navigation -->
     <header>
@@ -44,6 +58,30 @@
 
     <main class="game-container">
 
+        <!-- Game Info Cards -->
+        <section class="game-info-cards">
+            <div class="info-card">
+                <i class="bi bi-calendar-event"></i>
+                <h4>Release Date</h4>
+                <p>October 27, 2017</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-controller"></i>
+                <h4>Platforms</h4>
+                <p>PC, PS4, Xbox One</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Setting</h4>
+                <p>Ancient Egypt</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-clock-history"></i>
+                <h4>Era</h4>
+                <p>49-43 BCE</p>
+            </div>
+        </section>
+
         <!-- Campaign Info -->
         <section class="two-column-layout">
             <div class="video-responsive">
@@ -52,6 +90,15 @@
             <div>
                 <h3 class="section-subtitle">Birth of the Brotherhood</h3>
                 <p><strong>Assassin's Creed: Origins</strong> takes players to Ancient Egypt, where the journey of <strong>Bayek of Siwa</strong> gives rise to the Assassin Brotherhood. Discover a rich open world, RPG elements, and a new combat system that reshaped the franchise.</p>
+                <div class="story-highlights">
+                    <h4>Story Highlights</h4>
+                    <ul>
+                        <li>Witness the birth of the Assassin Brotherhood</li>
+                        <li>Explore the vast deserts and cities of Ancient Egypt</li>
+                        <li>Experience Bayek and Aya's quest for vengeance</li>
+                        <li>Encounter Cleopatra and Julius Caesar</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -96,6 +143,23 @@
             </div>
         </section>
 
+        <!-- Gameplay Mechanics -->
+        <section class="gameplay-section">
+            <h3 class="section-title">Gameplay Mechanics</h3>
+            <div class="two-column-layout">
+                <div class="mechanic-card">
+                    <i class="bi bi-shield-fill-check"></i>
+                    <h4>RPG Combat System</h4>
+                    <p>Experience a completely revamped combat system with hitbox-based attacks, dodging, and parrying. Level up, customize your gear, and unlock powerful abilities in this action-RPG transformation.</p>
+                </div>
+                <div class="mechanic-card">
+                    <i class="bi bi-binoculars-fill"></i>
+                    <h4>Senu the Eagle</h4>
+                    <p>Use your eagle companion to scout locations, mark enemies, and discover secrets from above. Senu revolutionized reconnaissance in the franchise.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery -->
         <section>
             <h3 class="section-title">Game Gallery</h3>
@@ -103,6 +167,28 @@
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.600x338.jpg" alt="AC Origins Screenshot 1" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_c4a4545f51c6836ac11c31427944fc7df813edfb.600x338.jpg" alt="AC Origins Screenshot 2" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_7edc3de6db0e6391158863f766c334c6eab1dbaa.600x338.jpg" alt="AC Origins Screenshot 3" /></div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="legacy-section">
+            <h3 class="section-title">Legacy & Impact</h3>
+            <div class="legacy-content">
+                <p>Assassin's Creed Origins marked a bold new direction for the franchise, introducing RPG mechanics, a revamped combat system, and a massive open world. Set in stunning Ancient Egypt, the game told the origin story of the Brotherhood while modernizing gameplay for a new era. Its success paved the way for Odyssey and Valhalla, establishing the "Ancient Trilogy" formula.</p>
+                <div class="awards-grid">
+                    <div class="award-badge">
+                        <i class="bi bi-trophy-fill"></i>
+                        <span>Franchise Reinvention</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Best Setting 2017</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-gear-fill"></i>
+                        <span>RPG Transformation</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -135,5 +221,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <script src="../script.js"></script>
+    <script src="game-enhancements.js"></script>
+
 </body>
 </html>

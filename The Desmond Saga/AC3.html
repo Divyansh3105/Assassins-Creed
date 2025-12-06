@@ -10,8 +10,22 @@
     <link rel="stylesheet" href="Styles.css">
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header and Navigation -->
     <header>
@@ -45,6 +59,30 @@
 
     <main class="game-container">
 
+        <!-- Game Info Cards -->
+        <section class="game-info-cards">
+            <div class="info-card">
+                <i class="bi bi-calendar-event"></i>
+                <h4>Release Date</h4>
+                <p>October 30, 2012</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-controller"></i>
+                <h4>Platforms</h4>
+                <p>PC, Xbox 360, PS3, Wii U</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Setting</h4>
+                <p>Colonial America</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-clock-history"></i>
+                <h4>Era</h4>
+                <p>1754-1783 AD</p>
+            </div>
+        </section>
+
         <!-- Campaign Info -->
         <section class="two-column-layout">
             <div class="video-responsive">
@@ -53,6 +91,15 @@
             <div>
                 <h3 class="section-subtitle">Revolution Begins</h3>
                 <p><em>Assassin's Creed III</em> introduces Connor Kenway, a half-Mohawk assassin fighting for freedom during the American Revolution. Navigate battlefields, scale forests, and influence a nation's birth. With a revamped engine and combat, AC3 redefined the series with epic scope and emotional storytelling.</p>
+                <div class="story-highlights">
+                    <h4>Story Highlights</h4>
+                    <ul>
+                        <li>Experience Connor's journey from childhood to Master Assassin</li>
+                        <li>Participate in iconic battles like Bunker Hill and Lexington</li>
+                        <li>Navigate the complex relationship between Connor and Haytham</li>
+                        <li>Witness the conclusion of Desmond's modern-day story</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -97,6 +144,23 @@
             </div>
         </section>
 
+        <!-- Gameplay Mechanics -->
+        <section class="gameplay-section">
+            <h3 class="section-title">Gameplay Mechanics</h3>
+            <div class="two-column-layout">
+                <div class="mechanic-card">
+                    <i class="bi bi-tree-fill"></i>
+                    <h4>Frontier & Hunting</h4>
+                    <p>Explore the vast American wilderness. Hunt animals for resources, discover hidden locations, and experience dynamic weather and seasons that affect gameplay.</p>
+                </div>
+                <div class="mechanic-card">
+                    <i class="bi bi-shield-fill-exclamation"></i>
+                    <h4>Revamped Combat</h4>
+                    <p>Experience fluid, brutal combat with dual-wielding weapons, environmental kills, and the iconic tomahawk. Chain kills and counter attacks feel more visceral than ever.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery -->
         <section>
             <h3 class="section-title">Game Gallery</h3>
@@ -104,6 +168,28 @@
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_3c0ef60ea9a2f72df176af41811dde6c5867c6c6.600x338.jpg" alt="AC3 Screenshot 1" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_ab1d62e4bcf7123f5797b16cd7c7e2984a470cb2.600x338.jpg" alt="AC3 Screenshot 2" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_63cd3caea8cbe8881aadd73a98a334a77d320f3a.600x338.jpg" alt="AC3 Screenshot 3" /></div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="legacy-section">
+            <h3 class="section-title">Legacy & Impact</h3>
+            <div class="legacy-content">
+                <p>Assassin's Creed III concluded Desmond's story while introducing a bold new setting and protagonist. The game's ambitious scope, featuring massive battles, naval combat, and a sprawling frontier, pushed the series forward. Connor's journey through the American Revolution offered a unique perspective on history, and the naval gameplay laid the groundwork for Black Flag's success.</p>
+                <div class="awards-grid">
+                    <div class="award-badge">
+                        <i class="bi bi-trophy-fill"></i>
+                        <span>Best of E3 2012</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>12+ Million Copies Sold</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-water"></i>
+                        <span>Revolutionary Naval Combat</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -136,6 +222,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <script src="../script.js"></script>
+    <script src="game-enhancements.js"></script>
 
 </body>
 </html>

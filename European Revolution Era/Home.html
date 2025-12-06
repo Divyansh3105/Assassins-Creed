@@ -10,8 +10,22 @@
     <link rel="stylesheet" href="Styles.css">
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header -->
     <header>
@@ -39,26 +53,53 @@
     <!-- Hero Banner -->
     <section id="hero-european">
         <div class="hero-overlay">
-            <h1>European Revolution Era</h1>
+            <div class="hero-content">
+                <h1>EUROPEAN REVOLUTION ERA</h1>
+                <p class="hero-subtitle">From the streets of Paris to the heart of London.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Revolution in Europe</h2>
+        <div class="about-content">
+            <p>The <b>European Revolution Era</b> takes players through two of history's most transformative periods: the French Revolution and the Industrial Revolution. These games showcase the franchise's evolution with enhanced parkour, cooperative gameplay, and dual protagonists.</p>
+            <p>In <b>Unity</b>, experience the chaos and beauty of Revolutionary Paris through Arno Dorian's quest for redemption. Then in <b>Syndicate</b>, command the Frye twins as they liberate Victorian London from Templar oppression during the height of the Industrial Age.</p>
+            <p>These titles introduced refined combat systems, massive crowds, detailed urban environments, and innovative gameplay mechanics that pushed the series forward while honoring its roots.</p>
         </div>
     </section>
 
     <main class="game-container">
         <!-- Game Titles -->
-        <h2>Revolution in Europe</h2>
+        <h2>Tales of Revolution</h2>
         <div class="assassin-grid">
             <!-- Assassin's Creed Unity -->
             <a href="Unity.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/header.jpg" alt="Assassin's Creed Unity">
-                <h3>Assassin's Creed: Unity (2014)</h3>
-                <p>Set during the French Revolution, join Arno Dorian as he navigates political unrest and personal redemption in Paris.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed: Unity (2014)</h3>
+                    <p class="assassin-era">French Revolution • 1789-1794</p>
+                    <p class="assassin-desc">Set during the French Revolution, join Arno Dorian as he navigates political unrest and personal redemption in Paris.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-person"></i> Arno Dorian</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Paris</span>
+                    </div>
+                </div>
             </a>
 
             <!-- Assassin's Creed Syndicate -->
             <a href="Syndicate.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/header.jpg" alt="Assassin's Creed Syndicate">
-                <h3>Assassin's Creed: Syndicate (2015)</h3>
-                <p>In Industrial London, lead the Frye twins — Jacob and Evie — as they battle Templar control in the heart of the Empire.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed: Syndicate (2015)</h3>
+                    <p class="assassin-era">Victorian Era • 1868</p>
+                    <p class="assassin-desc">In Industrial London, lead the Frye twins — Jacob and Evie — as they battle Templar control in the heart of the Empire.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-people"></i> Frye Twins</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> London</span>
+                    </div>
+                </div>
             </a>
         </div>
     </main>
@@ -81,5 +122,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <!-- Particles.js Initialization -->
+    <script src="../script.js"></script>
+
 </body>
 </html>

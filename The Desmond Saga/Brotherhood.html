@@ -10,8 +10,22 @@
     <link rel="stylesheet" href="Styles.css">
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header and Navigation -->
     <header>
@@ -44,6 +58,30 @@
     </section>
 
     <main class="game-container">
+
+        <!-- Game Info Cards -->
+        <section class="game-info-cards">
+            <div class="info-card">
+                <i class="bi bi-calendar-event"></i>
+                <h4>Release Date</h4>
+                <p>November 16, 2010</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-controller"></i>
+                <h4>Platforms</h4>
+                <p>PC, Xbox 360, PS3, Mac</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Setting</h4>
+                <p>Rome, Italy</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-clock-history"></i>
+                <h4>Era</h4>
+                <p>1499-1507 AD</p>
+            </div>
+        </section>
 
         <!-- Campaign Info -->
         <section class="two-column-layout">
@@ -97,6 +135,23 @@
             </div>
         </section>
 
+        <!-- Gameplay Mechanics -->
+        <section class="gameplay-section">
+            <h3 class="section-title">Gameplay Mechanics</h3>
+            <div class="two-column-layout">
+                <div class="mechanic-card">
+                    <i class="bi bi-people-fill"></i>
+                    <h4>Assassin Recruitment</h4>
+                    <p>Save citizens from guards and recruit them into your Brotherhood. Train them through missions and call upon them in combat for devastating chain kills.</p>
+                </div>
+                <div class="mechanic-card">
+                    <i class="bi bi-flag-fill"></i>
+                    <h4>Borgia Towers</h4>
+                    <p>Liberate districts by assassinating Borgia captains and burning their towers. Restore Rome's economy and unlock new shops and services.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery -->
         <section>
             <h3 class="section-title">Game Gallery</h3>
@@ -104,6 +159,28 @@
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg" alt="ACB Screenshot 1" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_b5fd8f198c7fdaa80e064039abc5b38238a5cef0.600x338.jpg" alt="ACB Screenshot 2" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_69a80289cc74d51d1edd016c1fbf9766ea63126b.600x338.jpg" alt="ACB Screenshot 3" /></div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="legacy-section">
+            <h3 class="section-title">Legacy & Impact</h3>
+            <div class="legacy-content">
+                <p>Brotherhood proved that direct sequels could expand and improve upon their predecessors. The Brotherhood recruitment system became a franchise staple, and the multiplayer mode introduced innovative cat-and-mouse gameplay that stood out in the action genre. Rome's single massive city showcased the series' attention to historical detail.</p>
+                <div class="awards-grid">
+                    <div class="award-badge">
+                        <i class="bi bi-trophy-fill"></i>
+                        <span>Best Action Game 2010</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Metacritic Score: 89/100</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Innovative Multiplayer</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -136,6 +213,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <script src="../script.js"></script>
+    <script src="game-enhancements.js"></script>
 
 </body>
 </html>

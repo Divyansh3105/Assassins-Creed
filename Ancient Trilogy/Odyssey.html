@@ -9,8 +9,22 @@
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header and Navigation -->
     <header>
@@ -44,6 +58,30 @@
 
     <main class="game-container">
 
+        <!-- Game Info Cards -->
+        <section class="game-info-cards">
+            <div class="info-card">
+                <i class="bi bi-calendar-event"></i>
+                <h4>Release Date</h4>
+                <p>October 5, 2018</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-controller"></i>
+                <h4>Platforms</h4>
+                <p>PC, PS4, Xbox One, Switch</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Setting</h4>
+                <p>Ancient Greece</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-clock-history"></i>
+                <h4>Era</h4>
+                <p>431-422 BCE</p>
+            </div>
+        </section>
+
         <!-- Campaign Info -->
         <section class="two-column-layout">
             <div class="video-responsive">
@@ -52,6 +90,15 @@
             <div>
                 <h3 class="section-subtitle">Forge Your Legacy</h3>
                 <p>In <strong>Assassin's Creed: Odyssey</strong>, embark on an epic journey through ancient Greece during the Peloponnesian War. Choose your path as either <strong>Alexios</strong> or <strong>Kassandra</strong>, uncover your Spartan heritage, and shape history through your choices in this RPG-style adventure.</p>
+                <div class="story-highlights">
+                    <h4>Story Highlights</h4>
+                    <ul>
+                        <li>Choose between Alexios or Kassandra as your protagonist</li>
+                        <li>Make choices that impact the story and world</li>
+                        <li>Explore ancient Greece from Athens to Sparta</li>
+                        <li>Uncover the secrets of the First Civilization</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -96,6 +143,23 @@
             </div>
         </section>
 
+        <!-- Gameplay Mechanics -->
+        <section class="gameplay-section">
+            <h3 class="section-title">Gameplay Mechanics</h3>
+            <div class="two-column-layout">
+                <div class="mechanic-card">
+                    <i class="bi bi-chat-square-text-fill"></i>
+                    <h4>Dialogue Choices</h4>
+                    <p>Shape your story through meaningful dialogue choices that affect relationships, quests, and endings. Your decisions have lasting consequences throughout the game.</p>
+                </div>
+                <div class="mechanic-card">
+                    <i class="bi bi-water"></i>
+                    <h4>Naval Exploration</h4>
+                    <p>Command your ship, the Adrestia, across the Aegean Sea. Engage in naval combat, recruit legendary lieutenants, and discover hidden islands.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery -->
         <section>
             <h3 class="section-title">Game Gallery</h3>
@@ -103,6 +167,28 @@
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_0ef33c0f230da6ebac94f5959f0e0a8bbc48cf8a.600x338.jpg" alt="AC Odyssey Screenshot 1" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_3f8f4a09fb1d69648a8c20aae19ca2924ba275bd.600x338.jpg" alt="AC Odyssey Screenshot 2" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_6dc9f95cfb6d264c3535b53ce08f36ee07066550.600x338.jpg" alt="AC Odyssey Screenshot 3" /></div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="legacy-section">
+            <h3 class="section-title">Legacy & Impact</h3>
+            <div class="legacy-content">
+                <p>Assassin's Creed Odyssey expanded on Origins' RPG foundation with deeper choice-driven gameplay and branching narratives. Set in the stunning world of Ancient Greece, it offered unprecedented player agency and one of the largest maps in the series. The game's mythological elements and engaging characters made it a fan favorite in the Ancient Trilogy.</p>
+                <div class="awards-grid">
+                    <div class="award-badge">
+                        <i class="bi bi-trophy-fill"></i>
+                        <span>Best RPG Elements</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Player Choice Pioneer</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-globe"></i>
+                        <span>Massive Open World</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -135,5 +221,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <script src="../script.js"></script>
+    <script src="game-enhancements.js"></script>
+
 </body>
 </html>

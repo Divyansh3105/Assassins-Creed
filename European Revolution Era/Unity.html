@@ -10,8 +10,22 @@
     <link rel="stylesheet" href="Styles.css">
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header and Navigation -->
     <header>
@@ -45,6 +59,30 @@
 
     <main class="game-container">
 
+        <!-- Game Info Cards -->
+        <section class="game-info-cards">
+            <div class="info-card">
+                <i class="bi bi-calendar-event"></i>
+                <h4>Release Date</h4>
+                <p>November 11, 2014</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-controller"></i>
+                <h4>Platforms</h4>
+                <p>PC, PS4, Xbox One</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h4>Setting</h4>
+                <p>Paris, France</p>
+            </div>
+            <div class="info-card">
+                <i class="bi bi-clock-history"></i>
+                <h4>Era</h4>
+                <p>1789-1794 AD</p>
+            </div>
+        </section>
+
         <!-- Campaign Info -->
         <section class="two-column-layout">
             <div class="video-responsive">
@@ -53,6 +91,15 @@
             <div>
                 <h3 class="section-subtitle">Revolution in Paris</h3>
                 <p><strong>Arno Dorian</strong> seeks redemption during the French Revolution in a city boiling with chaos. <em>Assassin's Creed: Unity</em> introduced cooperative gameplay, breathtaking parkour mechanics, and stunningly recreated Parisian landmarks. From Notre-Dame to the Bastille, join a tale of betrayal, justice, and revolution.</p>
+                <div class="story-highlights">
+                    <h4>Story Highlights</h4>
+                    <ul>
+                        <li>Experience Arno's quest for redemption and justice</li>
+                        <li>Witness the French Revolution's most pivotal moments</li>
+                        <li>Explore a meticulously recreated 18th-century Paris</li>
+                        <li>Uncover the conspiracy behind Arno's father's death</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -97,6 +144,23 @@
             </div>
         </section>
 
+        <!-- Gameplay Mechanics -->
+        <section class="gameplay-section">
+            <h3 class="section-title">Gameplay Mechanics</h3>
+            <div class="two-column-layout">
+                <div class="mechanic-card">
+                    <i class="bi bi-people-fill"></i>
+                    <h4>Cooperative Missions</h4>
+                    <p>Team up with up to 3 friends in dedicated co-op missions. Coordinate assassinations, heists, and infiltrations across Paris with unique character customization.</p>
+                </div>
+                <div class="mechanic-card">
+                    <i class="bi bi-arrows-move"></i>
+                    <h4>Advanced Parkour</h4>
+                    <p>Experience the most fluid parkour system yet with controlled descent, seamless climbing, and contextual animations that make navigating Paris feel natural.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery -->
         <section>
             <h3 class="section-title">Game Gallery</h3>
@@ -104,6 +168,28 @@
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_19c1c8d52d714fe8d0a0277c36832b4e0ad5def3.600x338.jpg" alt="AC Unity Screenshot 1" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_d825c8fd7c5472d17732bf3480760dd88924e551.600x338.jpg" alt="AC Unity Screenshot 2" /></div>
                 <div class="gallery-item"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_42c6e1765549541d5576ec5bdb01cbc45f376444.600x338.jpg" alt="AC Unity Screenshot 3" /></div>
+            </div>
+        </section>
+
+        <!-- Legacy Section -->
+        <section class="legacy-section">
+            <h3 class="section-title">Legacy & Impact</h3>
+            <div class="legacy-content">
+                <p>Assassin's Creed Unity pushed the boundaries of the franchise with its stunning recreation of Revolutionary Paris and innovative cooperative gameplay. Despite a rocky launch, the game's attention to historical detail, improved parkour system, and deep customization options earned it a dedicated fanbase. The game's portrayal of Notre-Dame became especially poignant after the 2019 fire.</p>
+                <div class="awards-grid">
+                    <div class="award-badge">
+                        <i class="bi bi-trophy-fill"></i>
+                        <span>Best Co-Op Experience</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Most Detailed City</span>
+                    </div>
+                    <div class="award-badge">
+                        <i class="bi bi-building"></i>
+                        <span>Iconic Notre-Dame</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -136,5 +222,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <script src="../script.js"></script>
+    <script src="game-enhancements.js"></script>
+
 </body>
 </html>

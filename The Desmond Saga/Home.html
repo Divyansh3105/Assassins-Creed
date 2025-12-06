@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
@@ -10,8 +10,22 @@
     <link rel="stylesheet" href="Styles.css">
     <!-- Link to Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- Header -->
     <header>
@@ -39,47 +53,95 @@
     <!-- Hero Banner -->
     <section id="hero-desmond">
         <div class="hero-overlay">
-            <h1>The Desmond Saga</h1>
+            <div class="hero-content">
+                <h1>THE DESMOND SAGA</h1>
+                <p class="hero-subtitle">Where it all began. The original Assassin's Creed experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>The Desmond Miles Era</h2>
+        <div class="about-content">
+            <p>The <b>Desmond Saga</b> represents the foundation of the Assassin's Creed franchise, spanning from 2007 to 2012. This epic storyline follows Desmond Miles, a modern-day bartender who discovers his ancestral connection to legendary Assassins throughout history.</p>
+            <p>Through the revolutionary Animus technology, players experience the memories of <b>Altaïr Ibn-La'Ahad</b> during the Third Crusade, <b>Ezio Auditore da Firenze</b> through the Italian Renaissance, and <b>Connor Kenway</b> during the American Revolution. Each ancestor's story builds toward Desmond's ultimate destiny in preventing a global catastrophe.</p>
+            <p>This saga introduced groundbreaking parkour mechanics, social stealth gameplay, and a rich narrative that blends historical fiction with science fiction, setting the standard for the entire franchise.</p>
         </div>
     </section>
 
     <main class="game-container">
         <!-- Game Titles -->
-        <h2>The Desmond Miles Era</h2>
+        <h2>Journey Through The Saga</h2>
         <div class="assassin-grid">
             <!-- AC1 -->
             <a href="AC1.html" class="assassin-card">
                 <img src="../Media/AC1.jpg" alt="Assassin's Creed 1">
-                <h3>Assassin's Creed (2007)</h3>
-                <p>The journey begins with Altaïr during the Third Crusade and the awakening of Desmond Miles.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed (2007)</h3>
+                    <p class="assassin-era">Third Crusade • 1191</p>
+                    <p class="assassin-desc">The journey begins with Altaïr Ibn-La'Ahad during the Third Crusade and the awakening of Desmond Miles.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-person"></i> Altaïr</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Holy Land</span>
+                    </div>
+                </div>
             </a>
 
             <!-- AC2 -->
             <a href="AC2.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/header.jpg" alt="Assassin's Creed II">
-                <h3>Assassin's Creed II (2009)</h3>
-                <p>Enter the Italian Renaissance and meet Ezio Auditore da Firenze on his quest for justice and vengeance.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed II (2009)</h3>
+                    <p class="assassin-era">Italian Renaissance • 1476-1499</p>
+                    <p class="assassin-desc">Enter the Italian Renaissance and meet Ezio Auditore da Firenze on his quest for justice and vengeance.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-person"></i> Ezio</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Italy</span>
+                    </div>
+                </div>
             </a>
 
             <!-- Brotherhood -->
             <a href="Brotherhood.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/header.jpg" alt="Brotherhood">
-                <h3>Assassin's Creed: Brotherhood (2010)</h3>
-                <p>Ezio leads the Brotherhood in Rome, expanding the Assassin Order and continuing the war against the Templars.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed: Brotherhood (2010)</h3>
+                    <p class="assassin-era">Renaissance Rome • 1500-1507</p>
+                    <p class="assassin-desc">Ezio leads the Brotherhood in Rome, expanding the Assassin Order and continuing the war against the Borgia family.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-people"></i> Brotherhood</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Rome</span>
+                    </div>
+                </div>
             </a>
 
             <!-- Revelations -->
             <a href="Revelations.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/header.jpg" alt="Revelations">
-                <h3>Assassin's Creed: Revelations (2011)</h3>
-                <p>Ezio follows in Altaïr’s footsteps to unlock secrets buried in Constantinople.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed: Revelations (2011)</h3>
+                    <p class="assassin-era">Ottoman Empire • 1511-1512</p>
+                    <p class="assassin-desc">Ezio follows in Altair's footsteps to unlock secrets buried in Constantinople, concluding both legends' stories.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-star"></i> Finale</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Constantinople</span>
+                    </div>
+                </div>
             </a>
 
             <!-- AC3 -->
             <a href="AC3.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/header.jpg" alt="Assassin's Creed III">
-                <h3>Assassin's Creed III (2012)</h3>
-                <p>As the American Revolution rages, Desmond learns his ultimate role through the story of Connor Kenway.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed III (2012)</h3>
+                    <p class="assassin-era">American Revolution • 1754-1783</p>
+                    <p class="assassin-desc">As the American Revolution rages, Desmond learns his ultimate role through the story of Connor Kenway.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-person"></i> Connor</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> America</span>
+                    </div>
+                </div>
             </a>
         </div>
     </main>
@@ -102,6 +164,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <!-- Particles.js Initialization -->
+    <script src="../script.js"></script>
 
 </body>
 </html>

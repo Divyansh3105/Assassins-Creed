@@ -6,8 +6,21 @@
     <title>Modern Classic Return</title>
     <link rel="stylesheet" href="Styles.css">
     <link href="../Media/AC_OG.png" rel="icon" type="image/x-icon">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="../Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Synchronizing...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <header>
         <nav>
@@ -35,24 +48,51 @@
 
     <section id="hero-modern">
         <div class="hero-overlay">
-            <h1>Modern Classic Return</h1>
+            <div class="hero-content">
+                <h1>MODERN CLASSIC RETURN</h1>
+                <p class="hero-subtitle">A return to the roots with modern innovation.</p>
+            </div>
         </div>
     </section>
 
-    <main id="master-assassins">
+    <!-- About Section -->
+    <section id="about">
         <h2>Back to Stealth and Storytelling</h2>
+        <div class="about-content">
+            <p>The <b>Modern Classic Return</b> represents the franchise's evolution as it honors its stealth-focused origins while embracing modern gameplay innovations. These titles mark a new chapter that balances classic Assassin's Creed gameplay with contemporary design.</p>
+            <p>Experience <b>Basim's</b> transformation from street thief to Master Assassin in the Golden Age of Baghdad, then journey to <b>Feudal Japan</b> with dual protagonists Yasuke and Naoe, combining brute force with deadly precision in one of gaming's most requested settings.</p>
+            <p>These games showcase refined parkour, focused narratives, and a return to the social stealth and assassination gameplay that defined the early franchise, while incorporating lessons learned from the RPG trilogy.</p>
+        </div>
+    </section>
+
+    <main class="game-container">
+        <h2>The New Era</h2>
         <div class="assassin-grid">
 
             <a href="Mirage.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg" alt="Assassin's Creed Mirage">
-                <h3>Assassin's Creed: Mirage (2023)</h3>
-                <p>Return to the franchise's stealth roots with Basim navigating the dense streets of 9th-century Baghdad, uncovering secrets in the shadows.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed: Mirage (2023)</h3>
+                    <p class="assassin-era">Abbasid Caliphate • 861 CE</p>
+                    <p class="assassin-desc">Return to the franchise's stealth roots with Basim navigating the dense streets of 9th-century Baghdad, uncovering secrets in the shadows.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-person"></i> Basim</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Baghdad</span>
+                    </div>
+                </div>
             </a>
 
             <a href="Shadows.html" class="assassin-card">
                 <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg" alt="Assassin's Creed Shadows">
-                <h3>Assassin's Creed: Shadows (2024)</h3>
-                <p>Step into feudal Japan, where dual protagonists—Yasuke and Naoe—merge power and stealth in an epic tale of honor, rebellion, and loyalty.</p>
+                <div class="assassin-info">
+                    <h3>Assassin's Creed: Shadows (2025)</h3>
+                    <p class="assassin-era">Feudal Japan • 1579</p>
+                    <p class="assassin-desc">Step into feudal Japan, where dual protagonists—Yasuke and Naoe—merge power and stealth in an epic tale of honor, rebellion, and loyalty.</p>
+                    <div class="assassin-stats">
+                        <span class="stat-badge"><i class="bi bi-people"></i> Yasuke & Naoe</span>
+                        <span class="stat-badge"><i class="bi bi-geo-alt"></i> Japan</span>
+                    </div>
+                </div>
             </a>
 
         </div>
@@ -75,5 +115,9 @@
 
     <!-- Background Music -->
     <audio id="bg-music" src="../Media/background.mp3" autoplay loop></audio>
+
+    <!-- Particles.js Initialization -->
+    <script src="../script.js"></script>
+
 </body>
 </html>
