@@ -1,129 +1,542 @@
+<div align="center">
+
 # 🗡️ Assassin's Creed Tribute Website
 
-![Banner](Media/Banner.png)
+### _Nothing is true, everything is permitted._
 
-![Assassin’s Creed](https://img.shields.io/badge/Assassin's_Creed-000000?style=for-the-badge&logo=ubisoft&logoColor=white)
-![Hidden Blade](https://img.shields.io/badge/Hidden_Blade-C1121F?style=for-the-badge&logoColor=white)
-![Animus](https://img.shields.io/badge/Animus-1D3557?style=for-the-badge&logoColor=white)
-![Brotherhood](https://img.shields.io/badge/Brotherhood-6A040F?style=for-the-badge&logoColor=white)
-![Templars vs Assassins](https://img.shields.io/badge/Assassins_vs_Templars-212529?style=for-the-badge&logoColor=white)
+![Banner](Media/Banner.webp)
+
+[![Assassin's Creed](https://img.shields.io/badge/Assassin's_Creed-000000?style=for-the-badge&logo=ubisoft&logoColor=white)](https://assassins-creed-tribute.netlify.app)
+[![Hidden Blade](https://img.shields.io/badge/Hidden_Blade-C1121F?style=for-the-badge&logoColor=white)](https://assassins-creed-tribute.netlify.app)
+[![Animus](https://img.shields.io/badge/Animus-1D3557?style=for-the-badge&logoColor=white)](https://assassins-creed-tribute.netlify.app)
+[![Brotherhood](https://img.shields.io/badge/Brotherhood-6A040F?style=for-the-badge&logoColor=white)](https://assassins-creed-tribute.netlify.app)
+[![Templars vs Assassins](https://img.shields.io/badge/Assassins_vs_Templars-212529?style=for-the-badge&logoColor=white)](https://assassins-creed-tribute.netlify.app)
+
+---
+
+### 🌐 **[Live Demo](https://assassins-creed-tribute.netlify.app)** | 💻 **[GitHub Repo](https://github.com/Divyansh3105/Assassins-Creed)** | 👨‍💻 **[Portfolio](https://divyansh3105.github.io/Portfolio/)**
 
 ---
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Particles.js](https://img.shields.io/badge/Particles.js-000000?style=for-the-badge&logo=javascript&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-## 📌 Project Overview
-
-The **Assassin’s Creed Tribute Website** is a fan-made project celebrating the **Assassin’s Creed franchise**.
-It is built with **HTML & CSS**, focusing on **responsive layouts, animations, and clean design** to showcase the evolution of the series.
-
-## 📖 Description
-
-This website highlights the journey of **Assassins across centuries**, featuring:
-
-- **The Desmond Saga** (AC1–AC3)
-- **The Kenway Saga** (Black Flag, Rogue, AC3)
-- **Ezio Trilogy** (AC2, Brotherhood, Revelations)
-- **Industrial Revolution Titles** (Unity, Syndicate)
-- **Ancient Trilogy** (Origins, Odyssey, Valhalla)
-
-Each section has dedicated **tribute pages** with banners, characters, trailers, lore, and the Brotherhood’s creed.
-A “**Legacy of the Assassins**” page pays homage to iconic Assassins across time.
-
-🌐 **Live Demo:** [Assassin's Creed Tribute Website](https://assassins-creed-tribute.netlify.app)
-
-💻 **GitHub Repo:** [Divyansh3105/Assassins-Creed](https://github.com/Divyansh3105/Assassins-Creed)
+</div>
 
 ---
 
-## 🚀 Features
-- 🗡️ Tribute pages for multiple **Assassin’s Creed games**
-- 📱 **Responsive design** – Works smoothly on desktop, tablet, and mobile
-- 🧭 **Unified Navigation** – Consistent navbar and footer across pages
-- 🎨 Pure **HTML + CSS styling** for modern and lightweight UI
-- 🖼️ Engaging sections with banners, lore, and character highlights
-- 🌍 Deployed seamlessly on **Netlify**
+## 📌 Project Overview
+
+> **A comprehensive fan-made tribute celebrating the legendary Assassin's Creed franchise**
+
+The **Assassin's Creed Tribute Website** is an immersive, multi-page web experience that takes you through centuries of hidden history. Built with modern web technologies, it features stunning visuals, smooth animations, and interactive elements that bring the Assassin's Brotherhood to life.
+
+<div align="center">
+
+### 🎮 Spanning 2000+ Years of History | 🗡️ 13+ Main Titles | 🌍 5 Major Eras
+
+</div>
+
+---
+
+## � What's Inside
+
+This tribute website showcases the complete Assassin's Creed journey across five major eras:
+
+<table>
+<tr>
+<td width="20%" align="center"><b>🏛️ The Desmond Saga</b></td>
+<td width="80%">The original saga featuring <b>Altaïr, Ezio, Connor</b>, and <b>Desmond Miles</b> (AC1, AC2, Brotherhood, Revelations, AC3)</td>
+</tr>
+<tr>
+<td width="20%" align="center"><b>⚓ Colonial Era</b></td>
+<td width="80%">The legendary <b>Kenway family</b> across three generations featuring <b>Edward, Haytham, Connor</b>, and <b>Shay</b> (Black Flag, Rogue, AC3)</td>
+</tr>
+<tr>
+<td width="20%" align="center"><b>🎩 European Revolution</b></td>
+<td width="80%">Industrial Revolution chaos with <b>Arno Dorian</b> and the <b>Frye Twins</b> (Unity, Syndicate)</td>
+</tr>
+<tr>
+<td width="20%" align="center"><b>⚔️ Ancient Trilogy</b></td>
+<td width="80%">Epic RPG adventures with <b>Bayek, Kassandra/Alexios</b>, and <b>Eivor</b> (Origins, Odyssey, Valhalla)</td>
+</tr>
+<tr>
+<td width="20%" align="center"><b>🌅 Modern Classic Return</b></td>
+<td width="80%">Back to stealth roots with <b>Basim</b> and <b>Naoe & Yasuke</b> (Mirage, Shadows)</td>
+</tr>
+</table>
+
+---
+
+## ✨ Features Showcase
+
+<div align="center">
+
+### 🎯 Core Capabilities
+
+</div>
+
+```
+🗡️  Multi-Page Architecture    📱  Fully Responsive Design    🧭  Unified Navigation
+🎨  Modern UI/UX               🖼️  Rich Media Content         🌍  Netlify Deployment
+```
+
+<details>
+<summary><b>🎮 Interactive Elements</b> (Click to expand)</summary>
+
+<br>
+
+| Feature                        | Description                                                        |
+| ------------------------------ | ------------------------------------------------------------------ |
+| ✨ **Particles.js Background** | Dynamic animated particle effects creating an immersive atmosphere |
+| 🎵 **Background Music Player** | Toggle-able ambient soundtrack with volume control                 |
+| 🔝 **Scroll-to-Top Button**    | Smooth scrolling navigation for better UX                          |
+| 🎬 **Loading Screen**          | Immersive "Synchronizing..." animation on page load                |
+| 🎯 **Scroll Animations**       | Intersection Observer API for smooth element reveals               |
+| 🎨 **Tab Switching**           | Interactive showcase of game styles (Stealth, Combat, Exploration) |
+| 🔍 **Assassin Filter**         | Filter legendary assassins by era, role, and attributes            |
+| 📊 **Animated Counters**       | Dynamic statistics with smooth number animations                   |
+| 🌅 **Dynamic Greetings**       | Time-based welcome messages for personalized experience            |
+| 🎭 **Parallax Effects**        | Engaging scroll-based hero animations                              |
+
+</details>
+
+<details>
+<summary><b>🎨 Design Features</b> (Click to expand)</summary>
+
+<br>
+
+- 🎨 **Custom Assassin's Creed Font** – Authentic typography from the game
+- 🌑 **Dark Theme** – Immersive black and red color scheme
+- ✨ **Glowing Text Effects** – Animated gradient headings with pulsing glow
+- 🎯 **Custom Cursor** – Themed pointer design for enhanced immersion
+- 📜 **Custom Scrollbar** – Styled with signature Assassin's Creed red
+- 💫 **Hover Animations** – Interactive card and button effects on mouse over
+- 🎪 **Staggered Animations** – Sequential element reveals for visual appeal
+- 🔴 **Gradient Accents** – Smooth red-to-white color transitions
+- 🖼️ **High-Quality Images** – Optimized game banners and character portraits
+- 🎬 **Smooth Transitions** – CSS animations for seamless user experience
+
+</details>
+
+<details>
+<summary><b>🧭 Navigation Features</b> (Click to expand)</summary>
+
+<br>
+
+| Feature           | Desktop             | Mobile          |
+| ----------------- | ------------------- | --------------- |
+| **Menu Style**    | Horizontal navbar   | Hamburger menu  |
+| **Dropdown**      | Hover-activated     | Touch-activated |
+| **Transitions**   | Smooth fade         | Slide & fade    |
+| **Active Links**  | Highlighted         | Highlighted     |
+| **Accessibility** | Keyboard navigation | Touch-friendly  |
+
+</details>
 
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend:** HTML5, CSS3
-- **Deployment:** Netlify
-- **Version Control:** Git & GitHub
+
+<div align="center">
+
+| Category            | Technologies                             |
+| ------------------- | ---------------------------------------- |
+| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)           |
+| **Libraries**       | Particles.js, Bootstrap Icons            |
+| **Animations**      | CSS Keyframes, Intersection Observer API |
+| **Deployment**      | Netlify (CI/CD)                          |
+| **Version Control** | Git & GitHub                             |
+| **Design**          | Custom CSS, Flexbox, Grid                |
+
+</div>
 
 ---
 
-## 📂 Project Structure
+## � Proje ct Structure
+
 ```
 Assassins-Creed/
-│── index.html                      # Landing page
-│── styles.css                      # Landing page style
-│── Assassins.html                  # Top Assassigns page
-│── The Desmond Saga/               # Desmond Saga (AC1–AC3, Brotherhood, Revelations)
-│── Modern Classic Return/          # Mirage, Shadows
-│── European Revolution Era/        # Unity & Syndicate
-│── Ancient Trilogy/                # Origins, Odyssey, Valhalla
-│── Colonial Era/                   # BlackFlag, Rogue
-│── Media/                          # Images, icons, and media
-│── README.md                       # Project documentation
+│
+├── 🏠 index.html                   # Landing page with hero, about, game styles, stats
+├── 🎨 styles.css                   # Main stylesheet for landing page
+├── ⚡ script.js                    # JavaScript for animations and interactions
+├── 🗡️ Assassins.html               # Legendary Assassins showcase page
+├── ⚙️ particles-config.json        # Particles.js configuration
+│
+├── 📁 The Desmond Saga/            # The original saga (2007-2012)
+│   ├── Home.html                   # Desmond Saga overview
+│   ├── AC1.html                    # 🗡️ Assassin's Creed (2007) - Altaïr
+│   ├── AC2.html                    # 🦅 Assassin's Creed II (2009) - Ezio
+│   ├── Brotherhood.html            # 👥 AC: Brotherhood (2010) - Ezio
+│   ├── Revelations.html            # 🔥 AC: Revelations (2011) - Ezio & Altaïr
+│   ├── AC3.html                    # 🦅 Assassin's Creed III (2012) - Connor
+│   ├── styles.css                  # Saga-specific styles
+│   └── game-enhancements.js        # Saga-specific JavaScript
+│
+├── 📁 Colonial Era/                # The Kenway Saga (1715-1783)
+│   ├── Home.html                   # Kenway Saga overview
+│   ├── BlackFlag.html              # ⚓ AC IV: Black Flag (2013) - Edward Kenway
+│   ├── Rogue.html                  # ❄️ AC: Rogue (2014) - Shay Cormac
+│   ├── styles.css                  # Saga-specific styles
+│   └── game-enhancements.js        # Saga-specific JavaScript
+│
+├── 📁 European Revolution Era/     # Industrial Revolution (1789-1868)
+│   ├── Home.html                   # European Revolution overview
+│   ├── Unity.html                  # 🇫🇷 AC: Unity (2014) - Arno Dorian
+│   ├── Syndicate.html              # 🎩 AC: Syndicate (2015) - Jacob & Evie Frye
+│   ├── styles.css                  # Saga-specific styles
+│   └── game-enhancements.js        # Saga-specific JavaScript
+│
+├── 📁 Ancient Trilogy/             # RPG-focused ancient era (49 BCE - 878 CE)
+│   ├── Home.html                   # Ancient Trilogy overview
+│   ├── Origins.html                # 🐫 AC: Origins (2017) - Bayek
+│   ├── Odyssey.html                # 🏛️ AC: Odyssey (2018) - Kassandra/Alexios
+│   ├── Valhalla.html               # ⚔️ AC: Valhalla (2020) - Eivor
+│   ├── styles.css                  # Saga-specific styles
+│   └── game-enhancements.js        # Saga-specific JavaScript
+│
+├── 📁 Modern Classic Return/       # Latest releases (861 CE - 1579 CE)
+│   ├── Home.html                   # Modern classics overview
+│   ├── Mirage.html                 # 🌅 AC: Mirage (2023) - Basim
+│   ├── Shadows.html                # 🗾 AC: Shadows (2025) - Naoe & Yasuke
+│   ├── styles.css                  # Saga-specific styles
+│   └── game-enhancements.js        # Saga-specific JavaScript
+│
+├── 📁 Media/                       # All images, fonts, and audio
+│   ├── 🖼️ *.jpg, *.png             # Game banners, character images, heroes
+│   ├── 🔤 Assassin$.ttf            # Custom Assassin's Creed font
+│   ├── 🎵 background.mp3           # Background music
+│   ├── 🎨 logo.png                 # AC logo
+│   └── 🖱️ Unavailable.cur          # Custom cursor
+│
+├── 📄 LICENSE                      # MIT License
+└── 📄 README.md                    # This file
 ```
 
 ---
 
 ## 📸 Screenshots
 
-### 🔹 Homepage
+<div align="center">
+
+### � Homepage
+
 ![Homepage Screenshot](Media/ss1.png)
 
-### 🔹 Game Page Example
+_Featuring hero banner, about section, game styles showcase, and franchise statistics_
+
+---
+
+### 🎮 Game Page
+
 ![Game Page Screenshot](Media/ss2.png)
 
----
+_Individual game pages with detailed information, characters, and historical context_
 
-## 📖 How to Run Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Divyansh3105/Assassins-Creed.git
-   ```
-
-2. Open the project folder:
-   ```bash
-   cd Assassins-Creed
-   ```
-
-3. Run the website:
-   - Simply open `index.html` in your browser.
+</div>
 
 ---
 
-## 🎯 Purpose of the Project
-This project was developed as a **portfolio showcase project** to:
-- Practice **multi-page responsive design** using only HTML & CSS.
-- Demonstrate ability to structure **content-rich tribute sites**.
-- Present a visually engaging fan tribute to the **Assassin’s Creed universe**.
-- Highlight creative storytelling combined with **modern web UI/UX practices**.
+## 🚀 Quick Start
+
+### Prerequisites
+
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Optional: Local server for optimal performance
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Divyansh3105/Assassins-Creed.git
+
+# 2. Navigate to project directory
+cd Assassins-Creed
+
+# 3. Open in browser
+# Simply double-click index.html or use a local server:
+```
+
+### Running with Local Server (Recommended)
+
+<details>
+<summary><b>Option 1: Python</b></summary>
+
+```bash
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
+
+# Then open: http://localhost:8000
+```
+
+</details>
+
+<details>
+<summary><b>Option 2: Node.js</b></summary>
+
+```bash
+# Using http-server
+npx http-server
+
+# Or install globally
+npm install -g http-server
+http-server
+
+# Then open: http://localhost:8080
+```
+
+</details>
+
+<details>
+<summary><b>Option 3: VS Code Live Server</b></summary>
+
+1. Install "Live Server" extension in VS Code
+2. Right-click `index.html`
+3. Select "Open with Live Server"
+4. Browser opens automatically
+</details>
 
 ---
 
-## 📌 Future Enhancements
-- 🌑 Add **Dark/Light Mode toggle**
-- 🎥 Integrate **trailers and gameplay clips**
-- 🔎 Implement a **search/filter system** for games by timeline
+## 🎮 Era Breakdown
+
+<div align="center">
+
+### 🏛️ The Desmond Saga
+
+_Where it all began_
+
+</div>
+
+| Game                 | Year | Protagonist        | Era                             | Location         |
+| -------------------- | ---- | ------------------ | ------------------------------- | ---------------- |
+| Assassin's Creed     | 2007 | Altaïr Ibn-La'Ahad | Third Crusade (1191)            | Holy Land        |
+| Assassin's Creed II  | 2009 | Ezio Auditore      | Italian Renaissance (1476-1499) | Italy            |
+| AC: Brotherhood      | 2010 | Ezio Auditore      | Renaissance Rome (1500-1507)    | Rome             |
+| AC: Revelations      | 2011 | Ezio & Altaïr      | Ottoman Empire (1511-1512)      | Constantinople   |
+| Assassin's Creed III | 2012 | Connor Kenway      | American Revolution (1754-1783) | Colonial America |
+
+<div align="center">
+
+### ⚓ Colonial Era / The Kenway Saga
+
+_Three generations, one legendary bloodline_
+
+</div>
+
+| Game                 | Year | Protagonist   | Era                              | Location         |
+| -------------------- | ---- | ------------- | -------------------------------- | ---------------- |
+| AC IV: Black Flag    | 2013 | Edward Kenway | Golden Age of Piracy (1715-1722) | Caribbean        |
+| AC: Rogue            | 2014 | Shay Cormac   | Seven Years' War (1752-1761)     | North Atlantic   |
+| Assassin's Creed III | 2012 | Connor Kenway | American Revolution (1754-1783)  | Colonial America |
+
+<div align="center">
+
+### 🎩 European Revolution Era
+
+_Revolution and industrial change_
+
+</div>
+
+| Game          | Year | Protagonist       | Era                           | Location |
+| ------------- | ---- | ----------------- | ----------------------------- | -------- |
+| AC: Unity     | 2014 | Arno Dorian       | French Revolution (1789-1794) | Paris    |
+| AC: Syndicate | 2015 | Jacob & Evie Frye | Victorian Era (1868)          | London   |
+
+<div align="center">
+
+### ⚔️ Ancient Trilogy
+
+_Massive RPG experiences in ancient worlds_
+
+</div>
+
+| Game         | Year | Protagonist        | Era                          | Location |
+| ------------ | ---- | ------------------ | ---------------------------- | -------- |
+| AC: Origins  | 2017 | Bayek of Siwa      | Ptolemaic Egypt (49-43 BCE)  | Egypt    |
+| AC: Odyssey  | 2018 | Kassandra/Alexios  | Ancient Greece (431-422 BCE) | Greece   |
+| AC: Valhalla | 2020 | Eivor Varinsdottir | Viking Age (873-878 CE)      | England  |
+
+<div align="center">
+
+### 🌅 Modern Classic Return
+
+_Back to stealth roots_
+
+</div>
+
+| Game        | Year | Protagonist     | Era                        | Location |
+| ----------- | ---- | --------------- | -------------------------- | -------- |
+| AC: Mirage  | 2023 | Basim Ibn Ishaq | Abbasid Caliphate (861 CE) | Baghdad  |
+| AC: Shadows | 2025 | Naoe & Yasuke   | Feudal Japan (1579 CE)     | Japan    |
 
 ---
 
-## 👨‍💻 Author
-**Divyansh Garg**
-- 🌐 [Portfolio](https://divyansh3105.github.io/Portfolio/)
-- 💼 [LinkedIn](www.linkedin.com/in/divyanshgarg3105)
-- 💻 [GitHub](https://github.com/Divyansh3105)
+## 🎯 Project Goals
+
+<div align="center">
+
+This project was crafted to demonstrate:
+
+</div>
+
+```
+✅ Multi-page responsive web design
+✅ Advanced CSS animations and transitions
+✅ JavaScript DOM manipulation and event handling
+✅ Intersection Observer API implementation
+✅ Accessibility best practices
+✅ Performance optimization techniques
+✅ Clean, maintainable code structure
+✅ Creative storytelling through web design
+```
 
 ---
 
-✨ *This is a fan-made tribute website and not affiliated with Ubisoft or the official Assassin’s Creed franchise.*
+## 🔮 Future Enhancements
 
-⭐ If you like this project, consider giving it a **star** on GitHub!
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 Design & UX
+
+- [ ] Dark/Light mode toggle
+- [ ] Theme customization options
+- [ ] Advanced parallax effects
+- [ ] 3D card flip animations
+- [ ] Custom loading animations per era
+
+</td>
+<td width="50%">
+
+### ⚡ Features
+
+- [ ] Embedded game trailers
+- [ ] Character comparison tool
+- [ ] Interactive timeline
+- [ ] Search functionality
+- [ ] Franchise statistics dashboard
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🌐 Technical
+
+- [ ] Progressive Web App (PWA)
+- [ ] Multi-language support
+- [ ] Backend integration
+- [ ] User accounts & favorites
+- [ ] Performance analytics
+
+</td>
+<td width="50%">
+
+### 📱 Content
+
+- [ ] News section for updates
+- [ ] Community fan art gallery
+- [ ] Game reviews & ratings
+- [ ] Easter eggs & secrets guide
+- [ ] Lore deep-dive articles
+
+</td>
+</tr>
+</table>
+
+---
+
+## 👨‍💻 About the Developer
+
+<div align="center">
+
+### Divyansh Garg
+
+**Full-Stack Developer | Web Designer | AC Enthusiast**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://divyansh3105.github.io/Portfolio/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/divyanshgarg3105/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Divyansh3105)
+
+_🧠 Brain + 💻 Keyboard = ✨ Magic_
+
+</div>
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+<div align="center">
+
+Special thanks to:
+
+**🎮 Ubisoft** - For creating the legendary Assassin's Creed franchise
+
+**✨ Particles.js** - For the mesmerizing background effects
+
+**🎨 Bootstrap Icons** - For the comprehensive icon library
+
+**🌐 Netlify** - For seamless hosting and deployment
+
+**❤️ AC Community** - For endless inspiration and passion
+
+</div>
+
+---
+
+## 📊 Project Stats
+
+<div align="center">
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Divyansh3105/Assassins-Creed?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/Divyansh3105/Assassins-Creed?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Divyansh3105/Assassins-Creed?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/Divyansh3105/Assassins-Creed?style=for-the-badge)
+
+</div>
+
+---
+
+<div align="center">
+
+## 💬 Feedback & Contributions
+
+Found a bug? Have a suggestion? Want to contribute?
+
+**Feel free to open an issue or submit a pull request!**
+
+---
+
+### ⭐ If you enjoyed this project, please give it a star!
+
+---
+
+<img src="Media/logo.png" alt="Assassin's Creed Logo" width="100">
+
+### _"Nothing is true, everything is permitted."_
+
+**🗡️ May the Father of Understanding guide you 🗡️**
+
+---
+
+**Made with ❤️ and ☕ by [Divyansh Garg](https://github.com/Divyansh3105)**
+
+_This is a fan-made tribute website and is not affiliated with Ubisoft or the official Assassin's Creed franchise._
+
+</div>

@@ -1,397 +1,408 @@
 /* Imports the custom font used throughout the site */
 @font-face {
-    font-family: Assasign;
-    src: url(../Media/Assassin$.ttf);
+  font-family: Assasign;
+  src: url(../Media/Assassin$.ttf);
 }
 
 /* Universal box-sizing reset for consistent layout */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    cursor: url(../Media/Unavailable.cur), pointer;
+  box-sizing: border-box;
+  cursor: url(../Media/Unavailable.cur), pointer;
 }
 
 /* == GLOBAL STYLES                      == */
 
 /* Default styles for the entire page */
 body {
-    background-color: black;
-    color: white;
-    font-family: Assasign, sans-serif;
-    margin: 0;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    font-size: 19px;
-    position: relative;
+  background-color: black;
+  color: white;
+  font-family: Assasign, sans-serif;
+  margin: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-size: 19px;
+  position: relative;
 }
 
 /* Particles Background */
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: radial-gradient(ellipse at center, #1a0000 0%, #000000 100%);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, #1a0000 0%, #000000 100%);
 }
 
 /* Basic typography settings */
-h1, h2, h3, h5 {
-    font-weight: 700;
+h1,
+h2,
+h3,
+h5 {
+  font-weight: 700;
 }
 
 /* Gradient text effect for main section titles */
 h2 {
-    font-size: 3rem;
-    background: linear-gradient(to right, #dc2626, #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-align: center;
+  font-size: 3rem;
+  background: linear-gradient(to right, #dc2626, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
 }
 
 /* Default paragraph styling */
 p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #9ca3af;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #9ca3af;
 }
 
 /* Removes the default underline from links */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* == HEADER & NAVIGATION                == */
 
 /* Header container */
 header {
-    background-color: black;
-    padding: 1rem 1.5rem;
+  background-color: black;
+  padding: 1rem 1.5rem;
 }
 
 /* Navigation bar layout */
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1600px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 #logo {
-    height: 4rem;
+  height: 4rem;
 }
 
 /* Navigation links container */
 .content {
-    display: flex;
-    list-style: none;
-    font-size: 1.3rem;
-    margin: 0;
-    padding: 0;
-    gap: 1.5rem;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 /* Styling for navigation links and the dropdown button */
-.content a, .dropdownto {
-    text-decoration: none;
-    color: #dc3545;
-    transition: color 0.2s ease-in-out;
+.content a,
+.dropdownto {
+  text-decoration: none;
+  color: #dc3545;
+  transition: color 0.2s ease-in-out;
 }
-.content a:hover, .dropdownto:hover {
-    color: #f8f9fa;
+.content a:hover,
+.dropdownto:hover {
+  color: #f8f9fa;
 }
 
 /* Dropdown Menu styling */
 .dropdown {
-    position: relative; /* Parent for absolute positioning of the menu */
+  position: relative; /* Parent for absolute positioning of the menu */
 }
 .dropdownto {
-    background: none;
-    border: none;
-    padding: 0;
-    font-family: inherit;
-    font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
 }
-.dropdownto:focus { outline: none; }
+.dropdownto:focus {
+  outline: none;
+}
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0; /* Aligns menu to the right to prevent going off-screen */
-    z-index: 1000;
-    display: none; /* Hidden by default */
-    min-width: 14rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
-    list-style: none;
-    background-color: #212529;
-    background-clip: padding-box;
-    border: 1px solid rgba(239, 68, 68, 0.2);
-    border-radius: 0.25rem;
-    font-size: 1.1rem;
+  position: absolute;
+  top: 100%;
+  right: 0; /* Aligns menu to the right to prevent going off-screen */
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  min-width: 14rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  list-style: none;
+  background-color: #212529;
+  background-clip: padding-box;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
 }
 
 /* Shows the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .dropdown-menu a {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    color: #dc3545;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: #dc3545;
 }
 .dropdown-menu a:hover {
-    background-color: #dc3545;
-    color: #fff !important;
+  background-color: #dc3545;
+  color: #fff !important;
 }
 /* Style for the currently active page link in the dropdown */
 .active-dropdown-item {
-    font-weight: 800;
-    color: #fff !important;
+  font-weight: 800;
+  color: #fff !important;
 }
 
 /* == HERO SECTIONS                      == */
 
 /* Dark overlay for all hero banners */
 .hero-overlay {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
 }
 /* Gradient text for hero titles */
 .hero-overlay h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    background: linear-gradient(to right, #dc2626, #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #dc2626, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Hero banner for the main landing page (Home.html) */
 #hero-modern {
-    height: 24rem;
-    background-image: url('../Media/ModernBanner.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  height: 24rem;
+  background-image: url("../Media/ModernBanner.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* Hero banner for the Kenway Saga home page */
 #hero-kenway {
-    height: 24rem;
-    background-image: url('../Media/KenwaySagaBanner.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  height: 24rem;
+  background-image: url("../Media/KenwaySagaBanner.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* Hero banner for the European Revolution Era home page */
 #hero-european {
-    height: 24rem;
-    background-image: url('../Media/EuropeanBanner.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  height: 24rem;
+  background-image: url("../Media/EuropeanBanner.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* Generic hero banner for game detail pages (Mirage.html, etc.) */
 .hero-game-detail {
-    height: 24rem;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  height: 24rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* == GAME CARD STYLES (HOME.HTML)       == */
 
 /* Container for the game cards section */
 #master-assassins {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 4.5rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
 }
 
 #master-assassins h2 {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Responsive grid for the game cards */
 .assassin-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 /* Individual game card styling */
 a.assassin-card {
-    display: block;
-    background-color: rgba(31, 41, 55, 0.5);
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
-    border: 2px solid #4a1414;
-    padding: 1rem;
+  display: block;
+  background-color: rgba(31, 41, 55, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  border: 2px solid #4a1414;
+  padding: 1rem;
 }
 a.assassin-card:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-    border-color: #991b1b;
+  transform: scale(1.05); /* Zoom effect on hover */
+  border-color: #991b1b;
 }
 
 .assassin-card img {
-    width: 100%;
-    border-radius: 0.25rem;
+  width: 100%;
+  border-radius: 0.25rem;
 }
 
 .assassin-card h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-top: 1rem;
-    padding: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 0;
 }
 
 .assassin-card p {
-    padding: 0;
-    margin-top: 0.5rem;
+  padding: 0;
+  margin-top: 0.5rem;
 }
 
 /* == GAME DETAIL STYLES (MIRAGE.HTML)   == */
 
 /* Main content container for game detail pages */
 .game-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
 }
 
 /* Title for sections within a game page */
 .section-title {
-    text-align: center;
-    color: #ef4444; /* red-500 */
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    font-size: 2.25rem;
+  text-align: center;
+  color: #ef4444; /* red-500 */
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
 }
 /* Subtitle used next to the video embed */
 .section-subtitle {
-    color: #ef4444; /* red-500 */
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+  color: #ef4444; /* red-500 */
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
 }
 
 /* Responsive two-column layout (for video/text and characters) */
 .two-column-layout {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 2.5rem;
-    align-items: center;
-    margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
-    .two-column-layout {
-        grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
-    }
+  .two-column-layout {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  }
 }
 
 /* Responsive container for YouTube video embeds */
 .video-responsive {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-    border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 0.5rem;
 }
 .video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Responsive three-column layout (for features and gallery) */
 .three-column-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center;
 }
 
 /* Container for the features section */
 .features-section {
-    margin: 3rem 0;
+  margin: 3rem 0;
 }
 
 /* Individual feature item (icon, title, text) */
 .feature-item i {
-    font-size: 3rem;
-    color: #f87171; /* red-400 */
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #f87171; /* red-400 */
+  margin-bottom: 1rem;
 }
 .feature-item h5 {
-    font-size: 1.25rem;
-    color: #fff;
+  font-size: 1.25rem;
+  color: #fff;
 }
 
 /* Individual character card */
 .character-card img {
-    width: 100%;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .character-card h5 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 /* Individual gallery image */
 .gallery-item img {
-    width: 100%;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Call-to-action section at the bottom of game pages */
 .cta-section {
-    text-align: center;
-    background-color: #1f2937; /* gray-800 */
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    margin: 4rem auto;
+  text-align: center;
+  background-color: #1f2937; /* gray-800 */
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  margin: 4rem auto;
 }
 .cta-section h3 {
-    font-size: 1.75rem;
-    color: #ef4444; /* red-500 */
-    margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #ef4444; /* red-500 */
+  margin-bottom: 1rem;
 }
 /* Button styling for the CTA */
 .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #dc3545;
-    color: #fff;
-    border-radius: 9999px; /* Creates a pill shape */
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-    font-size: 1.1rem;
-    border: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 9999px; /* Creates a pill shape */
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 1.1rem;
+  border: none;
 }
 .btn:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
-
 
 /* --------- Footer --------- */
 .main-footer {
@@ -488,7 +499,9 @@ a.assassin-card:hover {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
 }
 
 #loading-screen.hidden {
@@ -533,7 +546,8 @@ a.assassin-card:hover {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -563,7 +577,11 @@ a.assassin-card:hover {
 
 .assassin-card {
   display: block;
-  background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.8));
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.8),
+    rgba(17, 24, 39, 0.8)
+  );
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -577,7 +595,7 @@ a.assassin-card:hover {
 }
 
 .assassin-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -600,7 +618,9 @@ a.assassin-card:hover {
 
 .assassin-card:hover {
   transform: translateY(-15px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(220, 53, 69, 0.4), 0 0 30px rgba(220, 53, 69, 0.2);
+  box-shadow:
+    0 25px 50px rgba(220, 53, 69, 0.4),
+    0 0 30px rgba(220, 53, 69, 0.2);
   border-color: #dc3545;
 }
 
@@ -756,7 +776,9 @@ a.assassin-card:hover {
 section {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 section.animate-in {
@@ -796,7 +818,9 @@ h2 {
     text-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
   }
   to {
-    text-shadow: 0 0 20px rgba(220, 53, 69, 0.8), 0 0 30px rgba(220, 53, 69, 0.4);
+    text-shadow:
+      0 0 20px rgba(220, 53, 69, 0.8),
+      0 0 30px rgba(220, 53, 69, 0.4);
   }
 }
 
@@ -917,456 +941,486 @@ h2 {
 
 /* Game Info Cards Section */
 .game-info-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 40px 0;
-    padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+  padding: 0 20px;
 }
 
 .info-card {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(0, 0, 0, 0.5));
-    border: 2px solid rgba(201, 169, 97, 0.3);
-    border-radius: 12px;
-    padding: 25px;
-    text-align: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  border: 2px solid rgba(201, 169, 97, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(201, 169, 97, 0.8);
-    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+  transform: translateY(-5px);
+  border-color: rgba(201, 169, 97, 0.8);
+  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
 }
 
 .info-card i {
-    font-size: 2.5rem;
-    color: #c9a961;
-    margin-bottom: 15px;
-    display: block;
+  font-size: 2.5rem;
+  color: #c9a961;
+  margin-bottom: 15px;
+  display: block;
 }
 
 .info-card h4 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #ffffff;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #ffffff;
 }
 
 .info-card p {
-    font-size: 1rem;
-    color: #cccccc;
-    margin: 0;
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0;
 }
 
 /* Story Highlights */
 .story-highlights {
-    margin-top: 25px;
-    padding: 20px;
-    background: rgba(220, 38, 38, 0.1);
-    border-left: 4px solid #c9a961;
-    border-radius: 8px;
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(220, 38, 38, 0.1);
+  border-left: 4px solid #c9a961;
+  border-radius: 8px;
 }
 
 .story-highlights h4 {
-    color: #c9a961;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
+  color: #c9a961;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
 }
 
 .story-highlights ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .story-highlights li {
-    padding: 8px 0 8px 30px;
-    position: relative;
-    color: #e0e0e0;
-    line-height: 1.6;
+  padding: 8px 0 8px 30px;
+  position: relative;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
 
 .story-highlights li:before {
-    content: "⚔";
-    position: absolute;
-    left: 0;
-    color: #c9a961;
-    font-size: 18px;
+  content: "⚔";
+  position: absolute;
+  left: 0;
+  color: #c9a961;
+  font-size: 18px;
 }
 
 /* Gameplay Mechanics Section */
 .gameplay-section {
-    margin: 60px 0;
-    padding: 40px 20px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(220, 38, 38, 0.05));
-    border-radius: 16px;
+  margin: 60px 0;
+  padding: 40px 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(220, 38, 38, 0.05)
+  );
+  border-radius: 16px;
 }
 
 .mechanic-card {
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(201, 169, 97, 0.2);
-    border-radius: 12px;
-    padding: 30px;
-    transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(201, 169, 97, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
 }
 
 .mechanic-card:hover {
-    border-color: rgba(201, 169, 97, 0.6);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
+  border-color: rgba(201, 169, 97, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
 }
 
 .mechanic-card i {
-    font-size: 3rem;
-    color: #c9a961;
-    margin-bottom: 20px;
-    display: block;
+  font-size: 3rem;
+  color: #c9a961;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .mechanic-card h4 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .mechanic-card p {
-    color: #cccccc;
-    line-height: 1.7;
-    font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 /* Legacy Section */
 .legacy-section {
-    margin: 60px 0;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(0, 0, 0, 0.8));
-    border-radius: 16px;
-    border: 2px solid rgba(201, 169, 97, 0.3);
+  margin: 60px 0;
+  padding: 50px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+  border-radius: 16px;
+  border: 2px solid rgba(201, 169, 97, 0.3);
 }
 
 .legacy-content {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .legacy-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #e0e0e0;
-    margin-bottom: 30px;
-    text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .award-badge {
-    background: rgba(201, 169, 97, 0.1);
-    border: 2px solid rgba(201, 169, 97, 0.4);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
+  background: rgba(201, 169, 97, 0.1);
+  border: 2px solid rgba(201, 169, 97, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .award-badge:hover {
-    background: rgba(201, 169, 97, 0.2);
-    border-color: #c9a961;
-    transform: scale(1.05);
+  background: rgba(201, 169, 97, 0.2);
+  border-color: #c9a961;
+  transform: scale(1.05);
 }
 
 .award-badge i {
-    font-size: 2.5rem;
-    color: #c9a961;
-    display: block;
-    margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: #c9a961;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .award-badge span {
-    display: block;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /* Enhanced Character Cards */
 .character-card {
-    text-align: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: visible;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
 }
 
 .character-card img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    border: 3px solid rgba(201, 169, 97, 0.3);
-    transition: all 0.4s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 3px solid rgba(201, 169, 97, 0.3);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .character-card:hover img {
-    border-color: rgba(201, 169, 97, 0.9);
-    box-shadow: 0 12px 35px rgba(220, 38, 38, 0.5), 0 0 30px rgba(201, 169, 97, 0.3);
-    transform: translateY(-8px) scale(1.03);
+  border-color: rgba(201, 169, 97, 0.9);
+  box-shadow:
+    0 12px 35px rgba(220, 38, 38, 0.5),
+    0 0 30px rgba(201, 169, 97, 0.3);
+  transform: translateY(-8px) scale(1.03);
 }
 
 .character-card h5 {
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin: 0;
-    padding: 10px;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(201, 169, 97, 0.2));
-    border-radius: 8px;
-    border: 1px solid rgba(201, 169, 97, 0.3);
-    transition: all 0.3s ease;
-    font-weight: 600;
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.2),
+    rgba(201, 169, 97, 0.2)
+  );
+  border-radius: 8px;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .character-card:hover h5 {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.4), rgba(201, 169, 97, 0.4));
-    border-color: rgba(201, 169, 97, 0.6);
-    color: #c9a961;
-    transform: translateY(-3px);
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.4),
+    rgba(201, 169, 97, 0.4)
+  );
+  border-color: rgba(201, 169, 97, 0.6);
+  color: #c9a961;
+  transform: translateY(-3px);
 }
 
 .character-card::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(201, 169, 97, 0.3), transparent);
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease;
-    pointer-events: none;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 169, 97, 0.3), transparent);
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .character-card:hover::after {
-    width: 120%;
-    height: 120%;
+  width: 120%;
+  height: 120%;
 }
 
 /* Enhanced Gallery Items */
 .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .gallery-item::after {
-    content: '🔍';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    font-size: 3rem;
-    color: white;
-    transition: transform 0.3s ease;
-    pointer-events: none;
+  content: "🔍";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 3rem;
+  color: white;
+  transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
 .gallery-item:hover::after {
-    transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .gallery-item img {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Enhanced Feature Items */
 .feature-item i {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .feature-item:hover i {
-    transform: scale(1.2) rotate(10deg);
-    color: #ffffff;
+  transform: scale(1.2) rotate(10deg);
+  color: #ffffff;
 }
 
 /* == NOTABLE CHARACTERS ENHANCEMENTS    == */
 
 /* Character section wrapper */
 section:has(.character-card) {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.05), rgba(0, 0, 0, 0.3));
-    border-radius: 16px;
-    margin: 40px 0;
-    border: 1px solid rgba(201, 169, 97, 0.2);
+  padding: 60px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.05),
+    rgba(0, 0, 0, 0.3)
+  );
+  border-radius: 16px;
+  margin: 40px 0;
+  border: 1px solid rgba(201, 169, 97, 0.2);
 }
 
 /* Character card name badge effect */
 .character-card h5::before {
-    content: '⚔';
-    margin-right: 8px;
-    color: #c9a961;
-    font-size: 1.2rem;
+  content: "⚔";
+  margin-right: 8px;
+  color: #c9a961;
+  font-size: 1.2rem;
 }
 
 /* Add role/description to character cards */
 .character-card::before {
-    content: attr(data-role);
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: rgba(0, 0, 0, 0.9);
-    color: #c9a961;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
-    white-space: nowrap;
-    border: 1px solid rgba(201, 169, 97, 0.5);
-    z-index: 10;
+  content: attr(data-role);
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(0, 0, 0, 0.9);
+  color: #c9a961;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  border: 1px solid rgba(201, 169, 97, 0.5);
+  z-index: 10;
 }
 
 .character-card:hover::before {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Three column grid enhancement for characters */
 .three-column-grid {
-    gap: 30px;
+  gap: 30px;
 }
 
 /* Character image frame effect */
 .character-card img {
-    position: relative;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(201, 169, 97, 0.1));
-    padding: 5px;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(220, 38, 38, 0.1),
+    rgba(201, 169, 97, 0.1)
+  );
+  padding: 5px;
 }
 
 /* Assassin symbol decoration */
 .section-title::before,
 .section-title::after {
-    content: '◆';
-    color: #c9a961;
-    margin: 0 15px;
-    font-size: 0.8em;
-    opacity: 0.6;
+  content: "◆";
+  color: #c9a961;
+  margin: 0 15px;
+  font-size: 0.8em;
+  opacity: 0.6;
 }
 
 /* Character card stagger animation */
 .character-card:nth-child(1) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .character-card:nth-child(2) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .character-card:nth-child(3) {
-    animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 /* Glow effect on hover */
 .character-card:hover {
-    filter: brightness(1.1);
+  filter: brightness(1.1);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .game-info-cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
+  .game-info-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 
-    .info-card {
-        padding: 20px;
-    }
+  .info-card {
+    padding: 20px;
+  }
 
-    .info-card i {
-        font-size: 2rem;
-    }
+  .info-card i {
+    font-size: 2rem;
+  }
 
-    .awards-grid {
-        grid-template-columns: 1fr;
-    }
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .story-highlights {
-        padding: 15px;
-    }
+  .story-highlights {
+    padding: 15px;
+  }
 
-    .mechanic-card {
-        padding: 20px;
-    }
+  .mechanic-card {
+    padding: 20px;
+  }
 
-    .legacy-section {
-        padding: 30px 15px;
-    }
+  .legacy-section {
+    padding: 30px 15px;
+  }
 
-    section:has(.character-card) {
-        padding: 40px 15px;
-    }
+  section:has(.character-card) {
+    padding: 40px 15px;
+  }
 
-    .character-card h5 {
-        font-size: 1.2rem;
-    }
+  .character-card h5 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .game-info-cards {
-        grid-template-columns: 1fr;
-    }
+  .game-info-cards {
+    grid-template-columns: 1fr;
+  }
 
-    .info-card h4 {
-        font-size: 1rem;
-    }
+  .info-card h4 {
+    font-size: 1rem;
+  }
 
-    .info-card p {
-        font-size: 0.9rem;
-    }
+  .info-card p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Loading Animation for Enhanced Elements */
 @keyframes slideInFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .game-container > section {
-    animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.8s ease forwards;
 }
 
 /* Smooth Transitions */
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
