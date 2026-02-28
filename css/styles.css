@@ -2,14 +2,58 @@
 #hero,
 #hero-dynamic,
 #game-hero {
-  height: 24rem;
+  height: 38rem; /* Default for sub-pages */
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
+
+/* Master Tribute Homepage Hero (100vh) */
+#hero.master-hero {
+  height: 100vh;
+  margin-top: -5.5rem; /* Pull up behind the completely transparent header */
+}
+
 #hero {
-  background-image: url("../Media/AC_Hero.webp");
+  display: flex; /* Establish flex context for splits */
 }
+
+/* Split-Screen Hero Images */
+.hero-split {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-left {
+  background-image: url("../Media/Altair.webp");
+  background-position: top center;
+}
+
+.hero-right {
+  background-image: url("../Media/Ezio.webp");
+  /* Optional: apply a slight dark gradient on the inner edges to merge them */
+  box-shadow: inset 100px 0 100px -50px var(--bg-black);
+}
+
+.hero-overlay-desktop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(5, 5, 5, 0.95) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -21,20 +65,78 @@
   justify-content: center;
   align-items: center;
 }
+
 .hero-content {
   text-align: center;
   color: white;
   padding: 0 1.5rem;
+  z-index: 10;
 }
 #hero h1,
 #hero-dynamic h1,
 #game-hero h1 {
-  font-size: 3rem;
-  background: linear-gradient(to right, var(--blood-red), var(--text-white));
+  font-size: 3.5rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.master-hero .cinematic-content h1 {
+  font-size: 4rem;
+  font-weight: 300; /* Sleeker, thinner font for the first line */
+  letter-spacing: 6px;
+}
+
+.hero-title-gold {
+  font-size: 4rem !important;
+  background: linear-gradient(to right, var(--gold-accent), var(--bright-gold));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-top: -10px !important;
 }
+
+.master-hero .cinematic-content .hero-title-gold {
+  font-size: 5rem !important;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+/* Subtle Animus Glint Animation */
+.glint-text {
+  position: relative;
+  display: inline-block;
+}
+.glint-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: glint 5s infinite;
+}
+
+@keyframes glint {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
 #hero p,
 #hero-dynamic p,
 #game-hero p {
@@ -43,144 +145,835 @@
   color: var(--text-white);
 }
 
-/* About Section (Home Page) */
-#about {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4.5rem 1.5rem;
-}
-#about h2 {
-  margin-bottom: 2rem;
-}
-#about p {
-  text-align: left;
-}
-#about b {
-  color: var(--text-white);
+.hero-subtitle-animus {
+  font-family: monospace;
+  letter-spacing: 3px;
+  color: var(--text-offwhite) !important;
+  text-transform: uppercase;
+  font-size: 1.1rem !important;
+  margin-top: 1.5rem !important;
 }
 
-/* Game Styles Section (Home Page) */
-#game-styles {
-  padding: 0 1.5rem 5rem 1.5rem;
-}
-#game-styles h2 {
-  margin-bottom: 2rem;
-}
-.nav-pills {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 3rem; /* Controls gap between pills and cards */
-  gap: 1rem;
-}
-.nav-link {
-  display: block;
-  text-decoration: none;
-  color: var(--text-offwhite);
-  background-color: var(--primary-red);
-  border: 1px solid transparent;
-  border-radius: 50rem;
-  padding: 0.5rem 1.5rem;
-  font-size: 1.1rem;
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease,
-    color 0.3s ease;
-}
-.nav-link.active {
-  box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.6);
-}
-.tab-content {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-.tab-pane {
-  display: none;
-}
-.tab-pane.show.active {
-  display: block;
+/* The Eternal War Section */
+.animus-glitch-bg {
+  position: relative;
+  background-color: var(--bg-black);
+  background-image:
+    radial-gradient(
+      circle at center,
+      rgba(30, 30, 35, 0.4) 0%,
+      var(--bg-black) 100%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 255, 255, 0.02) 4px,
+      rgba(255, 255, 255, 0.02) 8px
+    );
 }
 
-.card-grid {
+.eternal-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem 1.5rem;
+}
+
+.animus-tag {
+  display: inline-block;
+  font-family: monospace;
+  color: var(--gold-accent);
+  border: 1px solid var(--gold-accent);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  background: rgba(201, 169, 97, 0.1);
+}
+
+.war-header h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.war-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+
+.war-content-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
-@media (min-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+@media (min-width: 992px) {
+  .war-content-grid {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
   }
 }
-.card {
-  background-color: rgba(31, 41, 55, 0.5);
-  border: 1px solid rgba(239, 68, 68, 0.2);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+
+.war-side {
+  padding: 3rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.war-side:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.assassin-side {
+  border-top: 3px solid var(--gold-accent);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.5) 0%,
+    rgba(15, 15, 20, 0.8) 100%
+  );
+}
+
+.templar-side {
+  border-top: 3px solid var(--bright-red);
+  background: linear-gradient(
+    135deg,
+    rgba(40, 15, 15, 0.5) 0%,
+    rgba(15, 15, 20, 0.8) 100%
+  );
+}
+
+.large-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.icon-red {
+  color: var(--bright-red);
+}
+
+.war-side h4 {
+  font-size: 2rem;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.war-side p {
+  color: var(--text-offwhite);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.creed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.creed-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+.creed-list li::before {
+  content: "»";
+  color: var(--gold-accent);
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.templar-side .creed-list li::before {
+  color: var(--bright-red);
+}
+
+.templar-desc {
+  border-left: 3px solid var(--bright-red);
+  padding-left: 1rem;
+  margin-top: 1rem !important;
+}
+
+.war-divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+
+@media (min-width: 992px) {
+  .war-divider {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
+
+.animus-line {
+  flex: 1;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+
+@media (max-width: 991px) {
+  .animus-line {
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+  }
+}
+
+.war-divider span {
+  margin: 1rem;
+  letter-spacing: 2px;
+}
+
+/* Featured Eras Showcase (Horizontal Scroll) */
+.eras-showcase-section {
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-black) 0%,
+    rgba(15, 15, 20, 0.9) 100%
+  );
+  overflow: hidden;
+}
+
+.eras-showcase-section .section-header {
+  margin-bottom: 4rem;
+  padding: 0 1.5rem;
+}
+
+.eras-showcase-section h2 {
+  font-size: 3rem;
+  color: var(--gold-accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+}
+
+.eras-scroll-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem 3rem 4rem 3rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-accent) rgba(255, 255, 255, 0.05);
+  scroll-snap-type: x mandatory;
+}
+
+/* Custom Scrollbar for Webkit */
+.eras-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+.eras-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.eras-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--gold-accent);
+  border-radius: 4px;
+}
+
+.era-showcase-card {
+  position: relative;
+  flex: 0 0 85vw; /* Almost full width on mobile */
+  max-width: 600px;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  scroll-snap-align: center;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .era-showcase-card {
+    flex: 0 0 45vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .era-showcase-card {
+    flex: 0 0 30vw;
+  }
+}
+
+.era-showcase-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(220, 53, 69, 0.3);
+}
+
+.era-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s ease;
+}
+
+.era-showcase-card:hover .era-bg {
+  transform: scale(1.08); /* Zoom effect on hover */
+}
+
+.era-showcase-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 5, 0.95) 0%,
+    rgba(5, 5, 5, 0.3) 50%,
+    transparent 100%
+  );
+}
+
+.era-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.era-date {
+  color: var(--gold-accent);
+  font-family: monospace;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.era-content h3 {
+  font-size: 2.2rem;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.era-showcase-card:hover .era-content h3 {
+  color: var(--bright-red);
+}
+
+.era-content p {
+  color: var(--text-offwhite);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.btn-text-gold {
+  color: var(--gold-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.era-showcase-card:hover .btn-text-gold {
+  transform: translateX(10px);
+}
+
+/* Core Gameplay Pillars */
+.pillars-section {
+  padding: 5rem 1.5rem 8rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pillars-section .section-header {
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--gold-accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: -0.5rem;
+  font-weight: 500;
   text-align: center;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.pillars-section h2 {
+  font-size: 3rem;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  letter-spacing: 4px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.pillar-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 41, 55, 0.4) 0%,
+    rgba(15, 15, 20, 0.8) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 4rem 3rem;
+  text-align: center;
+  overflow: hidden;
+  transition:
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+  z-index: 1;
+}
+
+.pillar-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+  border-color: rgba(201, 169, 97, 0.3);
+}
+
+/* Base styling for icon */
+.pillar-icon-container {
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.pillar-icon {
+  font-size: 4.5rem;
+  color: var(--text-offwhite);
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease,
+    text-shadow 0.4s ease;
+}
+
+/* Hover effects for specific pillars */
+.pillar-card:nth-child(1):hover .pillar-icon {
+  color: var(--bright-red);
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
+}
+
+.pillar-card:nth-child(2):hover .pillar-icon {
+  color: var(--gold-accent);
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(201, 169, 97, 0.6);
+}
+
+.pillar-card:nth-child(3):hover .pillar-icon {
+  color: #4a90e2; /* Parkour Eagle Vision Blue */
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(74, 144, 226, 0.6);
+}
+
+.pillar-card h3 {
+  font-size: 2rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  z-index: 2;
+  position: relative;
+}
+
+.pillar-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 1.1rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Animus Glitch overlay on hover */
+.pillar-glitch-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(201, 169, 97, 0.05),
+    transparent 70%
+  );
   opacity: 0;
-  transform: translateY(30px);
+  transition: opacity 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.card.animate-in {
+.pillar-card:hover .pillar-glitch-layer {
   opacity: 1;
-  transform: translateY(0);
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 30px -5px rgba(220, 53, 69, 0.3);
-  border-color: rgba(239, 68, 68, 0.5);
+/* Legendary Master Assassins Gallery */
+.gallery-section {
+  padding: 6rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-.card-icon {
+
+.gallery-section .section-header {
+  margin-bottom: 5rem;
+}
+
+.gallery-section h2 {
   font-size: 3rem;
   color: var(--bright-red);
-  margin-bottom: 1rem;
-}
-.card h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--text-white);
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
 }
 
-/* Stats Section (Home Page) */
-#legacy {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 5rem 1.5rem;
-}
-#legacy h2 {
-  margin-bottom: 3rem;
-}
-.stats-grid {
+.assassins-gallery-grid {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
+
 @media (min-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .assassins-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-.stat-item {
-  background-color: rgba(31, 41, 55, 0.5);
-  border: 1px solid rgba(239, 68, 68, 0.2);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
+
+@media (min-width: 1200px) {
+  .assassins-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-portrait {
+  position: relative;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  background: var(--bg-black);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.gallery-portrait:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(220, 53, 69, 0.2);
+}
+
+.portrait-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  transition: transform 0.8s ease;
+  filter: grayscale(40%) contrast(1.1) drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+}
+
+.gallery-portrait:hover .portrait-image {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(1.1);
+}
+
+.portrait-frame {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid rgba(201, 169, 97, 0.2);
+  transition: border-color 0.4s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gallery-portrait:hover .portrait-frame {
+  border-color: rgba(220, 53, 69, 0.6);
+}
+
+.gallery-portrait::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 5, 0.95) 0%,
+    rgba(5, 5, 5, 0.6) 40%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.portrait-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 3;
   text-align: center;
 }
-.stat-number {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: var(--bright-red);
-  margin-bottom: 1rem;
-}
-.stat-number.large-text {
+
+.portrait-name h3 {
+  color: var(--text-white);
   font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
 }
-.stat-label {
+
+.gallery-portrait:hover .portrait-name h3 {
+  color: var(--bright-red);
+}
+
+.era-label {
+  color: var(--gold-accent);
+  font-family: monospace;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Legacy Timeline Section (Home Page) */
+#legacy.legacy-timeline-section {
+  max-width: 1400px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+}
+
+#legacy.legacy-timeline-section h2 {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: rgba(15, 15, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 992px) {
+  .timeline-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 6rem 3rem;
+    gap: 0;
+  }
+}
+
+.timeline-track {
+  position: absolute;
+  background: rgba(201, 169, 97, 0.2);
+  left: 3.4rem;
+  top: 4rem;
+  bottom: 4rem;
+  width: 2px;
+  overflow: hidden;
+}
+
+.timeline-track::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--gold-accent),
+    transparent
+  );
+  animation: timeline-flow 4s linear infinite;
+}
+
+@keyframes timeline-flow {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 150%;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline-track {
+    top: 50%;
+    left: 4rem;
+    right: 4rem;
+    height: 2px;
+    width: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  .timeline-track::after {
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--gold-accent),
+      transparent
+    );
+    animation: timeline-flow-h 4s linear infinite;
+  }
+}
+
+@keyframes timeline-flow-h {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 992px) {
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    flex: 1;
+  }
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px);
+}
+
+.timeline-node {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-black);
+  border: 3px solid var(--gold-accent);
+  box-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-node {
+  background: var(--gold-accent);
+  box-shadow: 0 0 20px rgba(201, 169, 97, 0.8);
+  transform: scale(1.3);
+}
+
+.timeline-content {
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.timeline-item:hover .timeline-content {
+  background: rgba(31, 41, 55, 0.7);
+  border-color: rgba(201, 169, 97, 0.3);
+}
+
+.icon-gold {
+  color: var(--gold-accent);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Hero Section (Assassins Page) */
@@ -319,16 +1112,14 @@
 }
 .assassin-card {
   display: block;
-  background: linear-gradient(
-    135deg,
-    rgba(31, 41, 55, 0.8),
-    rgba(17, 24, 39, 0.8)
-  );
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 2px solid rgba(220, 53, 69, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 0;
   cursor: pointer;
   opacity: 0;
@@ -343,7 +1134,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), transparent);
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.15), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -472,15 +1263,31 @@
 
 /* ---------------- HERO + TEXT RESIZING ---------------- */
 #hero,
+#hero-dynamic,
+#game-hero,
 #hero-assassins {
-  height: 18rem;
-  padding: 0 1rem;
+  height: 22rem;
+  padding: 0;
+  display: block; /* Disable flex split on small screens */
+  background-image: url("../Media/AC_Hero.webp"); /* Fallback for mobile */
+}
+
+/* Hide splits on mobile and rely on fallback background */
+.hero-split {
+  display: none;
 }
 
 #hero h1,
-#hero-assassins h1 {
-  font-size: 2rem;
+#hero-assassins h1,
+#hero-dynamic h1,
+#game-hero h1 {
+  font-size: 1.8rem;
   text-align: center;
+}
+
+.hero-title-gold {
+  font-size: 2.2rem !important;
+  margin-top: 0 !important;
 }
 
 #hero p {

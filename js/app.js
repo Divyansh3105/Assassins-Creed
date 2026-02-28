@@ -67,7 +67,7 @@ async function loadEraContent() {
     }
 
     const cardHtml = `
-            <a href="game.html?game=${game.id}" class="assassin-card">
+            <a href="game.html?game=${game.id}" class="assassin-card glass-panel" tabindex="0">
                 <img src="${game.card_image}" alt="${game.card_title}" loading="lazy">
                 <div class="assassin-info">
                     <h3>${game.card_title}</h3>
@@ -298,7 +298,7 @@ async function loadAssassinsContent() {
     }
 
     const html = `
-      <div class="assassin-card" data-assassin="${assassin.id}" data-era="${assassin.card_era_filter}" data-role="${assassin.card_role}">
+      <div class="assassin-card glass-panel" data-assassin="${assassin.id}" data-era="${assassin.card_era_filter}" data-role="${assassin.card_role}" tabindex="0">
           <img src="${assassin.card_image}" alt="${assassin.card_title}" loading="lazy">
           <div class="assassin-info">
               <h3>${assassin.card_title}</h3>

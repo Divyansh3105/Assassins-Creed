@@ -40,22 +40,30 @@ customElements.define("loading-screen", LoadingScreen);
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <header>
-            <nav>
-                <a href="index.html">
-                    <img id="logo" src="Media/logo.png" alt="logo">
-                </a>
-
+        <header class="sticky-header animus-glass">
+            <nav class="desktop-nav">
+                <!-- Mobile / Toggled Hamburger -->
                 <button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                <ul class="content">
+                <!-- Left Links -->
+                <ul class="content nav-left">
                     <li><a href="index.html" class="home-link">Home</a></li>
-                    <li><a href="Assassins.html">Legendary Assassins</a></li>
+                    <li><a href="Assassins.html">Assassins</a></li>
+                </ul>
 
+                <!-- Center Logo -->
+                <div class="nav-center">
+                    <a href="index.html">
+                        <img id="logo" src="Media/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Right Links -->
+                <ul class="content nav-right">
                     <li class="dropdown">
                         <input type="checkbox" id="games-toggle">
                         <label for="games-toggle" class="dropdownto">Games</label>
@@ -67,6 +75,9 @@ class SiteHeader extends HTMLElement {
                             <li><a href="era.html?era=ancient-trilogy">Ancient Trilogy</a></li>
                             <li><a href="era.html?era=modern-classic-return">Modern Classic Return</a></li>
                         </ul>
+                    </li>
+                    <li class="cta-nav-item">
+                        <a href="index.html" class="btn-cta-gold">Join the Creed</a>
                     </li>
                 </ul>
 

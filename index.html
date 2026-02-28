@@ -12,7 +12,7 @@
         content="Embark on a journey through time with this Assassin's Creed tribute page, honoring the franchise’s epic sagas, hidden blades, and historical adventures.">
 
     <!-- Preload Custom Font -->
-    <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
     <!-- Open Graph Meta Tags for social media sharing -->
     <meta property="og:title" content="Assassin's Creed Tribute">
@@ -49,125 +49,241 @@
     <site-header></site-header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-overlay">
-                <div class="hero-content">
-                    <h1>ASSASSIN'S CREED: THE HIDDEN BLADE OF HISTORY</h1>
-                    <p>History is our playground.</p>
+        <!-- Hero Section (Desktop Split-Screen Layout) -->
+        <section id="hero" class="split-hero master-hero">
+            <!-- Left Split (Altair) -->
+            <div class="hero-split hero-left"></div>
+            <!-- Right Split (Ezio) -->
+            <div class="hero-split hero-right"></div>
+
+            <div class="hero-overlay-desktop">
+                <div class="hero-content cinematic-content">
+                    <h1>NOTHING IS TRUE.</h1>
+                    <h1 class="hero-title-gold glint-text">EVERYTHING IS PERMITTED.</h1>
+                    <p class="hero-subtitle-animus">Initiate sequence. Relive the memories.</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>What is Assassin's Creed?</h2>
-            <div class="about-content">
-                <p><b>Assassin's Creed</b> is a revolutionary action-adventure game franchise developed by Ubisoft.
-                    Launched
-                    in 2007, it features historical fiction intertwined with stealth, parkour, and open-world
-                    exploration.
-                    Players use the Animus to relive the memories of legendary Assassins across different timelines—from
-                    Ancient Egypt and Renaissance Italy to Viking-age England.</p>
-                <p>The franchise explores the eternal conflict between the <b>Assassin Brotherhood</b>, who fight for
-                    free
-                    will and peace, and the <b>Templar Order</b>, who seek control through order. Each game transports
-                    players to meticulously recreated historical periods, allowing them to experience pivotal moments in
-                    human history while uncovering ancient mysteries and powerful artifacts known as Pieces of Eden.</p>
-                <p>With over <b>200 million copies sold</b> worldwide, Assassin's Creed has become one of gaming's most
-                    beloved franchises, praised for its stunning historical accuracy, engaging narratives, and
-                    innovative
-                    gameplay mechanics that blend stealth, combat, and exploration.</p>
-            </div>
-        </section>
-
-        <!-- Game styles -->
-        <section id="game-styles">
-            <h2>Game Styles</h2>
-            <ul class="nav nav-pills" id="gameTabs">
-                <li class="nav-item">
-                    <a class="nav-link active" data-bs-toggle="pill" href="#stealth">Stealth</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="pill" href="#combat">Combat</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="pill" href="#exploration">Exploration</a>
-                </li>
-            </ul>
-
-            <div class="tab-content">
-                <div class="tab-pane show active" id="stealth">
-                    <div class="card-grid">
-                        <div class="card">
-                            <div class="card-icon">🗡️</div>
-                            <h3>Stealth Kills</h3>
-                            <p>Eliminate targets silently using hidden blades and shadows.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">🏙️</div>
-                            <h3>Blending In</h3>
-                            <p>Use crowds, disguises, and environment to stay undetected.</p>
-                        </div>
-                        <div class="card">
-                            <div class="card-icon">🧠</div>
-                            <h3>Strategic Takedowns</h3>
-                            <p>Plan your attacks and use patience to strike precisely.</p>
-                        </div>
-                    </div>
+        <!-- Featured Eras Showcase -->
+        <section id="featured-eras" class="eras-showcase-section">
+            <div class="container-fluid">
+                <div class="section-header text-center">
+                    <h2>ERAS OF THE BROTHERHOOD</h2>
+                    <p class="section-subtitle">Explore the memories of the past</p>
                 </div>
 
-                <div class="tab-pane" id="combat">
-                    <div class="card-grid">
-                        <div class="card">
-                            <div class="card-icon">⚔️</div>
-                            <h3>Evolving Combat</h3>
-                            <p>From simple counters to full-scale RPG combat systems.</p>
+                <div class="eras-scroll-container">
+                    <!-- Renaissance Italy -->
+                    <a href="era.html?era=the-desmond-saga" class="era-showcase-card">
+                        <div class="era-bg" style="background-image: url('Media/Ezio.webp');"></div>
+                        <div class="era-content glass-panel">
+                            <span class="era-date">15th Century</span>
+                            <h3>Renaissance Italy</h3>
+                            <p>Uncover the conspiracies of the Borgia family alongside legendary Master Assassin Ezio
+                                Auditore da Firenze.</p>
+                            <span class="btn-text-gold">Explore Era <i class="bi bi-arrow-right"></i></span>
                         </div>
-                        <div class="card">
-                            <div class="card-icon">🛡️</div>
-                            <h3>Weapon Variety</h3>
-                            <p>Wield swords, bows, hidden blades, and dual axes.</p>
-                        </div>
-                    </div>
-                </div>
+                    </a>
 
-                <div class="tab-pane" id="exploration">
-                    <div class="card-grid">
-                        <div class="card">
-                            <div class="card-icon">🏛️</div>
-                            <h3>Historical Cities</h3>
-                            <p>Explore cities like Florence, London, and Constantinople.</p>
+                    <!-- Victorian London -->
+                    <a href="era.html?era=modern-classic-return" class="era-showcase-card">
+                        <div class="era-bg" style="background-image: url('Media/ModernBanner.webp');"></div>
+                        <div class="era-content glass-panel">
+                            <span class="era-date">1868 CE</span>
+                            <h3>Victorian London</h3>
+                            <p>Fight for the working class during the Industrial Revolution as twins Jacob and Evie
+                                Frye.</p>
+                            <span class="btn-text-gold">Explore Era <i class="bi bi-arrow-right"></i></span>
                         </div>
-                        <div class="card">
-                            <div class="card-icon">🧭</div>
-                            <h3>Parkour & Climbing</h3>
-                            <p>Climb iconic landmarks and leap across rooftops.</p>
+                    </a>
+
+                    <!-- Ancient Egypt -->
+                    <a href="era.html?era=ancient-trilogy" class="era-showcase-card">
+                        <div class="era-bg" style="background-image: url('Media/AncientBanner.webp');"></div>
+                        <div class="era-content glass-panel">
+                            <span class="era-date">49 BCE</span>
+                            <h3>Ancient Egypt</h3>
+                            <p>Witness the birth of the Brotherhood with Bayek of Siwa in a kingdom tearing itself
+                                apart.</p>
+                            <span class="btn-text-gold">Explore Era <i class="bi bi-arrow-right"></i></span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Legacy Section -->
-        <section id="legacy">
-            <h2>Legacy of the Creed</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3 class="stat-number">13+</h3>
-                    <p class="stat-label">Main Titles</p>
+        <!-- The Eternal War Section -->
+        <section id="eternal-war" class="animus-glitch-bg">
+            <div class="eternal-container">
+                <div class="war-header text-center">
+                    <h2>THE ETERNAL WAR</h2>
+                    <h3 class="war-subtitle">Assassins vs. Templars</h3>
                 </div>
-                <div class="stat-item">
-                    <h3 class="stat-number">200M+</h3>
-                    <p class="stat-label">Copies Sold</p>
+
+                <div class="war-content-grid">
+                    <div class="war-side assassin-side glass-panel">
+                        <i class="bi bi-shield-shaded icon-gold large-icon"></i>
+                        <h4>The Brotherhood</h4>
+                        <p><i>"Where other men blindly follow the truth, remember..."</i></p>
+                        <ul class="creed-list">
+                            <li>Stay your blade from the flesh of an innocent.</li>
+                            <li>Hide in plain sight.</li>
+                            <li>Never compromise the Brotherhood.</li>
+                        </ul>
+                    </div>
+
+                    <div class="war-divider">
+                        <div class="animus-line"></div>
+                        <span>VS</span>
+                        <div class="animus-line"></div>
+                    </div>
+
+                    <div class="war-side templar-side glass-panel">
+                        <i class="bi bi-x-diamond-fill icon-red large-icon"></i>
+                        <h4>The Templar Order</h4>
+                        <p><i>"May the Father of Understanding guide us."</i></p>
+                        <ul class="creed-list templar-list">
+                            <li>Create a perfect world through order.</li>
+                            <li>Control and guide humanity's purpose.</li>
+                            <li>Recover and wield the Pieces of Eden.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3 class="stat-number">15+</h3>
-                    <p class="stat-label">Years of Impact</p>
+            </div>
+        </section>
+
+        <!-- Core Gameplay Pillars -->
+        <section id="core-pillars" class="pillars-section">
+            <div class="container-fluid">
+                <div class="section-header text-center">
+                    <h2>THE CREED'S PILLARS</h2>
+                    <p class="section-subtitle">Master the arts of the Brotherhood</p>
                 </div>
-                <div class="stat-item">
-                    <h3 class="stat-number large-text">49 BCE – 2020 CE</h3>
-                    <p class="stat-label">Spanning History</p>
+
+                <div class="pillars-grid">
+                    <!-- Stealth Pillar -->
+                    <div class="pillar-card glass-panel" tabindex="0">
+                        <div class="pillar-icon-container">
+                            <i class="bi bi-eye-slash pillar-icon"></i>
+                        </div>
+                        <h3>STEALTH</h3>
+                        <p>Strike from the shadows. Master the art of the Hidden Blade, blend into the bustling crowds,
+                            and eliminate your targets without ever being seen. True Assassins are ghosts.</p>
+                        <div class="pillar-glitch-layer"></div>
+                    </div>
+
+                    <!-- Combat Pillar -->
+                    <div class="pillar-card glass-panel" tabindex="0">
+                        <div class="pillar-icon-container">
+                            <i class="bi bi-crosshair pillar-icon"></i>
+                        </div>
+                        <h3>COMBAT</h3>
+                        <p>When the shadows fail, steel answers. Wield an arsenal of deadly historical weaponry. Flow
+                            seamlessly through brutal, rhythmic combat to overpower the Templar forces.</p>
+                        <div class="pillar-glitch-layer"></div>
+                    </div>
+
+                    <!-- Parkour Pillar -->
+                    <div class="pillar-card glass-panel" tabindex="0">
+                        <div class="pillar-icon-container">
+                            <i class="bi bi-arrows-move pillar-icon"></i>
+                        </div>
+                        <h3>PARKOUR</h3>
+                        <p>The city is your weapon. Free-run across the sprawling rooftops of history's greatest cities.
+                            Scale impossibly high monuments and execute the iconic Leap of Faith.</p>
+                        <div class="pillar-glitch-layer"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legendary Master Assassins Gallery -->
+        <section id="master-assassins" class="gallery-section animus-glitch-bg">
+            <div class="container-fluid">
+                <div class="section-header text-center">
+                    <h2>LEGENDARY MASTERS</h2>
+                    <p class="section-subtitle">Those who shaped history</p>
+                </div>
+
+                <div class="assassins-gallery-grid">
+                    <!-- Altair -->
+                    <a href="Assassins.html" class="gallery-portrait glass-panel">
+                        <div class="portrait-image" style="background-image: url('Media/Altair.webp');"></div>
+                        <div class="portrait-frame"></div>
+                        <div class="portrait-name">
+                            <h3>Altaïr Ibn-La'Ahad</h3>
+                            <span class="era-label">Levant, 1191</span>
+                        </div>
+                    </a>
+
+                    <!-- Ezio -->
+                    <a href="Assassins.html" class="gallery-portrait glass-panel">
+                        <div class="portrait-image" style="background-image: url('Media/Ezio.webp');"></div>
+                        <div class="portrait-frame"></div>
+                        <div class="portrait-name">
+                            <h3>Ezio Auditore</h3>
+                            <span class="era-label">Italy, 1476</span>
+                        </div>
+                    </a>
+
+                    <!-- Bayek -->
+                    <a href="Assassins.html" class="gallery-portrait glass-panel">
+                        <div class="portrait-image" style="background-image: url('Media/Bayek.webp');"></div>
+                        <div class="portrait-frame"></div>
+                        <div class="portrait-name">
+                            <h3>Bayek of Siwa</h3>
+                            <span class="era-label">Egypt, 49 BCE</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="Assassins.html" class="btn-cta-gold">View The Full Brotherhood</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legacy Timeline Section -->
+        <section id="legacy" class="legacy-timeline-section">
+            <h2>Brotherhood Legacy</h2>
+            <div class="timeline-container glass-panel">
+                <div class="timeline-track"></div>
+
+                <div class="timeline-item" tabindex="0">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <i class="bi bi-clock-history icon-gold"></i>
+                        <h3 class="stat-number">49 BCE</h3>
+                        <p class="stat-label">The Hidden Ones</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" tabindex="0">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <i class="bi bi-globe icon-gold"></i>
+                        <h3 class="stat-number">1191 CE</h3>
+                        <p class="stat-label">The Levantine Brotherhood</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" tabindex="0">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <i class="bi bi-brush icon-gold"></i>
+                        <h3 class="stat-number">1476 CE</h3>
+                        <p class="stat-label">The Italian Renaissance</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" tabindex="0">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-content">
+                        <i class="bi bi-gear-wide-connected icon-gold"></i>
+                        <h3 class="stat-number">1868 CE</h3>
+                        <p class="stat-label">The Industrial Revolution</p>
+                    </div>
                 </div>
             </div>
         </section>

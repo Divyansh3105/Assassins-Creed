@@ -1,51 +1,113 @@
-/* Header */
-/* Header */
-header {
-  background-color: rgba(0, 0, 0, 0.95);
+/* Header & Animus UI */
+header.sticky-header {
+  background: rgba(5, 5, 5, 0.85);
   padding: 1rem 1.5rem;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(220, 53, 69, 0.2);
+  z-index: 2000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
 }
 
-header nav {
+header.animus-glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* Subtle horizontal lines for Animus glitch effect */
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.01) 2px,
+    rgba(255, 255, 255, 0.01) 4px
+  );
+}
+
+header nav.desktop-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
 #logo {
-  height: 4rem;
+  height: 4.5rem;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05);
 }
 
 .content {
   display: flex;
   list-style: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
-  margin-left: auto;
+}
+
+.nav-left {
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.nav-right {
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .content a {
   text-decoration: none;
+  color: var(--text-offwhite);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
   color: var(--primary-red);
 }
-.content a:hover {
-  color: var(--text-offwhite);
-}
-.content .home-link {
-  font-weight: 800; /* Bolds the Home link on the home page */
-}
+
+.content .home-link,
 .content .assassins-link {
-  font-weight: 800; /* Bolds the Assassins link on the assassins page */
+  font-weight: 700;
+}
+
+/* CTA Button */
+.btn-cta-gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201, 169, 97, 0.1);
+  border: 1px solid var(--gold-accent);
+  color: var(--gold-accent) !important;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: 700 !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease !important;
+}
+
+.btn-cta-gold:hover {
+  background: var(--gold-accent);
+  color: var(--bg-black) !important;
+  box-shadow: 0 0 15px rgba(201, 169, 97, 0.5);
 }
 
 /* Dropdown */
@@ -59,11 +121,18 @@ header nav {
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: inherit;
   background: none;
   border: none;
-  color: var(--primary-red);
+  color: var(--text-offwhite);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   padding: 0;
+  transition: color 0.3s ease;
+}
+
+.dropdownto:hover {
+  color: var(--primary-red);
 }
 
 .dropdownto:focus {
@@ -79,10 +148,13 @@ header nav {
   flex-direction: column;
   min-width: 14rem;
   list-style: none;
-  background-color: var(--footer-dark);
-  border: 1px solid rgba(239, 68, 68, 0.2);
-  border-radius: 0.25rem;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
   padding: 0.5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -117,9 +189,11 @@ nav:not(.nav-active) .content .dropdown-menu {
 /* Footer */
 /* --------- Footer --------- */
 .main-footer {
-  padding: 15px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(3, 4, 10, 0.8);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   text-align: center;
 }
 
@@ -130,13 +204,14 @@ nav:not(.nav-active) .content .dropdown-menu {
 }
 
 .main-footer a {
-  color: #ffffff;
-  text-decoration: underline;
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .main-footer a:hover {
-  color: var(--primary-red);
+  color: var(--bright-gold);
 }
 
 .footer-icons {
@@ -154,26 +229,35 @@ nav:not(.nav-active) .content .dropdown-menu {
   color: var(--primary-red);
 }
 
-
 /* Responsive Header Layout */
 /* Tablets and smaller desktops (max-width: 992px) */
 @media (max-width: 992px) {
-  header nav {
+  header nav.desktop-nav {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .nav-center {
+    position: static;
+    transform: none;
+    margin-bottom: 1rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex: none;
+    width: 100%;
+    justify-content: center;
   }
 
   .content {
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     gap: 1rem;
   }
-
-
 }
 /* Tablets and large phones (max-width: 768px) */
-
 
 /* Hamburger container */
 .hamburger {
@@ -216,10 +300,29 @@ nav:not(.nav-active) .content .dropdown-menu {
 /* ---------------- TABLETS & PHONES (max-width: 768px) ---------------- */
 @media (max-width: 768px) {
   /* ---------------- HEADER & NAV ---------------- */
-  header nav {
+  header nav.desktop-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-center {
+    position: static;
+    transform: none;
+  }
+
+  .content.nav-left,
+  .content.nav-right {
     flex-direction: column;
-    gap: 1rem;
     align-items: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: none;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 
   .content {
@@ -230,7 +333,7 @@ nav:not(.nav-active) .content .dropdown-menu {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(10, 10, 10, 0.75);
+    background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding-top: 6rem;
@@ -276,9 +379,9 @@ nav:not(.nav-active) .content .dropdown-menu {
 
   /* ---------------- HAMBURGER ---------------- */
   .hamburger {
-  background: none;
-  border: none;
-  padding: 0;
+    background: none;
+    border: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -392,7 +495,6 @@ nav:not(.nav-active) .content .dropdown-menu {
   .dropdown-menu a:hover {
     color: var(--text-white);
   }
-
 }
 /* ---------------- DESKTOP DROPDOWN POSITION FIX ---------------- */
 @media (min-width: 769px) {
@@ -490,9 +592,9 @@ nav:not(.nav-active) .content .dropdown-menu {
 
   /* ---------------- HAMBURGER ---------------- */
   .hamburger {
-  background: none;
-  border: none;
-  padding: 0;
+    background: none;
+    border: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -685,6 +787,4 @@ nav:not(.nav-active) .content .dropdown-menu {
     font-size: 1.2rem;
     margin: 0 5px;
   }
-
-
 }

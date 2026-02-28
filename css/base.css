@@ -1,29 +1,29 @@
 /* Typography and Globals */
 @font-face {
-  font-family: Assasign;
-  src: url("../Media/Assassin.ttf");
+  font-family: "Assasign";
+  src: url("../Media/Assassin.ttf") format("truetype");
   font-display: swap;
 }
 
 /* == GLOBAL CSS VARIABLES == */
 :root {
   /* Red Theme */
-  --primary-red: #dc3545;
+  --primary-red: #dc3545; /* Deeper blood red */
   --primary-red-hover: #c82333;
-  --bright-red: #ef4444;
-  --blood-red: #dc2626;
+  --bright-red: #ff4d4d; /* More vibrant bright red */
+  --blood-red: #b91c1c; /* Darker blood red */
   --light-red: #f87171;
 
   /* Gold Theme */
-  --gold-accent: #c9a961;
+  --gold-accent: #c9a961; /* Richer gold */
   --bright-gold: #fbbf24;
 
   /* Dark Theme */
-  --bg-black: #000000;
+  --bg-black: #050505; /* Deepest charcoal/black */
   --bg-dark: #111827;
   --bg-card: #1f2937;
   --border-dark: #374151;
-  --footer-dark: #212529;
+  --footer-dark: #1a1a1a;
 
   /* Light Theme */
   --text-white: #ffffff;
@@ -33,7 +33,17 @@
   --text-muted: #9ca3af;
 
   /* Typography */
-  --font-primary: "Assasign", sans-serif;
+  --font-primary: "Inter", "Roboto", "Segoe UI", "Arial", sans-serif;
+  --font-display: "Assasign", sans-serif;
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 *,
@@ -48,8 +58,8 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--bg-black);
+  color: var(--text-white);
   font-family: var(--font-primary);
   margin: 0;
   overflow-x: hidden;
@@ -82,6 +92,8 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -262,7 +274,7 @@ p {
 #scroll-top {
   position: fixed;
   bottom: 2rem;
-  left: 2rem;
+  right: 2rem;
   width: 60px;
   height: 60px;
   border-radius: 50%;
