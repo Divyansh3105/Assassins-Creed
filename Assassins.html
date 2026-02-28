@@ -1,20 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <link href="Media/AC_OG.webp" rel="icon" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Legends of the Creed</title>
+    <title>Legendary Assassins - Assassin's Creed Tribute</title>
+
+    <!-- Preload Custom Font -->
+    <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin>
 
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Web Components -->
+    <script src="js/components.js"></script>
 </head>
 
 <body>
@@ -22,420 +31,63 @@
     <div id="particles-js"></div>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-content">
-            <img src="Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
-            <div class="loading-spinner"></div>
-            <p class="loading-text">Synchronizing...</p>
-        </div>
-    </div>
+    <loading-screen></loading-screen>
 
     <!-- Header -->
-    <header>
-        <nav>
-            <a href="index.html">
-                <img id="logo" src="Media/logo.png" alt="logo">
-            </a>
+    <site-header></site-header>
 
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="content">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Assassins.html" class="home-link">Legendary Assassins</a></li>
-
-                <li class="dropdown">
-                    <input type="checkbox" id="games-toggle">
-                    <label for="games-toggle" class="dropdownto">Games</label>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="The Desmond Saga/Home.html">The Desmond Saga</a></li>
-                        <li><a href="Colonial Era/Home.html">Colonial Era</a></li>
-                        <li><a href="European Revolution Era/Home.html">European Revolution Era</a></li>
-                        <li><a href="Ancient Trilogy/Home.html">Ancient Trilogy</a></li>
-                        <li><a href="Modern Classic Return/Home.html">Modern Classic Return</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <div class="overlay"></div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero-assassins">
-        <div class="hero-overlay">
-            <h1>Legends of the Creed</h1>
-            <p class="hero-subtitle">Masters of stealth, guardians of freedom</p>
-        </div>
-    </section>
-
-    <!-- Master Assassins Section -->
-    <section id="master-assassins">
-        <h2>Master Assassins</h2>
-
-        <!-- Filter Section -->
-        <div class="filter-container">
-            <div class="filter-pills">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="bi bi-grid-fill"></i> All Assassins
-                </button>
-                <button class="filter-btn" data-filter="mentor">
-                    <i class="bi bi-trophy-fill"></i> Mentors
-                </button>
-                <button class="filter-btn" data-filter="founder">
-                    <i class="bi bi-shield-fill"></i> Founders
-                </button>
-                <button class="filter-btn" data-filter="ancient">
-                    <i class="bi bi-hourglass-split"></i> Ancient Era
-                </button>
-                <button class="filter-btn" data-filter="modern">
-                    <i class="bi bi-clock-history"></i> Modern Era
-                </button>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero-assassins">
+            <div class="hero-overlay">
+                <h1>Legends of the Creed</h1>
+                <p class="hero-subtitle">Masters of stealth, guardians of freedom</p>
             </div>
-        </div>
+        </section>
 
-        <div class="assassin-grid">
-            <!-- Ezio Card -->
-            <div class="assassin-card" data-assassin="ezio" data-era="modern" data-role="mentor">
-                <img src="Media/Ezio.webp" alt="Ezio Auditore" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Ezio Auditore da Firenze</h3>
-                    <div class="assassin-era">Italian Renaissance • 1459-1524</div>
-                    <p class="assassin-desc">The most celebrated Assassin in history. Born into nobility, Ezio's life
-                        changed when his family was betrayed. He became a Master Assassin, rebuilt the Brotherhood, and
-                        discovered the secrets of the First Civilization.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-trophy-fill"></i>
-                            <span>Mentor</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-star-fill"></i>
-                            <span>3 Games</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Italy</span>
-                        </div>
-                    </div>
+        <!-- Master Assassins Section -->
+        <section id="master-assassins">
+            <h2>Master Assassins</h2>
+
+            <!-- Filter Section -->
+            <div class="filter-container">
+                <div class="filter-pills">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="bi bi-grid-fill"></i> All Assassins
+                    </button>
+                    <button class="filter-btn" data-filter="mentor">
+                        <i class="bi bi-trophy-fill"></i> Mentors
+                    </button>
+                    <button class="filter-btn" data-filter="founder">
+                        <i class="bi bi-shield-fill"></i> Founders
+                    </button>
+                    <button class="filter-btn" data-filter="ancient">
+                        <i class="bi bi-hourglass-split"></i> Ancient Era
+                    </button>
+                    <button class="filter-btn" data-filter="modern">
+                        <i class="bi bi-clock-history"></i> Modern Era
+                    </button>
                 </div>
             </div>
 
-            <!-- Altair card -->
-            <div class="assassin-card" data-assassin="altair" data-era="ancient" data-role="mentor">
-                <img src="Media/Altair.webp" alt="Altair" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Altaïr Ibn-La'Ahad</h3>
-                    <div class="assassin-era">Third Crusade • 1165-1257</div>
-                    <p class="assassin-desc">The legendary Syrian Assassin who reformed the Brotherhood. After his
-                        arrogance led to failure, Altaïr redeemed himself and revolutionized the Creed, creating the
-                        foundation for future generations.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-trophy-fill"></i>
-                            <span>Mentor</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-book-fill"></i>
-                            <span>Codex Author</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Levant</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bayek card -->
-            <div class="assassin-card" data-assassin="bayek" data-era="ancient" data-role="founder">
-                <img src="Media/Bayek.webp" alt="Bayek" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Bayek of Siwa</h3>
-                    <div class="assassin-era">Ptolemaic Egypt • 85-38 BCE</div>
-                    <p class="assassin-desc">The first Hidden One and founder of the Brotherhood. A Medjay protector
-                        seeking vengeance for his son, Bayek established the order that would become the Assassins,
-                        fighting against the Order of the Ancients.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-shield-fill"></i>
-                            <span>Founder</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-heart-fill"></i>
-                            <span>Medjay</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Egypt</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kassandra card -->
-            <div class="assassin-card" data-assassin="kassandra" data-era="ancient" data-role="founder">
-                <img src="Media/Kassandra.webp" alt="Kassandra" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Kassandra</h3>
-                    <div class="assassin-era">Ancient Greece • 458 BCE-2018 CE</div>
-                    <p class="assassin-desc">A legendary Spartan misthios and wielder of the Staff of Hermes
-                        Trismegistus. Kassandra fought against the Cult of Kosmos and lived for over 2,400 years,
-                        protecting humanity from the shadows.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-lightning-fill"></i>
-                            <span>Demigod</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-infinity"></i>
-                            <span>Immortal</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Greece</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eivor card -->
-            <div class="assassin-card" data-assassin="eivor" data-era="ancient" data-role="warrior">
-                <img src="Media/Eivor.webp" alt="Eivor" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Eivor Varinsdottir</h3>
-                    <div class="assassin-era">Viking Age • 847-877 CE</div>
-                    <p class="assassin-desc">A fierce Viking warrior and reincarnation of Odin. Eivor led the Raven Clan
-                        to England, allied with the Hidden Ones, and fought against the Order of the Ancients while
-                        building a new settlement.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-hammer"></i>
-                            <span>Viking</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-lightning-fill"></i>
-                            <span>Sage</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>England</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Arno card -->
-            <div class="assassin-card" data-assassin="arno">
-                <img src="Media/Arno.webp" alt="Arno Dorian" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Arno Victor Dorian</h3>
-                    <div class="assassin-era">French Revolution • 1768-1833</div>
-                    <p class="assassin-desc">A French Assassin seeking redemption and justice. After his adoptive
-                        father's murder, Arno joined the Brotherhood to uncover a conspiracy that threatened to tear
-                        France apart during its bloodiest revolution.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-heart-fill"></i>
-                            <span>Romantic</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-flag-fill"></i>
-                            <span>Revolutionary</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>France</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Connor card -->
-            <div class="assassin-card" data-assassin="connor">
-                <img src="Media/Connor.webp" alt="Connor Kenway" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Ratonhnhaké:ton (Connor)</h3>
-                    <div class="assassin-era">American Revolution • 1756-1820s</div>
-                    <p class="assassin-desc">A half-Mohawk, half-British Assassin who fought for freedom during the
-                        American Revolution. Connor sought to protect his people and ideals, becoming a pivotal figure
-                        in America's birth as a nation.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-tree-fill"></i>
-                            <span>Native</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-flag-fill"></i>
-                            <span>Patriot</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>America</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Edward card -->
-            <div class="assassin-card" data-assassin="edward">
-                <img src="Media/Edward.webp" alt="Edward Kenway" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Edward James Kenway</h3>
-                    <div class="assassin-era">Golden Age of Piracy • 1693-1735</div>
-                    <p class="assassin-desc">A Welsh pirate turned Assassin. Initially driven by greed, Edward's
-                        adventures in the Caribbean led him to understand the Assassin cause, eventually becoming a
-                        Master Assassin and father to Haytham.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-water"></i>
-                            <span>Pirate</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-compass-fill"></i>
-                            <span>Captain</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Caribbean</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Basim card -->
-            <div class="assassin-card" data-assassin="basim">
-                <img src="Media/Basim.webp" alt="Basim Ibn Ishaq" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Basim Ibn Ishaq</h3>
-                    <div class="assassin-era">Islamic Golden Age • 844-2020 CE</div>
-                    <p class="assassin-desc">A cunning Hidden One and reincarnation of Loki. Basim's quest for answers
-                        about his past led him from Baghdad to Valhalla, where he discovered his true nature and
-                        manipulated events across centuries.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-eye-fill"></i>
-                            <span>Sage</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-moon-stars-fill"></i>
-                            <span>Trickster</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Baghdad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Shay card -->
-            <div class="assassin-card" data-assassin="shay">
-                <img src="Media/Shay.webp" alt="Shay Cormac" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Shay Patrick Cormac</h3>
-                    <div class="assassin-era">Seven Years' War • 1731-1805</div>
-                    <p class="assassin-desc">The Assassin who became a Templar. After witnessing the Brotherhood's
-                        reckless pursuit of Precursor artifacts causing destruction, Shay defected and hunted his former
-                        brothers to prevent further catastrophes.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-arrow-left-right"></i>
-                            <span>Defector</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-crosshair"></i>
-                            <span>Hunter</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>Atlantic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Jacob card -->
-            <div class="assassin-card" data-assassin="jacob">
-                <img src="Media/Jacob.webp" alt="Jacob Frye" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Jacob Frye</h3>
-                    <div class="assassin-era">Victorian Era • 1847-1888+</div>
-                    <p class="assassin-desc">A charismatic and impulsive Assassin who liberated London from Templar
-                        control. Jacob founded the Rooks gang and, alongside his twin sister Evie, dismantled Crawford
-                        Starrick's criminal empire.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-people-fill"></i>
-                            <span>Gang Leader</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-person-fill"></i>
-                            <span>Twin</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>London</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Evie card -->
-            <div class="assassin-card" data-assassin="evie">
-                <img src="Media/Evie.webp" alt="Evie Frye" loading="lazy">
-                <div class="assassin-info">
-                    <h3>Evie Frye</h3>
-                    <div class="assassin-era">Victorian Era • 1847-1888+</div>
-                    <p class="assassin-desc">A master of stealth and intelligence. Evie's methodical approach
-                        complemented her brother's brashness. She sought the Shroud of Eden while helping liberate
-                        London, proving herself as one of the Brotherhood's finest.</p>
-                    <div class="assassin-stats">
-                        <div class="stat-badge">
-                            <i class="bi bi-search"></i>
-                            <span>Scholar</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-person-fill"></i>
-                            <span>Twin</span>
-                        </div>
-                        <div class="stat-badge">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <span>London</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="assassin-grid" id="main-assassins-grid"></div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 Assassin's Creed Tribute. Reliving the memories of legends.</p>
-            <p>
-                🧠 Brain + 💻 Keyboard =
-                <a href="https://github.com/Divyansh3105" target="_blank">Divyansh Garg</a>
-            </p>
-            <div class="footer-icons">
-                <a href="https://github.com/Divyansh3105" target="_blank" aria-label="GitHub"><i
-                        class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/divyanshgarg3105/" target="_blank" aria-label="LinkedIn"><i
-                        class="bi bi-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
+    <site-footer></site-footer>
 
     <!-- Background Music -->
     <audio id="bg-music" src="Media/background.mp3" autoplay loop></audio>
 
     <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAssassinsContent();
+        });
+    </script>
 </body>
 
 </html>

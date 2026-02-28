@@ -1,0 +1,183 @@
+/* == HERO SECTIONS                      == */
+
+/* Dark overlay for all hero banners */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%),
+    radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.6) 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+/* Gradient text for hero titles */
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--blood-red), var(--text-white), var(--gold-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glitch-glow 3s infinite alternate;
+  text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+@keyframes glitch-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 25px rgba(220, 38, 38, 0.8),
+      0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+  }
+}
+
+/* Generic hero banner for game detail pages (Mirage.html, etc.) */
+.hero-game-detail {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* == GAME DETAIL STYLES (MIRAGE.HTML)   == */
+
+/* Main content container for game detail pages */
+.game-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Title for sections within a game page */
+.section-title {
+  text-align: center;
+  color: var(--bright-red); /* red-500 */
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+}
+/* Subtitle used next to the video embed */
+.section-subtitle {
+  color: var(--bright-red); /* red-500 */
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive two-column layout (for video/text and characters) */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  }
+}
+
+/* Responsive container for YouTube video embeds */
+.video-responsive {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 0.5rem;
+}
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive three-column layout (for features and gallery) */
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+/* Container for the features section */
+.features-section {
+  margin: 3rem 0;
+}
+
+/* Individual feature item (icon, title, text) */
+.feature-item i {
+  font-size: 3rem;
+  color: var(--light-red); /* red-400 */
+  margin-bottom: 1rem;
+}
+.feature-item h5 {
+  font-size: 1.25rem;
+  color: var(--text-white);
+}
+
+/* Individual character card */
+.character-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.character-card h5 {
+  font-size: 1.25rem;
+}
+
+/* Individual gallery image */
+.gallery-item img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Call-to-action section at the bottom of game pages */
+.cta-section {
+  text-align: center;
+  background-color: var(--bg-card); /* gray-800 */
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  margin: 4rem auto;
+}
+.cta-section h3 {
+  font-size: 1.75rem;
+  color: var(--bright-red); /* red-500 */
+  margin-bottom: 1rem;
+}
+/* Button styling for the CTA */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-red);
+  color: var(--text-white);
+  border-radius: 9999px; /* Creates a pill shape */
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 1.1rem;
+  border: none;
+}
+.btn:hover {
+  background-color: var(--primary-red-hover);
+}

@@ -1,0 +1,1341 @@
+{
+  "eras": [
+    {
+      "id": "the-desmond-saga",
+      "folder": "The Desmond Saga",
+      "title": "THE DESMOND SAGA",
+      "subtitle": "Where it all began. The original Assassin's Creed experience.",
+      "banner_image": "Media/DesmondSagaBanner.webp",
+      "about_html": "<p>The <b>Desmond Saga</b> represents the foundation of the Assassin's Creed franchise, spanning from 2007 to 2012. This epic storyline follows Desmond Miles, a modern-day bartender who discovers his ancestral connection to legendary Assassins throughout history.</p>\n<p>Through the revolutionary Animus technology, players experience the memories of <b>Alta\u00efr Ibn-La'Ahad</b> during the Third Crusade, <b>Ezio Auditore da Firenze</b> through the Italian Renaissance, and <b>Connor Kenway</b> during the American Revolution. Each ancestor's story builds toward Desmond's ultimate destiny in preventing a global catastrophe.</p>\n<p>This saga introduced groundbreaking parkour mechanics, social stealth gameplay, and a rich narrative that blends historical fiction with science fiction, setting the standard for the entire franchise.</p>",
+      "games": ["ac1", "ac2", "brotherhood", "revelations", "ac3"]
+    },
+    {
+      "id": "colonial-era",
+      "folder": "Colonial Era",
+      "title": "THE KENWAY SAGA",
+      "subtitle": "Three generations. One legendary bloodline.",
+      "banner_image": "Media/KenwaySagaBanner.webp",
+      "about_html": "<p>The <b>Kenway Saga</b> spans three generations of one of the most legendary families in Assassin's Creed history. From the Golden Age of Piracy to the American Revolution, witness the rise and fall of the Kenway dynasty.</p>\n<p>Experience <b>Edward Kenway's</b> transformation from ruthless pirate to Master Assassin in the Caribbean, follow <b>Haytham Kenway's</b> path as a Templar Grand Master, and join <b>Connor Kenway</b> (Ratonhnhak\u00e9:ton) in his fight for freedom during the birth of a nation.</p>\n<p>This saga explores themes of freedom, legacy, and the blurred lines between Assassins and Templars, featuring naval combat, exploration, and some of the franchise's most memorable characters.</p>",
+      "games": ["blackflag", "rogue", "ac3"]
+    },
+    {
+      "id": "european-revolution-era",
+      "folder": "European Revolution Era",
+      "title": "EUROPEAN REVOLUTION ERA",
+      "subtitle": "From the streets of Paris to the heart of London.",
+      "banner_image": "Media/EuropeanBanner.webp",
+      "about_html": "<p>The <b>European Revolution Era</b> takes players through two of history's most transformative periods: the French Revolution and the Industrial Revolution. These games showcase the franchise's evolution with enhanced parkour, cooperative gameplay, and dual protagonists.</p>\n<p>In <b>Unity</b>, experience the chaos and beauty of Revolutionary Paris through Arno Dorian's quest for redemption. Then in <b>Syndicate</b>, command the Frye twins as they liberate Victorian London from Templar oppression during the height of the Industrial Age.</p>\n<p>These titles introduced refined combat systems, massive crowds, detailed urban environments, and innovative gameplay mechanics that pushed the series forward while honoring its roots.</p>",
+      "games": ["unity", "syndicate"]
+    },
+    {
+      "id": "ancient-trilogy",
+      "folder": "Ancient Trilogy",
+      "title": "ANCIENT TRILOGY",
+      "subtitle": "Witness the birth of legends in ancient worlds.",
+      "banner_image": "Media/AncientBanner.webp",
+      "about_html": "<p>The <b>Ancient Trilogy</b> revolutionized the franchise with massive RPG elements, breathtaking open worlds, and stories set in humanity's most fascinating ancient civilizations. These games explore the origins of the Hidden Ones and the eternal conflict.</p>\n<p>Journey through <b>Ancient Egypt</b> with Bayek, the founder of the Hidden Ones, explore the myths and legends of <b>Ancient Greece</b> with Kassandra or Alexios, and raid across <b>Dark Ages England</b> as Eivor, a legendary Viking warrior.</p>\n<p>Featuring enhanced combat systems, dialogue choices, massive worlds to explore, and deep RPG mechanics, the Ancient Trilogy redefined what an Assassin's Creed game could be.</p>",
+      "games": ["origins", "odyssey", "valhalla"]
+    },
+    {
+      "id": "modern-classic-return",
+      "folder": "Modern Classic Return",
+      "title": "MODERN CLASSIC RETURN",
+      "subtitle": "A return to the roots with modern innovation.",
+      "banner_image": "Media/ModernBanner.webp",
+      "about_html": "<p>The <b>Modern Classic Return</b> represents the franchise's evolution as it honors its stealth-focused origins while embracing modern gameplay innovations. These titles mark a new chapter that balances classic Assassin's Creed gameplay with contemporary design.</p>\n<p>Experience <b>Basim's</b> transformation from street thief to Master Assassin in the Golden Age of Baghdad, then journey to <b>Feudal Japan</b> with dual protagonists Yasuke and Naoe, combining brute force with deadly precision in one of gaming's most requested settings.</p>\n<p>These games showcase refined parkour, focused narratives, and a return to the social stealth and assassination gameplay that defined the early franchise, while incorporating lessons learned from the RPG trilogy.</p>",
+      "games": ["mirage", "shadows"]
+    }
+  ],
+  "assassins": [
+    {
+      "id": "altair",
+      "card_title": "Altaïr Ibn-La'Ahad",
+      "card_era": "Third Crusade \u2022 1165-1257",
+      "card_role": "mentor",
+      "card_era_filter": "ancient",
+      "card_desc": "The legendary Syrian Assassin who reformed the Brotherhood. After his arrogance led to failure, Alta\u00efr redeemed himself and revolutionized the Creed, creating the foundation for future generations.",
+      "card_image": "Media/Altair.webp",
+      "card_stats": [
+        { "icon": "bi bi-trophy", "text": "Mentor" },
+        { "icon": "bi bi-book", "text": "Codex Author" },
+        { "icon": "bi bi-geo-alt", "text": "Levant" }
+      ]
+    },
+    {
+      "id": "ezio",
+      "card_title": "Ezio Auditore da Firenze",
+      "card_era": "Italian Renaissance \u2022 1459-1524",
+      "card_role": "mentor",
+      "card_era_filter": "modern",
+      "card_desc": "The most celebrated Assassin in history. Born into nobility, Ezio's life changed when his family was betrayed. He became a Master Assassin, rebuilt the Brotherhood, and discovered the secrets of the First Civilization.",
+      "card_image": "Media/Ezio.webp",
+      "card_stats": [
+        { "icon": "bi bi-trophy", "text": "Mentor" },
+        { "icon": "bi bi-star", "text": "3 Games" },
+        { "icon": "bi bi-geo-alt", "text": "Italy" }
+      ]
+    },
+    {
+      "id": "arno",
+      "card_title": "Arno Victor Dorian",
+      "card_era": "French Revolution \u2022 1768-?",
+      "card_role": "modern",
+      "card_era_filter": "modern",
+      "card_desc": "Driven by guilt over the death of his adoptive father, Arno joined the Parisian Brotherhood to seek redemption. His journey intertwined with \u00c9lise, a Templar, challenging his loyalties.",
+      "card_image": "Media/Arno.webp",
+      "card_stats": [
+        { "icon": "bi bi-sword", "text": "Master Fencer" },
+        { "icon": "bi bi-geo-alt", "text": "Paris" }
+      ]
+    },
+    {
+      "id": "connor",
+      "card_title": "Ratonhnhak\u00e9:ton (Connor)",
+      "card_era": "American Revolution \u2022 1756-?",
+      "card_role": "modern",
+      "card_era_filter": "modern",
+      "card_desc": "A half-Mohawk, half-British Master Assassin who fought to protect his people's land during the American Revolutionary War. He played a pivotal role in the nation's founding.",
+      "card_image": "Media/Connor.webp",
+      "card_stats": [
+        { "icon": "bi bi-tree", "text": "Frontiersman" },
+        { "icon": "bi bi-geo-alt", "text": "America" }
+      ]
+    },
+    {
+      "id": "edward",
+      "card_title": "Edward James Kenway",
+      "card_role": "founder",
+      "card_era_filter": "modern",
+      "card_era": "Golden Age of Piracy \u2022 1693-1735",
+      "card_desc": "A reckless privateer-turned-pirate who stumbled into the Assassin-Templar conflict. Edward sought wealth but found purpose, eventually becoming an Assassin and father to a legendary lineage.",
+      "card_image": "Media/Edward.webp",
+      "card_stats": [
+        { "icon": "fas fa-ship", "text": "Captain" },
+        { "icon": "bi bi-geo-alt", "text": "Caribbean" }
+      ]
+    },
+    {
+      "id": "bayek",
+      "card_title": "Bayek of Siwa",
+      "card_role": "founder",
+      "card_era_filter": "ancient",
+      "card_era": "Ptolemaic Egypt \u2022 85 BCE-?",
+      "card_desc": "The last Medjay of Egypt. Following a devastating personal tragedy, Bayek's quest for vengeance alongside his wife Aya led to the foundation of the Hidden Ones, the precursors to the Assassin Brotherhood.",
+      "card_image": "Media/Bayek.webp",
+      "card_stats": [
+        { "icon": "bi bi-eye", "text": "Founder" },
+        { "icon": "bi bi-geo-alt", "text": "Egypt" }
+      ]
+    },
+    {
+      "id": "eivor",
+      "card_title": "Eivor Varinsdottir",
+      "card_role": "ancient",
+      "card_era_filter": "ancient",
+      "card_era": "Viking Age \u2022 847-?",
+      "card_desc": "A fierce Viking shieldmaiden who led their clan from Norway to England. While not officially Hidden Ones, Eivor wielded a Hidden Blade and aided the Brotherhood in eradicating the Order of the Ancients.",
+      "card_image": "Media/Eivor.webp",
+      "card_stats": [
+        { "icon": "bi bi-shield", "text": "Jarlskona" },
+        { "icon": "bi bi-geo-alt", "text": "England" }
+      ]
+    },
+    {
+      "id": "kassandra",
+      "card_title": "Kassandra",
+      "card_role": "ancient",
+      "card_era_filter": "ancient",
+      "card_era": "Peloponnesian War \u2022 458 BCE-?",
+      "card_desc": "The legendary Eagle Bearer of Sparta and wielder of the Spear of Leonidas. As a Misthios, Kassandra fought the Cult of Kosmos and became the Keeper of the Staff of Hermes Trismegistus, living for millennia.",
+      "card_image": "Media/Kassandra.webp",
+      "card_stats": [
+        { "icon": "bi bi-lightning", "text": "Demigod" },
+        { "icon": "bi bi-geo-alt", "text": "Greece" }
+      ]
+    },
+    {
+      "id": "basim",
+      "card_title": "Basim Ibn Ishaq",
+      "card_role": "ancient",
+      "card_era_filter": "ancient",
+      "card_era": "Islamic Golden Age \u2022 835-?",
+      "card_desc": "A street thief from Baghdad who rose to become a Master Assassin. Basim's journey is one of tragedy and revelation, as he uncovers his true nature and past life within the Isu.",
+      "card_image": "Media/Basim.webp",
+      "card_stats": [
+        { "icon": "bi bi-moon", "text": "Master Thief" },
+        { "icon": "bi bi-geo-alt", "text": "Baghdad" }
+      ]
+    },
+    {
+      "id": "shay",
+      "card_title": "Shay Patrick Cormac",
+      "card_role": "modern",
+      "card_era_filter": "modern",
+      "card_era": "Seven Years' War \u2022 1731-?",
+      "card_desc": "An Assassin turned Templar out of disillusionment with the Brotherhood's reckless pursuit of Isu artifacts. He became a deadly Assassin hunter in the American colonies and North Atlantic.",
+      "card_image": "Media/Shay.webp",
+      "card_stats": [
+        { "icon": "bi bi-crosshair", "text": "Templar" },
+        { "icon": "bi bi-geo-alt", "text": "Colonies" }
+      ]
+    },
+    {
+      "id": "jacob",
+      "card_title": "Jacob Frye",
+      "card_role": "modern",
+      "card_era_filter": "modern",
+      "card_era": "Victorian London \u2022 1847-1912",
+      "card_desc": "A brawling Master Assassin who co-founded the Rooks street gang to dismantle Templar control over Industrial Revolution London. Brash and aggressive, he preferred action over planning.",
+      "card_image": "Media/Jacob.webp",
+      "card_stats": [
+        { "icon": "bi bi-people", "text": "Rooks Leader" },
+        { "icon": "bi bi-geo-alt", "text": "London" }
+      ]
+    },
+    {
+      "id": "evie",
+      "card_title": "Evie Frye",
+      "card_role": "modern",
+      "card_era_filter": "modern",
+      "card_era": "Victorian London \u2022 1847-?",
+      "card_desc": "The more calculated Frye twin, a Master of Stealth who focused on securing Pieces of Eden from Templar hands while her brother waged gang war. A true scholar of the Creed.",
+      "card_image": "Media/Evie.webp",
+      "card_stats": [
+        { "icon": "bi bi-eye-slash", "text": "Master of Stealth" },
+        { "icon": "bi bi-geo-alt", "text": "London" }
+      ]
+    }
+  ],
+  "games": {
+    "ac1": {
+      "id": "ac1",
+      "card_title": "Assassin's Creed (2007)",
+      "card_image": "Media/AC1.jpg",
+      "card_era": "Third Crusade \u2022 1191",
+      "card_desc": "The journey begins with Alta\u00efr Ibn-La'Ahad during the Third Crusade and the awakening of Desmond Miles.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Alta\u00efr"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Holy Land"
+        }
+      ],
+      "era_id": "the-desmond-saga",
+      "banner_image": "Media/AC1_Hero.webp",
+      "title": "Assassin's Creed (2007)",
+      "info": {
+        "release_date": "November 13, 2007",
+        "platforms": "PC, Xbox 360, PS3",
+        "setting": "Holy Land, 1191 AD",
+        "era": "Third Crusade"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/RjQ6ZtyXoA0?si=otd2C-s3I5oNUrcK",
+      "story_subtitle": "The Birth of the Creed",
+      "story_desc": "Step into the robes of <strong>Alta\u00efr Ibn-La'Ahad</strong>, a master assassin during the Third\n                    Crusade. The first title in the Assassin's Creed series laid the foundation for stealth, parkour,\n                    and historical fiction in modern gaming. With an innovative open world, unique free-running\n                    mechanics, and the introduction of Desmond Miles, this game began a legendary journey.",
+      "story_highlights": "<li>Explore three major cities: Jerusalem, Acre, and Damascus</li>\n<li>Uncover the conspiracy behind the Templar Order</li>\n<li>Experience the dual narrative of Alta\u00efr and Desmond Miles</li>\n<li>Discover the ancient conflict between Assassins and Templars</li>",
+      "features": [
+        {
+          "icon": "bi bi-lightning-fill",
+          "title": "Free-Running Parkour",
+          "desc": "Climb rooftops and leap across ancient cities fluidly."
+        },
+        {
+          "icon": "bi bi-eye-fill",
+          "title": "Social Stealth",
+          "desc": "Blend with crowds and vanish in plain sight."
+        },
+        {
+          "icon": "bi bi-book-half",
+          "title": "Historical Narrative",
+          "desc": "A thrilling plot that fuses real history with sci-fi intrigue."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Altair.webp",
+          "name": "Alta\u00efr Ibn-La'Ahad"
+        },
+        {
+          "image": "Media/Desmond.webp",
+          "name": "Desmond Miles"
+        },
+        {
+          "image": "Media/AlMualim.png",
+          "name": "Al Mualim"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-bullseye",
+          "title": "Assassination Techniques",
+          "desc": "Master the art of silent kills with the iconic hidden blade. Plan your approach, blend with\n                        scholars, and strike from the shadows to eliminate your targets without detection."
+        },
+        {
+          "icon": "bi bi-search",
+          "title": "Investigation & Intel",
+          "desc": "Gather information through eavesdropping, pickpocketing, and interrogation. Each assassination\n                        requires careful planning and reconnaissance before the strike."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/0000003837.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/0000003838.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/0000003839.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed revolutionized open-world gaming with its innovative parkour system and historical\n                    storytelling. The game introduced the Animus concept, blending modern-day and historical narratives\n                    in a way never seen before. Its success spawned one of gaming's most beloved franchises, influencing\n                    countless action-adventure titles.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Action Game 2007</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>IGN Game of the Year Nominee</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-controller\"></i>\n<span>Over 8 Million Copies Sold</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/assassins-creed",
+      "cta_subtitle": "Relive the origin of the Brotherhood in the game that started it all."
+    },
+    "ac2": {
+      "id": "ac2",
+      "card_title": "Assassin's Creed II (2009)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/header.jpg",
+      "card_era": "Italian Renaissance \u2022 1476-1499",
+      "card_desc": "Enter the Italian Renaissance and meet Ezio Auditore da Firenze on his quest for justice and vengeance.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Ezio"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Italy"
+        }
+      ],
+      "era_id": "the-desmond-saga",
+      "banner_image": "Media/AC2_Hero.webp",
+      "title": "Assassin's Creed II (2009)",
+      "info": {
+        "release_date": "November 17, 2009",
+        "platforms": "PC, Xbox 360, PS3, Mac",
+        "setting": "Renaissance Italy",
+        "era": "1476-1499 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/mb7Xzl2-lr0?si=7WMHHTfc8V3IQloz",
+      "story_subtitle": "The Rise of Ezio",
+      "story_desc": "Enter the Italian Renaissance as <strong>Ezio Auditore da Firenze</strong>, a young nobleman turned Assassin after tragedy strikes his family. <em>Assassin's Creed II</em> refined every aspect of its predecessor, offering a deeper story, new gameplay mechanics, and memorable cities like Florence and Venice. It marked the beginning of one of gaming\u2019s most iconic heroes.",
+      "story_highlights": "",
+      "features": [
+        {
+          "icon": "bi bi-shield-shaded",
+          "title": "Weapon Variety",
+          "desc": "From dual hidden blades to smoke bombs, new tools expand your strategy."
+        },
+        {
+          "icon": "bi bi-brush",
+          "title": "Renaissance Art & Design",
+          "desc": "Explore beautifully recreated cities like Florence, Venice, and Tuscany."
+        },
+        {
+          "icon": "bi bi-puzzle",
+          "title": "Cryptic Truths",
+          "desc": "Uncover glyph puzzles and secret messages left behind by ancient Assassins."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Ezio.webp",
+          "name": "Ezio Auditore"
+        },
+        {
+          "image": "Media/Desmond.webp",
+          "name": "Desmond Miles"
+        },
+        {
+          "image": "Media/Leonardo.jpg",
+          "name": "Leonardo da Vinci"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-gear-fill",
+          "title": "Economic System",
+          "desc": "Invest in Monteriggioni, your family's villa. Renovate shops, upgrade defenses, and collect art to increase your income and unlock new equipment."
+        },
+        {
+          "icon": "bi bi-lightbulb-fill",
+          "title": "Leonardo's Inventions",
+          "desc": "Collaborate with Leonardo da Vinci to decode Codex pages and unlock powerful weapons like the hidden gun, poison blade, and flying machine."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/ss_dd6a4d319cda32c24a4e16a0a62908e82673f458.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/ss_ef44b9f703f71acfdeb728a497390d397084ee35.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/ss_d3967a58038cc5e59332bb0043ab1ca343112bc6.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed II is widely regarded as one of the greatest games of all time. It perfected the formula established by its predecessor and introduced Ezio Auditore, who became the face of the franchise. The game's emotional storytelling, stunning Renaissance setting, and refined gameplay mechanics set a new standard for the series.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Game of the Year 2009</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Metacritic Score: 91/100</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-heart-fill\"></i>\n<span>Fan Favorite Character</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/assassins-creed-ii",
+      "cta_subtitle": "Discover secrets, master your skills, and become the legend of Florence and Venice."
+    },
+    "brotherhood": {
+      "id": "brotherhood",
+      "card_title": "Assassin's Creed: Brotherhood (2010)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/header.jpg",
+      "card_era": "Renaissance Rome \u2022 1500-1507",
+      "card_desc": "Ezio leads the Brotherhood in Rome, expanding the Assassin Order and continuing the war against the Borgia family.",
+      "card_stats": [
+        {
+          "icon": "bi bi-people",
+          "text": "Brotherhood"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Rome"
+        }
+      ],
+      "era_id": "the-desmond-saga",
+      "banner_image": "Media/ACB_Hero.webp",
+      "title": "Assassin's Creed: Brotherhood (2010)",
+      "info": {
+        "release_date": "November 16, 2010",
+        "platforms": "PC, Xbox 360, PS3, Mac",
+        "setting": "Rome, Italy",
+        "era": "1499-1507 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/RVNfLKS_iiw?si=OHZdulPayGuP5Ors",
+      "story_subtitle": "Brotherhood is Power",
+      "story_desc": "Continuing Ezio\u2019s journey, <em>Assassin's Creed: Brotherhood</em> expands the story to Rome where Ezio must rebuild the Assassin Brotherhood. The game introduced the iconic Brotherhood system, allowing players to recruit and train fellow assassins. It also marked the franchise\u2019s first foray into online multiplayer.",
+      "story_highlights": "",
+      "features": [
+        {
+          "icon": "bi bi-people-fill",
+          "title": "Brotherhood System",
+          "desc": "Recruit, train, and call on fellow assassins to aid you in battle."
+        },
+        {
+          "icon": "bi bi-building",
+          "title": "Rome Reborn",
+          "desc": "Help liberate and restore the city by investing in shops, landmarks, and guilds."
+        },
+        {
+          "icon": "bi bi-controller",
+          "title": "Multiplayer Debut",
+          "desc": "Engage in tense cat-and-mouse multiplayer with unique characters and playstyles."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Ezio.webp",
+          "name": "Ezio Auditore"
+        },
+        {
+          "image": "Media/Cesare.jpg",
+          "name": "Cesare Borgia"
+        },
+        {
+          "image": "Media/Machiavelli.webp",
+          "name": "Niccol\u00f2 Machiavelli"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-people-fill",
+          "title": "Assassin Recruitment",
+          "desc": "Save citizens from guards and recruit them into your Brotherhood. Train them through missions and call upon them in combat for devastating chain kills."
+        },
+        {
+          "icon": "bi bi-flag-fill",
+          "title": "Borgia Towers",
+          "desc": "Liberate districts by assassinating Borgia captains and burning their towers. Restore Rome's economy and unlock new shops and services."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_b5fd8f198c7fdaa80e064039abc5b38238a5cef0.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_69a80289cc74d51d1edd016c1fbf9766ea63126b.600x338.jpg"
+      ],
+      "legacy_html": "<p>Brotherhood proved that direct sequels could expand and improve upon their predecessors. The Brotherhood recruitment system became a franchise staple, and the multiplayer mode introduced innovative cat-and-mouse gameplay that stood out in the action genre. Rome's single massive city showcased the series' attention to historical detail.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Action Game 2010</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Metacritic Score: 89/100</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-people-fill\"></i>\n<span>Innovative Multiplayer</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/brotherhood",
+      "cta_subtitle": "Take Rome back, command your allies, and defeat the tyrannical Borgia family."
+    },
+    "revelations": {
+      "id": "revelations",
+      "card_title": "Assassin's Creed: Revelations (2011)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/header.jpg",
+      "card_era": "Ottoman Empire \u2022 1511-1512",
+      "card_desc": "Ezio follows in Altair's footsteps to unlock secrets buried in Constantinople, concluding both legends' stories.",
+      "card_stats": [
+        {
+          "icon": "bi bi-star",
+          "text": "Finale"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Constantinople"
+        }
+      ],
+      "era_id": "the-desmond-saga",
+      "banner_image": "Media/ACR_Hero.webp",
+      "title": "Assassin's Creed: Revelations (2011)",
+      "info": {
+        "release_date": "November 15, 2011",
+        "platforms": "PC, Xbox 360, PS3",
+        "setting": "Constantinople",
+        "era": "1511-1512 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/yTVX9GulYdg?si=zY6fJyfBxLoaBT3M",
+      "story_subtitle": "The Final Chapter of Ezio",
+      "story_desc": "<em>Assassin's Creed: Revelations</em> closes the legendary tale of Ezio Auditore. Journey to\n                    Constantinople to uncover the secrets of Alta\u00efr\u2019s legacy. New tools like the Hookblade, bomb\n                    crafting, and tower defense gameplay bring fresh dynamics. Experience both Ezio\u2019s and Alta\u00efr\u2019s\n                    intertwined destinies in a moving finale.",
+      "story_highlights": "",
+      "features": [
+        {
+          "icon": "bi bi-link-45deg",
+          "title": "Hookblade",
+          "desc": "Speed through Constantinople and scale buildings faster with the new assassin tool."
+        },
+        {
+          "icon": "bi bi-box-seam",
+          "title": "Bomb Crafting",
+          "desc": "Create tactical bombs from over 300 combinations to suit any situation."
+        },
+        {
+          "icon": "bi bi-eye",
+          "title": "Legacy of Alta\u00efr",
+          "desc": "Live through the memories of Alta\u00efr and uncover the secrets of the ancient Brotherhood."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Ezio.webp",
+          "name": "Ezio Auditore"
+        },
+        {
+          "image": "Media/Suleiman.webp",
+          "name": "Prince Suleiman"
+        },
+        {
+          "image": "Media/Altair.webp",
+          "name": "Alta\u00efr Ibn-La'Ahad"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-fire",
+          "title": "Bomb Crafting System",
+          "desc": "Create custom bombs from over 300 combinations. Mix shells, gunpowder, and effects to create\n                        lethal, tactical, or diversionary explosives tailored to your playstyle."
+        },
+        {
+          "icon": "bi bi-link-45deg",
+          "title": "Hookblade Traversal",
+          "desc": "Use the hookblade to zip across lines, extend your reach, and navigate Constantinople faster than\n                        ever. Perfect for quick escapes and dynamic parkour sequences."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/ss_28cb1321a03e8cf2af89b2f9ab441380b093db1e.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/ss_08575a6a8651d8e9b159153cc0a8175b7b181345.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/ss_4f86082d2db3066c72a9b80704c7a35d4ad2773b.600x338.jpg"
+      ],
+      "legacy_html": "<p>Revelations provided a fitting conclusion to Ezio's story while honoring Alta\u00efr's legacy. The\n                    emotional depth of seeing both assassins in their final years resonated with fans. The game's\n                    exploration of Constantinople and its rich Ottoman culture added a fresh setting to the series,\n                    while the bomb crafting system offered unprecedented tactical freedom.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-heart-fill\"></i>\n<span>Emotional Conclusion</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Metacritic Score: 80/100</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-book-fill\"></i>\n<span>Two Legendary Stories</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/revelations",
+      "cta_subtitle": "Conclude Ezio\u2019s journey and discover the hidden truths of the Creed."
+    },
+    "ac3": {
+      "id": "ac3",
+      "card_title": "Assassin's Creed III (2012)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/header.jpg",
+      "card_era": "American Revolution \u2022 1754-1783",
+      "card_desc": "As the American Revolution rages, Desmond learns his ultimate role through the story of Connor Kenway.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Connor"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "America"
+        }
+      ],
+      "era_id": "the-desmond-saga",
+      "banner_image": "Media/AC3_Hero.webp",
+      "title": "Assassin's Creed III (2012)",
+      "info": {
+        "release_date": "October 30, 2012",
+        "platforms": "PC, Xbox 360, PS3, Wii U",
+        "setting": "Colonial America",
+        "era": "1754-1783 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/-pUhraVG7Ow?si=DH9UJ-qhLg2SQ1qa",
+      "story_subtitle": "Revolution Begins",
+      "story_desc": "<em>Assassin's Creed III</em> introduces Connor Kenway, a half-Mohawk assassin fighting for freedom during the American Revolution. Navigate battlefields, scale forests, and influence a nation's birth. With a revamped engine and combat, AC3 redefined the series with epic scope and emotional storytelling.",
+      "story_highlights": "<li>Experience Connor's journey from childhood to Master Assassin</li>\n<li>Participate in iconic battles like Bunker Hill and Lexington</li>\n<li>Navigate the complex relationship between Connor and Haytham</li>\n<li>Witness the conclusion of Desmond's modern-day story</li>",
+      "features": [
+        {
+          "icon": "bi bi-tree",
+          "title": "Frontier Exploration",
+          "desc": "Traverse vast forests, scale cliffs, and hunt wildlife in the dynamic American frontier."
+        },
+        {
+          "icon": "bi bi-compass",
+          "title": "Naval Combat",
+          "desc": "Command your own ship and engage in thrilling sea battles that changed the tide of war."
+        },
+        {
+          "icon": "bi bi-people",
+          "title": "Historical Figures",
+          "desc": "Meet George Washington, Benjamin Franklin, and others as you shape history's path."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Connor.webp",
+          "name": "Connor Kenway"
+        },
+        {
+          "image": "Media/GeorgeWashington.webp",
+          "name": "George Washington"
+        },
+        {
+          "image": "Media/Haytham.webp",
+          "name": "Haytham Kenway"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-tree-fill",
+          "title": "Frontier & Hunting",
+          "desc": "Explore the vast American wilderness. Hunt animals for resources, discover hidden locations, and experience dynamic weather and seasons that affect gameplay."
+        },
+        {
+          "icon": "bi bi-shield-fill-exclamation",
+          "title": "Revamped Combat",
+          "desc": "Experience fluid, brutal combat with dual-wielding weapons, environmental kills, and the iconic tomahawk. Chain kills and counter attacks feel more visceral than ever."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_3c0ef60ea9a2f72df176af41811dde6c5867c6c6.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_ab1d62e4bcf7123f5797b16cd7c7e2984a470cb2.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_63cd3caea8cbe8881aadd73a98a334a77d320f3a.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed III concluded Desmond's story while introducing a bold new setting and protagonist. The game's ambitious scope, featuring massive battles, naval combat, and a sprawling frontier, pushed the series forward. Connor's journey through the American Revolution offered a unique perspective on history, and the naval gameplay laid the groundwork for Black Flag's success.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best of E3 2012</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>12+ Million Copies Sold</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-water\"></i>\n<span>Revolutionary Naval Combat</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/assassins-creed-3-remastered",
+      "cta_subtitle": "Shape the American Revolution and forge a new creed with Connor."
+    },
+    "blackflag": {
+      "id": "blackflag",
+      "card_title": "Assassin's Creed IV: Black Flag (2013)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/header.jpg",
+      "card_era": "Golden Age of Piracy \u2022 1715-1722",
+      "card_desc": "Set during the Golden Age of Piracy, follow Edward Kenway as he sails the Caribbean and blurs the line between pirate and Assassin.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Edward Kenway"
+        },
+        {
+          "icon": "bi bi-water",
+          "text": "Caribbean"
+        }
+      ],
+      "era_id": "colonial-era",
+      "banner_image": "Media/AC4_Hero.webp",
+      "title": "Assassin's Creed IV: Black Flag (2013)",
+      "info": {
+        "release_date": "October 29, 2013",
+        "platforms": "PC, PS3, PS4, Xbox 360, Xbox One",
+        "setting": "Caribbean Sea",
+        "era": "1715-1722 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/OwVe4ZNeQZk?si=Z55WScKT3jEKyXFk",
+      "story_subtitle": "Pirate's Creed",
+      "story_desc": "Set sail as <strong>Edward Kenway</strong>, a reckless pirate captain with the skills of an Assassin. <em>Assassin's Creed IV: Black Flag</em> blends naval combat, exploration, and classic stealth action in a lush open-world Caribbean. Become a legend of the seas during the Golden Age of Piracy.",
+      "story_highlights": "<li>Experience Edward's transformation from pirate to Assassin</li>\n<li>Explore the vast Caribbean with over 50 unique locations</li>\n<li>Meet legendary pirates like Blackbeard and Anne Bonny</li>\n<li>Command the Jackdaw in epic naval battles</li>",
+      "features": [
+        {
+          "icon": "bi bi-compass",
+          "title": "Open-Sea Exploration",
+          "desc": "Navigate the Caribbean, engage enemy ships, and uncover hidden islands."
+        },
+        {
+          "icon": "bi bi-crosshair2",
+          "title": "Naval Combat",
+          "desc": "Upgrade the Jackdaw and engage in thrilling ship-to-ship battles."
+        },
+        {
+          "icon": "bi bi-incognito",
+          "title": "Dual Identity",
+          "desc": "Live both as a pirate and an Assassin in a dynamic, morally gray world."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Edward.webp",
+          "name": "Edward Kenway"
+        },
+        {
+          "image": "Media/Blackbeard.webp",
+          "name": "Blackbeard"
+        },
+        {
+          "image": "Media/AnneBonny.webp",
+          "name": "Anne Bonny"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-water",
+          "title": "Naval Warfare",
+          "desc": "Command the Jackdaw in intense ship battles. Upgrade your vessel with mortars, swivel guns, and heavy shot. Board enemy ships and claim their cargo in the ultimate pirate experience."
+        },
+        {
+          "icon": "bi bi-compass-fill",
+          "title": "Open World Exploration",
+          "desc": "Discover hidden coves, underwater shipwrecks, and Mayan ruins. Hunt whales and sharks, dive for treasure, and build your pirate fleet across the Caribbean."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/ss_82453694854272967e6f7c2147ff86f62a2b1408.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/ss_afb6f91bc96b51d0684bb4cbec4389b49dcb96db.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/ss_c2ad7f22e27b8ffab2a896e543a82fc8f6e9a1a7.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed IV: Black Flag is widely considered one of the best entries in the franchise. Its revolutionary naval combat system, vast open-world Caribbean, and compelling pirate narrative captivated players worldwide. Edward Kenway's journey from selfish pirate to noble Assassin resonated deeply, while the game's sea shanties became iconic. Black Flag proved that the series could successfully explore new time periods and gameplay styles.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Game of the Year 2013</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Best Naval Combat</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-music-note-beamed\"></i>\n<span>Iconic Sea Shanties</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/iv-black-flag",
+      "cta_subtitle": "Board the Jackdaw, fight for freedom, and forge your legend as the most feared pirate Assassin of all time."
+    },
+    "rogue": {
+      "id": "rogue",
+      "card_title": "Assassin's Creed: Rogue (2014)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/header.jpg",
+      "card_era": "Seven Years' War \u2022 1752-1761",
+      "card_desc": "Experience the Assassin-Templar conflict from the other side through the story of Shay Cormac, a former Assassin turned Templar.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Shay Cormac"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "North Atlantic"
+        }
+      ],
+      "era_id": "colonial-era",
+      "banner_image": "Media/Rogue_Hero.webp",
+      "title": "Assassin's Creed: Rogue (2014)",
+      "info": {
+        "release_date": "November 11, 2014",
+        "platforms": "PC, PS3, Xbox 360",
+        "setting": "North Atlantic",
+        "era": "1752-1761 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/bjSy5kF6io0?si=Mso97QWY0OCR3OoJ",
+      "story_subtitle": "A Betrayal from Within",
+      "story_desc": "Play as <strong>Shay Patrick Cormac</strong>, a former Assassin turned Templar, in a story of betrayal, ideology, and loyalty. <em>Assassin's Creed: Rogue</em> delivers a fresh perspective, showing the conflict through the eyes of a Templar while exploring the icy North Atlantic and vibrant River Valley.",
+      "story_highlights": "<li>Experience the Assassin-Templar war from the Templar perspective</li>\n<li>Witness Shay's transformation from Assassin to Templar hunter</li>\n<li>Connect the stories of AC3, Black Flag, and Unity</li>\n<li>Navigate the frozen North Atlantic and River Valley</li>",
+      "features": [
+        {
+          "icon": "bi bi-crosshair",
+          "title": "Templar Perspective",
+          "desc": "Experience the Assassin-Templar conflict from the other side."
+        },
+        {
+          "icon": "fas fa-ship",
+          "title": "Naval Combat Returns",
+          "desc": "Command your ship, the Morrigan, in Arctic naval battles."
+        },
+        {
+          "icon": "bi bi-snow",
+          "title": "Icy Exploration",
+          "desc": "Traverse the frozen North Atlantic and hidden River Valley settlements."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Shay.webp",
+          "name": "Shay Cormac"
+        },
+        {
+          "image": "Media/Haytham.webp",
+          "name": "Haytham Kenway"
+        },
+        {
+          "image": "Media/Achilles.webp",
+          "name": "Achilles Davenport"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-crosshair",
+          "title": "Templar Hunter",
+          "desc": "Hunt down Assassins using new weapons like the air rifle and grenade launcher. Experience being stalked by Assassins in a thrilling role reversal that adds tension to every mission."
+        },
+        {
+          "icon": "bi bi-snow2",
+          "title": "Arctic Naval Combat",
+          "desc": "Navigate treacherous icebergs and frozen waters aboard the Morrigan. Use new tactics like oil slicks and burning oil to defeat enemies in harsh Arctic conditions."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_a1fa7dde874ab03dacfd0dd62633e316d34aa672.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_142c19862c8bb307252dedf7f17cda4eb5f3f2b8.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_221f6e993cdfc946eb1d61129b535d9d18b1c603.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Rogue offered a unique perspective by letting players experience the conflict from the Templar side. Shay's moral journey and the game's darker tone provided fresh insight into the franchise's central conflict. The Arctic setting and improved naval mechanics built upon Black Flag's foundation, while the story directly connected to both AC3 and Unity, making it essential for understanding the Kenway saga.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Unique Perspective</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Story Bridge</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-snow\"></i>\n<span>Arctic Innovation</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/rogue-remastered",
+      "cta_subtitle": "Challenge your ideals, shape history, and embrace a darker legacy."
+    },
+    "unity": {
+      "id": "unity",
+      "card_title": "Assassin's Creed: Unity (2014)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/header.jpg",
+      "card_era": "French Revolution \u2022 1789-1794",
+      "card_desc": "Set during the French Revolution, join Arno Dorian as he navigates political unrest and personal redemption in Paris.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Arno Dorian"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Paris"
+        }
+      ],
+      "era_id": "european-revolution-era",
+      "banner_image": "Media/Unity_Hero.webp",
+      "title": "Assassin's Creed: Unity (2014)",
+      "info": {
+        "release_date": "November 11, 2014",
+        "platforms": "PC, PS4, Xbox One",
+        "setting": "Paris, France",
+        "era": "1789-1794 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/xzCEdSKMkdU?si=nV6Cj4n5bz7zOy4-",
+      "story_subtitle": "Revolution in Paris",
+      "story_desc": "<strong>Arno Dorian</strong> seeks redemption during the French Revolution in a city boiling with chaos. <em>Assassin's Creed: Unity</em> introduced cooperative gameplay, breathtaking parkour mechanics, and stunningly recreated Parisian landmarks. From Notre-Dame to the Bastille, join a tale of betrayal, justice, and revolution.",
+      "story_highlights": "<li>Experience Arno's quest for redemption and justice</li>\n<li>Witness the French Revolution's most pivotal moments</li>\n<li>Explore a meticulously recreated 18th-century Paris</li>\n<li>Uncover the conspiracy behind Arno's father's death</li>",
+      "features": [
+        {
+          "icon": "bi bi-people",
+          "title": "4-Player Co-Op",
+          "desc": "Team up with friends in Brotherhood missions across Paris."
+        },
+        {
+          "icon": "bi bi-building",
+          "title": "Historic Paris",
+          "desc": "Scale Notre-Dame, blend into crowds, and witness the Revolution firsthand."
+        },
+        {
+          "icon": "bi bi-fast-forward",
+          "title": "Fluid Parkour",
+          "desc": "New animations make climbing, descending, and leaping more intuitive than ever."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Arno.webp",
+          "name": "Arno Dorian"
+        },
+        {
+          "image": "Media/Elise.webp",
+          "name": "\u00c9lise de la Serre"
+        },
+        {
+          "image": "Media/Napoleon.jpg",
+          "name": "Napoleon Bonaparte"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-people-fill",
+          "title": "Cooperative Missions",
+          "desc": "Team up with up to 3 friends in dedicated co-op missions. Coordinate assassinations, heists, and infiltrations across Paris with unique character customization."
+        },
+        {
+          "icon": "bi bi-arrows-move",
+          "title": "Advanced Parkour",
+          "desc": "Experience the most fluid parkour system yet with controlled descent, seamless climbing, and contextual animations that make navigating Paris feel natural."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_19c1c8d52d714fe8d0a0277c36832b4e0ad5def3.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_d825c8fd7c5472d17732bf3480760dd88924e551.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_42c6e1765549541d5576ec5bdb01cbc45f376444.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Unity pushed the boundaries of the franchise with its stunning recreation of Revolutionary Paris and innovative cooperative gameplay. Despite a rocky launch, the game's attention to historical detail, improved parkour system, and deep customization options earned it a dedicated fanbase. The game's portrayal of Notre-Dame became especially poignant after the 2019 fire.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Co-Op Experience</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Most Detailed City</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-building\"></i>\n<span>Iconic Notre-Dame</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/unity",
+      "cta_subtitle": "Wield the blade of justice and write history amidst the chaos of Revolution."
+    },
+    "syndicate": {
+      "id": "syndicate",
+      "card_title": "Assassin's Creed: Syndicate (2015)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/header.jpg",
+      "card_era": "Victorian Era \u2022 1868",
+      "card_desc": "In Industrial London, lead the Frye twins \u2014 Jacob and Evie \u2014 as they battle Templar control in the heart of the Empire.",
+      "card_stats": [
+        {
+          "icon": "bi bi-people",
+          "text": "Frye Twins"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "London"
+        }
+      ],
+      "era_id": "european-revolution-era",
+      "banner_image": "Media/ACS_Hero.webp",
+      "title": "Assassin's Creed: Syndicate (2015)",
+      "info": {
+        "release_date": "October 23, 2015",
+        "platforms": "PC, PS4, Xbox One",
+        "setting": "London, England",
+        "era": "1868 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/WTBbwgsyxvg?si=c4d2lJmXVQ0-zAq-",
+      "story_subtitle": "The Fight for London",
+      "story_desc": "Set in the heart of the Industrial Revolution, <strong>Assassin's Creed: Syndicate</strong> lets you play as twin Assassins <strong>Jacob and Evie Frye</strong>. Liberate London from the grip of oppression and corruption using new tools, gangs, and street smarts. Syndicate brought a gritty, fast-paced edge to the franchise.",
+      "story_highlights": "<li>Play as both Jacob and Evie Frye with unique abilities</li>\n<li>Build and lead the Rooks gang to control London</li>\n<li>Meet historical figures like Charles Darwin and Karl Marx</li>\n<li>Liberate London's boroughs from Templar control</li>",
+      "features": [
+        {
+          "icon": "bi bi-people",
+          "title": "Twin Protagonists",
+          "desc": "Switch between Jacob's brawling and Evie\u2019s stealthy tactics on the fly."
+        },
+        {
+          "icon": "bi bi-truck-front",
+          "title": "Vehicles & Grapple",
+          "desc": "Use carriages, trains, and a new grappling hook to navigate Victorian London."
+        },
+        {
+          "icon": "bi bi-flag",
+          "title": "Gang Wars",
+          "desc": "Lead the Rooks and take down rival gangs to claim control over the city."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Jacob.webp",
+          "name": "Jacob Frye"
+        },
+        {
+          "image": "Media/Evie.webp",
+          "name": "Evie Frye"
+        },
+        {
+          "image": "Media/Crawford.jpg",
+          "name": "Crawford Starrick"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-link-45deg",
+          "title": "Rope Launcher",
+          "desc": "Traverse Victorian London with the revolutionary rope launcher. Zip across rooftops, create ziplines, and reach new heights faster than ever before."
+        },
+        {
+          "icon": "bi bi-people-fill",
+          "title": "Gang Leadership",
+          "desc": "Build and command the Rooks gang. Recruit members, conquer territories, and engage in epic street fights to liberate London from Templar control."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/ss_349dc173bd543fddd7b667253e3429e9565fe098.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/ss_11432237c45e225db89965fed88fa56cd02b0072.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/ss_80c48aa2d827a9864180db0169413046bddb2035.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Syndicate brought the franchise to Victorian London with style and innovation. The twin protagonists offered diverse gameplay approaches, while the rope launcher revolutionized traversal. The game's portrayal of the Industrial Revolution, combined with appearances by historical figures like Charles Darwin and Alexander Graham Bell, created a memorable adventure through one of history's most transformative periods.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Dual Protagonists</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Innovative Traversal</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-gear-fill\"></i>\n<span>Industrial Revolution Era</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/syndicate",
+      "cta_subtitle": "Lead the revolution and free the streets from the shadows of the Templars."
+    },
+    "origins": {
+      "id": "origins",
+      "card_title": "Assassin's Creed: Origins (2017)",
+      "card_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/header.jpg",
+      "card_era": "Ptolemaic Egypt \u2022 49-43 BCE",
+      "card_desc": "Discover the roots of the Brotherhood with Bayek in a stunning recreation of Ancient Egypt during Cleopatra's rise to power.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Bayek"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Egypt"
+        }
+      ],
+      "era_id": "ancient-trilogy",
+      "banner_image": "Media/ACO_Hero.webp",
+      "title": "Assassin's Creed: Origins (2017)",
+      "info": {
+        "release_date": "October 27, 2017",
+        "platforms": "PC, PS4, Xbox One",
+        "setting": "Ancient Egypt",
+        "era": "49-43 BCE"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/cUuKIpCM2o0",
+      "story_subtitle": "Birth of the Brotherhood",
+      "story_desc": "<strong>Assassin's Creed: Origins</strong> takes players to Ancient Egypt, where the journey of\n                    <strong>Bayek of Siwa</strong> gives rise to the Assassin Brotherhood. Discover a rich open world,\n                    RPG elements, and a new combat system that reshaped the franchise.",
+      "story_highlights": "<li>Witness the birth of the Assassin Brotherhood</li>\n<li>Explore the vast deserts and cities of Ancient Egypt</li>\n<li>Experience Bayek and Aya's quest for vengeance</li>\n<li>Encounter Cleopatra and Julius Caesar</li>",
+      "features": [
+        {
+          "icon": "bi bi-crosshair",
+          "title": "Revolutionized Combat",
+          "desc": "Engage in action-RPG combat with customizable gear and abilities."
+        },
+        {
+          "icon": "bi bi-map",
+          "title": "Massive Open World",
+          "desc": "Explore deserts, cities, pyramids, and the Nile in stunning detail."
+        },
+        {
+          "icon": "bi bi-binoculars",
+          "title": "Senu the Eagle",
+          "desc": "Use your eagle companion Senu to scout, tag enemies, and explore from above."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Bayek.webp",
+          "name": "Bayek of Siwa"
+        },
+        {
+          "image": "Media/Aya.webp",
+          "name": "Aya"
+        },
+        {
+          "image": "Media/Ptolemy.webp",
+          "name": "Ptolemy XIII"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-shield-fill-check",
+          "title": "RPG Combat System",
+          "desc": "Experience a completely revamped combat system with hitbox-based attacks, dodging, and parrying.\n                        Level up, customize your gear, and unlock powerful abilities in this action-RPG transformation."
+        },
+        {
+          "icon": "bi bi-binoculars-fill",
+          "title": "Senu the Eagle",
+          "desc": "Use your eagle companion to scout locations, mark enemies, and discover secrets from above. Senu\n                        revolutionized reconnaissance in the franchise."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_c4a4545f51c6836ac11c31427944fc7df813edfb.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_7edc3de6db0e6391158863f766c334c6eab1dbaa.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Origins marked a bold new direction for the franchise, introducing RPG mechanics, a\n                    revamped combat system, and a massive open world. Set in stunning Ancient Egypt, the game told the\n                    origin story of the Brotherhood while modernizing gameplay for a new era. Its success paved the way\n                    for Odyssey and Valhalla, establishing the \"Ancient Trilogy\" formula.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Franchise Reinvention</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Best Setting 2017</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-gear-fill\"></i>\n<span>RPG Transformation</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/origins",
+      "cta_subtitle": "Uncover the secrets of Ancient Egypt and the hidden history behind the Brotherhood."
+    },
+    "odyssey": {
+      "id": "odyssey",
+      "card_title": "Assassin's Creed: Odyssey (2018)",
+      "card_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/header.jpg",
+      "card_era": "Ancient Greece \u2022 431-422 BCE",
+      "card_desc": "Choose your destiny as Kassandra or Alexios and shape the fate of Ancient Greece during the Peloponnesian War.",
+      "card_stats": [
+        {
+          "icon": "bi bi-people",
+          "text": "Kassandra/Alexios"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Greece"
+        }
+      ],
+      "era_id": "ancient-trilogy",
+      "banner_image": "Media/ACOa_Hero.webp",
+      "title": "Assassin's Creed: Odyssey (2018)",
+      "info": {
+        "release_date": "October 5, 2018",
+        "platforms": "PC, PS4, Xbox One, Switch",
+        "setting": "Ancient Greece",
+        "era": "431-422 BCE"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/s_SJZSAtLBA?si=y3AwkGL2KqKBoW9R",
+      "story_subtitle": "Forge Your Legacy",
+      "story_desc": "In <strong>Assassin's Creed: Odyssey</strong>, embark on an epic journey through ancient Greece during the Peloponnesian War. Choose your path as either <strong>Alexios</strong> or <strong>Kassandra</strong>, uncover your Spartan heritage, and shape history through your choices in this RPG-style adventure.",
+      "story_highlights": "<li>Choose between Alexios or Kassandra as your protagonist</li>\n<li>Make choices that impact the story and world</li>\n<li>Explore ancient Greece from Athens to Sparta</li>\n<li>Uncover the secrets of the First Civilization</li>",
+      "features": [
+        {
+          "icon": "bi bi-person-arms-up",
+          "title": "Player Choice",
+          "desc": "Choose your hero, shape your story, and make decisions that alter the game world."
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "title": "Ancient Greece",
+          "desc": "Explore a stunning open world filled with historic landmarks, cities, and mythology."
+        },
+        {
+          "icon": "bi bi-compass",
+          "title": "Naval Combat",
+          "desc": "Return to the seas and battle across the Aegean with upgradable ships and crew."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Alexios.webp",
+          "name": "Alexios"
+        },
+        {
+          "image": "Media/Kassandra.webp",
+          "name": "Kassandra"
+        },
+        {
+          "image": "Media/Deimos.png",
+          "name": "Deimos"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-chat-square-text-fill",
+          "title": "Dialogue Choices",
+          "desc": "Shape your story through meaningful dialogue choices that affect relationships, quests, and endings. Your decisions have lasting consequences throughout the game."
+        },
+        {
+          "icon": "bi bi-water",
+          "title": "Naval Exploration",
+          "desc": "Command your ship, the Adrestia, across the Aegean Sea. Engage in naval combat, recruit legendary lieutenants, and discover hidden islands."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_0ef33c0f230da6ebac94f5959f0e0a8bbc48cf8a.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_3f8f4a09fb1d69648a8c20aae19ca2924ba275bd.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_6dc9f95cfb6d264c3535b53ce08f36ee07066550.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Odyssey expanded on Origins' RPG foundation with deeper choice-driven gameplay and branching narratives. Set in the stunning world of Ancient Greece, it offered unprecedented player agency and one of the largest maps in the series. The game's mythological elements and engaging characters made it a fan favorite in the Ancient Trilogy.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best RPG Elements</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Player Choice Pioneer</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-globe\"></i>\n<span>Massive Open World</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/odyssey",
+      "cta_subtitle": "Dive into ancient history and fight for your destiny."
+    },
+    "valhalla": {
+      "id": "valhalla",
+      "card_title": "Assassin's Creed: Valhalla (2020)",
+      "card_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg",
+      "card_era": "Viking Age \u2022 873-878 CE",
+      "card_desc": "Become Eivor, a fierce Viking raider, and forge your legacy across England in a sprawling open-world saga of conquest and myth.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Eivor"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "England"
+        }
+      ],
+      "era_id": "ancient-trilogy",
+      "banner_image": "Media/Valhalla_Hero.webp",
+      "title": "Assassin's Creed: Valhalla (2020)",
+      "info": {
+        "release_date": "November 10, 2020",
+        "platforms": "PC, PS4, PS5, Xbox One, Xbox Series X/S",
+        "setting": "Viking Age England",
+        "era": "873-878 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/ssrNcwxALS4?si=wnEvCNXy-cK2v2PY",
+      "story_subtitle": "Become a Viking Legend",
+      "story_desc": "<strong>Assassin's Creed: Valhalla</strong> casts you as <strong>Eivor</strong>, a fierce Viking\n                    raider on a quest for glory in 9th-century England. Lead your clan from icy Norway to a new home in\n                    lush lands, engage in brutal battles, and forge alliances to establish your kingdom.",
+      "story_highlights": "<li>Lead your Viking clan from Norway to England</li>\n<li>Build and upgrade your settlement, Ravensthorpe</li>\n<li>Forge alliances with Saxon kingdoms</li>\n<li>Uncover the mysteries of the Hidden Ones and Order of Ancients</li>",
+      "features": [
+        {
+          "icon": "bi bi-house-door",
+          "title": "Settlement Building",
+          "desc": "Create and upgrade your Viking settlement as a central hub for your adventures."
+        },
+        {
+          "icon": "bi bi-people",
+          "title": "Raiding & Alliances",
+          "desc": "Lead raids, conquer lands, and form political alliances to expand your influence."
+        },
+        {
+          "icon": "bi bi-tree",
+          "title": "Myth & History",
+          "desc": "Encounter Norse gods, legendary beasts, and historical figures on your journey."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Eivor.webp",
+          "name": "Eivor"
+        },
+        {
+          "image": "Media/Sigurd.webp",
+          "name": "Sigurd"
+        },
+        {
+          "image": "Media/Basim.webp",
+          "name": "Basim"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-house-fill",
+          "title": "Settlement Management",
+          "desc": "Build and customize your Viking settlement, Ravensthorpe. Construct buildings, recruit new clan\n                        members, and unlock services that enhance your gameplay experience."
+        },
+        {
+          "icon": "bi bi-people-fill",
+          "title": "Raids & Conquest",
+          "desc": "Lead brutal Viking raids on monasteries and fortresses. Gather resources, expand your influence,\n                        and conquer territories across England with your crew."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_e7310b36689ec722d2ea4643efc15bd8fa720c67.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_c3bff917ead50268eb7708ef3bf30e07b58929e9.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Valhalla brought the Ancient Trilogy to a climactic conclusion with its Viking\n                    setting and settlement-building mechanics. The game's massive world, spanning England and Norway,\n                    combined with its deep narrative connections to the series' mythology, made it one of the most\n                    ambitious entries. Valhalla's post-launch support with expansions set new standards for the\n                    franchise.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best-Selling AC Game</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Epic Viking Saga</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-house-door-fill\"></i>\n<span>Settlement Innovation</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/valhalla",
+      "cta_subtitle": "Sail to new worlds, raid, rule, and uncover your destiny in Valhalla."
+    },
+    "mirage": {
+      "id": "mirage",
+      "card_title": "Assassin's Creed: Mirage (2023)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg",
+      "card_era": "Abbasid Caliphate \u2022 861 CE",
+      "card_desc": "Return to the franchise's stealth roots with Basim navigating the dense streets of 9th-century Baghdad, uncovering secrets in the shadows.",
+      "card_stats": [
+        {
+          "icon": "bi bi-person",
+          "text": "Basim"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Baghdad"
+        }
+      ],
+      "era_id": "modern-classic-return",
+      "banner_image": "Media/ACMirage_Hero.webp",
+      "title": "Assassin's Creed: Mirage (2023)",
+      "info": {
+        "release_date": "October 5, 2023",
+        "platforms": "PC, PS5, Xbox Series X/S",
+        "setting": "Baghdad, Iraq",
+        "era": "861-870 AD"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/x55lAlFtXmw?si=Cr_jlj78jvsSBBT8",
+      "story_subtitle": "Return to the Roots",
+      "story_desc": "In <strong>Assassin's Creed: Mirage</strong>, experience the origins of the Assassins in 9th-century Baghdad. Play as <strong>Basim</strong>, a skilled thief turned assassin, navigating a vibrant city filled with intrigue, stealth, and ancient secrets.",
+      "story_highlights": "<li>Discover Basim's transformation from street thief to Hidden One</li>\n<li>Explore the Golden Age of Baghdad with stunning detail</li>\n<li>Uncover the secrets of the ancient Order</li>\n<li>Experience classic stealth-focused gameplay</li>",
+      "features": [
+        {
+          "icon": "bi bi-person-circle",
+          "title": "Stealth Gameplay",
+          "desc": "Master stealth mechanics as you blend into crowds and strike unseen."
+        },
+        {
+          "icon": "bi bi-building",
+          "title": "Historic Baghdad",
+          "desc": "Explore a richly detailed open world city during the Islamic Golden Age."
+        },
+        {
+          "icon": "bi bi-lightning-charge",
+          "title": "Fast-Paced Action",
+          "desc": "Engage in fluid combat and dynamic parkour through narrow streets and rooftops."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Basma.webp",
+          "name": "Basma"
+        },
+        {
+          "image": "Media/Nizar.webp",
+          "name": "Nizar"
+        },
+        {
+          "image": "Media/Alawi.webp",
+          "name": "Alawi"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-eye-slash-fill",
+          "title": "Classic Stealth",
+          "desc": "Return to the roots with refined stealth mechanics. Use social stealth, blend into crowds, and execute silent assassinations like the original games."
+        },
+        {
+          "icon": "bi bi-compass-fill",
+          "title": "Dense Urban Exploration",
+          "desc": "Navigate the bustling streets and rooftops of Baghdad. Discover hidden secrets, complete contracts, and immerse yourself in the Islamic Golden Age."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_d2458dc72f538b42218cc16c0ce054810511bd81.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_93780fe600368be8e4c3bb62469fb49390561300.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_35ae8d4ea5b72a118082494994fc7eff9cd50a36.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Mirage marks a return to the series' roots, focusing on stealth, parkour, and a tightly crafted narrative. Set in the vibrant city of Baghdad during the Islamic Golden Age, it pays homage to the original game while introducing modern refinements. Basim's story bridges past and future, connecting to the larger AC universe.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Back to Basics Approach</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Critically Acclaimed Setting</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-heart-fill\"></i>\n<span>Fan-Favorite Return</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/mirage",
+      "cta_subtitle": "Step into the dawn of the Assassins and rewrite history."
+    },
+    "shadows": {
+      "id": "shadows",
+      "card_title": "Assassin's Creed: Shadows (2025)",
+      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg",
+      "card_era": "Feudal Japan \u2022 1579",
+      "card_desc": "Step into feudal Japan, where dual protagonists\u2014Yasuke and Naoe\u2014merge power and stealth in an epic tale of honor, rebellion, and loyalty.",
+      "card_stats": [
+        {
+          "icon": "bi bi-people",
+          "text": "Yasuke & Naoe"
+        },
+        {
+          "icon": "bi bi-geo-alt",
+          "text": "Japan"
+        }
+      ],
+      "era_id": "modern-classic-return",
+      "banner_image": "Media/ACSha_Hero.webp",
+      "title": "Assassin's Creed: Shadows (2024)",
+      "info": {
+        "release_date": "February 14, 2025",
+        "platforms": "PC, PS5, Xbox Series X/S",
+        "setting": "Feudal Japan",
+        "era": "Late 16th Century"
+      },
+      "video_url": "https://www.youtube-nocookie.com/embed/_JzywR97gUs?si=oLj5jkEEH9Qb3v-S",
+      "story_subtitle": "Shadows of Feudal Japan",
+      "story_desc": "<strong>Assassin's Creed: Shadows</strong> transports players to war-torn feudal Japan. Experience dual protagonists \u2014 the stealthy assassin <strong>Naoe</strong> and the powerful samurai <strong>Yasuke</strong> \u2014 as they fight through political strife, epic landscapes, and evolving loyalties in one of the franchise's most immersive worlds.",
+      "story_highlights": "<li>Play as both Naoe the Shinobi and Yasuke the Samurai</li>\n<li>Experience two distinct playstyles: stealth and combat</li>\n<li>Explore feudal Japan during the Sengoku period</li>\n<li>Navigate political intrigue and clan warfare</li>",
+      "features": [
+        {
+          "icon": "bi bi-eye-fill",
+          "title": "Stealth & Combat Blend",
+          "desc": "Master both silent assassinations and powerful katana strikes with two distinct styles."
+        },
+        {
+          "icon": "bi bi-map",
+          "title": "Feudal Japan",
+          "desc": "Roam ancient castles, villages, and bamboo forests as political chaos unfolds."
+        },
+        {
+          "icon": "bi bi-people",
+          "title": "Dual Protagonists",
+          "desc": "Play as both Naoe the Shinobi and Yasuke the Samurai in a revolutionary narrative."
+        }
+      ],
+      "characters": [
+        {
+          "image": "Media/Yasuke.webp",
+          "name": "Yasuke"
+        },
+        {
+          "image": "Media/Naoe.webp",
+          "name": "Naoe"
+        }
+      ],
+      "mechanics": [
+        {
+          "icon": "bi bi-person-fill-slash",
+          "title": "Dual Protagonist System",
+          "desc": "Switch between Naoe's stealth-focused gameplay and Yasuke's powerful combat style. Each character offers unique abilities, weapons, and approaches to missions."
+        },
+        {
+          "icon": "bi bi-brightness-high-fill",
+          "title": "Dynamic Seasons",
+          "desc": "Experience Japan's beauty across changing seasons. Weather and time of day affect stealth, combat, and exploration in this living, breathing world."
+        }
+      ],
+      "gallery": [
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/ss_935b0091a0c890f012f1d920621e654cab042dd0.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/ss_f1a664344a1577ed031ff22b31b2c6af6b757d3d.600x338.jpg",
+        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/ss_93f88e1f633beb0d1271cd570df08c20fc90ff4a.600x338.jpg"
+      ],
+      "legacy_html": "<p>Assassin's Creed Shadows represents the franchise's long-awaited journey to feudal Japan. With dual protagonists offering contrasting playstyles, the game promises to deliver both the stealth gameplay fans love and intense samurai combat. The setting during the Sengoku period provides a rich backdrop of political intrigue, honor, and warfare.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Most Anticipated 2025</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Revolutionary Dual System</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-globe\"></i>\n<span>Fan-Requested Setting</span>\n</div>\n</div>",
+      "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/shadows",
+      "cta_subtitle": "Unleash the power of stealth and honor in feudal Japan."
+    }
+  }
+}

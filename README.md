@@ -41,9 +41,23 @@ The **Assassin's Creed Tribute Website** is an immersive, multi-page web experie
 
 </div>
 
+## 📑 Table of Contents
+
+- [📌 Project Overview](#-project-overview)
+- [📦 What's Inside](#-whats-inside)
+- [✨ Features Showcase](#-features-showcase)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📂 Project Structure](#-project-structure)
+- [📸 Screenshots](#-screenshots)
+- [🚀 Quick Start](#-quick-start)
+- [🎮 Era Breakdown](#-era-breakdown)
+- [🎯 Project Goals](#-project-goals)
+- [🔮 Future Enhancements](#-future-enhancements)
+- [👨‍💻 About the Developer](#-about-the-developer)
+
 ---
 
-## � What's Inside
+## 📦 What's Inside
 
 This tribute website showcases the complete Assassin's Creed journey across five major eras:
 
@@ -81,8 +95,8 @@ This tribute website showcases the complete Assassin's Creed journey across five
 </div>
 
 ```
-🗡️  Multi-Page Architecture    📱  Fully Responsive Design    🧭  Unified Navigation
-🎨  Modern UI/UX               🖼️  Rich Media Content         🌍  Netlify Deployment
+🗡️  Multi-Page Architecture    📱  Fully Responsive Design    🧩  Modular Web Components
+🎨  Modern UI/UX               🖼️  Rich Media Content         📊  Data-Driven JSON Rendering
 ```
 
 <details>
@@ -146,70 +160,47 @@ This tribute website showcases the complete Assassin's Creed journey across five
 
 | Category            | Technologies                             |
 | ------------------- | ---------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)           |
+| **Frontend**        | HTML5 (Semantic), CSS3 (Variables), ES6+ |
+| **Architecture**    | Web Components API, Vanilla JSON Fetch   |
 | **Libraries**       | Particles.js, Bootstrap Icons            |
 | **Animations**      | CSS Keyframes, Intersection Observer API |
 | **Deployment**      | Netlify (CI/CD)                          |
 | **Version Control** | Git & GitHub                             |
-| **Design**          | Custom CSS, Flexbox, Grid                |
 
 </div>
 
 ---
 
-## � Proje ct Structure
+## 📂 Project Structure
 
-```
+```text
 Assassins-Creed/
 │
-├── 🏠 index.html                   # Landing page with hero, about, game styles, stats
-├── 🎨 styles.css                   # Main stylesheet for landing page
-├── ⚡ script.js                    # JavaScript for animations and interactions
-├── 🗡️ Assassins.html               # Legendary Assassins showcase page
-├── ⚙️ particles-config.json        # Particles.js configuration
+├── index.html                   # Landing page with hero, about, game styles, stats
+├── Assassins.html               # Data-driven Legendary Assassins showcase
+├── era.html                     # Era-specific pages
+├── game.html                    # Game-specific pages
 │
-├── 📁 The Desmond Saga/            # The original saga (2007-2012)
-│   ├── Home.html                   # Desmond Saga overview
-│   ├── AC1.html                    # 🗡️ Assassin's Creed (2007) - Altaïr
-│   ├── AC2.html                    # 🦅 Assassin's Creed II (2009) - Ezio
-│   ├── Brotherhood.html            # 👥 AC: Brotherhood (2010) - Ezio
-│   ├── Revelations.html            # 🔥 AC: Revelations (2011) - Ezio & Altaïr
-│   ├── AC3.html                    # 🦅 Assassin's Creed III (2012) - Connor
-│   ├── styles.css                  # Saga-specific styles
-│   └── game-enhancements.js        # Saga-specific JavaScript
+├── 📁 css/                         # Modular stylesheets
+│   ├── base.css                    # CSS Variables, resets, and typography
+│   ├── layout.css                  # Grids, utility classes, and responsive logic
+│   ├── components.css              # Custom Web Components styling
+│   ├── styles.css                  # Primary page styles and animations
+│   ├── styles_era.css              # Era-specific page styling
+│   └── styles_game.css             # Game-specific page styling
 │
-├── 📁 Colonial Era/                # The Kenway Saga (1715-1783)
-│   ├── Home.html                   # Kenway Saga overview
-│   ├── BlackFlag.html              # ⚓ AC IV: Black Flag (2013) - Edward Kenway
-│   ├── Rogue.html                  # ❄️ AC: Rogue (2014) - Shay Cormac
-│   ├── styles.css                  # Saga-specific styles
-│   └── game-enhancements.js        # Saga-specific JavaScript
+├── 📁 js/                          # Core scripts
+│   ├── app.js                      # Asynchronous JSON data fetching and DOM hydration
+│   ├── components.js               # Reusable Web Components (Header, Footer, Loaders)
+│   └── script.js                   # UI animations, observers, and event listeners
 │
-├── 📁 European Revolution Era/     # Industrial Revolution (1789-1868)
-│   ├── Home.html                   # European Revolution overview
-│   ├── Unity.html                  # 🇫🇷 AC: Unity (2014) - Arno Dorian
-│   ├── Syndicate.html              # 🎩 AC: Syndicate (2015) - Jacob & Evie Frye
-│   ├── styles.css                  # Saga-specific styles
-│   └── game-enhancements.js        # Saga-specific JavaScript
-│
-├── 📁 Ancient Trilogy/             # RPG-focused ancient era (49 BCE - 878 CE)
-│   ├── Home.html                   # Ancient Trilogy overview
-│   ├── Origins.html                # 🐫 AC: Origins (2017) - Bayek
-│   ├── Odyssey.html                # 🏛️ AC: Odyssey (2018) - Kassandra/Alexios
-│   ├── Valhalla.html               # ⚔️ AC: Valhalla (2020) - Eivor
-│   ├── styles.css                  # Saga-specific styles
-│   └── game-enhancements.js        # Saga-specific JavaScript
-│
-├── 📁 Modern Classic Return/       # Latest releases (861 CE - 1579 CE)
-│   ├── Home.html                   # Modern classics overview
-│   ├── Mirage.html                 # 🌅 AC: Mirage (2023) - Basim
-│   ├── Shadows.html                # 🗾 AC: Shadows (2025) - Naoe & Yasuke
-│   ├── styles.css                  # Saga-specific styles
-│   └── game-enhancements.js        # Saga-specific JavaScript
+├── 📁 data/
+│   ├── particles-config.json        # Particles.js configuration
+│   └── data.json                   # Centralized payload for assassins, games, and eras
 │
 ├── 📁 Media/                       # All images, fonts, and audio
-│   ├── 🖼️ *.jpg, *.png             # Game banners, character images, heroes
-│   ├── 🔤 Assassin$.ttf            # Custom Assassin's Creed font
+│   ├── 🖼️ *.webp,             # Game banners, character images, heroes
+│   ├── 🔤 Assassin.ttf            # Custom Assassin's Creed font
 │   ├── 🎵 background.mp3           # Background music
 │   ├── 🎨 logo.png                 # AC logo
 │   └── 🖱️ Unavailable.cur          # Custom cursor
@@ -224,9 +215,9 @@ Assassins-Creed/
 
 <div align="center">
 
-### � Homepage
+### 🏠 Homepage
 
-![Homepage Screenshot](Media/ss1.png)
+![Homepage Screenshot](Media/ss1.webp)
 
 _Featuring hero banner, about section, game styles showcase, and franchise statistics_
 
@@ -234,7 +225,7 @@ _Featuring hero banner, about section, game styles showcase, and franchise stati
 
 ### 🎮 Game Page
 
-![Game Page Screenshot](Media/ss2.png)
+![Game Page Screenshot](Media/ss2.webp)
 
 _Individual game pages with detailed information, characters, and historical context_
 
