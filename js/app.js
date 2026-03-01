@@ -1,11 +1,21 @@
 // Fetch data from data.json
 async function fetchGameData() {
   try {
+    // Check cache first
+    const cachedData = sessionStorage.getItem("ac_game_data");
+    if (cachedData) {
+      return JSON.parse(cachedData);
+    }
+
     const response = await fetch("data/data.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return await response.json();
+
+    const data = await response.json();
+    // Save to cache
+    sessionStorage.setItem("ac_game_data", JSON.stringify(data));
+    return data;
   } catch (error) {
     console.error("Could not fetch game data:", error);
     return null;
@@ -35,6 +45,33 @@ async function loadEraContent() {
 
   // Set Page Title
   document.title = `${eraData.title} - Assassin's Creed Tribute`;
+
+  // Update Meta Description dynamically
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    document.head.appendChild(metaDesc);
+  }
+  metaDesc.content =
+    eraData.subtitle || `Explore the Assassin's Creed ${eraData.title} era.`;
+
+  // Update OpenGraph tags if needed
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (!ogTitle) {
+    ogTitle = document.createElement("meta");
+    ogTitle.setAttribute("property", "og:title");
+    document.head.appendChild(ogTitle);
+  }
+  ogTitle.content = document.title;
+
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (!ogDesc) {
+    ogDesc = document.createElement("meta");
+    ogDesc.setAttribute("property", "og:description");
+    document.head.appendChild(ogDesc);
+  }
+  ogDesc.content = metaDesc.content;
 
   // Set Hero
   const heroSection = document.getElementById("hero-dynamic");
@@ -89,10 +126,8 @@ async function loadEraContent() {
   // Trigger animations if present in script.js (cards animate-in)
   setTimeout(() => {
     const cards = document.querySelectorAll(".assassin-card, .card");
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add("animate-in");
-      }, index * 100); // 100ms stagger between each card
+    cards.forEach((card) => {
+      card.classList.add("animate-in");
     });
   }, 100);
 }
@@ -111,6 +146,40 @@ async function loadGameContent() {
   // Base info
   document.title = gameData.title || `Assassin's Creed`;
   document.getElementById("page-title").textContent = document.title;
+
+  // Update Meta Description dynamically
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (!metaDesc) {
+    metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    document.head.appendChild(metaDesc);
+  }
+
+  // create a plain text summary from story_desc
+  if (gameData.story_desc) {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = gameData.story_desc;
+    metaDesc.content = tempDiv.textContent.substring(0, 150) + "...";
+  } else {
+    metaDesc.content = `Discover ${gameData.title}`;
+  }
+
+  // Update OpenGraph tags if needed
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (!ogTitle) {
+    ogTitle = document.createElement("meta");
+    ogTitle.setAttribute("property", "og:title");
+    document.head.appendChild(ogTitle);
+  }
+  ogTitle.content = document.title;
+
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (!ogDesc) {
+    ogDesc = document.createElement("meta");
+    ogDesc.setAttribute("property", "og:description");
+    document.head.appendChild(ogDesc);
+  }
+  ogDesc.content = metaDesc.content;
 
   // Hero Banner
   const hero = document.getElementById("game-hero");
@@ -237,7 +306,7 @@ async function loadGameContent() {
         "beforeend",
         `
                 <div class="gallery-item animate-in" style="opacity:1; transform:translateY(0);">
-                    <img src="${imgUrl}" alt="Screenshot" loading="lazy"/>
+                    <img src="${imgUrl}" alt="${gameData.title} Gameplay Screenshot" loading="lazy"/>
                 </div>
             `,
       );
@@ -333,12 +402,12 @@ async function loadAssassinsContent() {
     } else {
       // Fallback if the button is missing
       const cards = document.querySelectorAll(".assassin-card");
-      cards.forEach((card, i) => {
+      cards.forEach((card) => {
         card.style.display = "block";
         setTimeout(() => {
           card.style.opacity = "1";
           card.style.transform = "translateY(0)";
-        }, i * 100);
+        }, 10);
       });
     }
   }, 50);

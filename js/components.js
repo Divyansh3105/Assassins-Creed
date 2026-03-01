@@ -42,32 +42,31 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
         <header class="sticky-header animus-glass">
             <nav class="desktop-nav">
-                <!-- Mobile / Toggled Hamburger -->
+                <!-- Mobile Hamburger -->
                 <button id="menu-toggle" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                <!-- Left Links -->
-                <ul class="content nav-left">
-                    <li><a href="index.html" class="home-link">Home</a></li>
-                    <li><a href="Assassins.html">Assassins</a></li>
-                </ul>
-
-                <!-- Center Logo -->
-                <div class="nav-center">
-                    <a href="index.html">
-                        <img id="logo" src="Media/logo.png" alt="logo">
+                <!-- Left: Logo + Brand -->
+                <div class="nav-brand">
+                    <a href="index.html" class="nav-brand-link">
+                        <img id="logo" src="Media/logo.png" alt="Assassin's Creed Logo">
+                        <span class="nav-brand-text">Assassin's<br>Creed</span>
                     </a>
                 </div>
 
-                <!-- Right Links -->
-                <ul class="content nav-right">
+                <!-- Center: All Nav Links -->
+                <ul class="content nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Assassins.html">Assassins</a></li>
+                    <li><a href="isu.html">Isu Lore</a></li>
+                    <li><a href="factions.html">Factions</a></li>
+                    <li><a href="quiz_hub.html">Quiz</a></li>
                     <li class="dropdown">
                         <input type="checkbox" id="games-toggle">
-                        <label for="games-toggle" class="dropdownto">Games</label>
-
+                        <label for="games-toggle" class="dropdownto">Games ▾</label>
                         <ul class="dropdown-menu">
                             <li><a href="era.html?era=the-desmond-saga">The Desmond Saga</a></li>
                             <li><a href="era.html?era=colonial-era">Colonial Era</a></li>
@@ -76,10 +75,12 @@ class SiteHeader extends HTMLElement {
                             <li><a href="era.html?era=modern-classic-return">Modern Classic Return</a></li>
                         </ul>
                     </li>
-                    <li class="cta-nav-item">
-                        <a href="index.html" class="btn-cta-animus">Join the Creed</a>
-                    </li>
                 </ul>
+
+                <!-- Right: CTA -->
+                <div class="nav-cta">
+                    <a href="index.html" class="btn-cta-animus">Join the Creed</a>
+                </div>
 
                 <div class="overlay"></div>
             </nav>
@@ -95,7 +96,6 @@ class SiteHeader extends HTMLElement {
       const navLinks = this.querySelectorAll("nav a");
       navLinks.forEach((link) => {
         const linkHref = link.getAttribute("href");
-        // Match exact path or path + query string (like era.html?era=colonial-era)
         if (
           linkHref === currentPath ||
           linkHref === currentPath + currentSearch

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="Media/AC_OG.webp" rel="icon" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results — Animus Archives | Assassin's Creed Tribute</title>
+
+  <meta name="description" content="Review your Assassin sequence synchronization results.">
+  <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Site Shared Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Quiz Specific Styles -->
+  <link rel="stylesheet" href="css/quiz.css">
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/components.js"></script>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <loading-screen></loading-screen>
+  <site-header></site-header>
+
+  <main>
+
+    <div class="qr-wrapper">
+
+      <!-- Hero Section -->
+      <section class="qr-hero">
+
+        <!-- Character Portrait -->
+        <div class="qr-char-card">
+          <div class="qr-char-img" id="res-img"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8BEt4M1qhAJklhq0WmKLoyIVFDChiS-lHZ7mixL7REvI4ifhxHOCp2SI2mHOdZQrUN7yupktXbfX4yR_2CSJBYaOgymSGysI-mB6xRFOhA0_N_nn9CdmIC82ZdQMKdGG-9H8UKx6urtHViJjtw9YtIv0YUVK1L7K2xSYzZRjOtBZ6Jn4-1Q1xH4ayFnX34H6mmxHfZ4AK506XsLtNxPbv0OdzoweRdt6MUWKsF0uCWM3NO9R8Kt81ypzHf498ugNgjObDhoVyqzU');">
+          </div>
+          <div class="qr-char-overlay">
+            <span class="qr-match-badge"><i class="bi bi-patch-check-fill"></i> DNA MATCH FOUND</span>
+            <h2 class="qr-char-name" id="res-name">Resolving...</h2>
+            <span class="qr-char-sub" id="res-sub">...</span>
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="qr-content text-left">
+          <div class="qr-line"></div>
+          <h1 class="qr-title">You are <span id="res-title">...</span></h1>
+
+          <p class="qr-desc" id="res-desc">
+            Resolving genetic memory match criteria. Please stand by while the Animus synchronizes your choices with
+            historical data.
+          </p>
+
+          <div class="qr-tags" id="res-tags">
+            <!-- Dynamic Tags -->
+          </div>
+
+          <div class="qr-share flex gap-4">
+            <button class="btn-quiz-primary" id="qr-share-btn">
+              <i class="bi bi-share-fill"></i> Share Your Creed
+            </button>
+            <a href="quiz_hub.html" class="btn-quiz-secondary">
+              <i class="bi bi-arrow-repeat"></i> Retake Quiz
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Stats Grid -->
+      <section class="qr-stats">
+
+        <div class="qr-stat-col">
+          <span class="qr-stat-header"><i class="bi bi-eye-slash-fill"></i> Stealth</span>
+          <div class="qr-stat-bar-bg">
+            <div class="qr-stat-fill" id="res-stat-stealth-bar" style="width: 0%;"></div>
+          </div>
+          <span class="qr-stat-val" id="res-stat-stealth">0%</span>
+        </div>
+
+        <div class="qr-stat-col">
+          <span class="qr-stat-header"><i class="bi bi-shield-shaded"></i> Combat</span>
+          <div class="qr-stat-bar-bg">
+            <div class="qr-stat-fill" id="res-stat-combat-bar" style="width: 0%;"></div>
+          </div>
+          <span class="qr-stat-val" id="res-stat-combat">0%</span>
+        </div>
+
+        <div class="qr-stat-col">
+          <span class="qr-stat-header"><i class="bi bi-people-fill"></i> Charisma</span>
+          <div class="qr-stat-bar-bg">
+            <div class="qr-stat-fill" id="res-stat-charisma-bar" style="width: 0%;"></div>
+          </div>
+          <span class="qr-stat-val" id="res-stat-charisma">0%</span>
+        </div>
+
+      </section>
+
+      <!-- Traits Section -->
+      <section class="qr-traits">
+        <div class="qr-traits-header">
+          <h3 class="qr-traits-title">Your Assassin Traits</h3>
+          <p class="qr-traits-sub">An analysis of your choices reveals alignment with these core tenets.</p>
+        </div>
+
+        <div class="qr-traits-grid" id="res-traits">
+          <!-- Dynamic Traits -->
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <site-footer></site-footer>
+
+  <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script src="js/quiz.js"></script>
+
+  <script>
+    if (typeof particlesJS !== 'undefined') {
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 35 },
+          color: { value: '#f4c025' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.15, random: true },
+          size: { value: 1.5, random: true },
+          line_linked: { enable: true, distance: 130, color: '#f4c025', opacity: 0.08, width: 1 },
+          move: { enable: true, speed: 0.5, random: true }
+        },
+        interactivity: { events: { onhover: { enable: true, mode: 'grab' } } },
+        retina_detect: true
+      });
+    }
+  </script>
+</body>
+
+</html>

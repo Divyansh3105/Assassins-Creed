@@ -133,3 +133,17 @@
   transform: translateY(-2px);
   box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
 }
+
+/* ==================== ANIMUS ERROR PANEL ==================== */
+.animus-error-panel {
+  background: rgba(139, 0, 0, 0.8); /* Blood red tint */
+  border: 2px solid var(--bright-red);
+  box-shadow: var(--templar-shadow);
+  color: var(--text-white);
+  padding: 3rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 5rem auto;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}

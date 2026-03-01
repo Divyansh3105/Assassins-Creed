@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Media/AC_OG.webp" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isu Lore — Those Who Came Before | Assassin's Creed Tribute</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Explore the First Civilization — the Isu. Discover the Pieces of Eden, the Great Catastrophe, and the fragmented history of those who came before humanity.">
+
+    <!-- Preload Custom Font -->
+    <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Isu Lore — Those Who Came Before | Assassin's Creed">
+    <meta property="og:description"
+        content="Decrypt the glyphs. Understand the Pieces of Eden. Witness the First Civilization.">
+    <meta property="og:image" content="https://divyansh3105.github.io/Assassins-Creed/Media/OG.png">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Site Shared Styles (same as index.html) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Isu Page Specific Styles -->
+    <link rel="stylesheet" href="css/isu.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Web Components (shared navbar + footer + loading screen) -->
+    <script src="js/components.js"></script>
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Loading Screen -->
+    <loading-screen></loading-screen>
+
+    <!-- Shared Header (exact same as index.html) -->
+    <site-header></site-header>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="isu-hero" id="hero">
+            <div class="isu-hero-bg"></div>
+            <div class="isu-hero-overlay"></div>
+
+            <div class="isu-hero-content">
+                <div class="isu-eyebrow">
+                    <i class="bi bi-triangle"></i>
+                    First Civilization Archive
+                    <i class="bi bi-triangle-fill"></i>
+                </div>
+
+                <h1 class="isu-hero-title">Those Who<br>Came Before</h1>
+
+                <p class="isu-hero-subtitle">
+                    Explore the fragmented history of the First Civilization. Decrypt the glyphs,
+                    understand the technology, and witness the dawn of humanity.
+                </p>
+
+                <div class="isu-hero-actions">
+                    <a href="#artifacts" class="btn-isu-primary">
+                        <i class="bi bi-collection"></i> Explore Artifacts
+                    </a>
+                    <a href="#chronicle" class="btn-isu-secondary">
+                        <i class="bi bi-clock-history"></i> View Chronicle
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                Scroll to decrypt
+                <i class="bi bi-chevron-double-down"></i>
+            </div>
+        </section>
+
+        <!-- ==================== PIECES OF EDEN ==================== -->
+        <section class="isu-section" id="artifacts">
+            <div class="isu-section-header">
+                <p class="isu-label">Artifact Classification</p>
+                <h2 class="isu-section-title">The Pieces of Eden</h2>
+                <p class="isu-section-desc">
+                    Technological remnants of immense power, capable of bending reality and controlling minds.
+                </p>
+            </div>
+
+            <div class="isu-artifacts-grid">
+
+                <!-- The Apple -->
+                <div class="isu-artifact-card">
+                    <div class="isu-artifact-icon">
+                        <i class="bi bi-circle-fill"></i>
+                    </div>
+                    <div class="isu-artifact-body">
+                        <p class="isu-artifact-class">Class: Mind Control</p>
+                        <h3 class="isu-artifact-name">The Apple</h3>
+                        <p class="isu-artifact-desc">
+                            Designed to create illusions and control human minds.
+                            The most common Piece of Eden found throughout history.
+                        </p>
+                        <div class="isu-artifact-bar">
+                            <div class="isu-artifact-bar-fill" data-width="75%" style="width:0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Staff -->
+                <div class="isu-artifact-card">
+                    <div class="isu-artifact-icon">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+                    <div class="isu-artifact-body">
+                        <p class="isu-artifact-class">Class: Manipulation</p>
+                        <h3 class="isu-artifact-name">The Staff</h3>
+                        <p class="isu-artifact-desc">
+                            Capable of energy manipulation and amplifying the user's power.
+                            Often used by rulers to assert dominance over populations.
+                        </p>
+                        <div class="isu-artifact-bar">
+                            <div class="isu-artifact-bar-fill" data-width="50%" style="width:0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Shroud -->
+                <div class="isu-artifact-card">
+                    <div class="isu-artifact-icon">
+                        <i class="bi bi-bandaid-fill"></i>
+                    </div>
+                    <div class="isu-artifact-body">
+                        <p class="isu-artifact-class">Class: Regeneration</p>
+                        <h3 class="isu-artifact-name">The Shroud</h3>
+                        <p class="isu-artifact-desc">
+                            A healing artifact capable of regenerating tissue and curing ailments,
+                            though it cannot resurrect the dead.
+                        </p>
+                        <div class="isu-artifact-bar">
+                            <div class="isu-artifact-bar-fill" data-width="100%" style="width:0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Crystal Skull -->
+                <div class="isu-artifact-card">
+                    <div class="isu-artifact-icon">
+                        <i class="bi bi-gem"></i>
+                    </div>
+                    <div class="isu-artifact-body">
+                        <p class="isu-artifact-class">Class: Communication</p>
+                        <h3 class="isu-artifact-name">Crystal Skull</h3>
+                        <p class="isu-artifact-desc">
+                            Enables communication with beings across great distances
+                            and can transmit memories of the deceased Isu.
+                        </p>
+                        <div class="isu-artifact-bar">
+                            <div class="isu-artifact-bar-fill" data-width="60%" style="width:0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Sword of Eden -->
+                <div class="isu-artifact-card">
+                    <div class="isu-artifact-icon">
+                        <i class="bi bi-sword"></i>
+                    </div>
+                    <div class="isu-artifact-body">
+                        <p class="isu-artifact-class">Class: Weaponized</p>
+                        <h3 class="isu-artifact-name">Sword of Eden</h3>
+                        <p class="isu-artifact-desc">
+                            A blade capable of projecting a concussive energy field and
+                            inspiring loyalty in those who behold it.
+                        </p>
+                        <div class="isu-artifact-bar">
+                            <div class="isu-artifact-bar-fill" data-width="85%" style="width:0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Koh-i-Noor -->
+                <div class="isu-artifact-card">
+                    <div class="isu-artifact-icon">
+                        <i class="bi bi-diamond-fill"></i>
+                    </div>
+                    <div class="isu-artifact-body">
+                        <p class="isu-artifact-class">Class: Amplifier</p>
+                        <h3 class="isu-artifact-name">Koh-i-Noor</h3>
+                        <p class="isu-artifact-desc">
+                            A crystalline amplifier that magnifies any nearby Piece of Eden to catastrophic levels.
+                            Called "Mountain of Light" by humans.
+                        </p>
+                        <div class="isu-artifact-bar">
+                            <div class="isu-artifact-bar-fill" data-width="40%" style="width:0"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== CHRONICLE ==================== -->
+        <section class="isu-timeline-section" id="chronicle">
+            <div class="isu-timeline-inner">
+                <div class="isu-section-header">
+                    <p class="isu-label">Historical Record</p>
+                    <h2 class="isu-section-title">The Isu Era</h2>
+                    <p class="isu-section-desc">Key events in the collapse of the First Civilization.</p>
+                </div>
+
+                <div class="isu-timeline-events">
+
+                    <div class="isu-timeline-event">
+                        <div class="isu-timeline-dot"></div>
+                        <div class="isu-timeline-icon"><i class="bi bi-globe"></i></div>
+                        <div>
+                            <p class="isu-event-date">~1,000,000 BCE</p>
+                            <h3 class="isu-event-title">Rise of the First Civilization</h3>
+                            <p class="isu-event-desc">
+                                The Isu build a global civilization far surpassing anything humanity would later
+                                achieve,
+                                developing the Pieces of Eden as tools of governance and control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="isu-timeline-event">
+                        <div class="isu-timeline-dot"></div>
+                        <div class="isu-timeline-icon"><i class="bi bi-person-badge"></i></div>
+                        <div>
+                            <p class="isu-event-date">Unknown Date</p>
+                            <h3 class="isu-event-title">Project Anthropos</h3>
+                            <p class="isu-event-desc">
+                                The engineering of humanity by the Isu to serve as a docile workforce.
+                                Neurotransmitters were implanted to ensure obedience to the Pieces of Eden.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="isu-timeline-event">
+                        <div class="isu-timeline-dot"></div>
+                        <div class="isu-timeline-icon"><i class="bi bi-shield-exclamation"></i></div>
+                        <div>
+                            <p class="isu-event-date">Pre-Catastrophe</p>
+                            <h3 class="isu-event-title">War of Unification</h3>
+                            <p class="isu-event-desc">
+                                A global conflict among Isu factions for control, further weakening their
+                                society ahead of humanity's rebellion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="isu-timeline-event">
+                        <div class="isu-timeline-dot"></div>
+                        <div class="isu-timeline-icon"><i class="bi bi-hand-index-fill"></i></div>
+                        <div>
+                            <p class="isu-event-date">Eve's Uprising</p>
+                            <h3 class="isu-event-title">The Human Rebellion</h3>
+                            <p class="isu-event-desc">
+                                Led by Eve, a human-Isu hybrid who stole an Apple of Eden, sparking the
+                                war for freedom that would define all of human history.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="isu-timeline-event">
+                        <div class="isu-timeline-dot"></div>
+                        <div class="isu-timeline-icon"><i class="bi bi-sun"></i></div>
+                        <div>
+                            <p class="isu-event-date">~75,000 BCE</p>
+                            <h3 class="isu-event-title">The Great Catastrophe</h3>
+                            <p class="isu-event-desc">
+                                A coronal mass ejection from the sun wiped out most Isu and humanity alike,
+                                ending the First Civilization's dominion over Earth forever.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CTA ==================== -->
+        <section class="isu-cta-section" id="cta">
+            <div class="isu-cta-card">
+                <div class="isu-cta-glow"></div>
+                <i class="bi bi-key-fill" style="font-size:3rem;color:#d4af37;display:block;margin-bottom:1rem;"></i>
+                <h2 class="isu-cta-title">Uncover The Truth</h2>
+                <p class="isu-cta-desc">
+                    Join the initiated. Receive encrypted updates on new artifact discoveries and
+                    decoded Isu messages directly to your inbox.
+                </p>
+                <div class="isu-cta-form">
+                    <input class="isu-cta-input" id="isu-email" type="email"
+                        placeholder="Enter your genetic memory sequence (Email)">
+                    <button class="btn-isu-cta" id="isu-sync-btn" type="button">SYNCHRONIZE</button>
+                </div>
+                <p class="isu-cta-note">By synchronizing, you agree to the Abstergo Industries Privacy Policy.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer (exact same as index.html) -->
+    <site-footer></site-footer>
+
+    <!-- Shared Utility Buttons -->
+    <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Shared Main Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Isu Page Script -->
+    <script src="js/isu.js"></script>
+
+    <!-- Particles config -->
+    <script>
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 40, density: { enable: true, value_area: 800 } },
+                    color: { value: '#d4af37' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.25, random: true },
+                    size: { value: 2, random: true },
+                    line_linked: { enable: true, distance: 130, color: '#d4af37', opacity: 0.1, width: 1 },
+                    move: { enable: true, speed: 0.8, direction: 'none', random: true, out_mode: 'out' }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: false } }
+                },
+                retina_detect: true
+            });
+        }
+    </script>
+</body>
+
+</html>

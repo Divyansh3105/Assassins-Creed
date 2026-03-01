@@ -84,7 +84,8 @@
   cursor: url(../Media/Unavailable.cur), pointer;
 }
 
-#games-toggle {
+#games-toggle,
+#explore-toggle {
   display: none;
 }
 

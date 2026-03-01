@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Media/AC_OG.webp" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factions — Brotherhood vs Templars | Assassin's Creed Tribute</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="A deep dive into the ideologies of the Hidden Ones/Assassins vs the Order of the Ancients/Templars. Explore their tenets, notable figures, and history.">
+
+    <!-- Preload Custom Font -->
+    <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Factions — Brotherhood vs Templars | Assassin's Creed">
+    <meta property="og:description"
+        content="We work in the dark to serve the light. Nothing is true, everything is permitted.">
+    <meta property="og:image" content="https://divyansh3105.github.io/Assassins-Creed/Media/OG.png">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Site Shared Styles (same as index.html) -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Factions Page Specific Styles -->
+    <link rel="stylesheet" href="css/factions.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Web Components (shared navbar + footer + loading screen) -->
+    <script src="js/components.js"></script>
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Loading Screen -->
+    <loading-screen></loading-screen>
+
+    <!-- Shared Header (exact same as index.html) -->
+    <site-header></site-header>
+
+    <main>
+
+        <!-- ==================== HERO SPLIT SCREEN ==================== -->
+        <section class="factions-hero" id="hero">
+            <div class="factions-divider-line"></div>
+
+            <!-- Assassins Side -->
+            <div class="faction-side faction-assassins">
+                <div class="faction-assassins-bg"></div>
+                <div class="faction-content">
+                    <i class="bi bi-shield-shaded faction-icon"></i>
+                    <h1 class="faction-title">The<br><span>Brotherhood</span></h1>
+                    <p class="faction-creed">
+                        "We work in the dark to serve the light.<br>We are Assassins."
+                    </p>
+                    <a class="btn-faction btn-assassins" href="#tenets" id="join-assassins">Join the Shadows</a>
+                </div>
+            </div>
+
+            <!-- VS Divider -->
+            <div class="factions-divider">VS</div>
+
+            <!-- Templars Side -->
+            <div class="faction-side faction-templars">
+                <div class="faction-templars-bg"></div>
+                <div class="faction-content">
+                    <i class="bi bi-crosshair2 faction-icon"></i>
+                    <h1 class="faction-title">The<br><span>Order</span></h1>
+                    <p class="faction-creed">
+                        "Nothing is true, everything is permitted.<br>Lux in tenebris."
+                    </p>
+                    <a class="btn-faction btn-templars" href="#tenets" id="join-templars">Join the Order</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TENETS COMPARISON ==================== -->
+        <section class="factions-section" id="tenets">
+            <div class="factions-section-header">
+                <p class="factions-label">Core Ideology</p>
+                <h2 class="factions-section-title">Tenets & Beliefs</h2>
+            </div>
+
+            <div class="tenets-grid">
+
+                <!-- Assassins tenets -->
+                <div class="tenets-side tenets-assassins">
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Tenet I — Brotherhood</p>
+                        <h3 class="tenet-title">Stay Your Blade</h3>
+                        <p class="tenet-desc">Never harm an innocent. The Brotherhood serves to protect those who cannot
+                            protect themselves.</p>
+                    </div>
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Tenet II — Brotherhood</p>
+                        <h3 class="tenet-title">Be Discreet</h3>
+                        <p class="tenet-desc">Never compromise the Brotherhood. Work in the shadows, revealing yourself
+                            only when necessary.</p>
+                    </div>
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Tenet III — Brotherhood</p>
+                        <h3 class="tenet-title">Never Compromise</h3>
+                        <p class="tenet-desc">Always place the Brotherhood above personal gain. The creed survives only
+                            through unity.</p>
+                    </div>
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Philosophy — Brotherhood</p>
+                        <h3 class="tenet-title">Free Will</h3>
+                        <p class="tenet-desc">Humanity must choose its own path. Freedom — even to make mistakes — is
+                            the highest ideal worth fighting for.</p>
+                    </div>
+
+                    <a href="factions_assassins.html" class="btn-faction btn-assassins tenet-more-btn">
+                        <i class="bi bi-shield-shaded"></i> Explore the Brotherhood &rarr;
+                    </a>
+
+                </div>
+
+                <!-- VS column -->
+                <div class="tenets-vs">
+                    <div class="vs-badge">VS</div>
+                    <div class="vs-badge">VS</div>
+                    <div class="vs-badge">VS</div>
+                    <div class="vs-badge">VS</div>
+                </div>
+
+                <!-- Templars tenets -->
+                <div class="tenets-side tenets-templars">
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Tenet I — Order</p>
+                        <h3 class="tenet-title">Peace Through Control</h3>
+                        <p class="tenet-desc">True peace requires order. Humanity must be guided — not given the freedom
+                            to destroy itself.</p>
+                    </div>
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Tenet II — Order</p>
+                        <h3 class="tenet-title">Unity Above All</h3>
+                        <p class="tenet-desc">A single, unified vision is stronger than divided freedoms. The Order must
+                            act as one body, one will.</p>
+                    </div>
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Tenet III — Order</p>
+                        <h3 class="tenet-title">The Greater Good</h3>
+                        <p class="tenet-desc">Individual sacrifice is acceptable if it ensures the survival and
+                            prosperity of the many. The ends justify the means.</p>
+                    </div>
+
+                    <div class="tenet-entry">
+                        <p class="tenet-num">Philosophy — Order</p>
+                        <h3 class="tenet-title">Order &amp; Guidance</h3>
+                        <p class="tenet-desc">Humanity is flawed. Without the Order's influence, civilization will
+                            always collapse into chaos and self-destruction.</p>
+                    </div>
+
+                    <a href="factions_templars.html" class="btn-faction btn-templars tenet-more-btn">
+                        <i class="bi bi-crosshair2"></i> Explore the Order &rarr;
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== NOTABLE FIGURES ==================== -->
+        <section class="figures-section" id="figures">
+            <div class="figures-inner">
+                <div class="factions-section-header">
+                    <p class="factions-label">Memory Database</p>
+                    <h2 class="factions-section-title">Notable Figures</h2>
+                </div>
+
+                <div class="figures-grid">
+
+                    <!-- Assassins -->
+                    <div class="figure-card ac">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Altaïr Ibn-La'Ahad</h3>
+                        <p class="figure-era">Syria, 12th Century</p>
+                        <p class="figure-desc">Mentor of the Brotherhood who revolutionized the Creed and recovered the
+                            Apple of Eden.</p>
+                    </div>
+
+                    <div class="figure-card ac">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Ezio Auditore</h3>
+                        <p class="figure-era">Italy, 15th–16th Century</p>
+                        <p class="figure-desc">Master Assassin and Mentor who rebuilt the Brotherhood after
+                            near-annihilation.</p>
+                    </div>
+
+                    <div class="figure-card ac">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Bayek of Siwa</h3>
+                        <p class="figure-era">Egypt, 49 BCE</p>
+                        <p class="figure-desc">Founder of the Hidden Ones — the precursor to the Assassin Brotherhood.
+                        </p>
+                    </div>
+
+                    <div class="figure-card ac">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Eivor Varinsdottir</h3>
+                        <p class="figure-era">Norway / England, 873 CE</p>
+                        <p class="figure-desc">Viking warrior who allied with the Hidden Ones and opposed the Order of
+                            the Ancients.</p>
+                    </div>
+
+                    <!-- Templars -->
+                    <div class="figure-card tm">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Al Mualim</h3>
+                        <p class="figure-era">Syria, 12th Century</p>
+                        <p class="figure-desc">Grand Master who secretly directed the Brotherhood while serving Templar
+                            ends.</p>
+                    </div>
+
+                    <div class="figure-card tm">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Rodrigo Borgia</h3>
+                        <p class="figure-era">Italy, 15th Century</p>
+                        <p class="figure-desc">Grand Master of the Italian Rite who sought the Vault beneath the
+                            Vatican.</p>
+                    </div>
+
+                    <div class="figure-card tm">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Haytham Kenway</h3>
+                        <p class="figure-era">Colonial America, 18th Century</p>
+                        <p class="figure-desc">Grand Master of the Colonial Rite — son of a pirate, father of an
+                            Assassin.</p>
+                    </div>
+
+                    <div class="figure-card tm">
+                        <div class="figure-icon-wrap"><i class="bi bi-person-fill"></i></div>
+                        <h3 class="figure-name">Crawford Starrick</h3>
+                        <p class="figure-era">London, 1868</p>
+                        <p class="figure-desc">Grand Master of the British Rite who controlled London through industry
+                            and the Shroud of Eden.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer (exact same as index.html) -->
+    <site-footer></site-footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Shared Main Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Factions Page Script -->
+    <script src="js/factions.js"></script>
+
+    <!-- Particles config -->
+    <script>
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 45, density: { enable: true, value_area: 900 } },
+                    color: { value: ['#00d2ff', '#ff3333'] },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.2, random: true },
+                    size: { value: 2, random: true },
+                    line_linked: { enable: true, distance: 120, color: '#ffffff', opacity: 0.05, width: 1 },
+                    move: { enable: true, speed: 0.7, direction: 'none', random: true, out_mode: 'out' }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: false } }
+                },
+                retina_detect: true
+            });
+        }
+    </script>
+</body>
+
+</html>

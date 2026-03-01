@@ -22,23 +22,27 @@ header.animus-glass {
 
 header nav.desktop-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
+  gap: 1.5rem;
+  max-width: 1440px;
   margin: 0 auto;
   position: relative;
 }
 
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+/* Brand: logo + site name */
+.nav-brand {
+  flex-shrink: 0;
+}
+
+.nav-brand-link {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
 }
 
 #logo {
-  height: 4.5rem;
+  height: 2.6rem;
   transition: transform 0.3s ease;
 }
 
@@ -46,24 +50,54 @@ header nav.desktop-nav {
   transform: scale(1.05);
 }
 
+.nav-brand-text {
+  color: var(--text-offwhite);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-left: 2px solid var(--animus-blue);
+  padding-left: 0.6rem;
+  white-space: nowrap;
+}
+
+/* Center nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: center;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+.nav-links > li > a,
+.nav-links > li > .dropdownto {
+  display: block;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Right CTA */
+.nav-cta {
+  flex-shrink: 0;
+}
+
 .content {
   display: flex;
   list-style: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
-}
-
-.nav-left {
-  justify-content: flex-start;
-  flex: 1;
-}
-
-.nav-right {
-  justify-content: flex-end;
-  flex: 1;
 }
 
 .content a {
@@ -292,11 +326,15 @@ nav:not(.nav-active) .content .dropdown-menu {
     margin-bottom: 1rem;
   }
 
-  .nav-left,
-  .nav-right {
+  .nav-links {
     flex: none;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-brand-text {
+    display: none;
   }
 
   .content {
@@ -359,8 +397,7 @@ nav:not(.nav-active) .content .dropdown-menu {
     transform: none;
   }
 
-  .content.nav-left,
-  .content.nav-right {
+  .content.nav-links {
     flex-direction: column;
     align-items: flex-start;
     position: fixed;

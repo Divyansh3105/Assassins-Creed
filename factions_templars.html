@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="Media/AC_OG.webp" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Templar Order — Deep Dive | Assassin's Creed Tribute</title>
+
+    <meta name="description"
+        content="A deep dive into the Templar Order — their philosophy of control, Grand Masters, history, and the Abstergo Industries front.">
+    <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <meta property="og:title" content="The Templar Order | Assassin's Creed Tribute">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Site Shared Styles -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Templars Detail Page Styles -->
+    <link rel="stylesheet" href="css/factions_templars.css">
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/components.js"></script>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <loading-screen></loading-screen>
+    <site-header></site-header>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="tm-hero" id="hero">
+            <div class="tm-hero-bg"></div>
+
+            <!-- Breadcrumb -->
+            <div class="tm-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="factions.html">Factions</a>
+                <span>/</span>
+                <span class="tm-breadcrumb-active">Templar Order</span>
+            </div>
+
+            <div class="tm-hero-content">
+                <div class="tm-eyebrow">
+                    <i class="bi bi-crosshair2"></i>
+                    Order of the Ancients — Templar Order
+                    <i class="bi bi-crosshair2"></i>
+                </div>
+                <h1 class="tm-hero-title">The Templar<br><span>Order</span></h1>
+                <p class="tm-hero-quote">"May the Father of Understanding guide us.<br>Order through control."</p>
+                <p class="tm-hero-desc">
+                    Discover the history, ideology, and Grand Masters of the Order that has sought to guide humanity
+                    toward a perfect society since before recorded history.
+                </p>
+                <div class="tm-hero-actions">
+                    <a href="#philosophy" class="btn-tm-primary"><i class="bi bi-book"></i> View Philosophy</a>
+                    <a href="#figures" class="btn-tm-secondary"><i class="bi bi-people"></i> Grand Masters</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PHILOSOPHY / TENETS ==================== -->
+        <section class="tm-section" id="philosophy">
+            <div class="tm-section-header">
+                <p class="tm-label">Core Ideology</p>
+                <h2 class="tm-section-title">The Philosophy of Control</h2>
+                <p class="tm-section-desc">Our ideology is built upon the understanding that humanity requires guidance.
+                </p>
+            </div>
+
+            <div class="tm-tenets-grid">
+                <div class="tm-tenet-card">
+                    <div class="tm-tenet-icon"><i class="bi bi-balance-scale"></i></div>
+                    <h3 class="tm-tenet-title">Order</h3>
+                    <p class="tm-tenet-desc">Society functions best when structure is maintained and rules are enforced
+                        without exception. Chaos is the enemy of progress and must be eliminated.</p>
+                </div>
+                <div class="tm-tenet-card">
+                    <div class="tm-tenet-icon"><i class="bi bi-eye"></i></div>
+                    <h3 class="tm-tenet-title">Purpose</h3>
+                    <p class="tm-tenet-desc">Every individual has a role to play in the grand design of civilization.
+                        The Order provides that purpose, guiding the willing and directing the unwilling.</p>
+                </div>
+                <div class="tm-tenet-card">
+                    <div class="tm-tenet-icon"><i class="bi bi-shield-fill"></i></div>
+                    <h3 class="tm-tenet-title">Stability</h3>
+                    <p class="tm-tenet-desc">Peace is the result of a stable, controlled environment free from chaotic
+                        will and insurrection. The ends always justify the means when humanity's future is at stake.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== GRAND MASTERS ==================== -->
+        <section class="tm-figures-section" id="figures">
+            <div class="tm-section-header">
+                <p class="tm-label">High Command</p>
+                <h2 class="tm-section-title">Grand Masters</h2>
+            </div>
+
+            <div class="tm-figures-grid">
+                <div class="tm-figure-card">
+                    <div class="tm-figure-header">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="tm-figure-body">
+                        <p class="tm-figure-era">Syria, 12th Century</p>
+                        <h3 class="tm-figure-name">Al Mualim</h3>
+                        <p class="tm-figure-desc">Grand Master who secretly directed the Assassin Brotherhood while
+                            serving Templar ends, seeking the Apple of Eden to impose his own "peace."</p>
+                    </div>
+                </div>
+                <div class="tm-figure-card">
+                    <div class="tm-figure-header">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="tm-figure-body">
+                        <p class="tm-figure-era">Italy, 15th Century</p>
+                        <h3 class="tm-figure-name">Rodrigo Borgia</h3>
+                        <p class="tm-figure-desc">Also known as Pope Alexander VI. He used the Papacy to extend Templar
+                            influence across Europe during the Renaissance, seeking the Vault beneath the Vatican.</p>
+                    </div>
+                </div>
+                <div class="tm-figure-card">
+                    <div class="tm-figure-header">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="tm-figure-body">
+                        <p class="tm-figure-era">Colonial America, 1725–1781</p>
+                        <h3 class="tm-figure-name">Haytham Kenway</h3>
+                        <p class="tm-figure-desc">First Grand Master of the Colonial Rite. Son of a pirate, father of an
+                            Assassin, and a man of iron conviction who sought to unite the colonies under Templar rule.
+                        </p>
+                    </div>
+                </div>
+                <div class="tm-figure-card">
+                    <div class="tm-figure-header">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="tm-figure-body">
+                        <p class="tm-figure-era">London, 1868</p>
+                        <h3 class="tm-figure-name">Crawford Starrick</h3>
+                        <p class="tm-figure-desc">Grand Master of the British Rite who controlled London's underworld,
+                            industry, and politics. Wielded the Shroud of Eden as his ultimate weapon.</p>
+                    </div>
+                </div>
+                <div class="tm-figure-card">
+                    <div class="tm-figure-header">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="tm-figure-body">
+                        <p class="tm-figure-era">Egypt, 49 BCE</p>
+                        <h3 class="tm-figure-name">Julius Caesar</h3>
+                        <p class="tm-figure-desc">Supreme Leader of the Order of the Ancients in Egypt, who used the
+                            Trident of Eden to instill fanatical loyalty in his legions and expand the Roman Empire.</p>
+                    </div>
+                </div>
+                <div class="tm-figure-card">
+                    <div class="tm-figure-header">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <div class="tm-figure-body">
+                        <p class="tm-figure-era">France, 18th Century</p>
+                        <h3 class="tm-figure-name">François-Thomas Germain</h3>
+                        <p class="tm-figure-desc">Grand Master of the French Rite who used the Sword of Eden and the
+                            chaos of the French Revolution to attempt to reshape society under Templar ideals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ORIGINS ==================== -->
+        <section class="tm-origins-section" id="origins">
+            <div class="tm-origins-inner">
+                <div class="tm-origins-text">
+                    <p class="tm-label">Origins</p>
+                    <h2 class="tm-section-title" style="text-align:left;">The Order of the Ancients</h2>
+                    <p class="tm-origins-desc">
+                        Before they were called Templars, they were the Order of the Ancients — an ancient organization
+                        first recorded around 1334 BCE in Egypt, under Pharaoh Smenkhkare. For millennia they have
+                        worked from the shadows to guide humanity toward the light of "perfection."
+                    </p>
+                    <p class="tm-origins-desc">
+                        Their names change across centuries and civilizations, but their purpose remains eternal:
+                        establish total control, eliminate chaos, and shepherd humanity toward a destiny chosen not by
+                        the many — but by the few who know best.
+                    </p>
+                    <div class="tm-origins-stats">
+                        <div class="tm-stat">
+                            <span class="tm-stat-num">1334 BCE</span>
+                            <span class="tm-stat-label">First Recorded</span>
+                        </div>
+                        <div class="tm-stat-divider"></div>
+                        <div class="tm-stat">
+                            <span class="tm-stat-num">Global</span>
+                            <span class="tm-stat-label">Influence</span>
+                        </div>
+                        <div class="tm-stat-divider"></div>
+                        <div class="tm-stat">
+                            <span class="tm-stat-num">Abstergo</span>
+                            <span class="tm-stat-label">Modern Front</span>
+                        </div>
+                    </div>
+                    <a href="factions.html" class="btn-tm-primary" style="margin-top:1.5rem; display:inline-flex;">
+                        <i class="bi bi-arrow-left"></i> Back to Factions
+                    </a>
+                </div>
+                <div class="tm-origins-visual">
+                    <div class="tm-origins-glyph">
+                        <div class="tm-glyph-ring tm-glyph-ring-1"></div>
+                        <div class="tm-glyph-ring tm-glyph-ring-2"></div>
+                        <i class="bi bi-crosshair2 tm-glyph-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <site-footer></site-footer>
+
+    <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+
+    <script>
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 40 },
+                    color: { value: '#ff3333' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.2, random: true },
+                    size: { value: 2, random: true },
+                    line_linked: { enable: true, distance: 120, color: '#ff3333', opacity: 0.07, width: 1 },
+                    move: { enable: true, speed: 0.7, random: true }
+                },
+                interactivity: { events: { onhover: { enable: true, mode: 'grab' } } },
+                retina_detect: true
+            });
+        }
+    </script>
+</body>
+
+</html>
