@@ -1,26 +1,23 @@
 /* Header & Animus UI */
 header.sticky-header {
-  background: rgba(5, 5, 5, 0.85);
+  background: rgba(2, 2, 2, 0.9);
   padding: 1rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 2000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
   transition: all 0.3s ease;
 }
 
 header.animus-glass {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  /* Subtle horizontal lines for Animus glitch effect */
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(255, 255, 255, 0.01) 2px,
-    rgba(255, 255, 255, 0.01) 4px
-  );
+  /* Holographic grid lines for Animus header */
+  background-image:
+    linear-gradient(rgba(0, 210, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 header nav.desktop-nav {
@@ -79,7 +76,8 @@ header nav.desktop-nav {
 }
 
 .content a:hover {
-  color: var(--primary-red);
+  color: var(--animus-blue);
+  text-shadow: 0 0 10px var(--animus-glow);
 }
 
 .content .home-link,
@@ -88,26 +86,50 @@ header nav.desktop-nav {
 }
 
 /* CTA Button */
-.btn-cta-gold {
+.btn-cta-animus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(201, 169, 97, 0.1);
-  border: 1px solid var(--gold-accent);
-  color: var(--gold-accent) !important;
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid var(--animus-blue);
+  color: var(--animus-blue) !important;
   padding: 0.8rem 2rem;
-  border-radius: 4px;
+  border-radius: 4px; /* Sharper */
   font-weight: 700 !important;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease !important;
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
 }
 
-.btn-cta-gold:hover {
-  background: var(--gold-accent);
-  color: var(--bg-black) !important;
-  box-shadow: 0 0 15px rgba(201, 169, 97, 0.5);
+.btn-cta-animus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 210, 255, 0.4),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.btn-cta-animus:hover {
+  background: rgba(0, 210, 255, 0.2);
+  color: var(--text-white) !important;
+  box-shadow: 0 0 20px var(--animus-glow);
+  border-color: #00e5ff;
+}
+
+.btn-cta-animus:hover::before {
+  left: 100%;
 }
 
 /* Dropdown */
@@ -132,7 +154,8 @@ header nav.desktop-nav {
 }
 
 .dropdownto:hover {
-  color: var(--primary-red);
+  color: var(--animus-blue);
+  text-shadow: 0 0 10px var(--animus-glow);
 }
 
 .dropdownto:focus {
@@ -148,13 +171,15 @@ header nav.desktop-nav {
   flex-direction: column;
   min-width: 14rem;
   list-style: none;
-  background: rgba(17, 24, 39, 0.85);
+  background: rgba(10, 14, 23, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: 4px;
   padding: 0.5rem 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 210, 255, 0.1);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -162,18 +187,21 @@ header nav.desktop-nav {
 /* Dropdown links */
 .dropdown-menu a {
   display: block;
-  padding: 0.5rem 1.5rem;
-  color: var(--primary-red);
+  padding: 0.7rem 1.5rem;
+  color: var(--text-offwhite);
   text-decoration: none;
   transition:
     background 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    padding-left 0.3s ease;
 }
 
 /* Hover effect */
 .dropdown-menu a:hover {
-  background-color: var(--primary-red);
-  color: var(--text-white) !important;
+  background-color: rgba(0, 210, 255, 0.1);
+  color: var(--animus-blue) !important;
+  padding-left: 2rem;
+  border-left: 3px solid var(--animus-blue);
 }
 
 /* Hide dropdown when menu is closed */
@@ -189,12 +217,29 @@ nav:not(.nav-active) .content .dropdown-menu {
 /* Footer */
 /* --------- Footer --------- */
 .main-footer {
-  padding: 20px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(5, 5, 5, 0.85);
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(0, 210, 255, 0.2);
+  background: rgba(5, 8, 15, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   text-align: center;
+  position: relative;
+}
+
+.main-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--animus-blue),
+    transparent
+  );
+  box-shadow: 0 0 10px var(--animus-glow);
 }
 
 .main-footer p {
@@ -204,14 +249,16 @@ nav:not(.nav-active) .content .dropdown-menu {
 }
 
 .main-footer a {
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .main-footer a:hover {
-  color: var(--bright-gold);
+  color: var(--text-white);
+  text-shadow: 0 0 10px var(--animus-glow);
 }
 
 .footer-icons {
@@ -220,13 +267,15 @@ nav:not(.nav-active) .content .dropdown-menu {
 
 .footer-icons a {
   color: var(--text-white);
-  margin: 0 8px;
-  font-size: 1.4rem;
-  transition: color 0.3s;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: all 0.3s;
 }
 
 .footer-icons a:hover {
-  color: var(--primary-red);
+  color: var(--animus-blue);
+  transform: translateY(-3px);
+  text-shadow: 0 0 15px var(--animus-glow);
 }
 
 /* Responsive Header Layout */

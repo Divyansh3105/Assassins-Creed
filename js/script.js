@@ -285,40 +285,50 @@ if (filterButtons.length > 0) {
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       this.classList.add("active");
 
-      // Dynamically query cards since they might be injected by app.js asynchronously
+      // Dynamically query cards since they might be injected asynchronously
       const currentCards = document.querySelectorAll(".assassin-card");
 
-      // Filter cards
+      // Apply Glitch Effect
       currentCards.forEach((card) => {
-        const role = card.dataset.role || "";
-        const era = card.dataset.era || "";
-        let shouldShow = false;
+        card.classList.add("glitch-anim");
 
-        if (filter === "all") {
-          shouldShow = true;
-        } else if (filter === "mentor" && role === "mentor") {
-          shouldShow = true;
-        } else if (filter === "founder" && role === "founder") {
-          shouldShow = true;
-        } else if (filter === "ancient" && era === "ancient") {
-          shouldShow = true;
-        } else if (filter === "modern" && era === "modern") {
-          shouldShow = true;
-        }
+        // Wait for glitch to play to halfway before hiding/showing
+        setTimeout(() => {
+          const role = card.dataset.role || "";
+          const era = card.dataset.era || "";
+          let shouldShow = false;
 
-        if (shouldShow) {
-          card.style.display = "block";
+          if (filter === "all") {
+            shouldShow = true;
+          } else if (filter === "mentor" && role === "mentor") {
+            shouldShow = true;
+          } else if (filter === "founder" && role === "founder") {
+            shouldShow = true;
+          } else if (filter === "ancient" && era === "ancient") {
+            shouldShow = true;
+          } else if (filter === "modern" && era === "modern") {
+            shouldShow = true;
+          }
+
+          if (shouldShow) {
+            card.style.display = "block";
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+            }, 10);
+          } else {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            setTimeout(() => {
+              card.style.display = "none";
+            }, 200);
+          }
+
+          // Remove glitch class when animation finishes
           setTimeout(() => {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          }, 10);
-        } else {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(20px)";
-          setTimeout(() => {
-            card.style.display = "none";
-          }, 300);
-        }
+            card.classList.remove("glitch-anim");
+          }, 200);
+        }, 200); // Trigger toggle midway through the 0.4s glitch animation
       });
     });
   });
@@ -355,7 +365,7 @@ if (typeof particlesJS !== "undefined") {
         },
       },
       color: {
-        value: ["#dc3545", "#ef4444", "#991b1b", "#ffffff"],
+        value: ["#00d2ff", "#0088cc", "#0055aa", "#ffffff"],
       },
       shape: {
         type: ["circle", "triangle", "edge"],
@@ -387,7 +397,7 @@ if (typeof particlesJS !== "undefined") {
       line_linked: {
         enable: true,
         distance: 150,
-        color: "#dc3545",
+        color: "#00d2ff",
         opacity: 0.4,
         width: 1,
       },
@@ -434,3 +444,17 @@ if (typeof particlesJS !== "undefined") {
     retina_detect: true,
   });
 }
+
+// ==================== ANIMUS CHARACTER SLIDER INFINITE LOOP ====================
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderTracks = document.querySelectorAll(".assassins-slider-track");
+
+  sliderTracks.forEach((track) => {
+    // Clone all children to create a seamless loop
+    const children = Array.from(track.children);
+    children.forEach((child) => {
+      const clone = child.cloneNode(true);
+      track.appendChild(clone);
+    });
+  });
+});

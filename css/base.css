@@ -7,43 +7,74 @@
 
 /* == GLOBAL CSS VARIABLES == */
 :root {
-  /* Red Theme */
-  --primary-red: #dc3545; /* Deeper blood red */
-  --primary-red-hover: #c82333;
-  --bright-red: #ff4d4d; /* More vibrant bright red */
-  --blood-red: #b91c1c; /* Darker blood red */
-  --light-red: #f87171;
+  /* Animus Blue Theme (Primary) */
+  --animus-blue: #00d2ff;
+  --animus-glow: rgba(0, 210, 255, 0.6);
+  --animus-dark-blue: #004d66;
 
-  /* Gold Theme */
-  --gold-accent: #c9a961; /* Richer gold */
-  --bright-gold: #fbbf24;
+  /* Red Theme (Templar/Glitch) */
+  --primary-red: #ff3333;
+  --bright-red: #ff0000;
+  --blood-red: #8b0000;
+  --templar-glow: rgba(255, 51, 51, 0.6);
 
-  /* Dark Theme */
-  --bg-black: #050505; /* Deepest charcoal/black */
-  --bg-dark: #111827;
-  --bg-card: #1f2937;
-  --border-dark: #374151;
-  --footer-dark: #1a1a1a;
+  /* Removed Gold Theme entirely - Redefined secondary highlights to white/cyan */
+  --gold-accent: var(--animus-blue);
+  --bright-gold: #ffffff;
 
-  /* Light Theme */
+  /* Dark Theme (Backgrounds) */
+  --bg-black: #050505; /* True deep black */
+  --bg-dark: #0a0e14; /* Slight bluish slate */
+  --bg-card: rgba(10, 14, 20, 0.7);
+  --border-dark: rgba(0, 210, 255, 0.2);
+  --footer-dark: #020305;
+
+  /* Light Theme (Text) */
   --text-white: #ffffff;
-  --text-offwhite: #f8f9fa;
-  --text-light: #e5e7eb;
-  --text-gray: #d1d5db;
-  --text-muted: #9ca3af;
+  --text-offwhite: #e0f2fe; /* Slight blue tint */
+  --text-light: #bae6fd;
+  --text-gray: #9ca3af;
+  --text-muted: #64748b;
 
   /* Typography */
-  --font-primary: "Inter", "Roboto", "Segoe UI", "Arial", sans-serif;
+  --font-primary:
+    "Orbitron", "Inter", "Roboto", "Segoe UI", sans-serif; /* Futuristic geometric default */
   --font-display: "Assasign", sans-serif;
+
+  /* UI Elements */
+  --hologram-shadow: 0 0 10px var(--animus-glow), 0 0 20px var(--animus-glow);
+  --templar-shadow: 0 0 10px var(--templar-glow), 0 0 20px var(--templar-glow);
+  --glitch-shadow: -2px 0 var(--animus-blue), 2px 0 var(--bright-red);
 }
 
-/* Glassmorphism Utility */
+/* Glassmorphism & High-tech Panel Utility */
 .glass-panel {
-  background: rgba(17, 24, 39, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: rgba(10, 14, 23, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 210, 255, 0.15);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(0, 210, 255, 0.05);
+  border-radius: 4px; /* Sharper edges for UI */
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--animus-blue),
+    transparent
+  );
+  opacity: 0.5;
 }
 
 *,
@@ -63,10 +94,16 @@ body {
   font-family: var(--font-primary);
   margin: 0;
   overflow-x: hidden;
-  font-size: 19px;
+  font-size: 17px;
+  line-height: 1.6;
   opacity: 0;
   transition: opacity 0.5s ease;
   position: relative;
+  /* Animus Grid Line Pattern overlay across entire body */
+  background-image:
+    linear-gradient(rgba(0, 210, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Particles Background */
@@ -79,7 +116,7 @@ body {
   z-index: -1;
   background: radial-gradient(
     ellipse at center,
-    #1a0000 0%,
+    var(--bg-dark) 0%,
     var(--bg-black) 100%
   );
 }
@@ -93,22 +130,24 @@ h2,
 h3 {
   font-weight: 700;
   font-family: var(--font-display);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-size: 3rem;
-  background: linear-gradient(to right, var(--blood-red), var(--text-white));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--text-white);
+  text-shadow: 0 0 15px var(--animus-glow);
   text-align: center;
 }
 
 p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-offwhite);
+  font-family: "Inter", sans-serif; /* Keep body highly readable */
+  letter-spacing: 0.5px;
 }
 
 /* Custom Scrollbar & Selection */
@@ -116,44 +155,45 @@ p {
 
 /* SCROLLBAR STYLING - WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px; /* Slimmer high-tech look */
 }
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--bg-black);
+  border-left: 1px solid rgba(0, 210, 255, 0.1);
 }
 
 /* Scrollbar Thumb */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--primary-red), var(--bright-red));
-  border-radius: 6px;
-  border: 2px solid #000000;
-  box-shadow: 0 0 6px var(--primary-red);
+  background: var(--animus-blue);
+  border-radius: 0; /* Square futuristic look */
+  box-shadow: 0 0 8px var(--animus-blue);
 }
 
 /* Scrollbar Thumb Hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--bright-red), var(--primary-red));
-  box-shadow: 0 0 12px var(--bright-red);
+  background: #00e5ff;
 }
 
 /* SCROLLBAR STYLING - Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-red) #000000;
+  scrollbar-color: var(--animus-blue) var(--bg-black);
 }
 
 /* SELECTION STYLING */
 ::selection {
-  background: var(--primary-red);
-  color: #ffffff;
+  background: var(--animus-blue);
+  color: var(--bg-black);
+  text-shadow: none;
 }
 
 /* Firefox Selection Styling */
 ::-moz-selection {
-  background: var(--primary-red);
-  color: #ffffff;
+  background: var(--animus-blue);
+  color: var(--bg-black);
+  text-shadow: none;
 }
 
 /* Loading Screen */
@@ -164,7 +204,11 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--bg-black), #1a0000);
+  background: radial-gradient(
+    circle at center,
+    var(--bg-dark),
+    var(--bg-black)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,19 +238,58 @@ p {
 .loading-spinner {
   width: 60px;
   height: 60px;
-  border: 4px solid rgba(220, 53, 69, 0.2);
-  border-top-color: var(--primary-red);
+  border: 4px solid rgba(0, 210, 255, 0.1);
+  border-top-color: var(--animus-blue);
+  border-bottom-color: var(--animus-blue);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: animusSpin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
   margin: 0 auto 1.5rem;
+  box-shadow: 0 0 15px var(--animus-glow);
 }
 
 .loading-text {
   font-size: 1.5rem;
-  color: var(--primary-red);
-  font-family: var(--font-primary);
-  animation: pulse 2s ease-in-out infinite;
+  color: var(--animus-blue);
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: glitch 1.5s infinite;
   margin: 0;
+}
+
+@keyframes animusSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    border-width: 2px;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: var(--glitch-shadow);
+  }
+  25% {
+    text-shadow:
+      -2px 0 var(--bright-red),
+      2px 0 var(--animus-blue);
+  }
+  50% {
+    text-shadow: 0 0 10px var(--animus-glow);
+  }
+  75% {
+    text-shadow:
+      2px 0 var(--animus-blue),
+      -2px 0 var(--bright-red);
+  }
+  100% {
+    text-shadow: var(--glitch-shadow);
+  }
 }
 
 @keyframes spin {
@@ -247,22 +330,24 @@ p {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-red), var(--bright-red));
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(10, 14, 23, 0.8);
+  border: 1px solid var(--animus-blue);
+  color: var(--animus-blue);
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 999;
-  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(10px);
 }
 
 #music-toggle:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6);
+  box-shadow: 0 0 25px var(--animus-glow);
+  background: rgba(0, 210, 255, 0.1);
 }
 
 #music-toggle:active {
@@ -274,17 +359,17 @@ p {
 #scroll-top {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  right: 6.5rem;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-red), var(--bright-red));
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(10, 14, 23, 0.8);
+  border: 1px solid var(--animus-blue);
+  color: var(--animus-blue);
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 999;
-  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
   transition: all 0.3s ease;
   opacity: 0;
   visibility: hidden;
@@ -292,6 +377,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(10px);
 }
 
 #scroll-top.visible {
@@ -302,7 +388,8 @@ p {
 
 #scroll-top:hover {
   transform: scale(1.1) translateY(0);
-  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6);
+  box-shadow: 0 0 25px var(--animus-glow);
+  background: rgba(0, 210, 255, 0.1);
 }
 
 #scroll-top:active {
@@ -337,7 +424,7 @@ section.animate-in {
 
 .stat-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 25px -5px rgba(220, 53, 69, 0.3);
+  box-shadow: 0 0 25px var(--animus-glow);
 }
 
 /* ==================== HERO PARALLAX EFFECT ==================== */
@@ -353,12 +440,12 @@ h2 {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+    text-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
   }
   to {
     text-shadow:
-      0 0 20px rgba(220, 53, 69, 0.8),
-      0 0 30px rgba(220, 53, 69, 0.4);
+      0 0 20px rgba(0, 210, 255, 0.8),
+      0 0 30px rgba(0, 210, 255, 0.4);
   }
 }
 
@@ -421,11 +508,11 @@ h2 {
 #hero-modern h1 {
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(to right, var(--blood-red), var(--text-white));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  text-transform: uppercase;
+  color: var(--text-white);
+  text-shadow: 0 0 15px var(--animus-glow);
   margin: 0;
+  letter-spacing: 4px;
 }
 
 .hero-subtitle {
@@ -489,39 +576,59 @@ h2 {
 .info-card {
   background: linear-gradient(
     135deg,
-    rgba(220, 38, 38, 0.1),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 210, 255, 0.05),
+    rgba(10, 14, 20, 0.8)
   );
-  border: 2px solid rgba(201, 169, 97, 0.3);
-  border-radius: 12px;
+  border: 1px solid var(--border-dark);
+  border-radius: 4px; /* Sharper edges */
   padding: 25px;
   text-align: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--animus-blue),
+    transparent
+  );
+  opacity: 0.5;
 }
 
 .info-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(201, 169, 97, 0.8);
-  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+  border-color: var(--animus-blue);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
 }
 
 .info-card i {
   font-size: 2.5rem;
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   margin-bottom: 15px;
   display: block;
+  text-shadow: 0 0 10px var(--animus-glow);
 }
 
 .info-card h4 {
   font-size: 1.2rem;
   margin: 10px 0;
   color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .info-card p {
   font-size: 1rem;
-  color: #cccccc;
+  color: var(--text-offwhite);
   margin: 0;
 }
 
@@ -529,16 +636,18 @@ h2 {
 .story-highlights {
   margin-top: 25px;
   padding: 20px;
-  background: rgba(220, 38, 38, 0.1);
-  border-left: 4px solid var(--gold-accent);
-  border-radius: 8px;
+  background: rgba(0, 210, 255, 0.05); /* Animus blue tint */
+  border-left: 4px solid var(--animus-blue);
+  border-radius: 4px;
 }
 
 .story-highlights h4 {
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .story-highlights ul {
@@ -555,11 +664,12 @@ h2 {
 }
 
 .story-highlights li:before {
-  content: "⚔";
+  content: "»";
   position: absolute;
   left: 0;
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   font-size: 18px;
+  text-shadow: 0 0 5px var(--animus-glow);
 }
 
 /* Gameplay Mechanics Section */
@@ -568,41 +678,60 @@ h2 {
   padding: 40px 20px;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.3),
-    rgba(220, 38, 38, 0.05)
+    rgba(10, 14, 20, 0.5),
+    rgba(0, 210, 255, 0.05)
   );
-  border-radius: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-dark);
 }
 
 .mechanic-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid rgba(201, 169, 97, 0.2);
-  border-radius: 12px;
+  background: rgba(10, 14, 20, 0.8);
+  border: 1px solid rgba(0, 210, 255, 0.15);
+  border-radius: 4px;
   padding: 30px;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mechanic-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(
+    135deg,
+    transparent 50%,
+    rgba(0, 210, 255, 0.2) 50%
+  );
 }
 
 .mechanic-card:hover {
-  border-color: rgba(201, 169, 97, 0.6);
+  border-color: var(--animus-blue);
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.15);
 }
 
 .mechanic-card i {
   font-size: 3rem;
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   margin-bottom: 20px;
   display: block;
+  text-shadow: 0 0 15px var(--animus-glow);
 }
 
 .mechanic-card h4 {
   color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .mechanic-card p {
-  color: #cccccc;
+  color: var(--text-offwhite);
   line-height: 1.7;
   font-size: 1rem;
 }
@@ -613,11 +742,27 @@ h2 {
   padding: 50px 20px;
   background: linear-gradient(
     135deg,
-    rgba(220, 38, 38, 0.1),
-    rgba(0, 0, 0, 0.8)
+    rgba(0, 210, 255, 0.05),
+    rgba(5, 5, 5, 0.9)
   );
-  border-radius: 16px;
-  border: 2px solid rgba(201, 169, 97, 0.3);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  position: relative;
+}
+
+.legacy-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--animus-blue),
+    transparent
+  );
 }
 
 .legacy-content {
@@ -628,7 +773,7 @@ h2 {
 .legacy-content p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #e0e0e0;
+  color: var(--text-offwhite);
   margin-bottom: 30px;
   text-align: center;
 }
@@ -641,9 +786,9 @@ h2 {
 }
 
 .award-badge {
-  background: rgba(201, 169, 97, 0.1);
-  border: 2px solid rgba(201, 169, 97, 0.4);
-  border-radius: 10px;
+  background: rgba(0, 210, 255, 0.05);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: 4px;
   padding: 20px;
   text-align: center;
   transition: all 0.3s ease;
@@ -651,16 +796,18 @@ h2 {
 }
 
 .award-badge:hover {
-  background: rgba(201, 169, 97, 0.2);
-  border-color: var(--gold-accent);
+  background: rgba(0, 210, 255, 0.15);
+  border-color: var(--animus-blue);
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
 }
 
 .award-badge i {
   font-size: 2.5rem;
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   display: block;
   margin-bottom: 15px;
+  text-shadow: 0 0 10px var(--animus-glow);
 }
 
 .award-badge span {
@@ -668,6 +815,7 @@ h2 {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 /* Enhanced Character Cards */
@@ -681,19 +829,21 @@ h2 {
 
 .character-card img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 4px;
   margin-bottom: 1rem;
-  border: 3px solid rgba(201, 169, 97, 0.3);
+  border: 2px solid rgba(0, 210, 255, 0.2);
   transition: all 0.4s ease;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  filter: grayscale(20%) contrast(1.1); /* Cinematic feel */
 }
 
 .character-card:hover img {
-  border-color: rgba(201, 169, 97, 0.9);
+  border-color: var(--animus-blue);
   box-shadow:
-    0 12px 35px rgba(220, 38, 38, 0.5),
-    0 0 30px rgba(201, 169, 97, 0.3);
+    0 12px 35px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(0, 210, 255, 0.3);
   transform: translateY(-8px) scale(1.03);
+  filter: grayscale(0%) contrast(1.1);
 }
 
 .character-card h5 {
@@ -703,23 +853,24 @@ h2 {
   padding: 10px;
   background: linear-gradient(
     135deg,
-    rgba(220, 38, 38, 0.2),
-    rgba(201, 169, 97, 0.2)
+    rgba(0, 210, 255, 0.1),
+    rgba(10, 14, 20, 0.8)
   );
-  border-radius: 8px;
-  border: 1px solid rgba(201, 169, 97, 0.3);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 210, 255, 0.3);
   transition: all 0.3s ease;
   font-weight: 600;
+  letter-spacing: 1.5px;
 }
 
 .character-card:hover h5 {
   background: linear-gradient(
     135deg,
-    rgba(220, 38, 38, 0.4),
-    rgba(201, 169, 97, 0.4)
+    rgba(0, 210, 255, 0.2),
+    rgba(10, 14, 20, 0.9)
   );
-  border-color: rgba(201, 169, 97, 0.6);
-  color: var(--gold-accent);
+  border-color: var(--animus-blue);
+  text-shadow: 0 0 10px var(--animus-glow);
   transform: translateY(-3px);
 }
 
@@ -731,7 +882,7 @@ h2 {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 169, 97, 0.3), transparent);
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.15), transparent);
   transform: translate(-50%, -50%);
   transition: all 0.5s ease;
   pointer-events: none;
@@ -802,10 +953,11 @@ section:has(.character-card) {
 
 /* Character card name badge effect */
 .character-card h5::before {
-  content: "⚔";
+  content: "»";
   margin-right: 8px;
-  color: var(--gold-accent);
+  color: var(--animus-blue);
   font-size: 1.2rem;
+  text-shadow: 0 0 5px var(--animus-glow);
 }
 
 /* Add role/description to character cards */
@@ -815,16 +967,17 @@ section:has(.character-card) {
   bottom: 60px;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  background: rgba(0, 0, 0, 0.9);
-  color: var(--gold-accent);
+  background: rgba(5, 5, 5, 0.9);
+  color: var(--animus-blue);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 4px;
   font-size: 0.9rem;
   opacity: 0;
   transition: all 0.3s ease;
   pointer-events: none;
   white-space: nowrap;
-  border: 1px solid rgba(201, 169, 97, 0.5);
+  border: 1px solid rgba(0, 210, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
   z-index: 10;
 }
 
@@ -843,8 +996,8 @@ section:has(.character-card) {
   position: relative;
   background: linear-gradient(
     135deg,
-    rgba(220, 38, 38, 0.1),
-    rgba(201, 169, 97, 0.1)
+    rgba(0, 210, 255, 0.1),
+    rgba(10, 14, 20, 0.5)
   );
   padding: 5px;
 }
@@ -852,11 +1005,12 @@ section:has(.character-card) {
 /* Assassin symbol decoration */
 .section-title::before,
 .section-title::after {
-  content: "◆";
-  color: var(--gold-accent);
+  content: "»";
+  color: var(--animus-blue);
   margin: 0 15px;
   font-size: 0.8em;
-  opacity: 0.6;
+  opacity: 0.8;
+  text-shadow: 0 0 5px var(--animus-glow);
 }
 
 /* Character card stagger animation */
@@ -1010,8 +1164,9 @@ section:has(.character-card) {
 /* Individual feature item */
 .feature-item i {
   font-size: 3rem;
-  color: var(--light-red);
+  color: var(--bright-red);
   margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 .feature-item h5 {
   font-size: 1.25rem;

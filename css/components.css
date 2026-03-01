@@ -30,7 +30,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(220, 53, 69, 0.15), transparent);
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -48,9 +48,9 @@
 .assassin-card:hover {
   transform: translateY(-15px) scale(1.03);
   box-shadow:
-    0 25px 50px rgba(220, 53, 69, 0.4),
-    0 0 30px rgba(220, 53, 69, 0.2);
-  border-color: var(--primary-red);
+    0 25px 50px rgba(0, 210, 255, 0.2),
+    0 0 30px rgba(0, 210, 255, 0.1);
+  border-color: var(--animus-blue);
 }
 
 .assassin-card img {
@@ -85,7 +85,7 @@
 
 .assassin-era {
   font-size: 0.95rem;
-  color: var(--primary-red);
+  color: var(--animus-blue);
   font-weight: 600;
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
@@ -112,22 +112,24 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(220, 53, 69, 0.2);
-  border: 1px solid rgba(220, 53, 69, 0.4);
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.4);
   padding: 0.5rem 1rem;
-  border-radius: 2rem;
+  border-radius: 4px; /* Harder edge for Animus */
   font-size: 0.9rem;
   color: var(--text-offwhite);
   transition: all 0.3s ease;
 }
 
 .stat-badge i {
-  color: var(--primary-red);
+  color: var(--animus-blue);
   font-size: 1rem;
+  text-shadow: 0 0 5px var(--animus-glow);
 }
 
 .assassin-card:hover .stat-badge {
-  background: rgba(220, 53, 69, 0.3);
-  border-color: rgba(220, 53, 69, 0.6);
+  background: rgba(0, 210, 255, 0.2);
+  border-color: rgba(0, 210, 255, 0.6);
   transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
 }

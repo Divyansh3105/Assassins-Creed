@@ -40,8 +40,11 @@
     <main id="game-content" style="display: none;">
         <!-- Hero Banner -->
         <section class="hero-game-detail" id="game-hero">
+            <div class="hero-overlay-desktop"></div>
             <div class="hero-overlay">
-                <h1 id="game-title">Game Title</h1>
+                <div class="hero-content">
+                    <h1 class="glint-text" id="game-title">Game Title</h1>
+                </div>
             </div>
         </section>
 
@@ -114,7 +117,7 @@
             <section class="cta-section">
                 <h3 id="game-cta-title">Discover the Experience</h3>
                 <p id="game-cta-subtitle"></p>
-                <a href="#" target="_blank" class="btn" id="game-play-now">
+                <a href="#" target="_blank" class="btn-cta-animus" style="display:inline-flex;" id="game-play-now">
                     Play Now
                 </a>
             </section>
@@ -124,7 +127,7 @@
     <div id="error-message" style="display: none; text-align: center; padding: 100px; color: white;">
         <h2>Game Not Found</h2>
         <p>The requested game could not be found. Please check the URL or select a game from an era page.</p>
-        <a href="index.html" style="color: #dc3545; display: inline-block; margin-top: 20px;">Return to Home</a>
+        <a href="index.html" style="color: #00d2ff; display: inline-block; margin-top: 20px;">Return to Home</a>
     </div>
 
     <!-- Footer -->
