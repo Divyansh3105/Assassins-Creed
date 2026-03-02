@@ -1,0 +1,449 @@
+/* ==================== FACTION DETAIL PAGE — SHARED STYLES ==================== */
+/* Used by factions_assassins.html (.faction-page-ac) and factions_templars.html (.faction-page-tm) */
+/* Colour tokens resolved per page via CSS custom properties — see each page's faction CSS file. */
+
+/* ---- Breadcrumb ---- */
+.fd-breadcrumb {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.fd-breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.fd-breadcrumb a:hover {
+  color: var(--faction-accent);
+}
+.fd-breadcrumb span {
+  color: rgba(255, 255, 255, 0.2);
+}
+.fd-breadcrumb-active {
+  color: var(--faction-accent);
+}
+
+/* ---- Hero ---- */
+.fd-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at var(--faction-gradient-pos, 50% 50%),
+    rgba(var(--faction-tint-rgb), 0.05) 0%,
+    var(--bg-black) 70%
+  );
+}
+.fd-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(var(--faction-tint-rgb), 0.04) 1px, transparent 1px),
+    linear-gradient(
+      90deg,
+      rgba(var(--faction-tint-rgb), 0.04) 1px,
+      transparent 1px
+    );
+  background-size: 40px 40px;
+  z-index: 0;
+}
+/* Vertical accent bar — left/right position set per faction in overrides below */
+.fd-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--faction-accent),
+    transparent
+  );
+  z-index: 2;
+}
+.fd-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+  padding: 0 2rem;
+  text-align: center;
+}
+.fd-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--faction-accent);
+  border: 1px solid rgba(var(--faction-tint-rgb), 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+.fd-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 0.9;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  animation: none;
+  text-shadow: none;
+}
+.fd-hero-title span {
+  color: var(--faction-accent);
+  text-shadow: 0 0 20px var(--faction-glow);
+}
+.fd-hero-quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(var(--faction-tint-rgb), 0.7);
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  border-left: 2px solid rgba(var(--faction-tint-rgb), 0.3);
+  padding-left: 1rem;
+  text-align: left;
+}
+.fd-hero-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+.fd-hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---- Buttons ---- */
+.btn-fd-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  background: rgba(var(--faction-tint-rgb), 0.1);
+  border: 1px solid var(--faction-accent);
+  color: var(--faction-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.btn-fd-primary:hover {
+  background: rgba(var(--faction-tint-rgb), 0.2);
+  box-shadow: 0 0 15px var(--faction-glow);
+  color: #fff;
+}
+.btn-fd-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-offwhite);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.btn-fd-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ---- Section common ---- */
+.fd-section {
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.fd-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.fd-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--faction-accent);
+  margin-bottom: 0.75rem;
+}
+.fd-label::before,
+.fd-label::after {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: var(--faction-accent);
+}
+.fd-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: none;
+  text-shadow: none;
+}
+.fd-section-desc {
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  margin-top: 0.75rem;
+}
+
+/* ---- Tenets / Philosophy grid ---- */
+.fd-tenets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.fd-tenet-card {
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid rgba(var(--faction-tint-rgb), 0.12);
+  border-top: 2px solid var(--faction-accent);
+  border-radius: 3px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+.fd-tenet-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--faction-tint-rgb), 0.4);
+  box-shadow: 0 8px 20px rgba(var(--faction-tint-rgb), 0.08);
+}
+.fd-tenet-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(var(--faction-tint-rgb), 0.08);
+  border: 1px solid rgba(var(--faction-tint-rgb), 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--faction-accent);
+  margin-bottom: 1.2rem;
+  transition: all 0.3s;
+}
+.fd-tenet-card:hover .fd-tenet-icon {
+  background: rgba(var(--faction-tint-rgb), 0.15);
+  box-shadow: 0 0 12px var(--faction-glow);
+}
+.fd-tenet-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+  animation: none;
+  text-shadow: none;
+}
+.fd-tenet-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+/* ---- Notable Figures section ---- */
+.fd-figures-section {
+  background: rgba(5, 5, 5, 0.7);
+  border-top: 1px solid rgba(var(--faction-tint-rgb), 0.08);
+  border-bottom: 1px solid rgba(var(--faction-tint-rgb), 0.08);
+  padding: 5rem 1.5rem;
+}
+.fd-figures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.fd-figure-card {
+  background: rgba(10, 10, 10, 0.92);
+  border: 1px solid rgba(var(--faction-tint-rgb), 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.fd-figure-card:hover {
+  border-color: rgba(var(--faction-tint-rgb), 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(var(--faction-tint-rgb), 0.08);
+}
+.fd-figure-header {
+  height: 5rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--faction-tint-rgb), 0.07) 0%,
+    transparent 70%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgba(var(--faction-tint-rgb), 0.4);
+  border-bottom: 1px solid rgba(var(--faction-tint-rgb), 0.08);
+  transition: color 0.3s;
+}
+.fd-figure-card:hover .fd-figure-header {
+  color: var(--faction-accent);
+}
+.fd-figure-body {
+  padding: 1.25rem;
+}
+.fd-figure-era {
+  font-size: 0.7rem;
+  font-family: monospace;
+  color: var(--faction-accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.fd-figure-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+  animation: none;
+  text-shadow: none;
+}
+.fd-figure-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+/* ---- Origins section ---- */
+.fd-origins-section {
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.fd-origins-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.fd-origins-desc {
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.fd-origins-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.fd-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.fd-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--faction-accent);
+  font-weight: 700;
+  text-shadow: 0 0 10px var(--faction-glow);
+}
+.fd-stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.fd-stat-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Glyph visual ---- */
+.fd-origins-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fd-origins-glyph {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fd-glyph-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid;
+}
+.fd-glyph-ring-1 {
+  width: 100%;
+  height: 100%;
+  border-color: rgba(var(--faction-tint-rgb), 0.15);
+  animation: spin 30s linear infinite;
+}
+.fd-glyph-ring-2 {
+  width: 70%;
+  height: 70%;
+  border-color: rgba(var(--faction-tint-rgb), 0.25);
+  animation: spin 20s linear infinite reverse;
+}
+.fd-glyph-icon {
+  font-size: 5rem;
+  color: rgba(var(--faction-tint-rgb), 0.3);
+  z-index: 1;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .fd-origins-inner {
+    grid-template-columns: 1fr;
+  }
+  .fd-origins-visual {
+    display: none;
+  }
+  .fd-hero {
+    min-height: 70vh;
+  }
+}

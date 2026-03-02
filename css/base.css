@@ -77,11 +77,48 @@
   opacity: 0.5;
 }
 
+/* ---- Box-sizing reset ---- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  cursor: url(../Media/Unavailable.cur), pointer;
+}
+
+/* ---- Cursor — themed for background, semantic for interactive elements ---- */
+/* Apply the custom cursor to the general browsing surface */
+body {
+  cursor: url(../Media/Unavailable.cur), default;
+}
+
+/* Restore the standard pointer on all interactive elements —
+   the "not-allowed" cursor signal is incorrect and confusing here */
+a,
+button,
+label,
+select,
+[role="button"],
+[tabindex]:not([tabindex="-1"]),
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+.btn-cta-animus,
+.btn-text-animus,
+.era-showcase-card,
+.gallery-portrait,
+.pillar-card,
+.assassin-card,
+.award-badge {
+  cursor: pointer;
+}
+
+/* Text cursor on editable fields */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea {
+  cursor: text;
 }
 
 #games-toggle,

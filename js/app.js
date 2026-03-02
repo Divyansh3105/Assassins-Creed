@@ -24,24 +24,19 @@ async function fetchGameData() {
 
 // Get URL parameter by name
 function getUrlParameter(name) {
-  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-  var results = regex.exec(location.search);
-  return results === null
-    ? ""
-    : decodeURIComponent(results[1].replace(/\+/g, " "));
+  return new URLSearchParams(window.location.search).get(name) || "";
 }
 
 // Load Era Content (for era.html)
 async function loadEraContent() {
   const data = await fetchGameData();
-  if (!data) return showError();
+  if (!data) return showError({ from: "data" });
 
   const eraId = getUrlParameter("era");
-  if (!eraId) return showError();
+  if (!eraId) return showError({ from: "era" });
 
   const eraData = data.eras.find((e) => e.id === eraId);
-  if (!eraData) return showError();
+  if (!eraData) return showError({ from: "era", ref: eraId });
 
   // Set Page Title
   document.title = `${eraData.title} - Assassin's Creed Tribute`;
@@ -73,7 +68,25 @@ async function loadEraContent() {
   }
   ogDesc.content = metaDesc.content;
 
-  // Set Hero
+  // og:image — use the era's banner, fall back to the site-wide OG image
+  let ogImage = document.querySelector('meta[property="og:image"]');
+  if (!ogImage) {
+    ogImage = document.createElement("meta");
+    ogImage.setAttribute("property", "og:image");
+    document.head.appendChild(ogImage);
+  }
+  ogImage.content =
+    eraData.banner_image ||
+    "https://divyansh3105.github.io/Assassins-Creed/Media/OG.png";
+
+  // og:url — the canonical URL for this era page
+  let ogUrl = document.querySelector('meta[property="og:url"]');
+  if (!ogUrl) {
+    ogUrl = document.createElement("meta");
+    ogUrl.setAttribute("property", "og:url");
+    document.head.appendChild(ogUrl);
+  }
+  ogUrl.content = window.location.href;
   const heroSection = document.getElementById("hero-dynamic");
   if (eraData.banner_image) {
     heroSection.style.backgroundImage = `url('${eraData.banner_image}')`;
@@ -83,7 +96,9 @@ async function loadEraContent() {
   document.getElementById("era-subtitle").textContent = eraData.subtitle;
 
   // Set About
-  document.getElementById("era-about-content").innerHTML = eraData.about_html;
+  document.getElementById("era-about-content").innerHTML = DOMPurify.sanitize(
+    eraData.about_html,
+  );
 
   // Set Games
   const gamesGrid = document.getElementById("era-games-grid");
@@ -116,7 +131,7 @@ async function loadEraContent() {
                 </div>
             </a>
         `;
-    gamesGrid.insertAdjacentHTML("beforeend", cardHtml);
+    gamesGrid.insertAdjacentHTML("beforeend", DOMPurify.sanitize(cardHtml));
   });
 
   // Show Content
@@ -135,13 +150,13 @@ async function loadEraContent() {
 // Load Game Content (for game.html)
 async function loadGameContent() {
   const data = await fetchGameData();
-  if (!data) return showError();
+  if (!data) return showError({ from: "data" });
 
   const gameId = getUrlParameter("game");
-  if (!gameId) return showError();
+  if (!gameId) return showError({ from: "game" });
 
   const gameData = data.games[gameId];
-  if (!gameData) return showError();
+  if (!gameData) return showError({ from: "game", ref: gameId });
 
   // Base info
   document.title = gameData.title || `Assassin's Creed`;
@@ -158,7 +173,7 @@ async function loadGameContent() {
   // create a plain text summary from story_desc
   if (gameData.story_desc) {
     const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = gameData.story_desc;
+    tempDiv.innerHTML = DOMPurify.sanitize(gameData.story_desc);
     metaDesc.content = tempDiv.textContent.substring(0, 150) + "...";
   } else {
     metaDesc.content = `Discover ${gameData.title}`;
@@ -181,7 +196,25 @@ async function loadGameContent() {
   }
   ogDesc.content = metaDesc.content;
 
-  // Hero Banner
+  // og:image — use the game's banner, fall back to the site-wide OG image
+  let ogImage = document.querySelector('meta[property="og:image"]');
+  if (!ogImage) {
+    ogImage = document.createElement("meta");
+    ogImage.setAttribute("property", "og:image");
+    document.head.appendChild(ogImage);
+  }
+  ogImage.content =
+    gameData.banner_image ||
+    "https://divyansh3105.github.io/Assassins-Creed/Media/OG.png";
+
+  // og:url — the canonical URL for this game page
+  let ogUrl = document.querySelector('meta[property="og:url"]');
+  if (!ogUrl) {
+    ogUrl = document.createElement("meta");
+    ogUrl.setAttribute("property", "og:url");
+    document.head.appendChild(ogUrl);
+  }
+  ogUrl.content = window.location.href;
   const hero = document.getElementById("game-hero");
   if (gameData.banner_image) {
     hero.style.backgroundImage = `url('${gameData.banner_image}')`;
@@ -205,13 +238,13 @@ async function loadGameContent() {
         .replace(/\b\w/g, (l) => l.toUpperCase());
       infoGrid.insertAdjacentHTML(
         "beforeend",
-        `
+        DOMPurify.sanitize(`
                 <div class="info-card animate-in" style="opacity:1; transform:translateY(0);">
                     <i class="bi ${icon}"></i>
                     <h4>${title}</h4>
                     <p>${value}</p>
                 </div>
-            `,
+            `),
       );
     }
   }
@@ -230,12 +263,13 @@ async function loadGameContent() {
 
   document.getElementById("game-story-subtitle").textContent =
     gameData.story_subtitle || "Story";
-  document.getElementById("game-story-desc").innerHTML =
-    gameData.story_desc || "";
+  document.getElementById("game-story-desc").innerHTML = DOMPurify.sanitize(
+    gameData.story_desc || "",
+  );
 
   if (gameData.story_highlights) {
     document.getElementById("game-story-highlights").innerHTML =
-      gameData.story_highlights;
+      DOMPurify.sanitize(gameData.story_highlights);
   } else {
     document.querySelector(".story-highlights").style.display = "none";
   }
@@ -248,13 +282,13 @@ async function loadGameContent() {
     gameData.features.forEach((f) => {
       grid.insertAdjacentHTML(
         "beforeend",
-        `
+        DOMPurify.sanitize(`
                 <div class="feature-item animate-in" style="opacity:1; transform:translateY(0);">
                     <i class="${f.icon}"></i>
                     <h5>${f.title}</h5>
                     <p>${f.desc}</p>
                 </div>
-            `,
+            `),
       );
     });
   }
@@ -267,12 +301,12 @@ async function loadGameContent() {
     gameData.characters.forEach((c) => {
       grid.insertAdjacentHTML(
         "beforeend",
-        `
+        DOMPurify.sanitize(`
                 <div class="character-card animate-in" style="opacity:1; transform:translateY(0);">
                     <img src="${c.image}" alt="${c.name}" loading="lazy"/>
                     <h5>${c.name}</h5>
                 </div>
-            `,
+            `),
       );
     });
   }
@@ -285,13 +319,13 @@ async function loadGameContent() {
     gameData.mechanics.forEach((m) => {
       grid.insertAdjacentHTML(
         "beforeend",
-        `
+        DOMPurify.sanitize(`
                 <div class="mechanic-card animate-in" style="opacity:1; transform:translateY(0);">
                     <i class="${m.icon}"></i>
                     <h4>${m.title}</h4>
                     <p>${m.desc}</p>
                 </div>
-            `,
+            `),
       );
     });
   }
@@ -304,11 +338,11 @@ async function loadGameContent() {
     gameData.gallery.forEach((imgUrl) => {
       grid.insertAdjacentHTML(
         "beforeend",
-        `
+        DOMPurify.sanitize(`
                 <div class="gallery-item animate-in" style="opacity:1; transform:translateY(0);">
                     <img src="${imgUrl}" alt="${gameData.title} Gameplay Screenshot" loading="lazy"/>
                 </div>
-            `,
+            `),
       );
     });
   }
@@ -317,8 +351,9 @@ async function loadGameContent() {
   if (gameData.legacy_html) {
     const sec = document.getElementById("game-legacy-section");
     sec.style.display = "block";
-    document.getElementById("game-legacy-html").innerHTML =
-      gameData.legacy_html;
+    document.getElementById("game-legacy-html").innerHTML = DOMPurify.sanitize(
+      gameData.legacy_html,
+    );
   }
 
   // CTA
@@ -335,20 +370,22 @@ async function loadGameContent() {
   document.getElementById("game-content").style.display = "block";
 }
 
-function showError() {
-  document.getElementById("loading-screen").style.display = "none";
-  const eraContent = document.getElementById("era-content");
-  const gameContent = document.getElementById("game-content");
-  if (eraContent) eraContent.style.display = "none";
-  if (gameContent) gameContent.style.display = "none";
+function showError(context = {}) {
+  // Build a descriptive redirect so 404.html can show context-aware messaging
+  const params = new URLSearchParams();
+  if (context.from) params.set("from", context.from);
+  if (context.ref) params.set("ref", context.ref);
 
-  document.getElementById("error-message").style.display = "block";
+  // Redirect to the dedicated 404 page
+  window.location.replace(
+    "404.html" + (params.toString() ? "?" + params.toString() : ""),
+  );
 }
 
 // Load Assassins Content (for Assassins.html)
 async function loadAssassinsContent() {
   const data = await fetchGameData();
-  if (!data || !data.assassins) return showError();
+  if (!data || !data.assassins) return showError({ from: "data" });
 
   const grid = document.getElementById("main-assassins-grid");
   if (!grid) return;
@@ -366,20 +403,26 @@ async function loadAssassinsContent() {
         .join("");
     }
 
+    const imgSrc = assassin.card_image || "Media/Unavailable.cur";
+    const imgAlt = assassin.card_title || "Unknown Assassin";
+    const cardTitle = assassin.card_title || "Unknown Assassin";
+    const cardEra = assassin.card_era || "Era Unknown";
+    const cardDesc = assassin.card_desc || "No description available.";
+
     const html = `
       <div class="assassin-card glass-panel" data-assassin="${assassin.id}" data-era="${assassin.card_era_filter}" data-role="${assassin.card_role}" tabindex="0">
-          <img src="${assassin.card_image}" alt="${assassin.card_title}" loading="lazy">
+          <img src="${imgSrc}" alt="${imgAlt}" loading="lazy">
           <div class="assassin-info">
-              <h3>${assassin.card_title}</h3>
-              <div class="assassin-era">${assassin.card_era}</div>
-              <p class="assassin-desc">${assassin.card_desc}</p>
+              <h3>${cardTitle}</h3>
+              <div class="assassin-era">${cardEra}</div>
+              <p class="assassin-desc">${cardDesc}</p>
               <div class="assassin-stats">
                   ${statsHtml}
               </div>
           </div>
       </div>
     `;
-    grid.insertAdjacentHTML("beforeend", html);
+    grid.insertAdjacentHTML("beforeend", DOMPurify.sanitize(html));
   });
 
   // Show Content

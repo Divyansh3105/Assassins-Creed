@@ -3,8 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- Google Fonts: Orbitron (display) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Game Title</title>
+
+    <!-- Open Graph (og:title, og:description, og:image, og:url updated dynamically by loadGameContent()) -->
+    <meta property="og:title" content="Assassin's Creed">
+    <meta property="og:description" content="Discover the Assassin's Creed universe.">
+    <meta property="og:image" content="https://divyansh3105.github.io/Assassins-Creed/Media/OG.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
 
     <!-- Preload Custom Font -->
     <link rel="preload" href="Media/Assassin.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -27,6 +41,23 @@
 </head>
 
 <body>
+    <noscript>
+        <style>
+            #loading-screen {
+                display: none !important;
+            }
+        </style>
+        <div
+            style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#050505;color:#fff;font-family:sans-serif;text-align:center;padding:2rem;">
+            <p style="font-size:2rem;letter-spacing:4px;text-transform:uppercase;color:#00d2ff;margin-bottom:1rem;">
+                &#9888; Animus Offline</p>
+            <p style="color:#64748b;max-width:480px;line-height:1.7;">JavaScript is required to synchronize with the
+                Animus Archives.<br>Please enable it in your browser settings to continue.</p>
+            <a href="index.html"
+                style="margin-top:2rem;padding:0.75rem 2rem;border:1px solid #00d2ff;color:#00d2ff;text-decoration:none;letter-spacing:2px;font-size:0.85rem;text-transform:uppercase;">Return
+                to Base</a>
+        </div>
+    </noscript>
     <!-- Loading Screen -->
     <loading-screen></loading-screen>
 
@@ -134,9 +165,11 @@
     <site-footer></site-footer>
 
     <!-- Background Music -->
-    <audio id="bg-music" src="Media/background.mp3" autoplay loop></audio>
+    <audio id="bg-music" src="Media/background.mp3" loop></audio>
 
     <script src="js/script.js"></script>
+    <!-- DOMPurify: sanitize all HTML injected from data.json to prevent XSS -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script>
     <script src="js/app.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

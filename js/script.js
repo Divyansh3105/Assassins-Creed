@@ -39,13 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==================== PARALLAX HERO EFFECT ====================
 const hero = document.querySelector("#hero, #hero-assassins");
 if (hero) {
-  window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
-    const parallax = hero.querySelector(".hero-overlay, .hero-content");
-    if (parallax) {
-      parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-  });
+  const parallax = hero.querySelector(".hero-overlay, .hero-content");
+  if (parallax) {
+    // Promote to GPU layer upfront to avoid per-frame compositing cost
+    parallax.style.willChange = "transform";
+
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          parallax.style.transform = `translateY(${window.pageYOffset * 0.3}px)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
 }
 
 // ==================== ANIMATED COUNTER ====================
@@ -198,11 +207,17 @@ if (menuToggle && navElement) {
 }
 
 // ==================== SCROLL TO TOP BUTTON ====================
-const scrollTopBtn = document.createElement("button");
-scrollTopBtn.id = "scroll-top";
-scrollTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
-scrollTopBtn.setAttribute("aria-label", "Scroll to top");
-document.body.appendChild(scrollTopBtn);
+// Use an existing #scroll-top element (e.g. hardcoded in HTML) or create one
+const scrollTopBtn =
+  document.getElementById("scroll-top") ||
+  (() => {
+    const btn = document.createElement("button");
+    btn.id = "scroll-top";
+    btn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+    btn.setAttribute("aria-label", "Scroll to top");
+    document.body.appendChild(btn);
+    return btn;
+  })();
 
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 300) {

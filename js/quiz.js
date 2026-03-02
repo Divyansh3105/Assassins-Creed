@@ -265,7 +265,7 @@ const resultsDB = {
 
 // State
 let currentStep = 0;
-let scores = { ezio: 0, connor: 0, arno: 0, eivor: 0 };
+let answers = new Array(questions.length).fill(null); // stores each step's chosen type
 
 // =======================
 // UI CONTROLLERS
@@ -332,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initQuiz() {
   currentStep = 0;
-  scores = { ezio: 0, connor: 0, arno: 0, eivor: 0 };
+  answers = new Array(questions.length).fill(null);
   renderStep();
 }
 
@@ -354,7 +354,6 @@ function renderStep() {
     const label = document.createElement("label");
     label.className = "quiz-label";
 
-    // We add click listener immediately to enable "Next" button on select
     label.innerHTML = `
             <input type="radio" name="quiz_q" class="quiz-radio" value="${opt.type}" id="q_opt_${index}">
             <div class="quiz-opt-text">
@@ -364,8 +363,13 @@ function renderStep() {
             <i class="bi ${opt.icon} quiz-opt-icon"></i>
         `;
 
-    // Listen for change on the input itself
     const input = label.querySelector("input");
+
+    // Restore previously saved answer when navigating back
+    if (answers[currentStep] === opt.type) {
+      input.checked = true;
+    }
+
     input.addEventListener("change", () => {
       document.getElementById("quiz-next-btn").disabled = false;
     });
@@ -378,7 +382,8 @@ function renderStep() {
     currentStep === 0 ? "hidden" : "visible";
 
   const nextBtn = document.getElementById("quiz-next-btn");
-  nextBtn.disabled = true; // wait for selection
+  // If this step was already answered (navigating back), enable Next immediately
+  nextBtn.disabled = answers[currentStep] === null;
 
   if (currentStep === questions.length - 1) {
     nextBtn.innerHTML = 'Complete Sync <i class="bi bi-cpu-fill"></i>';
@@ -388,16 +393,14 @@ function renderStep() {
 }
 
 function handleNext() {
-  // Tally score
   const selected = document.querySelector('input[name="quiz_q"]:checked');
   if (!selected) return;
 
-  scores[selected.value]++;
+  // Overwrite (or set) the answer for this step — handles changed answers on back-navigation
+  answers[currentStep] = selected.value;
 
   if (currentStep < questions.length - 1) {
     currentStep++;
-    const nextBtn = document.getElementById("quiz-next-btn");
-    nextBtn.disabled = true;
     renderStep();
   } else {
     finishQuiz();
@@ -406,16 +409,20 @@ function handleNext() {
 
 function handlePrev() {
   if (currentStep > 0) {
-    // We decrement previous score simply by wiping and recalculating. For full fidelity we'd track answers per-step.
-    // For simplicity in this demo, let's just let them step back visually, resetting score on submit.
-    // The most accurate way is routing:
     currentStep--;
-    renderStep();
+    renderStep(); // renderStep restores the saved answer for this step
   }
 }
 
 function finishQuiz() {
-  // 1. Find winner
+  // 1. Recalculate scores from scratch using the answers array
+  //    This ensures changed answers (via "Previous") are correctly reflected
+  const scores = { ezio: 0, connor: 0, arno: 0, eivor: 0 };
+  answers.forEach((ans) => {
+    if (ans && scores[ans] !== undefined) scores[ans]++;
+  });
+
+  // 2. Find winner
   let winner = "ezio";
   let max = -1;
   for (let key in scores) {
@@ -425,15 +432,15 @@ function finishQuiz() {
     }
   }
 
-  // 2. Loading state
+  // 3. Loading state
   const nextBtn = document.getElementById("quiz-next-btn");
   nextBtn.innerHTML = '<i class="bi bi-hourglass-split spin"></i> Syncing...';
   nextBtn.disabled = true;
 
-  // 3. Complete progress bar
+  // 4. Complete progress bar
   document.getElementById("quiz-progress").style.width = `100%`;
 
-  // 4. Redirect
+  // 5. Redirect
   setTimeout(() => {
     window.location.href = `quiz_results.html?profile=${winner}`;
   }, 1000);
