@@ -116,6 +116,9 @@ This tribute website showcases the complete Assassin's Creed journey across five
 | 📊 **Animated Counters**       | Dynamic statistics with smooth number animations                   |
 | 🌅 **Dynamic Greetings**       | Time-based welcome messages for personalized experience            |
 | 🎭 **Parallax Effects**        | Engaging scroll-based hero animations                              |
+| 🧩 **Quiz System**             | Interactive faction quizzes to test your knowledge                 |
+| 🧬 **Isu Archive**             | Deep lore exploration of the First Civilization                    |
+| ⚔️ **Faction Pages**           | Detailed breakdown of the Assassin and Templar ideologies          |
 
 </details>
 
@@ -162,6 +165,7 @@ This tribute website showcases the complete Assassin's Creed journey across five
 | ------------------- | ---------------------------------------- |
 | **Frontend**        | HTML5 (Semantic), CSS3 (Variables), ES6+ |
 | **Architecture**    | Web Components API, Vanilla JSON Fetch   |
+| **SEO & Discovery** | Semantic HTML, Sitemap.xml, Robots.txt   |
 | **Libraries**       | Particles.js, Bootstrap Icons            |
 | **Animations**      | CSS Keyframes, Intersection Observer API |
 | **Deployment**      | Netlify (CI/CD)                          |
@@ -180,6 +184,15 @@ Assassins-Creed/
 ├── Assassins.html               # Data-driven Legendary Assassins showcase
 ├── era.html                     # Era-specific pages
 ├── game.html                    # Game-specific pages
+├── 404.html                     # Custom error page
+├── factions.html                # Factions landing page
+├── factions_assassins.html      # Assassins faction details
+├── factions_templars.html       # Templars faction details
+├── isu.html                     # The Isu legacy page
+├── quiz_hub.html                # Quiz hub page
+├── quiz_results.html            # Quiz results page
+├── robots.txt                   # Search engine crawler instructions
+├── sitemap.xml                  # Website sitemap for SEO
 │
 ├── 📁 css/                         # Modular stylesheets
 │   ├── base.css                    # CSS Variables, resets, and typography
@@ -187,7 +200,13 @@ Assassins-Creed/
 │   ├── components.css              # Custom Web Components styling
 │   ├── styles.css                  # Primary page styles and animations
 │   ├── styles_era.css              # Era-specific page styling
-│   └── styles_game.css             # Game-specific page styling
+│   ├── styles_game.css             # Game-specific page styling
+│   ├── factions_shared.css         # Shared styles for Factions pages
+│   ├── factions_assassins.css      # Assassin-specific variables and overrides
+│   ├── factions_templars.css       # Templar-specific variables and overrides
+│   ├── factions.css                # Factions landing page styles
+│   ├── isu.css                     # Isu page styling
+│   └── quiz.css                    # Quiz pages styling
 │
 ├── 📁 js/                          # Core scripts
 │   ├── app.js                      # Asynchronous JSON data fetching and DOM hydration
@@ -195,7 +214,7 @@ Assassins-Creed/
 │   └── script.js                   # UI animations, observers, and event listeners
 │
 ├── 📁 data/
-│   ├── particles-config.json        # Particles.js configuration
+│   ├── particles-config.json       # Particles.js configuration
 │   └── data.json                   # Centralized payload for assassins, games, and eras
 │
 ├── 📁 Media/                       # All images, fonts, and audio
