@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Assassins Roster -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/Assassins.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Eras -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/era.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Factions Hub -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/factions.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Assassin Brotherhood -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/factions_assassins.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Templar Order -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/factions_templars.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Games -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/game.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Isu / Those Who Came Before -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/isu.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Quiz Hub -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/quiz_hub.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Quiz Results (dynamic, lower priority) -->
+  <url>
+    <loc>https://divyansh3105.github.io/Assassins-Creed/quiz_results.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

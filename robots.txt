@@ -1,0 +1,11 @@
+# robots.txt — Assassin's Creed Tribute
+# https://divyansh3105.github.io/Assassins-Creed/
+
+User-agent: *
+Allow: /
+
+# Block error and utility pages from indexing
+Disallow: /404.html
+
+# Sitemap location
+Sitemap: https://divyansh3105.github.io/Assassins-Creed/sitemap.xml
