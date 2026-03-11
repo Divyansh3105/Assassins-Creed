@@ -1,0 +1,16 @@
+{
+  "name": "Assassin's Creed PWA",
+  "short_name": "AC PWA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#222",
+  "description": "A PWA for Assassin's Creed project.",
+  "icons": [
+    {
+      "src": "Media/Unavailable.cur",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -4,6 +4,8 @@
 <head>
     <link href="Media/AC_OG.webp" rel="icon" type="image/x-icon">
     <meta charset="UTF-8">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
 
     <!-- Google Fonts: Orbitron (display) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,6 +79,20 @@
 
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('js/service-worker.js')
+                    .then(function (registration) {
+                        console.log('ServiceWorker registration successful:', registration.scope);
+                    })
+                    .catch(function (error) {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 
     <!-- Web Components -->
     <script src="js/components.js"></script>
