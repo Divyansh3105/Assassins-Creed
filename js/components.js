@@ -77,11 +77,6 @@ class SiteHeader extends HTMLElement {
                     </li>
                 </ul>
 
-                <!-- Right: CTA -->
-                <div class="nav-cta">
-                    <a href="index.html" class="btn-cta-animus">Join the Creed</a>
-                </div>
-
                 <div class="overlay"></div>
             </nav>
         </header>
