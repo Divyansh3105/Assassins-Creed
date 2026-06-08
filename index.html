@@ -79,22 +79,7 @@
 
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('js/service-worker.js')
-                    .then(function (registration) {
-                        console.log('ServiceWorker registration successful:', registration.scope);
-                    })
-                    .catch(function (error) {
-                        console.log('ServiceWorker registration failed:', error);
-                    });
-            });
-        }
-    </script>
-
-    <!-- Web Components -->
+<!-- Web Components -->
     <script src="js/components.js"></script>
 </head>
 
