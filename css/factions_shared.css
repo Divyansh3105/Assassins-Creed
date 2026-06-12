@@ -447,3 +447,31 @@
     min-height: 70vh;
   }
 }
+
+/* ==================== FACTION COLOUR TOKENS ==================== */
+
+.faction-page-ac {
+  --faction-accent: var(--animus-blue); /* #00d2ff */
+  --faction-glow: var(--animus-glow);
+  --faction-tint-rgb: 0, 210, 255;
+  --faction-gradient-pos: 30% 50%; /* radial gradient focus — left-leaning */
+}
+
+/* Accent bar on the LEFT edge of the hero (Brotherhood identity) */
+.faction-page-ac .fd-hero::before {
+  left: 0;
+  right: auto;
+}
+
+.faction-page-tm {
+  --faction-accent: var(--primary-red); /* #ff3333 */
+  --faction-glow: var(--templar-glow);
+  --faction-tint-rgb: 255, 51, 51;
+  --faction-gradient-pos: 70% 50%; /* radial gradient focus — right-leaning */
+}
+
+/* Accent bar on the RIGHT edge of the hero (Templar Order identity) */
+.faction-page-tm .fd-hero::before {
+  right: 0;
+  left: auto;
+}
