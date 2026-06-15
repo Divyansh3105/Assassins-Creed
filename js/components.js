@@ -1,5 +1,10 @@
 // js/components.js
 
+// Respect reduced-motion: every particlesJS call site guards on typeof, so this skips them all.
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  window.particlesJS = undefined;
+}
+
 class LoadingScreen extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `

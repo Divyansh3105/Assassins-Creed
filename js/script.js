@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ==================== PARALLAX HERO EFFECT ====================
 const hero = document.querySelector("#hero, #hero-assassins");
-if (hero) {
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (hero && !reduceMotion) {
   const parallax = hero.querySelector(".hero-overlay, .hero-content");
   if (parallax) {
     // Promote to GPU layer upfront to avoid per-frame compositing cost
@@ -59,6 +60,10 @@ if (hero) {
 
 // ==================== ANIMATED COUNTER ====================
 function animateCounter(element, target, duration = 2000) {
+  if (reduceMotion) {
+    element.textContent = formatNumber(target);
+    return;
+  }
   const start = 0;
   const increment = target / (duration / 16);
   let current = start;
