@@ -1,11 +1,10 @@
+// Lives at the site root so its scope covers every page.
 // Bump CACHE on each release; old caches are deleted on activate.
-const CACHE = "ac-pwa-v2";
-const PRECACHE = ["./", "index.html", "css/styles.css", "js/app.js"];
+const CACHE = "ac-pwa-v3";
+const PRECACHE = ["./", "index.html", "404.html", "css/styles.css", "js/app.js"];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)),
-  );
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(PRECACHE)));
   self.skipWaiting();
 });
 
@@ -27,12 +26,18 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(req)
       .then((res) => {
-        if (res.ok) {
+        // status 200 only: 206 partial (audio) responses can't be cached
+        if (res.status === 200) {
           const copy = res.clone();
           caches.open(CACHE).then((cache) => cache.put(req, copy));
         }
         return res;
       })
-      .catch(() => caches.match(req)),
+      .catch(async () => {
+        const hit = await caches.match(req);
+        if (hit) return hit;
+        if (req.mode === "navigate") return caches.match("404.html");
+        return Response.error();
+      }),
   );
 });

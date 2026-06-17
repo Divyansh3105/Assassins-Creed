@@ -101,7 +101,7 @@ if (statsSection) {
             if (text.includes("M+")) {
               const num = parseInt(text) * 1000000;
               animateCounter(stat, num);
-            } else if (text.includes("+") && !text.includes("–")) {
+            } else if (text.includes("+") && !text.includes("â€“")) {
               const num = parseInt(text);
               animateCounter(stat, num);
             }
@@ -482,6 +482,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==================== PWA SERVICE WORKER ====================
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("js/service-worker.js").catch(() => {});
+    navigator.serviceWorker.register("service-worker.js").catch(() => {});
   });
 }
