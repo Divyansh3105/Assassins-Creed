@@ -45,7 +45,7 @@ const questions = [
       },
       {
         text: "My Brute Strength",
-        desc: "I shatter through defenses and shatter morale.",
+        desc: "I break through defenses and shatter morale.",
         icon: "bi-hammer",
         type: "eivor",
       },
@@ -122,7 +122,7 @@ const questions = [
     ],
   },
   {
-    title: "Choose your primary secondary weapon:",
+    title: "Choose your secondary weapon:",
     options: [
       {
         text: "Throwing Knives",
@@ -158,7 +158,7 @@ const resultsDB = {
     name: "Ezio Auditore",
     sub: "Da Firenze",
     title: "The Mentor",
-    img: "../Media/Ezio.webp",
+    img: "Media/Ezio.webp",
     desc: "Charismatic, skilled, and driven by a deep sense of justice. Like Ezio, you are a natural leader who values family and loyalty above all. Your journey is one of growth, transforming from a carefree youth into a wise mentor who guides others from the shadows.",
     tags: ["Florence", "1459 – 1524", "Master Assassin"],
     stats: { stealth: 95, combat: 88, charisma: 100 },
@@ -185,7 +185,7 @@ const resultsDB = {
     name: "Connor Kenway",
     sub: "Ratonhnhaké:ton",
     title: "The Champion",
-    img: "../Media/Connor.webp",
+    img: "Media/Connor.webp",
     desc: "Stoic, fierce, and utterly devoted to liberty. Like Connor, you have a powerful connection to nature and a strong moral compass. You are a solitary but formidable force of nature, relentlessly pursuing justice and freedom for the marginalized.",
     tags: ["America", "1756 – 1804", "Master Assassin"],
     stats: { stealth: 80, combat: 98, charisma: 65 },
@@ -212,7 +212,7 @@ const resultsDB = {
     name: "Arno Dorian",
     sub: "Victor",
     title: "The Ghost",
-    img: "../Media/Arno.webp",
+    img: "Media/Arno.webp",
     desc: "Tactical, quick-witted, and highly mobile. Like Arno, your greatest strength is exploiting the environment and striking with precision. You navigate complex social and physical structures with ease, turning urban chaos to your advantage.",
     tags: ["Paris", "1768 – ?", "Master Assassin"],
     stats: { stealth: 100, combat: 75, charisma: 85 },
@@ -239,7 +239,7 @@ const resultsDB = {
     name: "Eivor Varinsdottir",
     sub: "Wolf-Kissed",
     title: "The Conqueror",
-    img: "../Media/Eivor.webp",
+    img: "Media/Eivor.webp",
     desc: "Fierce, honorable, and unyielding. Like Eivor, you are a natural warrior who leads from the front. You value your clan above all else and aren't afraid to confront obstacles head-on. You are a force to be reckoned with.",
     tags: ["England", "847 – ?", "Jarl"],
     stats: { stealth: 60, combat: 100, charisma: 80 },
@@ -311,10 +311,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Share button interaction
     const shareBtn = document.getElementById("qr-share-btn");
     if (shareBtn) {
-      shareBtn.addEventListener("click", () => {
+      shareBtn.addEventListener("click", async () => {
         const origHTML = shareBtn.innerHTML;
-        shareBtn.innerHTML = '<i class="bi bi-check2"></i> LINK COPIED';
-        shareBtn.style.background = "#2ecc71";
+        let label = '<i class="bi bi-check2"></i> LINK COPIED';
+        let ok = true;
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+        } catch {
+          ok = false;
+          label = '<i class="bi bi-x-lg"></i> COPY FAILED';
+        }
+        shareBtn.innerHTML = label;
+        shareBtn.style.background = ok ? "#2ecc71" : "#ff3333";
         shareBtn.style.color = "#000";
         setTimeout(() => {
           shareBtn.innerHTML = origHTML;
@@ -343,7 +351,7 @@ function renderStep() {
   document.getElementById("quiz-step").innerText =
     `Sequence ${currentStep + 1} of ${questions.length}`;
   document.getElementById("quiz-progress").style.width =
-    `${(currentStep / questions.length) * 100}%`;
+    `${((currentStep + 1) / questions.length) * 100}%`;
   document.getElementById("quiz-question-title").innerText = q.title;
 
   // Body
@@ -422,15 +430,10 @@ function finishQuiz() {
     if (ans && scores[ans] !== undefined) scores[ans]++;
   });
 
-  // 2. Find winner
-  let winner = "ezio";
-  let max = -1;
-  for (let key in scores) {
-    if (scores[key] > max) {
-      max = scores[key];
-      winner = key;
-    }
-  }
+  // 2. Find winner; on a tie, the tied type chosen most recently wins
+  const max = Math.max(...Object.values(scores));
+  const winner =
+    [...answers].reverse().find((ans) => ans && scores[ans] === max) || "ezio";
 
   // 3. Loading state
   const nextBtn = document.getElementById("quiz-next-btn");
@@ -453,7 +456,9 @@ function finishQuiz() {
 function loadResults() {
   const params = new URLSearchParams(window.location.search);
   const profileId = params.get("profile") || "ezio"; // default fallback
-  const data = resultsDB[profileId] || resultsDB["ezio"];
+  const data = Object.hasOwn(resultsDB, profileId)
+    ? resultsDB[profileId]
+    : resultsDB["ezio"];
 
   // 1. Text & Hero
   document.getElementById("res-img").style.backgroundImage =
