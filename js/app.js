@@ -1,21 +1,12 @@
 // Fetch data from data.json
 async function fetchGameData() {
   try {
-    // Check cache first
-    const cachedData = sessionStorage.getItem("ac_game_data");
-    if (cachedData) {
-      return JSON.parse(cachedData);
-    }
-
     const response = await fetch("data/data.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
-    // Save to cache
-    sessionStorage.setItem("ac_game_data", JSON.stringify(data));
-    return data;
+    return await response.json();
   } catch (error) {
     console.error("Could not fetch game data:", error);
     return null;
@@ -105,7 +96,7 @@ async function loadEraContent() {
   gamesGrid.innerHTML = "";
 
   eraData.games.forEach((gameId) => {
-    const game = data.games[gameId];
+    const game = Object.hasOwn(data.games, gameId) ? data.games[gameId] : null;
     if (!game) return;
 
     let statsHtml = "";
@@ -155,7 +146,7 @@ async function loadGameContent() {
   const gameId = getUrlParameter("game");
   if (!gameId) return showError({ from: "game" });
 
-  const gameData = data.games[gameId];
+  const gameData = Object.hasOwn(data.games, gameId) ? data.games[gameId] : null;
   if (!gameData) return showError({ from: "game", ref: gameId });
 
   // Base info
@@ -234,7 +225,7 @@ async function loadGameContent() {
     for (const [key, value] of Object.entries(gameData.info)) {
       const icon = iconMap[key] || "bi-info-circle";
       const title = key
-        .replace("_", " ")
+        .replaceAll("_", " ")
         .replace(/\b\w/g, (l) => l.toUpperCase());
       infoGrid.insertAdjacentHTML(
         "beforeend",
@@ -403,7 +394,7 @@ async function loadAssassinsContent() {
         .join("");
     }
 
-    const imgSrc = assassin.card_image || "Media/Unavailable.cur";
+    const imgSrc = assassin.card_image || "Media/logo.png";
     const imgAlt = assassin.card_title || "Unknown Assassin";
     const cardTitle = assassin.card_title || "Unknown Assassin";
     const cardEra = assassin.card_era || "Era Unknown";
