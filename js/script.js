@@ -60,8 +60,9 @@ if (hero && !reduceMotion) {
 
 // ==================== ANIMATED COUNTER ====================
 function animateCounter(element, target, duration = 2000) {
+  const finalText = element.textContent.trim(); // keeps suffixes like "+"
   if (reduceMotion) {
-    element.textContent = formatNumber(target);
+    element.textContent = finalText;
     return;
   }
   const start = 0;
@@ -71,7 +72,7 @@ function animateCounter(element, target, duration = 2000) {
   const timer = setInterval(() => {
     current += increment;
     if (current >= target) {
-      element.textContent = formatNumber(target);
+      element.textContent = finalText;
       clearInterval(timer);
     } else {
       element.textContent = formatNumber(Math.floor(current));
@@ -101,7 +102,7 @@ if (statsSection) {
             if (text.includes("M+")) {
               const num = parseInt(text) * 1000000;
               animateCounter(stat, num);
-            } else if (text.includes("+") && !text.includes("â€“")) {
+            } else if (text.includes("+") && !text.includes("–")) {
               const num = parseInt(text);
               animateCounter(stat, num);
             }
@@ -110,7 +111,7 @@ if (statsSection) {
         }
       });
     },
-    { threshold: 0.5 },
+    { threshold: 0.2 }, // 0.5 never fires on phones when the section is tall
   );
 
   statsObserver.observe(statsSection);
@@ -263,13 +264,11 @@ function rebindAssassinHovers() {
   const cardsHover = document.querySelectorAll(".assassin-card");
   if (cardsHover.length > 0) {
     cardsHover.forEach((card) => {
-      // Clone block to strip any previously bound old listeners
-      const newCard = card.cloneNode(true);
-      if (card.parentNode) {
-        card.parentNode.replaceChild(newCard, card);
-      }
+      // Bind once; cloning the node would drop observers and other listeners
+      if (card.dataset.hoverBound) return;
+      card.dataset.hoverBound = "1";
 
-      newCard.addEventListener("mouseenter", function () {
+      card.addEventListener("mouseenter", function () {
         const badges = this.querySelectorAll(".stat-badge");
         badges.forEach((badge, index) => {
           setTimeout(() => {
@@ -278,7 +277,7 @@ function rebindAssassinHovers() {
         });
       });
 
-      newCard.addEventListener("mouseleave", function () {
+      card.addEventListener("mouseleave", function () {
         const badges = this.querySelectorAll(".stat-badge");
         badges.forEach((badge) => {
           badge.style.transform = "translateY(0) scale(1)";

@@ -120,22 +120,22 @@ class SiteFooter extends HTMLElement {
                 </div>
 
                 <div class="footer-main-text">
-                    <p class="crypto-text">© 2025 ABSTERGO ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
+                    <p class="crypto-text">© ${new Date().getFullYear()} ABSTERGO ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
                     <p class="quote-text">"We work in the dark to serve the light."</p>
                 </div>
 
                 <div class="footer-credits">
                     <p>
                         <span class="muted">Operator //</span>
-                        <a href="https://github.com/Divyansh3105" target="_blank" class="glow-link">Divyansh Garg</a>
+                        <a href="https://github.com/Divyansh3105" target="_blank" rel="noopener noreferrer" class="glow-link">Divyansh Garg</a>
                     </p>
                 </div>
 
                 <div class="footer-icons">
-                    <a href="https://github.com/Divyansh3105" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/Divyansh3105" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/divyanshgarg3105/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/divyanshgarg3105/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </div>

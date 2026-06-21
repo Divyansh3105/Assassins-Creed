@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ctaBtn && ctaInput) {
     ctaBtn.addEventListener("click", () => {
       const email = ctaInput.value.trim();
-      if (!email || !email.includes("@")) {
+      if (!email || !ctaInput.checkValidity()) {
         ctaInput.style.borderColor = "rgba(255,51,51,0.7)";
         ctaInput.placeholder = "Invalid sequence — enter a valid email";
         setTimeout(() => {
