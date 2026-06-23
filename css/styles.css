@@ -28,12 +28,12 @@
 }
 
 .hero-left {
-  background-image: url("../Media/Altair.webp");
+  background-image: url("../assets/img/characters/Altair.webp");
   background-position: top center;
 }
 
 .hero-right {
-  background-image: url("../Media/Ezio.webp");
+  background-image: url("../assets/img/characters/Ezio.webp");
   /* Optional: apply a slight dark gradient on the inner edges to merge them */
   box-shadow: inset 100px 0 100px -50px var(--bg-black);
 }
@@ -1068,7 +1068,7 @@
 /* Hero Section (Assassins Page) */
 #hero-assassins {
   height: 28rem;
-  background-image: url("../Media/AC_Legends.webp");
+  background-image: url("../assets/img/games/AC_Legends.webp");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1408,7 +1408,7 @@
   height: 22rem;
   padding: 0;
   display: block; /* Disable flex split on small screens */
-  background-image: url("../Media/AC_Hero.webp"); /* Fallback for mobile */
+  background-image: url("../assets/img/games/AC_Hero.webp"); /* Fallback for mobile */
 }
 
 /* Hide splits on mobile and rely on fallback background */

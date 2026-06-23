@@ -1,4 +1,4 @@
-// js/factions.js — Factions Page JavaScript
+// js/pages/factions.js — Factions Page JavaScript
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---- Scroll-reveal for sections ----

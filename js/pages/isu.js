@@ -1,4 +1,4 @@
-// js/isu.js - Isu Lore Page JavaScript
+// js/pages/isu.js - Isu Lore Page JavaScript
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---- Scroll-reveal for sections ----

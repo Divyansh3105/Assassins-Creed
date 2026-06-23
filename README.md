@@ -1,6 +1,6 @@
 <div align="center">
 
-![Assassin's Creed Tribute Banner](Media/Banner.webp)
+![Assassin's Creed Tribute Banner](docs/banner.webp)
 
 # Assassin's Creed Tribute Website
 
@@ -53,10 +53,27 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 ## 📁 Project Structure
 
 ```plaintext
-├── css/                     # Stylesheets and modular CSS
+├── assets/
+│   ├── audio/               # Background music
+│   ├── fonts/               # Custom Assassin typeface
+│   ├── icons/               # Logo, favicon, PWA icons, cursor
+│   ├── img/
+│   │   ├── banners/         # Era banners
+│   │   ├── characters/      # Character portraits
+│   │   ├── games/           # Game hero art
+│   │   ├── isu/             # Isu artifacts and hero
+│   │   └── portraits/       # Faction page portraits
+│   └── social/              # Open Graph share image
+├── css/
+│   ├── base.css, layout.css, components.css, styles.css   # Shared styles
+│   └── pages/               # Per-page styles (era, game, factions, isu, quiz)
 ├── data/                    # JSON data files for content
-├── js/                      # JavaScript modules and logic
-├── Media/                   # Images, audio, and visual assets
+├── docs/                    # README banner and screenshots
+├── js/
+│   ├── app.js, components.js, script.js                   # Shared logic
+│   └── pages/               # Per-page scripts (factions, isu, quiz)
+├── service-worker.js        # PWA service worker (must stay at root)
+├── manifest.json            # PWA manifest
 ├── index.html               # Main entry point & Home page
 ├── Assassins.html           # Assassin roster and filters
 ├── era.html                 # Eras and timelines
@@ -106,9 +123,9 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 
 |                           Home / Hero Section                            |                           Factions Breakdown                           |
 | :----------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| <img src="Media/ss1.webp" width="400" alt="Home Section Placeholder" />  |  <img src="Media/ss2.webp" width="400" alt="Factions Placeholder" />   |
+| <img src="docs/screenshots/ss1.webp" width="400" alt="Home Section Placeholder" />  |  <img src="docs/screenshots/ss2.webp" width="400" alt="Factions Placeholder" />   |
 |                       **Assassins Roster Filter**                        |                            **Isu Archive**                             |
-| <img src="Media/ss4.webp" width="400" alt="Roster Filter Placeholder" /> | <img src="Media/ss3.webp" width="400" alt="Isu Archive Placeholder" /> |
+| <img src="docs/screenshots/ss4.webp" width="400" alt="Roster Filter Placeholder" /> | <img src="docs/screenshots/ss3.webp" width="400" alt="Isu Archive Placeholder" /> |
 
 ## 💡 What I Learned
 

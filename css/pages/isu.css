@@ -121,7 +121,7 @@
   border-radius: 2px;
   font-size: 0.85rem;
   transition: all 0.3s ease;
-  cursor: url("../Media/Unavailable.cur"), pointer;
+  cursor: url("../../assets/icons/Unavailable.cur"), pointer;
 }
 
 .btn-isu-primary:hover {
@@ -145,7 +145,7 @@
   border-radius: 2px;
   font-size: 0.85rem;
   transition: all 0.3s ease;
-  cursor: url("../Media/Unavailable.cur"), pointer;
+  cursor: url("../../assets/icons/Unavailable.cur"), pointer;
 }
 
 .btn-isu-secondary:hover {
@@ -546,7 +546,7 @@
   border: none;
   border-radius: 2px;
   font-size: 0.85rem;
-  cursor: url("../Media/Unavailable.cur"), pointer;
+  cursor: url("../../assets/icons/Unavailable.cur"), pointer;
   transition: all 0.3s;
 }
 

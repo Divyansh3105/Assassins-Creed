@@ -1,4 +1,4 @@
-// js/quiz.js — Personality Quiz Logic
+// js/pages/quiz.js — Personality Quiz Logic
 
 // =======================
 // QUIZ DATA & LOGIC
@@ -158,7 +158,7 @@ const resultsDB = {
     name: "Ezio Auditore",
     sub: "Da Firenze",
     title: "The Mentor",
-    img: "Media/Ezio.webp",
+    img: "assets/img/characters/Ezio.webp",
     desc: "Charismatic, skilled, and driven by a deep sense of justice. Like Ezio, you are a natural leader who values family and loyalty above all. Your journey is one of growth, transforming from a carefree youth into a wise mentor who guides others from the shadows.",
     tags: ["Florence", "1459 – 1524", "Master Assassin"],
     stats: { stealth: 95, combat: 88, charisma: 100 },
@@ -185,7 +185,7 @@ const resultsDB = {
     name: "Connor Kenway",
     sub: "Ratonhnhaké:ton",
     title: "The Champion",
-    img: "Media/Connor.webp",
+    img: "assets/img/characters/Connor.webp",
     desc: "Stoic, fierce, and utterly devoted to liberty. Like Connor, you have a powerful connection to nature and a strong moral compass. You are a solitary but formidable force of nature, relentlessly pursuing justice and freedom for the marginalized.",
     tags: ["America", "1756 – 1804", "Master Assassin"],
     stats: { stealth: 80, combat: 98, charisma: 65 },
@@ -212,7 +212,7 @@ const resultsDB = {
     name: "Arno Dorian",
     sub: "Victor",
     title: "The Ghost",
-    img: "Media/Arno.webp",
+    img: "assets/img/characters/Arno.webp",
     desc: "Tactical, quick-witted, and highly mobile. Like Arno, your greatest strength is exploiting the environment and striking with precision. You navigate complex social and physical structures with ease, turning urban chaos to your advantage.",
     tags: ["Paris", "1768 – ?", "Master Assassin"],
     stats: { stealth: 100, combat: 75, charisma: 85 },
@@ -239,7 +239,7 @@ const resultsDB = {
     name: "Eivor Varinsdottir",
     sub: "Wolf-Kissed",
     title: "The Conqueror",
-    img: "Media/Eivor.webp",
+    img: "assets/img/characters/Eivor.webp",
     desc: "Fierce, honorable, and unyielding. Like Eivor, you are a natural warrior who leads from the front. You value your clan above all else and aren't afraid to confront obstacles head-on. You are a force to be reckoned with.",
     tags: ["England", "847 – ?", "Jarl"],
     stats: { stealth: 60, combat: 100, charisma: 80 },

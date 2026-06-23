@@ -68,7 +68,7 @@ async function loadEraContent() {
   }
   ogImage.content =
     eraData.banner_image ||
-    "https://divyansh3105.github.io/Assassins-Creed/Media/OG.png";
+    "https://divyansh3105.github.io/Assassins-Creed/assets/social/OG.png";
 
   // og:url — the canonical URL for this era page
   let ogUrl = document.querySelector('meta[property="og:url"]');
@@ -196,7 +196,7 @@ async function loadGameContent() {
   }
   ogImage.content =
     gameData.banner_image ||
-    "https://divyansh3105.github.io/Assassins-Creed/Media/OG.png";
+    "https://divyansh3105.github.io/Assassins-Creed/assets/social/OG.png";
 
   // og:url — the canonical URL for this game page
   let ogUrl = document.querySelector('meta[property="og:url"]');
@@ -394,7 +394,7 @@ async function loadAssassinsContent() {
         .join("");
     }
 
-    const imgSrc = assassin.card_image || "Media/logo.png";
+    const imgSrc = assassin.card_image || "assets/icons/logo.png";
     const imgAlt = assassin.card_title || "Unknown Assassin";
     const cardTitle = assassin.card_title || "Unknown Assassin";
     const cardEra = assassin.card_era || "Era Unknown";

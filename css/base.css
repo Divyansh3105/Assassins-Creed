@@ -1,7 +1,7 @@
 /* Typography and Globals */
 @font-face {
   font-family: "Assasign";
-  src: url("../Media/Assassin.ttf") format("truetype");
+  src: url("../assets/fonts/Assassin.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -87,7 +87,7 @@
 /* ---- Cursor — themed for background, semantic for interactive elements ---- */
 /* Apply the custom cursor to the general browsing surface */
 body {
-  cursor: url(../Media/Unavailable.cur), default;
+  cursor: url(../assets/icons/Unavailable.cur), default;
 }
 
 /* Restore the standard pointer on all interactive elements —

@@ -70,7 +70,7 @@
 #hero-dynamic {
   height: 60vh;
   min-height: 400px;
-  background-image: url("../Media/ModernBanner.webp"); /* Overridden by JS for Dynamic */
+  background-image: url("../../assets/img/banners/ModernBanner.webp"); /* Overridden by JS for Dynamic */
   background-size: cover;
   background-position: center;
   position: relative;

@@ -10,7 +10,7 @@ class LoadingScreen extends HTMLElement {
     this.innerHTML = `
         <div id="loading-screen">
             <div class="loading-content">
-                <img src="Media/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
+                <img src="assets/icons/logo.png" alt="Assassin's Creed Logo" class="loading-logo">
                 <div class="loading-spinner"></div>
                 <p class="loading-text">Synchronizing...</p>
             </div>
@@ -57,7 +57,7 @@ class SiteHeader extends HTMLElement {
                 <!-- Left: Logo + Brand -->
                 <div class="nav-brand">
                     <a href="index.html" class="nav-brand-link">
-                        <img id="logo" src="Media/logo.png" alt="Assassin's Creed Logo">
+                        <img id="logo" src="assets/icons/logo.png" alt="Assassin's Creed Logo">
                         <span class="nav-brand-text">Assassin's<br>Creed</span>
                     </a>
                 </div>
