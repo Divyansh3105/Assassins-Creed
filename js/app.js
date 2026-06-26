@@ -420,6 +420,20 @@ async function loadAssassinsContent() {
   document.getElementById("loading-screen").style.display = "none";
   grid.style.display = "grid";
 
+  // Deep link from search: /Assassins.html#ezio scrolls to and highlights that card
+  const card =
+    location.hash &&
+    document.querySelector(
+      `[data-assassin="${CSS.escape(location.hash.slice(1))}"]`,
+    );
+  if (card) {
+    setTimeout(() => {
+      card.scrollIntoView({ block: "center" });
+      card.style.outline = "2px solid var(--animus-blue)";
+      card.style.outlineOffset = "4px";
+    }, 400);
+  }
+
   // Refresh hover logic bindings from script.js now that cards exist
   if (typeof rebindAssassinHovers === "function") {
     rebindAssassinHovers();

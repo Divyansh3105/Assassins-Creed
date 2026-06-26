@@ -37,6 +37,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 |    **Dynamic Greetings**    | - Time-based welcome messages for personalized experience            |
 |    **Parallax Effects**     | - Engaging scroll-based hero animations                              |
 |       **Quiz System**       | - Interactive faction quizzes to test your knowledge                 |
+|     **Archive Search**      | - Search games, assassins, characters and eras (press `/` to focus)  |
 |       **Isu Archive**       | - Deep lore exploration of the First Civilization                    |
 |      **Faction Pages**      | - Detailed breakdown of the Assassin and Templar ideologies          |
 
