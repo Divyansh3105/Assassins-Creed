@@ -68,6 +68,7 @@ class SiteHeader extends HTMLElement {
                     <li><a href="Assassins.html">Assassins</a></li>
                     <li><a href="isu.html">Isu Lore</a></li>
                     <li><a href="factions.html">Factions</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
                     <li><a href="quiz_hub.html">Quiz</a></li>
                     <li><a href="search.html" aria-label="Search"><i class="bi bi-search"></i></a></li>
                     <li class="dropdown">

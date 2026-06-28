@@ -38,6 +38,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 |    **Parallax Effects**     | - Engaging scroll-based hero animations                              |
 |       **Quiz System**       | - Interactive faction quizzes to test your knowledge                 |
 |     **Archive Search**      | - Search games, assassins, characters and eras (press `/` to focus)  |
+|   **Interactive Timeline**  | - Every game in story or release order, filterable by era            |
 |       **Isu Archive**       | - Deep lore exploration of the First Civilization                    |
 |      **Faction Pages**      | - Detailed breakdown of the Assassin and Templar ideologies          |
 
@@ -138,7 +139,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 ## 🗺️ Future Improvements
 
 - [ ] Add localization support (multi-language toggles)
-- [ ] Implement a full-screen interactive timeline of events
+- [x] Implement an interactive timeline of events
 - [ ] Optimize mobile viewport animations further
 - [ ] Connect the Quiz System outcomes to a backend for global stats tracking
 
