@@ -316,7 +316,11 @@ document.addEventListener("DOMContentLoaded", () => {
         let label = '<i class="bi bi-check2"></i> LINK COPIED';
         let ok = true;
         try {
-          await navigator.clipboard.writeText(window.location.href);
+          const id = new URLSearchParams(window.location.search).get("profile");
+          const shareUrl = Object.hasOwn(resultsDB, id)
+            ? new URL(`results/${id}.html`, window.location.href).href
+            : window.location.href;
+          await navigator.clipboard.writeText(shareUrl);
         } catch {
           ok = false;
           label = '<i class="bi bi-x-lg"></i> COPY FAILED';

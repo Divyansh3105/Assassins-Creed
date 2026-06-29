@@ -39,6 +39,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 |       **Quiz System**       | - Interactive faction quizzes to test your knowledge                 |
 |     **Archive Search**      | - Search games, assassins, characters and eras (press `/` to focus)  |
 |   **Interactive Timeline**  | - Every game in story or release order, filterable by era            |
+|     **Quiz Share Cards**    | - Per-result preview images and share links for social media         |
 |       **Isu Archive**       | - Deep lore exploration of the First Civilization                    |
 |      **Faction Pages**      | - Detailed breakdown of the Assassin and Templar ideologies          |
 
