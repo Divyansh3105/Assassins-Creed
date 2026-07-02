@@ -16,7 +16,7 @@ _A visually immersive tribute website celebrating the Assassin’s Creed franchi
 
 ## 📖 Project Overview
 
-The Assassin's Creed Tribute Website is an immersive, multi-page web experience that takes you through centuries of hidden history. Built with modern web technologies, it features stunning visuals, smooth animations, and interactive elements that bring the Assassin's Brotherhood to life. It is designed as a fan tribute for fans, developers, and students alike.
+The Assassin's Creed Tribute Website is an immersive, multi-page web experience that takes you through centuries of hidden history. Built with modern web technologies, it features stunning visuals, smooth animations, and interactive elements that bring the Assassin's Brotherhood to life. Browse every game on an interactive timeline, search the whole archive, and take the quiz to share your result. It is designed as a fan tribute for fans, developers, and students alike.
 
 ## 🚀 Live Demo
 
@@ -37,11 +37,13 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 |    **Dynamic Greetings**    | - Time-based welcome messages for personalized experience            |
 |    **Parallax Effects**     | - Engaging scroll-based hero animations                              |
 |       **Quiz System**       | - Interactive faction quizzes to test your knowledge                 |
-|     **Archive Search**      | - Search games, assassins, characters and eras (press `/` to focus)  |
-|   **Interactive Timeline**  | - Every game in story or release order, filterable by era            |
-|     **Quiz Share Cards**    | - Per-result preview images and share links for social media         |
+|      **Archive Search**     | - Search games, assassins, characters and eras (`/` focuses the box)   |
+|   **Interactive Timeline**  | - Every game in story or release order, filterable by era              |
+|     **Quiz Share Cards**    | - Per-result preview images and shareable links for social media       |
 |       **Isu Archive**       | - Deep lore exploration of the First Civilization                    |
 |      **Faction Pages**      | - Detailed breakdown of the Assassin and Templar ideologies          |
+|     **Installable PWA**     | - Web app manifest and an offline-capable service worker               |
+|      **Reduced Motion**     | - Animations, particles and parallax switch off for `prefers-reduced-motion` |
 
 ## 🛠️ Tech Stack
 
@@ -66,27 +68,30 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 │   │   ├── games/           # Game hero art
 │   │   ├── isu/             # Isu artifacts and hero
 │   │   └── portraits/       # Faction page portraits
-│   └── social/              # Open Graph share image
+│   └── social/              # Open Graph image and quiz result share cards
 ├── css/
 │   ├── base.css, layout.css, components.css, styles.css   # Shared styles
-│   └── pages/               # Per-page styles (era, game, factions, isu, quiz)
+│   └── pages/               # Per-page styles (era, game, factions, isu, quiz, discover)
 ├── data/                    # JSON data files for content
+├── results/                 # Static share pages for each quiz result (Open Graph tags)
 ├── docs/                    # README banner and screenshots
 ├── js/
 │   ├── app.js, components.js, script.js                   # Shared logic
-│   └── pages/               # Per-page scripts (factions, isu, quiz)
+│   └── pages/               # Per-page scripts (factions, isu, quiz, search, timeline)
 ├── service-worker.js        # PWA service worker (must stay at root)
 ├── manifest.json            # PWA manifest
 ├── index.html               # Main entry point & Home page
 ├── Assassins.html           # Assassin roster and filters
-├── era.html                 # Eras and timelines
+├── era.html                 # Era overview and its games
 ├── factions.html            # Main Factions overview
 ├── factions_assassins.html  # Assassin Brotherhood deep-dive
 ├── factions_templars.html   # Templar Order deep-dive
-├── game.html                # Interactive mini-events or showcases
+├── game.html                # Per-game dossier (story, characters, gallery)
+├── timeline.html            # Interactive timeline of every game
+├── search.html              # Archive search
 ├── isu.html                 # Isu lore archive
 ├── quiz_hub.html            # Faction quiz entry
-├── quiz_results.html        # Quiz outcomes
+├── quiz_results.html        # Quiz outcomes and share button
 ├── robots.txt               # SEO bot rules
 ├── sitemap.xml              # SEO sitemap
 ├── LICENSE                  # MIT License
@@ -120,7 +125,9 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 2. **Experience the intro:** Wait for the "Synchronizing..." loading screen pattern to finish.
 3. **Explore content sections:** Use the navigation menu to browse through assassins, eras, and Isu lore.
 4. **Interact with the environment:** Toggle the background music player in the corner, test filters in the Assassins roster, and play around with the tabed showcases.
-5. **Take the quiz:** Navigate to the quiz hub to discover where your loyalties lie.
+5. **Take the quiz:** Navigate to the quiz hub to discover where your loyalties lie, then use **Share** to copy a link with its own preview card.
+6. **Walk the timeline:** Open **Timeline**, switch between story and release order, filter by era and expand any game for its dossier.
+7. **Search the archive:** Use the search icon in the header (or press `/`) to find a game, assassin, character or era.
 
 ## 🖼️ Screenshots / Demo
 
@@ -141,6 +148,8 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 
 - [ ] Add localization support (multi-language toggles)
 - [x] Implement an interactive timeline of events
+- [x] Add archive search across games, assassins, characters and eras
+- [x] Per-result quiz share cards
 - [ ] Optimize mobile viewport animations further
 - [ ] Connect the Quiz System outcomes to a backend for global stats tracking
 
