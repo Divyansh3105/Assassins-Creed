@@ -68,7 +68,7 @@ async function loadEraContent() {
   }
   ogImage.content =
     eraData.banner_image ||
-    "https://divyansh3105.github.io/Assassins-Creed/assets/social/OG.png";
+    "https://assassins-creed-tribute.netlify.app/assets/social/OG.png";
 
   // og:url — the canonical URL for this era page
   let ogUrl = document.querySelector('meta[property="og:url"]');
@@ -196,7 +196,7 @@ async function loadGameContent() {
   }
   ogImage.content =
     gameData.banner_image ||
-    "https://divyansh3105.github.io/Assassins-Creed/assets/social/OG.png";
+    "https://assassins-creed-tribute.netlify.app/assets/social/OG.png";
 
   // og:url — the canonical URL for this game page
   let ogUrl = document.querySelector('meta[property="og:url"]');

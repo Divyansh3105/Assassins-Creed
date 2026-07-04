@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Assassins Roster -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/Assassins.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/Assassins.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
   <!-- Eras -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/era.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/era.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- Factions Hub -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/factions.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/factions.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -35,7 +35,7 @@
 
   <!-- Assassin Brotherhood -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/factions_assassins.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/factions_assassins.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -43,7 +43,7 @@
 
   <!-- Templar Order -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/factions_templars.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/factions_templars.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -51,7 +51,7 @@
 
   <!-- Games -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/game.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -59,7 +59,7 @@
 
   <!-- Isu / Those Who Came Before -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/isu.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/isu.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -67,7 +67,7 @@
 
   <!-- Quiz Hub -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/quiz_hub.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/quiz_hub.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -75,19 +75,19 @@
 
   <!-- Quiz Results (dynamic, lower priority) -->
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/quiz_results.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/quiz_results.html</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/timeline.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/timeline.html</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://divyansh3105.github.io/Assassins-Creed/search.html</loc>
+    <loc>https://assassins-creed-tribute.netlify.app/search.html</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
   </url>
