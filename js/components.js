@@ -65,7 +65,7 @@ class SiteHeader extends HTMLElement {
                 <!-- Center: All Nav Links -->
                 <ul class="content nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="Assassins.html">Assassins</a></li>
+                    <li><a href="assassins.html">Assassins</a></li>
                     <li><a href="isu.html">Isu Lore</a></li>
                     <li><a href="factions.html">Factions</a></li>
                     <li><a href="timeline.html">Timeline</a></li>

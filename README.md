@@ -81,7 +81,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 ├── service-worker.js        # PWA service worker (must stay at root)
 ├── manifest.json            # PWA manifest
 ├── index.html               # Main entry point & Home page
-├── Assassins.html           # Assassin roster and filters
+├── assassins.html           # Assassin roster and filters
 ├── era.html                 # Era overview and its games
 ├── factions.html            # Main Factions overview
 ├── factions_assassins.html  # Assassin Brotherhood deep-dive

@@ -373,7 +373,7 @@ function showError(context = {}) {
   );
 }
 
-// Load Assassins Content (for Assassins.html)
+// Load Assassins Content (for assassins.html)
 async function loadAssassinsContent() {
   const data = await fetchGameData();
   if (!data || !data.assassins) return showError({ from: "data" });
@@ -420,7 +420,7 @@ async function loadAssassinsContent() {
   document.getElementById("loading-screen").style.display = "none";
   grid.style.display = "grid";
 
-  // Deep link from search: /Assassins.html#ezio scrolls to and highlights that card
+  // Deep link from search: /assassins.html#ezio scrolls to and highlights that card
   const card =
     location.hash &&
     document.querySelector(

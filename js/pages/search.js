@@ -33,7 +33,7 @@ function buildIndex(data) {
       title: a.card_title,
       sub: a.card_era,
       text: [a.card_desc, ...(a.card_stats || []).map((s) => s.text)].join(" "),
-      url: `Assassins.html#${encodeURIComponent(a.id)}`,
+      url: `assassins.html#${encodeURIComponent(a.id)}`,
       img: a.card_image,
     });
   });
