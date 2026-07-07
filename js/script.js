@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==================== PARALLAX HERO EFFECT ====================
 const hero = document.querySelector("#hero, #hero-assassins");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (hero && !reduceMotion) {
+// Phones skip parallax and hover transforms: per-frame scroll work and sticky tap-hover.
+const liteMotion = window.matchMedia("(max-width: 768px), (hover: none)").matches;
+if (hero && !reduceMotion && !liteMotion) {
   const parallax = hero.querySelector(".hero-overlay, .hero-content");
   if (parallax) {
     // Promote to GPU layer upfront to avoid per-frame compositing cost
@@ -142,7 +144,9 @@ tabLinks.forEach((link) => {
 });
 
 // ==================== CARD HOVER EFFECTS ====================
-const cards = document.querySelectorAll(".card, .assassin-card");
+const cards = liteMotion
+  ? []
+  : document.querySelectorAll(".card, .assassin-card");
 cards.forEach((card) => {
   card.addEventListener("mouseenter", function () {
     this.style.transform = "translateY(-10px) scale(1.02)";
@@ -262,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==================== ASSASSIN CARD HOVER EFFECTS ====================
 function rebindAssassinHovers() {
   const cardsHover = document.querySelectorAll(".assassin-card");
-  if (cardsHover.length > 0) {
+  if (cardsHover.length > 0 && !liteMotion) {
     cardsHover.forEach((card) => {
       // Bind once; cloning the node would drop observers and other listeners
       if (card.dataset.hoverBound) return;

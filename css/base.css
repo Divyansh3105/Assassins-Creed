@@ -1285,3 +1285,36 @@ h2 {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==================== MOBILE PERFORMANCE ==================== */
+/* Phones/touch: backdrop blur and endless decorative loops are the costliest
+   paints. The header and menus keep their blur; repeated cards lose it. */
+@media (max-width: 768px), (pointer: coarse) {
+  .glass-panel,
+  .assassin-card,
+  .info-card,
+  .timeline-content,
+  .animus-error-panel {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-color: rgba(10, 14, 20, 0.92) !important;
+  }
+
+  h2,
+  .hero-overlay h1,
+  .master-hero .cinematic-content .hero-title-animus,
+  .glint-text::after,
+  .timeline-track::after,
+  .fd-glyph-ring-1,
+  .fd-glyph-ring-2 {
+    animation: none !important;
+  }
+}
+
+/* Touch has no real hover: stop taps leaving cards stuck in the hovered state */
+@media (hover: none) {
+  .card:hover,
+  .assassin-card:hover {
+    transform: none !important;
+  }
+}

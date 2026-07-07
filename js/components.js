@@ -3,6 +3,21 @@
 // Respect reduced-motion: every particlesJS call site guards on typeof, so this skips them all.
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   window.particlesJS = undefined;
+} else if (
+  typeof particlesJS === "function" &&
+  window.matchMedia("(max-width: 768px), (pointer: coarse)").matches
+) {
+  // Phones: fewer particles, no hover/click physics, no retina-sized canvas.
+  const fullParticlesJS = particlesJS;
+  window.particlesJS = (id, cfg) => {
+    const p = cfg.particles || {};
+    if (p.number) p.number.value = Math.min(p.number.value, 25);
+    if (p.line_linked) p.line_linked.distance = Math.min(p.line_linked.distance || 120, 100);
+    const ev = (cfg.interactivity || {}).events || {};
+    ["onhover", "onclick"].forEach((k) => ev[k] && (ev[k].enable = false));
+    cfg.retina_detect = false;
+    return fullParticlesJS(id, cfg);
+  };
 }
 
 class LoadingScreen extends HTMLElement {

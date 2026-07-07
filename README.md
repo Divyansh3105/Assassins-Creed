@@ -150,7 +150,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 - [x] Implement an interactive timeline of events
 - [x] Add archive search across games, assassins, characters and eras
 - [x] Per-result quiz share cards
-- [ ] Optimize mobile viewport animations further
+- [x] Optimize mobile viewport animations further
 - [ ] Connect the Quiz System outcomes to a backend for global stats tracking
 
 ## 🤝 Contributing
