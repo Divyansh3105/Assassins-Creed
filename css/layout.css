@@ -392,20 +392,6 @@ nav:not(.nav-active) .content .dropdown-menu {
     transform: none;
   }
 
-  .content.nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: auto;
-    background: none;
-    padding: 0;
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
-  }
-
   .content {
     flex-direction: column;
     align-items: flex-start;
