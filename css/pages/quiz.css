@@ -1,4 +1,4 @@
-/* ==================== QUIZ PAGE STYLES ==================== */
+/* Quiz page styles */
 /* Animus dark theme — Gold accents (matching original quiz intent, but integrating with Animus base) */
 
 :root {
@@ -6,7 +6,7 @@
   --quiz-accent-dim: rgba(244, 192, 37, 0.2);
 }
 
-/* ==================== QUIZ HUB (QUESTIONS) ==================== */
+/* Quiz hub (questions) */
 
 .quiz-wrapper {
   padding: 3rem 1.5rem 6rem;
@@ -321,7 +321,7 @@
   opacity: 0.6;
 }
 
-/* ==================== QUIZ RESULTS PAGE ==================== */
+/* Quiz results page */
 
 .qr-wrapper {
   padding: 3rem 1.5rem 6rem;

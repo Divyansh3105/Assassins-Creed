@@ -1,7 +1,4 @@
-// js/pages/factions.js — Factions Page JavaScript
-
 document.addEventListener("DOMContentLoaded", () => {
-  // ---- Scroll-reveal for sections ----
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -18,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll("section")
     .forEach((sec) => revealObserver.observe(sec));
 
-  // ---- Figure card hover audio cue (optional subtle visual feedback) ----
   document.querySelectorAll(".figure-card").forEach((card) => {
     card.addEventListener("mouseenter", () => {
       card.style.zIndex = "2";
@@ -28,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ---- CTA faction choice buttons ----
   const assassinsBtn = document.getElementById("join-assassins");
   const templarsBtn = document.getElementById("join-templars");
 

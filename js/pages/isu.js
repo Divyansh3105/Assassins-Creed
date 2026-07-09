@@ -1,7 +1,4 @@
-// js/pages/isu.js - Isu Lore Page JavaScript
-
 document.addEventListener("DOMContentLoaded", () => {
-  // ---- Scroll-reveal for sections ----
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -18,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll("section")
     .forEach((sec) => revealObserver.observe(sec));
 
-  // ---- Animate artifact progress bars on scroll ----
   const barObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -39,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .querySelectorAll(".isu-artifact-card")
     .forEach((card) => barObserver.observe(card));
 
-  // ---- CTA form sync button ----
   const ctaBtn = document.getElementById("isu-sync-btn");
   const ctaInput = document.getElementById("isu-email");
 
@@ -65,5 +60,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ---- Scroll-to-top / music toggle (inherit from script.js if present) ----
 });

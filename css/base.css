@@ -5,7 +5,7 @@
   font-display: swap;
 }
 
-/* == GLOBAL CSS VARIABLES == */
+/* Global css variables */
 :root {
   /* Animus Blue Theme (Primary) */
   --animus-blue: #00d2ff;
@@ -189,7 +189,7 @@ p {
 }
 
 /* Custom Scrollbar & Selection */
-/* === CUSTOM SCROLLBAR & SELECTION STYLES === */
+/* Custom scrollbar & selection styles */
 
 /* SCROLLBAR STYLING - WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
@@ -235,7 +235,7 @@ p {
 }
 
 /* Loading Screen */
-/* ==================== LOADING SCREEN ==================== */
+/* Loading screen */
 #loading-screen {
   position: fixed;
   top: 0;
@@ -360,7 +360,7 @@ p {
 }
 
 /* Music Toggle */
-/* ==================== MUSIC TOGGLE BUTTON ==================== */
+/* Music toggle button */
 #music-toggle {
   position: fixed;
   bottom: 2rem;
@@ -393,7 +393,7 @@ p {
 }
 
 /* Scroll to Top */
-/* ==================== SCROLL TO TOP BUTTON ==================== */
+/* Scroll to top button */
 #scroll-top {
   position: fixed;
   bottom: 2rem;
@@ -435,7 +435,7 @@ p {
 }
 
 /* Scroll Animations */
-/* ==================== SCROLL ANIMATIONS ==================== */
+/* Scroll animations */
 section {
   opacity: 0;
   transform: translateY(30px);
@@ -465,13 +465,13 @@ section.animate-in {
   box-shadow: 0 0 25px var(--animus-glow);
 }
 
-/* ==================== HERO PARALLAX EFFECT ==================== */
+/* Hero parallax effect */
 #hero .hero-overlay,
 #hero-assassins .hero-overlay {
   transition: transform 0.1s ease-out;
 }
 
-/* ==================== GLOWING TEXT EFFECT ==================== */
+/* Glowing text effect */
 h2 {
   animation: glow 3s ease-in-out infinite alternate;
 }
@@ -487,7 +487,7 @@ h2 {
   }
 }
 
-/* ==================== CARD ICON ANIMATION ==================== */
+/* Card icon animation */
 .card-icon {
   transition: transform 0.3s ease;
 }
@@ -496,7 +496,7 @@ h2 {
   transform: scale(1.2) rotate(5deg);
 }
 
-/* ==================== HERO SECTION ==================== */
+/* Hero section */
 #hero-colonial,
 #hero-desmond,
 #hero-european,
@@ -561,7 +561,7 @@ h2 {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* ==================== ABOUT SECTION ==================== */
+/* About section */
 #about {
   max-width: 960px;
   margin: 0 auto;
@@ -588,7 +588,7 @@ h2 {
   color: var(--text-white);
 }
 
-/* ==================== GAME CONTAINER ==================== */
+/* Game container */
 .game-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -600,7 +600,7 @@ h2 {
   text-align: center;
 }
 
-/* == GAME PAGE ENHANCEMENTS             == */
+/* Game page enhancements */
 
 /* Game Info Cards Section */
 .game-info-cards {
@@ -974,7 +974,7 @@ h2 {
   color: #ffffff;
 }
 
-/* == NOTABLE CHARACTERS ENHANCEMENTS    == */
+/* Notable characters enhancements */
 
 /* Character section wrapper */
 section:has(.character-card) {
@@ -1155,7 +1155,7 @@ section:has(.character-card) {
   scroll-behavior: smooth;
 }
 
-/* == BASE GAME DETAIL STYLES == */
+/* Base game detail styles */
 
 /* Responsive two-column layout */
 .two-column-layout {
@@ -1258,7 +1258,7 @@ section:has(.character-card) {
 }
 
 /* Glowing Text */
-/* ==================== GLOWING TEXT EFFECT ==================== */
+/* Glowing text effect */
 h2 {
   animation: glow 3s ease-in-out infinite alternate;
 }
@@ -1274,7 +1274,7 @@ h2 {
   }
 }
 
-/* ==================== REDUCED MOTION ==================== */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1286,7 +1286,7 @@ h2 {
   }
 }
 
-/* ==================== MOBILE PERFORMANCE ==================== */
+/* Mobile performance */
 /* Phones/touch: backdrop blur and endless decorative loops are the costliest
    paints. The header and menus keep their blur; repeated cards lose it. */
 @media (max-width: 768px), (pointer: coarse) {

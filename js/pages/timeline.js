@@ -1,5 +1,3 @@
-// js/pages/timeline.js — interactive story/release timeline built from data/data.json
-
 const listEl = document.getElementById("tl");
 const erasEl = document.getElementById("tl-eras");
 const sortEl = document.getElementById("tl-sort");

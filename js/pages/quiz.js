@@ -1,8 +1,3 @@
-// js/pages/quiz.js — Personality Quiz Logic
-
-// =======================
-// QUIZ DATA & LOGIC
-// =======================
 
 const questions = [
   {
@@ -263,16 +258,10 @@ const resultsDB = {
   },
 };
 
-// State
 let currentStep = 0;
 let answers = new Array(questions.length).fill(null); // stores each step's chosen type
 
-// =======================
-// UI CONTROLLERS
-// =======================
-
 document.addEventListener("DOMContentLoaded", () => {
-  // ==== Reveal animations
   const revealObs = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
@@ -290,7 +279,6 @@ document.addEventListener("DOMContentLoaded", () => {
     )
     .forEach((el) => revealObs.observe(el));
 
-  // ==== Quiz Hub Logic
   const quizContainer = document.getElementById("quiz-container");
   if (quizContainer) {
     initQuiz();
@@ -303,12 +291,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .addEventListener("click", handlePrev);
   }
 
-  // ==== Quiz Results Logic
   const resName = document.getElementById("res-name");
   if (resName) {
     loadResults();
 
-    // Share button interaction
     const shareBtn = document.getElementById("qr-share-btn");
     if (shareBtn) {
       shareBtn.addEventListener("click", async () => {
@@ -338,10 +324,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// =======================
-// QUIZ ENGINE
-// =======================
-
 function initQuiz() {
   currentStep = 0;
   answers = new Array(questions.length).fill(null);
@@ -351,14 +333,12 @@ function initQuiz() {
 function renderStep() {
   const q = questions[currentStep];
 
-  // Update Header
   document.getElementById("quiz-step").innerText =
     `Sequence ${currentStep + 1} of ${questions.length}`;
   document.getElementById("quiz-progress").style.width =
     `${((currentStep + 1) / questions.length) * 100}%`;
   document.getElementById("quiz-question-title").innerText = q.title;
 
-  // Body
   const optsContainer = document.getElementById("quiz-options");
   optsContainer.innerHTML = "";
 
@@ -389,7 +369,6 @@ function renderStep() {
     optsContainer.appendChild(label);
   });
 
-  // Buttons
   document.getElementById("quiz-prev-btn").style.visibility =
     currentStep === 0 ? "hidden" : "visible";
 
@@ -408,7 +387,7 @@ function handleNext() {
   const selected = document.querySelector('input[name="quiz_q"]:checked');
   if (!selected) return;
 
-  // Overwrite (or set) the answer for this step — handles changed answers on back-navigation
+  // Overwrites any earlier answer for this step
   answers[currentStep] = selected.value;
 
   if (currentStep < questions.length - 1) {
@@ -427,35 +406,27 @@ function handlePrev() {
 }
 
 function finishQuiz() {
-  // 1. Recalculate scores from scratch using the answers array
-  //    This ensures changed answers (via "Previous") are correctly reflected
+  // Recompute from scratch so answers changed via Previous count
   const scores = { ezio: 0, connor: 0, arno: 0, eivor: 0 };
   answers.forEach((ans) => {
     if (ans && scores[ans] !== undefined) scores[ans]++;
   });
 
-  // 2. Find winner; on a tie, the tied type chosen most recently wins
+  // On a tie, the tied type chosen most recently wins
   const max = Math.max(...Object.values(scores));
   const winner =
     [...answers].reverse().find((ans) => ans && scores[ans] === max) || "ezio";
 
-  // 3. Loading state
   const nextBtn = document.getElementById("quiz-next-btn");
   nextBtn.innerHTML = '<i class="bi bi-hourglass-split spin"></i> Syncing...';
   nextBtn.disabled = true;
 
-  // 4. Complete progress bar
   document.getElementById("quiz-progress").style.width = `100%`;
 
-  // 5. Redirect
   setTimeout(() => {
     window.location.href = `quiz_results.html?profile=${winner}`;
   }, 1000);
 }
-
-// =======================
-// RESULTS ENGINE
-// =======================
 
 function loadResults() {
   const params = new URLSearchParams(window.location.search);
@@ -464,7 +435,6 @@ function loadResults() {
     ? resultsDB[profileId]
     : resultsDB["ezio"];
 
-  // 1. Text & Hero
   document.getElementById("res-img").style.backgroundImage =
     `url('${data.img}')`;
   document.getElementById("res-name").innerText = data.name;
@@ -472,7 +442,6 @@ function loadResults() {
   document.getElementById("res-title").innerText = data.title;
   document.getElementById("res-desc").innerText = data.desc;
 
-  // 2. Tags
   const tagsBox = document.getElementById("res-tags");
   tagsBox.innerHTML = "";
   data.tags.forEach((t) => {
@@ -482,7 +451,6 @@ function loadResults() {
     tagsBox.appendChild(span);
   });
 
-  // 3. Stats (will animate to full later)
   setTimeout(() => {
     document.getElementById("res-stat-stealth-bar").style.width =
       `${data.stats.stealth}%`;
@@ -499,7 +467,6 @@ function loadResults() {
     document.getElementById("res-stat-charisma").innerText =
       `${data.stats.charisma}%`;
 
-    // Color Max stat
     ["stealth", "combat", "charisma"].forEach((k) => {
       if (data.stats[k] === 100) {
         document.getElementById(`res-stat-${k}-bar`).classList.add("max");
@@ -508,13 +475,11 @@ function loadResults() {
     });
   }, 300); // slight delay for animation trigger
 
-  // 4. Traits
   const traitsBox = document.getElementById("res-traits");
   traitsBox.innerHTML = "";
   data.traits.forEach((t, i) => {
     const dv = document.createElement("div");
     dv.className = "qr-trait-card";
-    // Stagger entrance animation
     dv.style.animationDelay = `${i * 0.15}s`;
     dv.innerHTML = `
             <div class="qr-trait-icon"><i class="bi ${t.icon}"></i></div>

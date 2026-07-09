@@ -1,4 +1,4 @@
-/* ==================== FACTION DETAIL PAGE — SHARED STYLES ==================== */
+/* Faction detail page — shared styles */
 /* Used by factions_assassins.html (.faction-page-ac) and factions_templars.html (.faction-page-tm) */
 /* Colour tokens resolved per page via CSS custom properties — see each page's faction CSS file. */
 
@@ -448,7 +448,7 @@
   }
 }
 
-/* ==================== FACTION COLOUR TOKENS ==================== */
+/* Faction colour tokens */
 
 .faction-page-ac {
   --faction-accent: var(--animus-blue); /* #00d2ff */

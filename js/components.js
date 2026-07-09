@@ -1,5 +1,3 @@
-// js/components.js
-
 // Respect reduced-motion: every particlesJS call site guards on typeof, so this skips them all.
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   window.particlesJS = undefined;
@@ -32,7 +30,6 @@ class LoadingScreen extends HTMLElement {
         </div>
         `;
 
-    // Self-encapsulate the loader fadeout logic to prevent stalling
     const removeLoader = () => {
       setTimeout(() => {
         const ls = this.querySelector("#loading-screen");
@@ -104,7 +101,6 @@ class SiteHeader extends HTMLElement {
         </header>
         `;
 
-    // Accessibility: Set aria-current="page" on the active navigation link
     setTimeout(() => {
       const currentPath =
         window.location.pathname.split("/").pop() || "index.html";

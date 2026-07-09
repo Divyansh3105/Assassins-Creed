@@ -1,5 +1,3 @@
-// js/pages/search.js — client-side search over data/data.json
-
 const TYPES = ["Game", "Assassin", "Character", "Era"];
 const qInput = document.getElementById("dx-q");
 const filtersEl = document.getElementById("dx-filters");

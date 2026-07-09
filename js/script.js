@@ -1,6 +1,4 @@
-// ==================== SMOOTH SCROLL ====================
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  // Skip tab navigation links
   if (anchor.classList.contains("nav-link")) {
     return;
   }
@@ -14,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ==================== SCROLL ANIMATIONS ====================
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -28,7 +25,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe all sections and cards
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(
     "section, .card, .assassin-card, .stat-item",
@@ -36,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach((el) => observer.observe(el));
 });
 
-// ==================== PARALLAX HERO EFFECT ====================
 const hero = document.querySelector("#hero, #hero-assassins");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 // Phones skip parallax and hover transforms: per-frame scroll work and sticky tap-hover.
@@ -60,7 +55,6 @@ if (hero && !reduceMotion && !liteMotion) {
   }
 }
 
-// ==================== ANIMATED COUNTER ====================
 function animateCounter(element, target, duration = 2000) {
   const finalText = element.textContent.trim(); // keeps suffixes like "+"
   if (reduceMotion) {
@@ -91,7 +85,6 @@ function formatNumber(num) {
   return num.toString();
 }
 
-// Trigger counters when stats section is visible
 const statsSection = document.querySelector("#legacy");
 if (statsSection) {
   const statsObserver = new IntersectionObserver(
@@ -119,7 +112,6 @@ if (statsSection) {
   statsObserver.observe(statsSection);
 }
 
-// ==================== TAB SWITCHING WITH ANIMATION ====================
 const tabLinks = document.querySelectorAll(".nav-link");
 const tabPanes = document.querySelectorAll(".tab-pane");
 
@@ -128,13 +120,11 @@ tabLinks.forEach((link) => {
     e.preventDefault();
     e.stopPropagation(); // Prevent event bubbling
 
-    // Remove active from all
     tabLinks.forEach((l) => l.classList.remove("active"));
     tabPanes.forEach((p) => {
       p.classList.remove("show", "active");
     });
 
-    // Add active to clicked
     link.classList.add("active");
     const target = document.querySelector(link.getAttribute("href"));
     if (target) {
@@ -143,7 +133,6 @@ tabLinks.forEach((link) => {
   });
 });
 
-// ==================== CARD HOVER EFFECTS ====================
 const cards = liteMotion
   ? []
   : document.querySelectorAll(".card, .assassin-card");
@@ -157,19 +146,16 @@ cards.forEach((card) => {
   });
 });
 
-// ==================== MUSIC CONTROL ====================
 const bgMusic = document.getElementById("bg-music");
 let musicButton;
 
 if (bgMusic) {
-  // Create music control button
   musicButton = document.createElement("button");
   musicButton.id = "music-toggle";
   musicButton.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
   musicButton.setAttribute("aria-label", "Toggle background music");
   document.body.appendChild(musicButton);
 
-  // Start muted by default (better UX)
   bgMusic.volume = 0.3;
   bgMusic.muted = true;
   musicButton.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
@@ -186,7 +172,6 @@ if (bgMusic) {
   });
 }
 
-// ==================== MOBILE MENU TOGGLE ====================
 const menuToggle = document.getElementById("menu-toggle");
 const navElement = document.querySelector("header nav");
 const menuLinks = document.querySelectorAll(".content a:not(.dropdownto)");
@@ -216,7 +201,6 @@ if (menuToggle && navElement) {
   });
 }
 
-// ==================== SCROLL TO TOP BUTTON ====================
 // Use an existing #scroll-top element (e.g. hardcoded in HTML) or create one
 const scrollTopBtn =
   document.getElementById("scroll-top") ||
@@ -241,8 +225,6 @@ scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Loading screen logic abstracted to js/components.js
-// ==================== ASSASSIN CARD STAGGER ANIMATION ====================
 document.addEventListener("DOMContentLoaded", () => {
   const assassinCards = document.querySelectorAll(".assassin-card");
 
@@ -263,7 +245,6 @@ document.addEventListener("DOMContentLoaded", () => {
   assassinCards.forEach((card) => assassinObserver.observe(card));
 });
 
-// ==================== ASSASSIN CARD HOVER EFFECTS ====================
 function rebindAssassinHovers() {
   const cardsHover = document.querySelectorAll(".assassin-card");
   if (cardsHover.length > 0 && !liteMotion) {
@@ -291,12 +272,10 @@ function rebindAssassinHovers() {
   }
 }
 
-// Call initially for static pages
 document.addEventListener("DOMContentLoaded", () => {
   rebindAssassinHovers();
 });
 
-// ==================== ASSASSIN FILTER FUNCTIONALITY ====================
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 if (filterButtons.length > 0) {
@@ -304,14 +283,12 @@ if (filterButtons.length > 0) {
     button.addEventListener("click", function () {
       const filter = this.getAttribute("data-filter");
 
-      // Update active button
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       this.classList.add("active");
 
       // Dynamically query cards since they might be injected asynchronously
       const currentCards = document.querySelectorAll(".assassin-card");
 
-      // Apply Glitch Effect
       currentCards.forEach((card) => {
         card.classList.add("glitch-anim");
 
@@ -357,7 +334,6 @@ if (filterButtons.length > 0) {
   });
 }
 
-// ==================== DYNAMIC GREETING ====================
 const heroContent = document.querySelector(".hero-content p");
 if (heroContent && heroContent.textContent === "History is our playground.") {
   const hour = new Date().getHours();
@@ -376,7 +352,6 @@ if (heroContent && heroContent.textContent === "History is our playground.") {
   heroContent.textContent = greeting;
 }
 
-// ==================== PARTICLES.JS BACKGROUND ====================
 if (typeof particlesJS !== "undefined") {
   particlesJS("particles-js", {
     particles: {
@@ -468,7 +443,6 @@ if (typeof particlesJS !== "undefined") {
   });
 }
 
-// ==================== ANIMUS CHARACTER SLIDER INFINITE LOOP ====================
 document.addEventListener("DOMContentLoaded", () => {
   const sliderTracks = document.querySelectorAll(".assassins-slider-track");
 
@@ -482,7 +456,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ==================== PWA SERVICE WORKER ====================
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("service-worker.js").catch(() => {});

@@ -1,5 +1,5 @@
 /* Assassin Card & Grid */
-/* ==================== ASSASSIN CARD STYLES ==================== */
+/* Assassin card styles */
 .assassin-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -134,7 +134,7 @@
   box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
 }
 
-/* ==================== ANIMUS ERROR PANEL ==================== */
+/* Animus error panel */
 .animus-error-panel {
   background: rgba(139, 0, 0, 0.8); /* Blood red tint */
   border: 2px solid var(--bright-red);
