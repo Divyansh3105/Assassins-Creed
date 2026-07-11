@@ -280,9 +280,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/0000003837.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/0000003838.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/15100/0000003839.600x338.jpg"
+        "assets/img/steam/15100-0000003837.webp",
+        "assets/img/steam/15100-0000003838.webp",
+        "assets/img/steam/15100-0000003839.webp"
       ],
       "legacy_html": "<p>Assassin's Creed revolutionized open-world gaming with its innovative parkour system and historical\n                    storytelling. The game introduced the Animus concept, blending modern-day and historical narratives\n                    in a way never seen before. Its success spawned one of gaming's most beloved franchises, influencing\n                    countless action-adventure titles.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Action Game 2007</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>IGN Game of the Year Nominee</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-controller\"></i>\n<span>Over 8 Million Copies Sold</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/assassins-creed",
@@ -291,7 +291,7 @@
     "ac2": {
       "id": "ac2",
       "card_title": "Assassin's Creed II (2009)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/header.jpg",
+      "card_image": "assets/img/steam/33230-header.webp",
       "card_era": "Italian Renaissance \u2022 1476-1499",
       "card_desc": "Enter the Italian Renaissance and meet Ezio Auditore da Firenze on his quest for justice and vengeance.",
       "card_stats": [
@@ -361,9 +361,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/ss_dd6a4d319cda32c24a4e16a0a62908e82673f458.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/ss_ef44b9f703f71acfdeb728a497390d397084ee35.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/33230/ss_d3967a58038cc5e59332bb0043ab1ca343112bc6.600x338.jpg"
+        "assets/img/steam/33230-ss-dd6a4d319cda32c.webp",
+        "assets/img/steam/33230-ss-ef44b9f703f71ac.webp",
+        "assets/img/steam/33230-ss-d3967a58038cc5e.webp"
       ],
       "legacy_html": "<p>Assassin's Creed II is widely regarded as one of the greatest games of all time. It perfected the formula established by its predecessor and introduced Ezio Auditore, who became the face of the franchise. The game's emotional storytelling, stunning Renaissance setting, and refined gameplay mechanics set a new standard for the series.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Game of the Year 2009</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Metacritic Score: 91/100</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-heart-fill\"></i>\n<span>Fan Favorite Character</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/assassins-creed-ii",
@@ -372,7 +372,7 @@
     "brotherhood": {
       "id": "brotherhood",
       "card_title": "Assassin's Creed: Brotherhood (2010)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/header.jpg",
+      "card_image": "assets/img/steam/48190-header.webp",
       "card_era": "Renaissance Rome \u2022 1500-1507",
       "card_desc": "Ezio leads the Brotherhood in Rome, expanding the Assassin Order and continuing the war against the Borgia family.",
       "card_stats": [
@@ -442,9 +442,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_b5fd8f198c7fdaa80e064039abc5b38238a5cef0.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/48190/ss_69a80289cc74d51d1edd016c1fbf9766ea63126b.600x338.jpg"
+        "assets/img/steam/48190-ss-412a6e71dcafa32.webp",
+        "assets/img/steam/48190-ss-b5fd8f198c7fdaa.webp",
+        "assets/img/steam/48190-ss-69a80289cc74d51.webp"
       ],
       "legacy_html": "<p>Brotherhood proved that direct sequels could expand and improve upon their predecessors. The Brotherhood recruitment system became a franchise staple, and the multiplayer mode introduced innovative cat-and-mouse gameplay that stood out in the action genre. Rome's single massive city showcased the series' attention to historical detail.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Action Game 2010</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Metacritic Score: 89/100</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-people-fill\"></i>\n<span>Innovative Multiplayer</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/brotherhood",
@@ -453,7 +453,7 @@
     "revelations": {
       "id": "revelations",
       "card_title": "Assassin's Creed: Revelations (2011)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/header.jpg",
+      "card_image": "assets/img/steam/201870-header.webp",
       "card_era": "Ottoman Empire \u2022 1511-1512",
       "card_desc": "Ezio follows in Altair's footsteps to unlock secrets buried in Constantinople, concluding both legends' stories.",
       "card_stats": [
@@ -523,9 +523,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/ss_28cb1321a03e8cf2af89b2f9ab441380b093db1e.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/ss_08575a6a8651d8e9b159153cc0a8175b7b181345.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/201870/ss_4f86082d2db3066c72a9b80704c7a35d4ad2773b.600x338.jpg"
+        "assets/img/steam/201870-ss-28cb1321a03e8cf.webp",
+        "assets/img/steam/201870-ss-08575a6a8651d8e.webp",
+        "assets/img/steam/201870-ss-4f86082d2db3066.webp"
       ],
       "legacy_html": "<p>Revelations provided a fitting conclusion to Ezio's story while honoring Alta\u00efr's legacy. The\n                    emotional depth of seeing both assassins in their final years resonated with fans. The game's\n                    exploration of Constantinople and its rich Ottoman culture added a fresh setting to the series,\n                    while the bomb crafting system offered unprecedented tactical freedom.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-heart-fill\"></i>\n<span>Emotional Conclusion</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Metacritic Score: 80/100</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-book-fill\"></i>\n<span>Two Legendary Stories</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/revelations",
@@ -534,7 +534,7 @@
     "ac3": {
       "id": "ac3",
       "card_title": "Assassin's Creed III (2012)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/header.jpg",
+      "card_image": "assets/img/steam/911400-header.webp",
       "card_era": "American Revolution \u2022 1754-1783",
       "card_desc": "As the American Revolution rages, Desmond learns his ultimate role through the story of Connor Kenway.",
       "card_stats": [
@@ -604,9 +604,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_3c0ef60ea9a2f72df176af41811dde6c5867c6c6.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_ab1d62e4bcf7123f5797b16cd7c7e2984a470cb2.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/911400/ss_63cd3caea8cbe8881aadd73a98a334a77d320f3a.600x338.jpg"
+        "assets/img/steam/911400-ss-3c0ef60ea9a2f72.webp",
+        "assets/img/steam/911400-ss-ab1d62e4bcf7123.webp",
+        "assets/img/steam/911400-ss-63cd3caea8cbe88.webp"
       ],
       "legacy_html": "<p>Assassin's Creed III concluded Desmond's story while introducing a bold new setting and protagonist. The game's ambitious scope, featuring massive battles, naval combat, and a sprawling frontier, pushed the series forward. Connor's journey through the American Revolution offered a unique perspective on history, and the naval gameplay laid the groundwork for Black Flag's success.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best of E3 2012</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>12+ Million Copies Sold</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-water\"></i>\n<span>Revolutionary Naval Combat</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/assassins-creed-3-remastered",
@@ -615,7 +615,7 @@
     "blackflag": {
       "id": "blackflag",
       "card_title": "Assassin's Creed IV: Black Flag (2013)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/header.jpg",
+      "card_image": "assets/img/steam/242050-header.webp",
       "card_era": "Golden Age of Piracy \u2022 1715-1722",
       "card_desc": "Set during the Golden Age of Piracy, follow Edward Kenway as he sails the Caribbean and blurs the line between pirate and Assassin.",
       "card_stats": [
@@ -685,9 +685,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/ss_82453694854272967e6f7c2147ff86f62a2b1408.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/ss_afb6f91bc96b51d0684bb4cbec4389b49dcb96db.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242050/ss_c2ad7f22e27b8ffab2a896e543a82fc8f6e9a1a7.600x338.jpg"
+        "assets/img/steam/242050-ss-824536948542729.webp",
+        "assets/img/steam/242050-ss-afb6f91bc96b51d.webp",
+        "assets/img/steam/242050-ss-c2ad7f22e27b8ff.webp"
       ],
       "legacy_html": "<p>Assassin's Creed IV: Black Flag is widely considered one of the best entries in the franchise. Its revolutionary naval combat system, vast open-world Caribbean, and compelling pirate narrative captivated players worldwide. Edward Kenway's journey from selfish pirate to noble Assassin resonated deeply, while the game's sea shanties became iconic. Black Flag proved that the series could successfully explore new time periods and gameplay styles.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Game of the Year 2013</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Best Naval Combat</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-music-note-beamed\"></i>\n<span>Iconic Sea Shanties</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/iv-black-flag",
@@ -696,7 +696,7 @@
     "rogue": {
       "id": "rogue",
       "card_title": "Assassin's Creed: Rogue (2014)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/header.jpg",
+      "card_image": "assets/img/steam/311560-header.webp",
       "card_era": "Seven Years' War \u2022 1752-1761",
       "card_desc": "Experience the Assassin-Templar conflict from the other side through the story of Shay Cormac, a former Assassin turned Templar.",
       "card_stats": [
@@ -766,9 +766,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_a1fa7dde874ab03dacfd0dd62633e316d34aa672.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_142c19862c8bb307252dedf7f17cda4eb5f3f2b8.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311560/ss_221f6e993cdfc946eb1d61129b535d9d18b1c603.600x338.jpg"
+        "assets/img/steam/311560-ss-a1fa7dde874ab03.webp",
+        "assets/img/steam/311560-ss-142c19862c8bb30.webp",
+        "assets/img/steam/311560-ss-221f6e993cdfc94.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Rogue offered a unique perspective by letting players experience the conflict from the Templar side. Shay's moral journey and the game's darker tone provided fresh insight into the franchise's central conflict. The Arctic setting and improved naval mechanics built upon Black Flag's foundation, while the story directly connected to both AC3 and Unity, making it essential for understanding the Kenway saga.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Unique Perspective</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Story Bridge</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-snow\"></i>\n<span>Arctic Innovation</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/rogue-remastered",
@@ -777,7 +777,7 @@
     "unity": {
       "id": "unity",
       "card_title": "Assassin's Creed: Unity (2014)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/header.jpg",
+      "card_image": "assets/img/steam/289650-header.webp",
       "card_era": "French Revolution \u2022 1789-1794",
       "card_desc": "Set during the French Revolution, join Arno Dorian as he navigates political unrest and personal redemption in Paris.",
       "card_stats": [
@@ -847,9 +847,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_19c1c8d52d714fe8d0a0277c36832b4e0ad5def3.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_d825c8fd7c5472d17732bf3480760dd88924e551.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/ss_42c6e1765549541d5576ec5bdb01cbc45f376444.600x338.jpg"
+        "assets/img/steam/289650-ss-19c1c8d52d714fe.webp",
+        "assets/img/steam/289650-ss-d825c8fd7c5472d.webp",
+        "assets/img/steam/289650-ss-42c6e1765549541.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Unity pushed the boundaries of the franchise with its stunning recreation of Revolutionary Paris and innovative cooperative gameplay. Despite a rocky launch, the game's attention to historical detail, improved parkour system, and deep customization options earned it a dedicated fanbase. The game's portrayal of Notre-Dame became especially poignant after the 2019 fire.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Co-Op Experience</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Most Detailed City</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-building\"></i>\n<span>Iconic Notre-Dame</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/unity",
@@ -858,7 +858,7 @@
     "syndicate": {
       "id": "syndicate",
       "card_title": "Assassin's Creed: Syndicate (2015)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/header.jpg",
+      "card_image": "assets/img/steam/368500-header.webp",
       "card_era": "Victorian Era \u2022 1868",
       "card_desc": "In Industrial London, lead the Frye twins \u2014 Jacob and Evie \u2014 as they battle Templar control in the heart of the Empire.",
       "card_stats": [
@@ -928,9 +928,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/ss_349dc173bd543fddd7b667253e3429e9565fe098.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/ss_11432237c45e225db89965fed88fa56cd02b0072.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/368500/ss_80c48aa2d827a9864180db0169413046bddb2035.600x338.jpg"
+        "assets/img/steam/368500-ss-349dc173bd543fd.webp",
+        "assets/img/steam/368500-ss-11432237c45e225.webp",
+        "assets/img/steam/368500-ss-80c48aa2d827a98.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Syndicate brought the franchise to Victorian London with style and innovation. The twin protagonists offered diverse gameplay approaches, while the rope launcher revolutionized traversal. The game's portrayal of the Industrial Revolution, combined with appearances by historical figures like Charles Darwin and Alexander Graham Bell, created a memorable adventure through one of history's most transformative periods.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best Dual Protagonists</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Innovative Traversal</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-gear-fill\"></i>\n<span>Industrial Revolution Era</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/syndicate",
@@ -939,7 +939,7 @@
     "origins": {
       "id": "origins",
       "card_title": "Assassin's Creed: Origins (2017)",
-      "card_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/header.jpg",
+      "card_image": "assets/img/steam/582160-header.webp",
       "card_era": "Ptolemaic Egypt \u2022 49-43 BCE",
       "card_desc": "Discover the roots of the Brotherhood with Bayek in a stunning recreation of Ancient Egypt during Cleopatra's rise to power.",
       "card_stats": [
@@ -1009,9 +1009,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_c4a4545f51c6836ac11c31427944fc7df813edfb.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/582160/ss_7edc3de6db0e6391158863f766c334c6eab1dbaa.600x338.jpg"
+        "assets/img/steam/582160-ss-1a0ab42e93e51c4.webp",
+        "assets/img/steam/582160-ss-c4a4545f51c6836.webp",
+        "assets/img/steam/582160-ss-7edc3de6db0e639.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Origins marked a bold new direction for the franchise, introducing RPG mechanics, a\n                    revamped combat system, and a massive open world. Set in stunning Ancient Egypt, the game told the\n                    origin story of the Brotherhood while modernizing gameplay for a new era. Its success paved the way\n                    for Odyssey and Valhalla, establishing the \"Ancient Trilogy\" formula.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Franchise Reinvention</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Best Setting 2017</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-gear-fill\"></i>\n<span>RPG Transformation</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-gb/game/assassins-creed/origins",
@@ -1020,7 +1020,7 @@
     "odyssey": {
       "id": "odyssey",
       "card_title": "Assassin's Creed: Odyssey (2018)",
-      "card_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/header.jpg",
+      "card_image": "assets/img/steam/812140-header.webp",
       "card_era": "Ancient Greece \u2022 431-422 BCE",
       "card_desc": "Choose your destiny as Kassandra or Alexios and shape the fate of Ancient Greece during the Peloponnesian War.",
       "card_stats": [
@@ -1090,9 +1090,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_0ef33c0f230da6ebac94f5959f0e0a8bbc48cf8a.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_3f8f4a09fb1d69648a8c20aae19ca2924ba275bd.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/812140/ss_6dc9f95cfb6d264c3535b53ce08f36ee07066550.600x338.jpg"
+        "assets/img/steam/812140-ss-0ef33c0f230da6e.webp",
+        "assets/img/steam/812140-ss-3f8f4a09fb1d696.webp",
+        "assets/img/steam/812140-ss-6dc9f95cfb6d264.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Odyssey expanded on Origins' RPG foundation with deeper choice-driven gameplay and branching narratives. Set in the stunning world of Ancient Greece, it offered unprecedented player agency and one of the largest maps in the series. The game's mythological elements and engaging characters made it a fan favorite in the Ancient Trilogy.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best RPG Elements</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Player Choice Pioneer</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-globe\"></i>\n<span>Massive Open World</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/odyssey",
@@ -1101,7 +1101,7 @@
     "valhalla": {
       "id": "valhalla",
       "card_title": "Assassin's Creed: Valhalla (2020)",
-      "card_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg",
+      "card_image": "assets/img/steam/2208920-header.webp",
       "card_era": "Viking Age \u2022 873-878 CE",
       "card_desc": "Become Eivor, a fierce Viking raider, and forge your legacy across England in a sprawling open-world saga of conquest and myth.",
       "card_stats": [
@@ -1171,9 +1171,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_e7310b36689ec722d2ea4643efc15bd8fa720c67.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_c3bff917ead50268eb7708ef3bf30e07b58929e9.600x338.jpg"
+        "assets/img/steam/2208920-ss-103481084a59b34.webp",
+        "assets/img/steam/2208920-ss-e7310b36689ec72.webp",
+        "assets/img/steam/2208920-ss-c3bff917ead5026.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Valhalla brought the Ancient Trilogy to a climactic conclusion with its Viking\n                    setting and settlement-building mechanics. The game's massive world, spanning England and Norway,\n                    combined with its deep narrative connections to the series' mythology, made it one of the most\n                    ambitious entries. Valhalla's post-launch support with expansions set new standards for the\n                    franchise.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Best-Selling AC Game</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Epic Viking Saga</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-house-door-fill\"></i>\n<span>Settlement Innovation</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/valhalla",
@@ -1182,7 +1182,7 @@
     "mirage": {
       "id": "mirage",
       "card_title": "Assassin's Creed: Mirage (2023)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/header.jpg",
+      "card_image": "assets/img/steam/3035570-header.webp",
       "card_era": "Abbasid Caliphate \u2022 861 CE",
       "card_desc": "Return to the franchise's stealth roots with Basim navigating the dense streets of 9th-century Baghdad, uncovering secrets in the shadows.",
       "card_stats": [
@@ -1252,9 +1252,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_d2458dc72f538b42218cc16c0ce054810511bd81.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_93780fe600368be8e4c3bb62469fb49390561300.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3035570/ss_35ae8d4ea5b72a118082494994fc7eff9cd50a36.600x338.jpg"
+        "assets/img/steam/3035570-ss-d2458dc72f538b4.webp",
+        "assets/img/steam/3035570-ss-93780fe600368be.webp",
+        "assets/img/steam/3035570-ss-35ae8d4ea5b72a1.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Mirage marks a return to the series' roots, focusing on stealth, parkour, and a tightly crafted narrative. Set in the vibrant city of Baghdad during the Islamic Golden Age, it pays homage to the original game while introducing modern refinements. Basim's story bridges past and future, connecting to the larger AC universe.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Back to Basics Approach</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Critically Acclaimed Setting</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-heart-fill\"></i>\n<span>Fan-Favorite Return</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/mirage",
@@ -1263,7 +1263,7 @@
     "shadows": {
       "id": "shadows",
       "card_title": "Assassin's Creed: Shadows (2025)",
-      "card_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg",
+      "card_image": "assets/img/steam/3159330-header.webp",
       "card_era": "Feudal Japan \u2022 1579",
       "card_desc": "Step into feudal Japan, where dual protagonists\u2014Yasuke and Naoe\u2014merge power and stealth in an epic tale of honor, rebellion, and loyalty.",
       "card_stats": [
@@ -1329,9 +1329,9 @@
         }
       ],
       "gallery": [
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/ss_935b0091a0c890f012f1d920621e654cab042dd0.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/ss_f1a664344a1577ed031ff22b31b2c6af6b757d3d.600x338.jpg",
-        "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3159330/ss_93f88e1f633beb0d1271cd570df08c20fc90ff4a.600x338.jpg"
+        "assets/img/steam/3159330-ss-935b0091a0c890f.webp",
+        "assets/img/steam/3159330-ss-f1a664344a1577e.webp",
+        "assets/img/steam/3159330-ss-93f88e1f633beb0.webp"
       ],
       "legacy_html": "<p>Assassin's Creed Shadows represents the franchise's long-awaited journey to feudal Japan. With dual protagonists offering contrasting playstyles, the game promises to deliver both the stealth gameplay fans love and intense samurai combat. The setting during the Sengoku period provides a rich backdrop of political intrigue, honor, and warfare.</p>\n<div class=\"awards-grid\">\n<div class=\"award-badge\">\n<i class=\"bi bi-trophy-fill\"></i>\n<span>Most Anticipated 2025</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-star-fill\"></i>\n<span>Revolutionary Dual System</span>\n</div>\n<div class=\"award-badge\">\n<i class=\"bi bi-globe\"></i>\n<span>Fan-Requested Setting</span>\n</div>\n</div>",
       "play_now_url": "https://www.ubisoft.com/en-us/game/assassins-creed/shadows",
