@@ -152,6 +152,7 @@
   letter-spacing: 2px;
   color: var(--text-white);
   line-height: 0.95;
+  margin-top: 0.67em; /* keeps the spacing the old <h1> had */
   margin-bottom: 1rem;
   animation: none;
   text-shadow: none;

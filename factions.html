@@ -59,7 +59,8 @@
     <!-- Shared Header (exact same as index.html) -->
     <site-header></site-header>
 
-    <main>
+    <main id="main-content">
+        <h1 class="sr-only">Factions: the Assassin Brotherhood vs the Templar Order</h1>
 
         <!-- ==================== HERO SPLIT SCREEN ==================== -->
         <section class="factions-hero" id="hero">
@@ -70,7 +71,7 @@
                 <div class="faction-assassins-bg"></div>
                 <div class="faction-content">
                     <i class="bi bi-shield-shaded faction-icon"></i>
-                    <h1 class="faction-title">The<br><span>Brotherhood</span></h1>
+                    <div class="faction-title" role="heading" aria-level="2">The<br><span>Brotherhood</span></div>
                     <p class="faction-creed">
                         "We work in the dark to serve the light.<br>We are Assassins."
                     </p>
@@ -86,7 +87,7 @@
                 <div class="faction-templars-bg"></div>
                 <div class="faction-content">
                     <i class="bi bi-crosshair2 faction-icon"></i>
-                    <h1 class="faction-title">The<br><span>Order</span></h1>
+                    <div class="faction-title" role="heading" aria-level="2">The<br><span>Order</span></div>
                     <p class="faction-creed">
                         "Nothing is true, everything is permitted.<br>Lux in tenebris."
                     </p>
@@ -201,7 +202,7 @@
 
                     <!-- Assassins -->
                     <div class="figure-card ac">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Altaïr.webp" alt="Altaïr Ibn-La'Ahad"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Altaïr.webp" alt="Altaïr Ibn-La'Ahad"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Altaïr Ibn-La'Ahad</h3>
@@ -211,7 +212,7 @@
                     </div>
 
                     <div class="figure-card ac">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Ezio.webp" alt="Ezio Auditore"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Ezio.webp" alt="Ezio Auditore"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Ezio Auditore</h3>
@@ -221,7 +222,7 @@
                     </div>
 
                     <div class="figure-card ac">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Bayek.webp" alt="Bayek of Siwa"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Bayek.webp" alt="Bayek of Siwa"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Bayek of Siwa</h3>
@@ -231,7 +232,7 @@
                     </div>
 
                     <div class="figure-card ac">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Eivor.webp" alt="Eivor Varinsdottir"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Eivor.webp" alt="Eivor Varinsdottir"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Eivor Varinsdottir</h3>
@@ -242,7 +243,7 @@
 
                     <!-- Templars -->
                     <div class="figure-card tm">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/AlMualim.webp" alt="Al Mualim"
+                        <div class="figure-icon-wrap"><img width="800" height="448" loading="lazy" decoding="async" src="assets/img/portraits/AlMualim.webp" alt="Al Mualim"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Al Mualim</h3>
@@ -252,7 +253,7 @@
                     </div>
 
                     <div class="figure-card tm">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Borgia.webp" alt="Rodrigo Borgia"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Borgia.webp" alt="Rodrigo Borgia"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Rodrigo Borgia</h3>
@@ -262,7 +263,7 @@
                     </div>
 
                     <div class="figure-card tm">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Haytham.webp" alt="Haytham Kenway"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Haytham.webp" alt="Haytham Kenway"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Haytham Kenway</h3>
@@ -272,7 +273,7 @@
                     </div>
 
                     <div class="figure-card tm">
-                        <div class="figure-icon-wrap"><img loading="lazy" decoding="async" src="assets/img/portraits/Crawford.webp" alt="Crawford Starrick"
+                        <div class="figure-icon-wrap"><img width="800" height="800" loading="lazy" decoding="async" src="assets/img/portraits/Crawford.webp" alt="Crawford Starrick"
                                 style="width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 50%;">
                         </div>
                         <h3 class="figure-name">Crawford Starrick</h3>

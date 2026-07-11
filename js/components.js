@@ -49,6 +49,8 @@ class LoadingScreen extends HTMLElement {
       removeLoader();
     } else {
       window.addEventListener("load", removeLoader);
+      // a stalled font or image must not keep the loader up forever
+      setTimeout(removeLoader, 4000);
     }
   }
 }
@@ -57,6 +59,7 @@ customElements.define("loading-screen", LoadingScreen);
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
+        <a class="skip-link" href="#main-content">Skip to content</a>
         <header class="sticky-header animus-glass">
             <nav class="desktop-nav">
                 <!-- Mobile Hamburger -->
@@ -85,7 +88,7 @@ class SiteHeader extends HTMLElement {
                     <li><a href="search.html" aria-label="Search"><i class="bi bi-search"></i></a></li>
                     <li class="dropdown">
                         <input type="checkbox" id="games-toggle">
-                        <label for="games-toggle" class="dropdownto">Games ▾</label>
+                        <label for="games-toggle" class="dropdownto" tabindex="0" role="button" aria-haspopup="true">Games ▾</label>
                         <ul class="dropdown-menu">
                             <li><a href="era.html?era=the-desmond-saga">The Desmond Saga</a></li>
                             <li><a href="era.html?era=colonial-era">Colonial Era</a></li>
@@ -100,6 +103,31 @@ class SiteHeader extends HTMLElement {
             </nav>
         </header>
         `;
+
+    // <main> is parsed after this element, so wait for the document
+    const tagMain = () => {
+      const main = document.querySelector("main");
+      if (!main) return;
+      if (!main.id) main.id = "main-content";
+      this.querySelector(".skip-link").href = "#" + main.id;
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", tagMain);
+    } else {
+      tagMain();
+    }
+
+    // The Games menu is a checkbox hack, so give keyboard users a way in
+    const gamesLabel = this.querySelector(".dropdownto");
+    const gamesToggle = this.querySelector("#games-toggle");
+    gamesLabel.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        gamesToggle.checked = !gamesToggle.checked;
+      } else if (e.key === "Escape") {
+        gamesToggle.checked = false;
+      }
+    });
 
     setTimeout(() => {
       const currentPath =
