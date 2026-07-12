@@ -146,31 +146,63 @@ cards.forEach((card) => {
   });
 });
 
-const bgMusic = document.getElementById("bg-music");
-let musicButton;
-
-if (bgMusic) {
-  musicButton = document.createElement("button");
-  musicButton.id = "music-toggle";
-  musicButton.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
-  musicButton.setAttribute("aria-label", "Toggle background music");
-  document.body.appendChild(musicButton);
-
-  bgMusic.volume = 0.3;
-  bgMusic.muted = true;
-  musicButton.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
-
-  musicButton.addEventListener("click", () => {
-    if (bgMusic.muted) {
-      bgMusic.muted = false;
-      bgMusic.play();
-      musicButton.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
-    } else {
-      bgMusic.muted = true;
-      musicButton.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
-    }
-  });
+// Every page gets the same player. The audio element is created here (with
+// preload="none", so muted visitors never download the track) and its on/off
+// state and position carry from page to page via sessionStorage.
+const MUSIC_KEY = "ac_music";
+let bgMusic = document.getElementById("bg-music");
+if (!bgMusic) {
+  bgMusic = document.createElement("audio");
+  bgMusic.id = "bg-music";
+  bgMusic.src = "assets/audio/background.mp3";
+  bgMusic.loop = true;
+  document.body.appendChild(bgMusic);
 }
+bgMusic.preload = "none";
+
+const musicButton = document.createElement("button");
+musicButton.id = "music-toggle";
+musicButton.setAttribute("aria-label", "Toggle background music");
+document.body.appendChild(musicButton);
+
+const paintMusicIcon = () => {
+  musicButton.innerHTML = bgMusic.muted
+    ? '<i class="bi bi-volume-mute-fill"></i>'
+    : '<i class="bi bi-volume-up-fill"></i>';
+};
+const startMusic = () =>
+  bgMusic.play().catch(() => {
+    bgMusic.muted = true; // autoplay blocked: stay muted until the user taps
+    paintMusicIcon();
+  });
+
+let savedMusic = {};
+try {
+  savedMusic = JSON.parse(sessionStorage.getItem(MUSIC_KEY)) || {};
+} catch {}
+
+bgMusic.volume = 0.3;
+bgMusic.muted = !savedMusic.on;
+paintMusicIcon();
+if (savedMusic.on) {
+  bgMusic.currentTime = savedMusic.t || 0;
+  startMusic();
+}
+
+musicButton.addEventListener("click", () => {
+  bgMusic.muted = !bgMusic.muted;
+  paintMusicIcon();
+  if (!bgMusic.muted) startMusic();
+});
+
+window.addEventListener("pagehide", () => {
+  try {
+    sessionStorage.setItem(
+      MUSIC_KEY,
+      JSON.stringify({ on: !bgMusic.muted && !bgMusic.paused, t: bgMusic.currentTime }),
+    );
+  } catch {}
+});
 
 const menuToggle = document.getElementById("menu-toggle");
 const navElement = document.querySelector("header nav");
