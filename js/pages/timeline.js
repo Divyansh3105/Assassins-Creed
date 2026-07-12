@@ -7,7 +7,12 @@ let eraId = "all";
 let sortBy = "story";
 
 // "Ptolemaic Egypt — 49-43 BCE" -> { year: -49, label: "49 BCE" }
-function storyYear(cardEra) {
+function storyYear(g) {
+  if (typeof g.story_year === "number") {
+    const bce = g.story_year < 0;
+    return { year: g.story_year, label: `${Math.abs(g.story_year)} ${bce ? "BCE" : "CE"}` };
+  }
+  const cardEra = g.card_era;
   const m = cardEra.match(/(\d{1,4})(?:\s*[-–]\s*\d{1,4})?\s*(BCE|CE)?\s*$/);
   if (!m) return { year: Infinity, label: "—" };
   const bce = m[2] === "BCE";
@@ -109,7 +114,7 @@ fetch("data/data.json")
   .then((data) => {
     games = Object.values(data.games).map((g) => ({
       ...g,
-      story: storyYear(g.card_era),
+      story: storyYear(g),
       release: releaseYear(g),
     }));
     const options = [{ id: "all", title: "All eras" }, ...data.eras];

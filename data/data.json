@@ -224,6 +224,7 @@
         }
       ],
       "era_id": "the-desmond-saga",
+      "story_year": 1191,
       "banner_image": "assets/img/games/AC1_Hero.webp",
       "title": "Assassin's Creed (2007)",
       "info": {
@@ -305,6 +306,7 @@
         }
       ],
       "era_id": "the-desmond-saga",
+      "story_year": 1476,
       "banner_image": "assets/img/games/AC2_Hero.webp",
       "title": "Assassin's Creed II (2009)",
       "info": {
@@ -386,6 +388,7 @@
         }
       ],
       "era_id": "the-desmond-saga",
+      "story_year": 1500,
       "banner_image": "assets/img/games/ACB_Hero.webp",
       "title": "Assassin's Creed: Brotherhood (2010)",
       "info": {
@@ -467,6 +470,7 @@
         }
       ],
       "era_id": "the-desmond-saga",
+      "story_year": 1511,
       "banner_image": "assets/img/games/ACR_Hero.webp",
       "title": "Assassin's Creed: Revelations (2011)",
       "info": {
@@ -548,6 +552,7 @@
         }
       ],
       "era_id": "the-desmond-saga",
+      "story_year": 1754,
       "banner_image": "assets/img/games/AC3_Hero.webp",
       "title": "Assassin's Creed III (2012)",
       "info": {
@@ -629,6 +634,7 @@
         }
       ],
       "era_id": "colonial-era",
+      "story_year": 1715,
       "banner_image": "assets/img/games/AC4_Hero.webp",
       "title": "Assassin's Creed IV: Black Flag (2013)",
       "info": {
@@ -710,6 +716,7 @@
         }
       ],
       "era_id": "colonial-era",
+      "story_year": 1752,
       "banner_image": "assets/img/games/Rogue_Hero.webp",
       "title": "Assassin's Creed: Rogue (2014)",
       "info": {
@@ -791,6 +798,7 @@
         }
       ],
       "era_id": "european-revolution-era",
+      "story_year": 1789,
       "banner_image": "assets/img/games/Unity_Hero.webp",
       "title": "Assassin's Creed: Unity (2014)",
       "info": {
@@ -872,6 +880,7 @@
         }
       ],
       "era_id": "european-revolution-era",
+      "story_year": 1868,
       "banner_image": "assets/img/games/ACS_Hero.webp",
       "title": "Assassin's Creed: Syndicate (2015)",
       "info": {
@@ -953,6 +962,7 @@
         }
       ],
       "era_id": "ancient-trilogy",
+      "story_year": -49,
       "banner_image": "assets/img/games/ACO_Hero.webp",
       "title": "Assassin's Creed: Origins (2017)",
       "info": {
@@ -1034,6 +1044,7 @@
         }
       ],
       "era_id": "ancient-trilogy",
+      "story_year": -431,
       "banner_image": "assets/img/games/ACOa_Hero.webp",
       "title": "Assassin's Creed: Odyssey (2018)",
       "info": {
@@ -1115,6 +1126,7 @@
         }
       ],
       "era_id": "ancient-trilogy",
+      "story_year": 873,
       "banner_image": "assets/img/games/Valhalla_Hero.webp",
       "title": "Assassin's Creed: Valhalla (2020)",
       "info": {
@@ -1196,6 +1208,7 @@
         }
       ],
       "era_id": "modern-classic-return",
+      "story_year": 861,
       "banner_image": "assets/img/games/ACMirage_Hero.webp",
       "title": "Assassin's Creed: Mirage (2023)",
       "info": {
@@ -1277,6 +1290,7 @@
         }
       ],
       "era_id": "modern-classic-return",
+      "story_year": 1579,
       "banner_image": "assets/img/games/ACSha_Hero.webp",
       "title": "Assassin's Creed: Shadows (2025)",
       "info": {
