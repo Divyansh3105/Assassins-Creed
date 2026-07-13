@@ -61,6 +61,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 ├── assets/
 │   ├── audio/               # Background music
 │   ├── fonts/               # Custom Assassin typeface
+│   ├── vendor/              # Self-hosted Bootstrap Icons, DOMPurify and particles.js
 │   ├── icons/               # Logo, favicon, PWA icons, cursor
 │   ├── img/
 │   │   ├── banners/         # Era banners
@@ -78,6 +79,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 ├── js/
 │   ├── app.js, components.js, script.js                   # Shared logic
 │   └── pages/               # Per-page scripts (factions, isu, quiz, search, timeline)
+├── netlify.toml             # Security and cache headers
 ├── service-worker.js        # PWA service worker (must stay at root)
 ├── manifest.json            # PWA manifest
 ├── index.html               # Main entry point & Home page
@@ -117,7 +119,7 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
    # If using VS Code, use the "Live Server" extension on index.html
    ```
 
-> **Note:** Since this project relies on ES6 modules and fetch API calls for data loading, simply opening `index.html` from the file system (via `file://` protocol) might block cross-origin requests. Always use a local web server!
+> **Note:** The site loads its data with `fetch()`, which browsers block on `file://` pages, so always use a local web server.
 
 ## 🎮 Usage
 
@@ -133,15 +135,15 @@ The Assassin's Creed Tribute Website is an immersive, multi-page web experience 
 
 |                           Home / Hero Section                            |                           Factions Breakdown                           |
 | :----------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| <img src="docs/screenshots/ss1.webp" width="400" alt="Home Section Placeholder" />  |  <img src="docs/screenshots/ss2.webp" width="400" alt="Factions Placeholder" />   |
+| <img src="docs/screenshots/ss1.webp" width="400" alt="Home page hero" />  |  <img src="docs/screenshots/ss2.webp" width="400" alt="Factions overview" />   |
 |                       **Assassins Roster Filter**                        |                            **Isu Archive**                             |
-| <img src="docs/screenshots/ss4.webp" width="400" alt="Roster Filter Placeholder" /> | <img src="docs/screenshots/ss3.webp" width="400" alt="Isu Archive Placeholder" /> |
+| <img src="docs/screenshots/ss4.webp" width="400" alt="Assassins roster with filters" /> | <img src="docs/screenshots/ss3.webp" width="400" alt="Isu archive page" /> |
 
 ## 💡 What I Learned
 
 - **Advanced CSS Animations:** Mastered scroll-driven parallax and smooth keyframe transitions.
 - **Intersection Observer API:** Efficiently implemented scroll-triggered reveals without heavy performance hits.
-- **Modular JavaScript:** Organized JS logic into ES6 imports/exports for maintainability throughout a multi-page site.
+- **Plain JavaScript, organised by page:** Shared behaviour lives in `js/`, page-specific logic in `js/pages/`, with no build step or framework.
 - **Performance Optimization:** Handled heavy assets (images, audio, particle effects) while maintaining smooth frame rates and fast local loading times.
 
 ## 🗺️ Future Improvements
