@@ -16,8 +16,8 @@ function getUrlParameter(name) {
   return new URLSearchParams(window.location.search).get(name) || "";
 }
 
-const DEFAULT_OG_IMAGE =
-  "https://assassins-creed-tribute.netlify.app/assets/social/OG.png";
+const SITE_URL = "https://assassins-creed-tribute.netlify.app/";
+const DEFAULT_OG_IMAGE = SITE_URL + "assets/social/OG.png";
 
 function setMeta(attr, key, content) {
   let tag = document.querySelector(`meta[${attr}="${key}"]`);
@@ -35,7 +35,18 @@ function setPageMeta({ title, description, image }) {
   setMeta("property", "og:title", title);
   setMeta("property", "og:description", description);
   setMeta("property", "og:image", image || DEFAULT_OG_IMAGE);
-  setMeta("property", "og:url", window.location.href);
+
+  // Always point at the main (Netlify) address, whichever host served the page
+  const page = window.location.pathname.split("/").pop() || "index.html";
+  const url = SITE_URL + page + window.location.search;
+  setMeta("property", "og:url", url);
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+  canonical.href = url;
 }
 
 async function loadEraContent() {

@@ -1,94 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Assassins Roster -->
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/assassins.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Eras -->
-  <url>
-    <loc>https://assassins-creed-tribute.netlify.app/era.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Factions Hub -->
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/factions.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Assassin Brotherhood -->
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/factions_assassins.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Templar Order -->
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/factions_templars.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Games -->
-  <url>
-    <loc>https://assassins-creed-tribute.netlify.app/game.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Isu / Those Who Came Before -->
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/isu.html</loc>
-    <lastmod>2026-03-02</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
-  <!-- Quiz Hub -->
-  <url>
-    <loc>https://assassins-creed-tribute.netlify.app/quiz_hub.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Quiz Results (dynamic, lower priority) -->
-  <url>
-    <loc>https://assassins-creed-tribute.netlify.app/quiz_results.html</loc>
-    <lastmod>2026-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/timeline.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://assassins-creed-tribute.netlify.app/search.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/quiz_hub.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/era.html?era=the-desmond-saga</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/era.html?era=colonial-era</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/era.html?era=european-revolution-era</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/era.html?era=ancient-trilogy</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/era.html?era=modern-classic-return</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=ac1</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=ac2</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=brotherhood</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=revelations</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=ac3</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=blackflag</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=rogue</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=unity</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=syndicate</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=origins</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=odyssey</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=valhalla</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=mirage</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://assassins-creed-tribute.netlify.app/game.html?game=shadows</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
